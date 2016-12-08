@@ -1,0 +1,42 @@
+#!/bin/bash -e
+export PATH=$(pwd):$PATH
+
+prepare_build_env() {
+  echo "Prepare build environment for Android"
+  sudo apt-get update
+  sudo apt-get install openjdk-8-jdk
+  sudo apt-get update
+  sudo apt-get -f install
+  sudo apt-get install git-core gnupg flex bison gperf build-essential zip curl zlib1g-dev gcc-multilib g++-multilib libc6-dev-i386 lib32ncurses5-dev x11proto-core-dev libx11-dev lib32z-dev ccache libgl1-mesa-dev libxml2-utils xsltproc unzip
+}
+
+get_aosp() {
+  echo "Get latest AOSP from Tsinghua mirror"
+  repo init -u https://aosp.tuna.tsinghua.edu.cn/platform/manifest
+  repo sync -j4
+}
+
+build_aosp() {
+  echo "Build AOSP using HiKey variant"
+}
+
+main() {
+  case $1 in
+    "prepare")
+      prepare_build_env
+      ;;
+    "sync")
+      get_aosp
+      ;;
+    "build")
+      build_aosp
+      ;;
+    "all")
+      prepare_build_end
+      get_aosp
+      build_aosp
+      ;;
+  esac
+}
+
+main $1
