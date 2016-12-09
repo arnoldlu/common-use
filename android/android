@@ -1,4 +1,6 @@
 #!/bin/bash -e
+cur_path=$(pwd)
+
 export PATH=$(pwd):$PATH
 
 prepare_build_env() {
@@ -11,9 +13,21 @@ prepare_build_env() {
 }
 
 get_aosp() {
+  cd $cur_path
+
   echo "Get latest AOSP from Tsinghua mirror"
-  repo init -u https://aosp.tuna.tsinghua.edu.cn/platform/manifest
+  if [ ! -d .repo ]
+  then
+    repo init -u https://aosp.tuna.tsinghua.edu.cn/platform/manifest
+  fi
+
   repo sync -j4
+}
+
+get_kernel() {
+  cd $cur_path/kernel
+  echo "Get HiKey Kernel"
+  git clone https://aosp.tuna.tsinghua.edu.cn/kernel/hikey-linaro.git
 }
 
 build_aosp() {
@@ -27,6 +41,7 @@ main() {
       ;;
     "sync")
       get_aosp
+      get_kernel
       ;;
     "build")
       build_aosp
