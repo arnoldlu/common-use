@@ -938,7 +938,10 @@ def initFtraceAndroid():
 	global sysvals
 
 	tp = sysvals.tpath
-	if(sysvals.usetraceevents):
+	cf = 'dpm_run_callback'
+	if(sysvals.usetraceeventsonly):
+		cf = '-e dpm_prepare -e dpm_complete -e dpm_run_callback'
+	if(sysvals.usecallgraph or sysvals.usetraceevents):
 		print('INITIALIZING FTRACE...')
 		# turn trace off
 		os.system(sysvals.adb+" shell 'echo 0 > "+tp+"tracing_on'")
@@ -946,12 +949,23 @@ def initFtraceAndroid():
 		os.system(sysvals.adb+" shell 'echo global > "+tp+"trace_clock'")
 		# set trace buffer to a huge value
 		os.system(sysvals.adb+" shell 'echo nop > "+tp+"current_tracer'")
-		os.system(sysvals.adb+" shell 'echo 10000 > "+tp+"buffer_size_kb'")
-		# turn trace events on
-		events = iter(sysvals.traceevents)
-		for e in events:
-			os.system(sysvals.adb+" shell 'echo 1 > "+\
-				sysvals.epath+e+"/enable'")
+		os.system(sysvals.adb+" shell 'echo 100000 > "+tp+"buffer_size_kb'")
+		# initialize the callgraph trace, unless this is an x2 run
+		if(sysvals.usecallgraph and sysvals.execcount == 1):
+			# set trace type
+			os.system(sysvals.adb+" shell 'echo function_graph > "+tp+"current_tracer'")
+			os.system(sysvals.adb+" shell 'echo "" > "+tp+"set_ftrace_filter'")
+			# set trace format options
+			os.system(sysvals.adb+" shell 'echo funcgraph-abstime > "+tp+"trace_options'")
+			os.system(sysvals.adb+" shell 'echo funcgraph-proc > "+tp+"trace_options'")
+			# focus only on device suspend and resume
+			os.system(sysvals.adb+" shell 'cat "+tp+"available_filter_functions | grep "+cf+" > "+tp+"set_graph_function'")
+		if(sysvals.usetraceevents):
+			# turn trace events on
+			events = iter(sysvals.traceevents)
+			for e in events:
+				os.system(sysvals.adb+" shell 'echo 1 > "+\
+					sysvals.epath+e+"/enable'")
 		# clear the trace buffer
 		os.system(sysvals.adb+" shell 'echo \"\" > "+tp+"trace'")
 
