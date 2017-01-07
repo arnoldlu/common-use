@@ -1,4 +1,3 @@
 #!/bin/bash
-sudo ./analyze_suspend.py -f -rtcwake 5 -multi 10 5 -m freeze
-sudo ./analyze_suspend.py -f -rtcwake 5 -multi 10 5 -m standby
-sudo ./analyze_suspend.py -f -rtcwake 5 -multi 10 5 -m mem
+./analyze_suspend.py -adb  /usr/bin/adb -rtcwake 10 -multi 5 20 -f -m mem
+./analyze_suspend.py -adb  /usr/bin/adb -rtcwake 10 -multi 5 20 -f -m freeze
