@@ -1,0 +1,1404 @@
+# suspend-010717-143312 android freeze 4.4.17-230075-gf952889-dirty
+[32m[    9.283932] [0m[33mueventd[0m: found platform device soc/f723d000.dwmmc0
+[32m[    9.285650] [0m[33mueventd[0m: found platform device soc/f723d000.dwmmc0
+[32m[    9.287432] [0m[33mueventd[0m: found platform device soc/f723d000.dwmmc0
+[32m[    9.289142] [0m[33mueventd[0m: found platform device soc/f723d000.dwmmc0
+[32m[    9.290890] [0m[33mueventd[0m: found platform device soc/f723d000.dwmmc0
+[32m[    9.292597] [0m[33mueventd[0m: found platform device soc/f723d000.dwmmc0
+[32m[    9.294246] [0m[33mueventd[0m: found platform device soc/f723d000.dwmmc0
+[32m[    9.294917] [0m[33minit[0m: init_user0 result: 0
+[32m[    9.294988] [0m[33minit[0m: Command 'init_user0' action=post-fs-data (/init.rc:482) returned 0 took 842.227ms.
+[32m[    9.295961] [0m[33mueventd[0m: found platform device soc/f723d000.dwmmc0
+[32m[    9.296967] [0m[33mueventd[0m: found platform device soc/f723d000.dwmmc0
+[32m[    9.297273] [0m[33mselinux[0m: SELinux: Skipping restorecon_recursive(/data)\x0a
+[32m[    9.298118] [0m[33mueventd[0m: found platform device soc/f723d000.dwmmc0
+[32m[    9.298836] [0m[33minit[0m: computing context for service 'exec 1 (/system/bin/tzdatacheck)'
+[32m[    9.299096] [0m[33minit[0m: starting service 'exec 1 (/system/bin/tzdatacheck)'...
+[32m[    9.299325] [0m[33mueventd[0m: found platform device soc/f723d000.dwmmc0
+[32m[    9.311941] [0m[33mtype=1400 audit(12.103:7)[0m: avc: granted { getattr } for pid=1748 comm="vdc" path="/vendor" dev="rootfs" ino=9076 scontext=u:r:vdc:s0 tcontext=u:object_r:rootfs:s0 tclass=lnk_file
+[32m[    9.311953] [0m[33mtype=1400 audit(12.943:8)[0m: avc: granted { getattr } for pid=1795 comm="tzdatacheck" path="/vendor" dev="rootfs" ino=9076 scontext=u:r:tzdatacheck:s0 tcontext=u:object_r:rootfs:s0 tclass=lnk_file
+[32m[    9.444623] [0m(stk) :ldisc_install = 0
+[32m[    9.451030] [0m[33minit[0m: SVC_EXEC pid 1795 (uid 1000 gid 1000+0 context default) started; waiting...
+[32m[    9.459060] [0m[33minit[0m: Command 'exec - system system -- /system/bin/tzdatacheck /system/usr/share/zoneinfo /data/misc/zoneinfo' action=post-fs-data (/init.rc:488) returned 0 took 160.137ms.
+[32m[    9.478171] [0m[33minit[0m: Service 'exec 1 (/system/bin/tzdatacheck)' (pid 1795) exited with status 0
+[32m[    9.486821] [0m[33minit[0m: SVC_EXEC pid 1795 finished...
+[32m[    9.498443] [0m[33mselinux[0m[31m: SELinux:  Could not stat /data/local/tmp/lava: No such file or directory.\x0a[0m
+[32m[    9.510696] [0m[33minit[0m: processing action (load_persist_props_action)
+[32m[    9.516909] [0m[33minit[0m: Couldn't load properties from /data/local.prop: No such file or directory
+[32m[    9.556826] [0m[33minit[0m: computing context for service 'logd-reinit'
+[32m[    9.563614] [0m[33minit[0m: starting service 'logd-reinit'...
+[32m[    9.581244] [0m[33minit[0m: processing action (firmware_mounts_complete)
+[32m[    9.583885] [0m[33mtype=1400 audit(12.943:8)[0m: avc: granted { getattr } for pid=1795 comm="tzdatacheck" path="/vendor" dev="rootfs" ino=9076 scontext=u:r:tzdatacheck:s0 tcontext=u:object_r:rootfs:s0 tclass=lnk_file
+[32m[    9.583896] [0m[33mtype=1400 audit(13.211:9)[0m: avc: denied { getattr } for pid=1796 comm="logd" path="/vendor" dev="rootfs" ino=9076 scontext=u:r:logd:s0 tcontext=u:object_r:rootfs:s0 tclass=lnk_file permissive=0
+[32m[    9.598625] [0m[33mlogd.daemon[0m: reinit
+[32m[    9.627729] [0m[33minit[0m: Service 'logd-reinit' (pid 1796) exited with status 0
+[32m[    9.634526] [0m[33minit[0m: processing action (boot)
+[32m[    9.640394] [0m[33minit[0m[31m: write_file: Unable to open '/proc/sys/vm/min_free_order_shift': No such file or directory[0m
+[32m[    9.653367] [0m[33minit[0m: computing context for service 'hwservicemanager'
+[32m[    9.659920] [0m[33minit[0m: starting service 'hwservicemanager'...
+[32m[    9.666617] [0m[33minit[0m: starting service 'healthd'...
+[32m[    9.672652] [0m[33minit[0m: computing context for service 'lmkd'
+[32m[    9.675852] [0m[33mtype=1400 audit(13.211:9)[0m: avc: denied { getattr } for pid=1796 comm="logd" path="/vendor" dev="rootfs" ino=9076 scontext=u:r:logd:s0 tcontext=u:object_r:rootfs:s0 tclass=lnk_file permissive=0
+[32m[    9.675863] [0m[33mtype=1400 audit(13.307:10)[0m: avc: denied { getattr } for pid=1797 comm="hwservicemanage" path="/vendor" dev="rootfs" ino=9076 scontext=u:r:hwservicemanager:s0 tcontext=u:object_r:rootfs:s0 tclass=lnk_file permissive=0
+[32m[    9.683689] [0m[33mbinder[0m: 1798:1798 transaction failed 29189, size 0-0
+[32m[    9.699528] [0m[33mueventd[0m[31m: firmware: could not find firmware for ti-connectivity/wl1271-nvs.bin[0m
+[32m[    9.699638] [0m[33mueventd[0m: loading /devices/platform/soc/f723f000.dwmmc2/mmc_host/mmc2/mmc2:0001/mmc2:0001:2/wl18xx.1.auto/firmware/ti-connectivity!wl1271-nvs.bin took 2.82272 seconds
+[32m[    9.747585] [0m[33minit[0m: starting service 'lmkd'...
+[32m[    9.753233] [0m[33minit[0m: computing context for service 'servicemanager'
+[32m[    9.754371] [0m[33minit[0m: Created socket '/dev/socket/lmkd', mode 660, user 1000, group 1000
+[32m[    9.763346] [0m[33mtype=1400 audit(13.307:10)[0m: avc: denied { getattr } for pid=1797 comm="hwservicemanage" path="/vendor" dev="rootfs" ino=9076 scontext=u:r:hwservicemanager:s0 tcontext=u:object_r:rootfs:s0 tclass=lnk_file permissive=0
+[32m[    9.763357] [0m[33mtype=1400 audit(13.391:11)[0m: avc: denied { getattr } for pid=1800 comm="lmkd" path="/vendor" dev="rootfs" ino=9076 scontext=u:r:lmkd:s0 tcontext=u:object_r:rootfs:s0 tclass=lnk_file permissive=0
+[32m[    9.806405] [0m[33minit[0m: starting service 'servicemanager'...
+[32m[    9.812964] [0m[33minit[0m: computing context for service 'surfaceflinger'
+[32m[    9.819343] [0m[33minit[0m: starting service 'surfaceflinger'...
+[32m[    9.825667] [0m[33minit[0m: Command 'class_start core' action=boot (/init.rc:585) returned 0 took 159.098ms.
+[32m[    9.835746] [0m[33mtype=1400 audit(13.391:11)[0m: avc: denied { getattr } for pid=1800 comm="lmkd" path="/vendor" dev="rootfs" ino=9076 scontext=u:r:lmkd:s0 tcontext=u:object_r:rootfs:s0 tclass=lnk_file permissive=0
+[32m[    9.837243] [0mfile system registered
+[32m[    9.841090] [0m[33minit[0m: processing action (persist.sys.usb.config=* boot)
+[32m[    9.841152] [0m[33minit[0m: processing action (enable_property_trigger)
+[32m[    9.841364] [0m[33minit[0m: processing action (security.perf_harden=1)
+[32m[    9.841474] [0m[33minit[0m: processing action (ro.debuggable=1)
+[32m[    9.842320] [0m[33minit[0m: starting service 'console'...
+[32m[    9.843816] [0m[33minit[0m[31m: setpgid failed for console: Operation not permitted[0m
+[32m[    9.843911] [0m[33minit[0m: processing action (sys.usb.config=adb sys.usb.configfs=1)
+[32m[    9.844068] [0m[33minit[0m: starting service 'adbd'...
+[32m[    9.845107] [0m[33minit[0m: processing action (nonencrypted)
+[32m[    9.845271] [0m[33minit[0m[31m: cannot find '/system/bin/update_verifier', disabling 'exec 2 (/system/bin/update_verifier)': No such file or directory[0m
+[32m[    9.845362] [0m[33minit[0m[31m: cannot find '/system/bin/install-recovery.sh', disabling 'flash_recovery': No such file or directory[0m
+[32m[    9.845579] [0m[33minit[0m: computing context for service 'uim'
+[32m[    9.845840] [0m[33minit[0m: starting service 'uim'...
+[32m[    9.846928] [0m[33minit[0m: Created socket '/dev/socket/adbd', mode 660, user 1000, group 1000
+[32m[    9.847251] [0m[33minit[0m: computing context for service 'zygote'
+[32m[    9.847536] [0m[33minit[0m: starting service 'zygote'...
+[32m[    9.848826] [0m[33minit[0m: computing context for service 'zygote_secondary'
+[32m[    9.849088] [0m[33minit[0m: starting service 'zygote_secondary'...
+[32m[    9.850425] [0m[33minit[0m: computing context for service 'audioserver'
+[32m[    9.850753] [0m[33minit[0m: starting service 'audioserver'...
+[32m[    9.852258] [0m[33minit[0m: Created socket '/dev/socket/zygote_secondary', mode 660, user 0, group 1000
+[32m[    9.852281] [0m[33minit[0m: computing context for service 'cameraserver'
+[32m[    9.852615] [0m[33minit[0m: starting service 'cameraserver'...
+[32m[    9.854003] [0m[33minit[0m[31m: couldn't write 1815 to /dev/cpuset/camera-daemon/tasks: No such file or directory[0m
+[32m[    9.854286] [0m[33minit[0m: computing context for service 'drm'
+[32m[    9.854410] [0mread descriptors
+[32m[    9.854423] [0mread descriptors
+[32m[    9.854430] [0mread strings
+[32m[    9.854869] [0m[33minit[0m: starting service 'drm'...
+[32m[    9.855598] [0m[33minit[0m: Created socket '/dev/socket/zygote', mode 660, user 0, group 1000
+[32m[    9.856872] [0m[33minit[0m: computing context for service 'installd'
+[32m[    9.857355] [0m[33minit[0m: starting service 'installd'...
+[32m[    9.858878] [0m[33minit[0m: computing context for service 'keystore'
+[32m[    9.859515] [0m[33minit[0m: starting service 'keystore'...
+[32m[    9.861144] [0m[33minit[0m: computing context for service 'mediacodec'
+[32m[    9.861521] [0m[33minit[0m: starting service 'mediacodec'...
+[32m[    9.863423] [0m[33minit[0m: computing context for service 'mediadrm'
+[32m[    9.863812] [0m[33minit[0m: starting service 'mediadrm'...
+[32m[    9.865439] [0m[33minit[0m: computing context for service 'mediaextractor'
+[32m[    9.865763] [0m[33minit[0m: starting service 'mediaextractor'...
+[32m[    9.867233] [0m[33minit[0m: Created socket '/dev/socket/installd', mode 600, user 1000, group 1000
+[32m[    9.867316] [0m[33minit[0m: computing context for service 'media'
+[32m[    9.867670] [0m[33minit[0m: starting service 'media'...
+[32m[    9.874233] [0m[33minit[0m: computing context for service 'netd'
+[32m[    9.874621] [0m[33minit[0m: starting service 'netd'...
+[32m[    9.876330] [0m[33minit[0m: computing context for service 'wificond'
+[32m[    9.876705] [0m[33minit[0m: starting service 'wificond'...
+[32m[    9.877773] [0m[33minit[0m: Created socket '/dev/socket/netd', mode 660, user 0, group 1000
+[32m[    9.878616] [0m[33minit[0m: Created socket '/dev/socket/dnsproxyd', mode 660, user 0, group 3003
+[32m[    9.878618] [0m[33minit[0m: computing context for service 'gatekeeperd'
+[32m[    9.878909] [0m[33minit[0m: starting service 'gatekeeperd'...
+[32m[    9.879446] [0m[33minit[0m: Created socket '/dev/socket/mdns', mode 660, user 0, group 1000
+[32m[    9.880281] [0m[33minit[0m: Created socket '/dev/socket/fwmarkd', mode 660, user 0, group 3003
+[32m[    9.927239] [0m[33mwlcore[0m: wl18xx HW: 183x or 180x, PG 2.2 (ROM 0x11)
+[32m[    9.929449] [0m[33mcfg80211[0m: Updating information on frequency 2412 MHz with regulatory rule:
+[32m[    9.929454] [0m[33mcfg80211[0m: (2402000 KHz - 2472000 KHz @ 40000 KHz), (600 mBi, 2000 mBm)
+[32m[    9.929460] [0m[33mcfg80211[0m: Updating information on frequency 2417 MHz with regulatory rule:
+[32m[    9.929464] [0m[33mcfg80211[0m: (2402000 KHz - 2472000 KHz @ 40000 KHz), (600 mBi, 2000 mBm)
+[32m[    9.929469] [0m[33mcfg80211[0m: Updating information on frequency 2422 MHz with regulatory rule:
+[32m[    9.929473] [0m[33mcfg80211[0m: (2402000 KHz - 2472000 KHz @ 40000 KHz), (600 mBi, 2000 mBm)
+[32m[    9.929477] [0m[33mcfg80211[0m: Updating information on frequency 2427 MHz with regulatory rule:
+[32m[    9.929481] [0m[33mcfg80211[0m: (2402000 KHz - 2472000 KHz @ 40000 KHz), (600 mBi, 2000 mBm)
+[32m[    9.929485] [0m[33mcfg80211[0m: Updating information on frequency 2432 MHz with regulatory rule:
+[32m[    9.929489] [0m[33mcfg80211[0m: (2402000 KHz - 2472000 KHz @ 40000 KHz), (600 mBi, 2000 mBm)
+[32m[    9.929493] [0m[33mcfg80211[0m: Updating information on frequency 2437 MHz with regulatory rule:
+[32m[    9.929497] [0m[33mcfg80211[0m: (2402000 KHz - 2472000 KHz @ 40000 KHz), (600 mBi, 2000 mBm)
+[32m[    9.929502] [0m[33mcfg80211[0m: Updating information on frequency 2442 MHz with regulatory rule:
+[32m[    9.929506] [0m[33mcfg80211[0m: (2402000 KHz - 2472000 KHz @ 40000 KHz), (600 mBi, 2000 mBm)
+[32m[    9.929510] [0m[33mcfg80211[0m: Updating information on frequency 2447 MHz with regulatory rule:
+[32m[    9.929514] [0m[33mcfg80211[0m: (2402000 KHz - 2472000 KHz @ 40000 KHz), (600 mBi, 2000 mBm)
+[32m[    9.929518] [0m[33mcfg80211[0m: Updating information on frequency 2452 MHz with regulatory rule:
+[32m[    9.929522] [0m[33mcfg80211[0m: (2402000 KHz - 2472000 KHz @ 40000 KHz), (600 mBi, 2000 mBm)
+[32m[    9.929526] [0m[33mcfg80211[0m: Updating information on frequency 2457 MHz with regulatory rule:
+[32m[    9.929531] [0m[33mcfg80211[0m: (2402000 KHz - 2472000 KHz @ 40000 KHz), (600 mBi, 2000 mBm)
+[32m[    9.929536] [0m[33mcfg80211[0m: Updating information on frequency 2462 MHz with regulatory rule:
+[32m[    9.929540] [0m[33mcfg80211[0m: (2402000 KHz - 2472000 KHz @ 40000 KHz), (600 mBi, 2000 mBm)
+[32m[    9.929545] [0m[33mcfg80211[0m: Updating information on frequency 2467 MHz with regulatory rule:
+[32m[    9.929550] [0m[33mcfg80211[0m: (2457000 KHz - 2482000 KHz @ 40000 KHz), (600 mBi, 2000 mBm)
+[32m[    9.929554] [0m[33mcfg80211[0m: Updating information on frequency 2472 MHz with regulatory rule:
+[32m[    9.929559] [0m[33mcfg80211[0m: (2457000 KHz - 2482000 KHz @ 40000 KHz), (600 mBi, 2000 mBm)
+[32m[    9.929564] [0m[33mcfg80211[0m: Updating information on frequency 2484 MHz with regulatory rule:
+[32m[    9.929568] [0m[33mcfg80211[0m: (2474000 KHz - 2494000 KHz @ 20000 KHz), (600 mBi, 2000 mBm)
+[32m[    9.929573] [0m[33mcfg80211[0m: Disabling freq 5040 MHz
+[32m[    9.929576] [0m[33mcfg80211[0m: Disabling freq 5060 MHz
+[32m[    9.929580] [0m[33mcfg80211[0m: Disabling freq 5080 MHz
+[32m[    9.929584] [0m[33mcfg80211[0m: Disabling freq 5170 MHz
+[32m[    9.929588] [0m[33mcfg80211[0m: Updating information on frequency 5180 MHz with regulatory rule:
+[32m[    9.929593] [0m[33mcfg80211[0m: (5170000 KHz - 5250000 KHz @ 160000 KHz), (600 mBi, 2000 mBm)
+[32m[    9.929597] [0m[33mcfg80211[0m: Updating information on frequency 5190 MHz with regulatory rule:
+[32m[    9.929602] [0m[33mcfg80211[0m: (5170000 KHz - 5250000 KHz @ 160000 KHz), (600 mBi, 2000 mBm)
+[32m[    9.929606] [0m[33mcfg80211[0m: Updating information on frequency 5200 MHz with regulatory rule:
+[32m[    9.929610] [0m[33mcfg80211[0m: (5170000 KHz - 5250000 KHz @ 160000 KHz), (600 mBi, 2000 mBm)
+[32m[    9.929614] [0m[33mcfg80211[0m: Updating information on frequency 5210 MHz with regulatory rule:
+[32m[    9.929618] [0m[33mcfg80211[0m: (5170000 KHz - 5250000 KHz @ 160000 KHz), (600 mBi, 2000 mBm)
+[32m[    9.929623] [0m[33mcfg80211[0m: Updating information on frequency 5220 MHz with regulatory rule:
+[32m[    9.929627] [0m[33mcfg80211[0m: (5170000 KHz - 5250000 KHz @ 160000 KHz), (600 mBi, 2000 mBm)
+[32m[    9.929631] [0m[33mcfg80211[0m: Updating information on frequency 5230 MHz with regulatory rule:
+[32m[    9.929635] [0m[33mcfg80211[0m: (5170000 KHz - 5250000 KHz @ 160000 KHz), (600 mBi, 2000 mBm)
+[32m[    9.929639] [0m[33mcfg80211[0m: Updating information on frequency 5240 MHz with regulatory rule:
+[32m[    9.929643] [0m[33mcfg80211[0m: (5170000 KHz - 5250000 KHz @ 160000 KHz), (600 mBi, 2000 mBm)
+[32m[    9.929648] [0m[33mcfg80211[0m: Updating information on frequency 5260 MHz with regulatory rule:
+[32m[    9.929652] [0m[33mcfg80211[0m: (5250000 KHz - 5330000 KHz @ 160000 KHz), (600 mBi, 2000 mBm)
+[32m[    9.929656] [0m[33mcfg80211[0m: Updating information on frequency 5280 MHz with regulatory rule:
+[32m[    9.929660] [0m[33mcfg80211[0m: (5250000 KHz - 5330000 KHz @ 160000 KHz), (600 mBi, 2000 mBm)
+[32m[    9.929664] [0m[33mcfg80211[0m: Updating information on frequency 5300 MHz with regulatory rule:
+[32m[    9.929668] [0m[33mcfg80211[0m: (5250000 KHz - 5330000 KHz @ 160000 KHz), (600 mBi, 2000 mBm)
+[32m[    9.929673] [0m[33mcfg80211[0m: Updating information on frequency 5320 MHz with regulatory rule:
+[32m[    9.929677] [0m[33mcfg80211[0m: (5250000 KHz - 5330000 KHz @ 160000 KHz), (600 mBi, 2000 mBm)
+[32m[    9.929681] [0m[33mcfg80211[0m: Updating information on frequency 5500 MHz with regulatory rule:
+[32m[    9.929686] [0m[33mcfg80211[0m: (5490000 KHz - 5730000 KHz @ 160000 KHz), (600 mBi, 2000 mBm)
+[32m[    9.929690] [0m[33mcfg80211[0m: Updating information on frequency 5520 MHz with regulatory rule:
+[32m[    9.929695] [0m[33mcfg80211[0m: (5490000 KHz - 5730000 KHz @ 160000 KHz), (600 mBi, 2000 mBm)
+[32m[    9.929700] [0m[33mcfg80211[0m: Updating information on frequency 5540 MHz with regulatory rule:
+[32m[    9.929704] [0m[33mcfg80211[0m: (5490000 KHz - 5730000 KHz @ 160000 KHz), (600 mBi, 2000 mBm)
+[32m[    9.929709] [0m[33mcfg80211[0m: Updating information on frequency 5560 MHz with regulatory rule:
+[32m[    9.929713] [0m[33mcfg80211[0m: (5490000 KHz - 5730000 KHz @ 160000 KHz), (600 mBi, 2000 mBm)
+[32m[    9.929718] [0m[33mcfg80211[0m: Updating information on frequency 5580 MHz with regulatory rule:
+[32m[    9.929723] [0m[33mcfg80211[0m: (5490000 KHz - 5730000 KHz @ 160000 KHz), (600 mBi, 2000 mBm)
+[32m[    9.929727] [0m[33mcfg80211[0m: Updating information on frequency 5600 MHz with regulatory rule:
+[32m[    9.929732] [0m[33mcfg80211[0m: (5490000 KHz - 5730000 KHz @ 160000 KHz), (600 mBi, 2000 mBm)
+[32m[    9.929737] [0m[33mcfg80211[0m: Updating information on frequency 5620 MHz with regulatory rule:
+[32m[    9.929741] [0m[33mcfg80211[0m: (5490000 KHz - 5730000 KHz @ 160000 KHz), (600 mBi, 2000 mBm)
+[32m[    9.929746] [0m[33mcfg80211[0m: Updating information on frequency 5640 MHz with regulatory rule:
+[32m[    9.929750] [0m[33mcfg80211[0m: (5490000 KHz - 5730000 KHz @ 160000 KHz), (600 mBi, 2000 mBm)
+[32m[    9.929754] [0m[33mcfg80211[0m: Updating information on frequency 5660 MHz with regulatory rule:
+[32m[    9.929758] [0m[33mcfg80211[0m: (5490000 KHz - 5730000 KHz @ 160000 KHz), (600 mBi, 2000 mBm)
+[32m[    9.929763] [0m[33mcfg80211[0m: Updating information on frequency 5680 MHz with regulatory rule:
+[32m[    9.929767] [0m[33mcfg80211[0m: (5490000 KHz - 5730000 KHz @ 160000 KHz), (600 mBi, 2000 mBm)
+[32m[    9.929771] [0m[33mcfg80211[0m: Updating information on frequency 5700 MHz with regulatory rule:
+[32m[    9.929775] [0m[33mcfg80211[0m: (5490000 KHz - 5730000 KHz @ 160000 KHz), (600 mBi, 2000 mBm)
+[32m[    9.929779] [0m[33mcfg80211[0m: Updating information on frequency 5745 MHz with regulatory rule:
+[32m[    9.929784] [0m[33mcfg80211[0m: (5735000 KHz - 5835000 KHz @ 80000 KHz), (600 mBi, 2000 mBm)
+[32m[    9.929788] [0m[33mcfg80211[0m: Updating information on frequency 5765 MHz with regulatory rule:
+[32m[    9.929792] [0m[33mcfg80211[0m: (5735000 KHz - 5835000 KHz @ 80000 KHz), (600 mBi, 2000 mBm)
+[32m[    9.929796] [0m[33mcfg80211[0m: Updating information on frequency 5785 MHz with regulatory rule:
+[32m[    9.929800] [0m[33mcfg80211[0m: (5735000 KHz - 5835000 KHz @ 80000 KHz), (600 mBi, 2000 mBm)
+[32m[    9.929804] [0m[33mcfg80211[0m: Updating information on frequency 5805 MHz with regulatory rule:
+[32m[    9.929808] [0m[33mcfg80211[0m: (5735000 KHz - 5835000 KHz @ 80000 KHz), (600 mBi, 2000 mBm)
+[32m[    9.929812] [0m[33mcfg80211[0m: Updating information on frequency 5825 MHz with regulatory rule:
+[32m[    9.929817] [0m[33mcfg80211[0m: (5735000 KHz - 5835000 KHz @ 80000 KHz), (600 mBi, 2000 mBm)
+[32m[    9.933750] [0m[33mwlcore[0m: loaded
+[32m[   10.104979] [0m[33minit[0m[31m: cannot find '/system/xbin/perfprofd', disabling 'perfprofd': No such file or directory[0m
+[32m[   10.105080] [0m[33minit[0m: Command 'class_start late_start' action=nonencrypted (/init.rc:591) returned 0 took 226.639ms.
+[32m[   10.109128] [0m[33minit[0m: processing action (sys.usb.config=adb sys.usb.configfs=1 sys.usb.ffs.ready=1)
+[32m[   10.118763] [0m[33mdwc2 f72c0000.usb[0m: bound driver configfs-gadget
+[32m[   10.212446] [0m[33mtype=1400 audit(13.467:12)[0m: avc: granted { getattr } for pid=1802 comm="surfaceflinger" path="/vendor" dev="rootfs" ino=9076 scontext=u:r:surfaceflinger:s0 tcontext=u:object_r:rootfs:s0 tclass=lnk_file
+[32m[   10.273653] [0m[33mtype=1400 audit(13.467:12)[0m: avc: granted { getattr } for pid=1802 comm="surfaceflinger" path="/vendor" dev="rootfs" ino=9076 scontext=u:r:surfaceflinger:s0 tcontext=u:object_r:rootfs:s0 tclass=lnk_file
+[32m[   10.293001] [0m[33mtype=1400 audit(13.491:13)[0m: avc: denied { getattr } for pid=1815 comm="cameraserver" path="/vendor" dev="rootfs" ino=9076 scontext=u:r:cameraserver:s0 tcontext=u:object_r:rootfs:s0 tclass=lnk_file permissive=0
+[32m[   10.313264] [0m[33mtype=1400 audit(13.491:13)[0m: avc: denied { getattr } for pid=1815 comm="cameraserver" path="/vendor" dev="rootfs" ino=9076 scontext=u:r:cameraserver:s0 tcontext=u:object_r:rootfs:s0 tclass=lnk_file permissive=0
+[32m[   10.333286] [0m[33mtype=1400 audit(13.495:14)[0m: avc: denied { getattr } for pid=1814 comm="audioserver" path="/vendor" dev="rootfs" ino=9076 scontext=u:r:audioserver:s0 tcontext=u:object_r:rootfs:s0 tclass=lnk_file permissive=0
+[32m[   10.353401] [0m[33mtype=1400 audit(13.495:14)[0m: avc: denied { getattr } for pid=1814 comm="audioserver" path="/vendor" dev="rootfs" ino=9076 scontext=u:r:audioserver:s0 tcontext=u:object_r:rootfs:s0 tclass=lnk_file permissive=0
+[32m[   10.373207] [0m[33mtype=1400 audit(13.499:15)[0m: avc: granted { getattr } for pid=1811 comm="uim" path="/vendor" dev="rootfs" ino=9076 scontext=u:r:hci_attach:s0 tcontext=u:object_r:rootfs:s0 tclass=lnk_file
+[32m[   10.376363] [0m[33mdwc2 f72c0000.usb[0m: new device is high-speed
+[32m[   10.398174] [0m[33mtype=1400 audit(13.499:15)[0m: avc: granted { getattr } for pid=1811 comm="uim" path="/vendor" dev="rootfs" ino=9076 scontext=u:r:hci_attach:s0 tcontext=u:object_r:rootfs:s0 tclass=lnk_file
+[32m[   10.416180] [0m[33mtype=1400 audit(13.507:17)[0m: avc: denied { getattr } for pid=1821 comm="mediadrmserver" path="/vendor" dev="rootfs" ino=9076 scontext=u:r:mediadrmserver:s0 tcontext=u:object_r:rootfs:s0 tclass=lnk_file permissive=0
+[32m[   10.436611] [0m[33mtype=1400 audit(13.507:17)[0m: avc: denied { getattr } for pid=1821 comm="mediadrmserver" path="/vendor" dev="rootfs" ino=9076 scontext=u:r:mediadrmserver:s0 tcontext=u:object_r:rootfs:s0 tclass=lnk_file permissive=0
+[32m[   10.437279] [0m[33mandroid_work[0m: sent uevent USB_STATE=CONNECTED
+[32m[   10.448307] [0m[33m(stk) [0m[31m: timed out waiting for ldisc to be un-installed[0m
+[32m[   10.448308] [0m[33mdwc2 f72c0000.usb[0m: new device is high-speed
+[32m[   10.474016] [0m[33mtype=1400 audit(13.507:16)[0m: avc: denied { getattr } for pid=1822 comm="mediaextractor" path="/vendor" dev="rootfs" ino=9076 scontext=u:r:mediaextractor:s0 tcontext=u:object_r:rootfs:s0 tclass=lnk_file permissive=0
+[32m[   10.494617] [0m[33mtype=1400 audit(13.507:16)[0m: avc: denied { getattr } for pid=1822 comm="mediaextractor" path="/vendor" dev="rootfs" ino=9076 scontext=u:r:mediaextractor:s0 tcontext=u:object_r:rootfs:s0 tclass=lnk_file permissive=0
+[32m[   10.506452] [0m[33mMali<2>[0m: Session 0x71445C00 with pid 1802 was granted higher priority.
+[32m[   10.509125] [0m[33mdwc2 f72c0000.usb[0m: new address 101
+[32m[   10.527119] [0m[33mtype=1400 audit(13.507:18)[0m: avc: denied { getattr } for pid=1820 comm="mediacodec" path="/vendor" dev="rootfs" ino=9076 scontext=u:r:mediacodec:s0 tcontext=u:object_r:rootfs:s0 tclass=lnk_file permissive=0
+[32m[   10.530598] [0m[33mconfigfs-gadget gadget[0m: high-speed config #1: b
+[32m[   10.530810] [0m[33mandroid_work[0m: sent uevent USB_STATE=CONFIGURED
+[32m[   10.557003] [0m(stk) :ldisc_install = 1
+[32m[   10.557004] [0m[33muart-pl011 f7111000.uart[0m: no DMA platform data
+[32m[   10.567399] [0m[33mtype=1400 audit(13.507:18)[0m: avc: denied { getattr } for pid=1820 comm="mediacodec" path="/vendor" dev="rootfs" ino=9076 scontext=u:r:mediacodec:s0 tcontext=u:object_r:rootfs:s0 tclass=lnk_file permissive=0
+[32m[   10.573288] [0m[33maudit[0m: audit_lost=1 audit_rate_limit=20 audit_backlog_limit=64
+[32m[   10.573294] [0m[33maudit[0m[31m: rate limit exceeded[0m
+[32m[   10.578218] [0m[33minit[0m: computing context for service 'bootanim'
+[32m[   10.579033] [0m[33minit[0m: starting service 'bootanim'...
+[32m[   10.607537] [0m[33m(stc)[0m: st_tty_open 
+[32m[   10.608177] [0m(stk) :line discipline installed
+[32m[   10.614984] [0m(stk) :ti-connectivity/TIInit_11.8.32.bts
+[32m[   10.614989] [0m(stk) :change remote baud rate command in firmware
+[32m[   10.626846] [0m(stk) :skipping the wait event of change remote baud
+[32m[   10.626847] [0m[33mtype=1400 audit(13.511:19)[0m: avc: granted { read } for pid=1811 comm="uim" name="install" dev="sysfs" ino=10022 scontext=u:r:hci_attach:s0 tcontext=u:object_r:sysfs:s0 tclass=file
+[32m[   10.640339] [0m[33mrandom[0m: nonblocking pool is initialized
+[32m[   10.656043] [0m[33mtype=1400 audit(13.511:19)[0m: avc: granted { read } for pid=1811 comm="uim" name="install" dev="sysfs" ino=10022 scontext=u:r:hci_attach:s0 tcontext=u:object_r:sysfs:s0 tclass=file
+[32m[   10.673659] [0m[33mtype=1400 audit(13.511:20)[0m: avc: granted { read open } for pid=1811 comm="uim" path="/sys/devices/platform/kim/install" dev="sysfs" ino=10022 scontext=u:r:hci_attach:s0 tcontext=u:object_r:sysfs:s0 tclass=file
+[32m[   10.694684] [0m[33mtype=1400 audit(13.511:20)[0m: avc: granted { read open } for pid=1811 comm="uim" path="/sys/devices/platform/kim/install" dev="sysfs" ino=10022 scontext=u:r:hci_attach:s0 tcontext=u:object_r:sysfs:s0 tclass=file
+[32m[   10.703962] [0m[33mhealthd[0m: No battery devices found
+[32m[   10.719570] [0m[33mtype=1400 audit(13.523:21)[0m: avc: denied { getattr } for pid=1823 comm="mediaserver" path="/vendor" dev="rootfs" ino=9076 scontext=u:r:mediaserver:s0 tcontext=u:object_r:rootfs:s0 tclass=lnk_file permissive=0
+[32m[   10.739722] [0m[33mtype=1400 audit(13.523:21)[0m: avc: denied { getattr } for pid=1823 comm="mediaserver" path="/vendor" dev="rootfs" ino=9076 scontext=u:r:mediaserver:s0 tcontext=u:object_r:rootfs:s0 tclass=lnk_file permissive=0
+[32m[   10.759803] [0m[33mtype=1400 audit(13.775:22)[0m: avc: denied { getattr } for pid=1825 comm="wificond" path="/vendor" dev="rootfs" ino=9076 scontext=u:r:wificond:s0 tcontext=u:object_r:rootfs:s0 tclass=lnk_file permissive=0
+[32m[   10.779681] [0m[33mtype=1400 audit(13.775:22)[0m: avc: denied { getattr } for pid=1825 comm="wificond" path="/vendor" dev="rootfs" ino=9076 scontext=u:r:wificond:s0 tcontext=u:object_r:rootfs:s0 tclass=lnk_file permissive=0
+[32m[   10.799317] [0m[33mtype=1400 audit(13.783:23)[0m: avc: denied { getattr } for pid=1817 comm="drmserver" path="/vendor" dev="rootfs" ino=9076 scontext=u:r:drmserver:s0 tcontext=u:object_r:rootfs:s0 tclass=lnk_file permissive=0
+[32m[   10.820898] [0m[33mtype=1400 audit(13.783:23)[0m: avc: denied { getattr } for pid=1817 comm="drmserver" path="/vendor" dev="rootfs" ino=9076 scontext=u:r:drmserver:s0 tcontext=u:object_r:rootfs:s0 tclass=lnk_file permissive=0
+[32m[   10.840545] [0m[33mtype=1400 audit(13.791:24)[0m: avc: denied { getattr } for pid=1828 comm="gatekeeperd" path="/vendor" dev="rootfs" ino=9076 scontext=u:r:gatekeeperd:s0 tcontext=u:object_r:rootfs:s0 tclass=lnk_file permissive=0
+[32m[   10.861501] [0m[33mtype=1400 audit(13.791:24)[0m: avc: denied { getattr } for pid=1828 comm="gatekeeperd" path="/vendor" dev="rootfs" ino=9076 scontext=u:r:gatekeeperd:s0 tcontext=u:object_r:rootfs:s0 tclass=lnk_file permissive=0
+[32m[   10.881796] [0m[33mtype=1400 audit(13.799:25)[0m: avc: granted { getattr } for pid=1819 comm="keystore" path="/vendor" dev="rootfs" ino=9076 scontext=u:r:keystore:s0 tcontext=u:object_r:rootfs:s0 tclass=lnk_file
+[32m[   10.900550] [0m[33mtype=1400 audit(13.799:25)[0m: avc: granted { getattr } for pid=1819 comm="keystore" path="/vendor" dev="rootfs" ino=9076 scontext=u:r:keystore:s0 tcontext=u:object_r:rootfs:s0 tclass=lnk_file
+[32m[   10.919011] [0m[33mtype=1400 audit(13.819:26)[0m: avc: granted { getattr } for pid=1824 comm="netd" path="/vendor" dev="rootfs" ino=9076 scontext=u:r:netd:s0 tcontext=u:object_r:rootfs:s0 tclass=lnk_file
+[32m[   10.936959] [0m[33mtype=1400 audit(13.819:26)[0m: avc: granted { getattr } for pid=1824 comm="netd" path="/vendor" dev="rootfs" ino=9076 scontext=u:r:netd:s0 tcontext=u:object_r:rootfs:s0 tclass=lnk_file
+[32m[   10.954878] [0m[33mtype=1400 audit(13.983:27)[0m: avc: granted { getattr } for pid=1848 comm="iptables" path="/vendor" dev="rootfs" ino=9076 scontext=u:r:netd:s0 tcontext=u:object_r:rootfs:s0 tclass=lnk_file
+[32m[   10.973516] [0m[33mtype=1400 audit(13.983:27)[0m: avc: granted { getattr } for pid=1848 comm="iptables" path="/vendor" dev="rootfs" ino=9076 scontext=u:r:netd:s0 tcontext=u:object_r:rootfs:s0 tclass=lnk_file
+[32m[   10.991710] [0m[33mtype=1400 audit(14.043:28)[0m: avc: granted { getattr } for pid=1860 comm="ip6tables" path="/vendor" dev="rootfs" ino=9076 scontext=u:r:netd:s0 tcontext=u:object_r:rootfs:s0 tclass=lnk_file
+[32m[   11.006772] [0m[33mcfg80211[0m: Timeout while waiting for CRDA to reply, restoring regulatory settings
+[32m[   11.006782] [0m[33mcfg80211[0m: Restoring regulatory settings
+[32m[   11.006802] [0m[33mcfg80211[0m: Kicking the queue
+[32m[   11.011417] [0m[33mtype=1400 audit(14.043:28)[0m: avc: granted { getattr } for pid=1860 comm="ip6tables" path="/vendor" dev="rootfs" ino=9076 scontext=u:r:netd:s0 tcontext=u:object_r:rootfs:s0 tclass=lnk_file
+[32m[   11.029454] [0m[33mtype=1400 audit(14.095:29)[0m: avc: granted { getattr } for pid=1869 comm="iptables" path="/vendor" dev="rootfs" ino=9076 scontext=u:r:netd:s0 tcontext=u:object_r:rootfs:s0 tclass=lnk_file
+[32m[   11.047690] [0m[33mtype=1400 audit(14.095:29)[0m: avc: granted { getattr } for pid=1869 comm="iptables" path="/vendor" dev="rootfs" ino=9076 scontext=u:r:netd:s0 tcontext=u:object_r:rootfs:s0 tclass=lnk_file
+[32m[   11.065583] [0m[33mtype=1400 audit(14.111:30)[0m: avc: granted { getattr } for pid=1871 comm="ip6tables" path="/vendor" dev="rootfs" ino=9076 scontext=u:r:netd:s0 tcontext=u:object_r:rootfs:s0 tclass=lnk_file
+[32m[   11.083947] [0m[33mtype=1400 audit(14.111:30)[0m: avc: granted { getattr } for pid=1871 comm="ip6tables" path="/vendor" dev="rootfs" ino=9076 scontext=u:r:netd:s0 tcontext=u:object_r:rootfs:s0 tclass=lnk_file
+[32m[   11.101901] [0m[33mtype=1400 audit(14.131:31)[0m: avc: granted { getattr } for pid=1874 comm="iptables" path="/vendor" dev="rootfs" ino=9076 scontext=u:r:netd:s0 tcontext=u:object_r:rootfs:s0 tclass=lnk_file
+[32m[   11.120140] [0m[33mtype=1400 audit(14.131:31)[0m: avc: granted { getattr } for pid=1874 comm="iptables" path="/vendor" dev="rootfs" ino=9076 scontext=u:r:netd:s0 tcontext=u:object_r:rootfs:s0 tclass=lnk_file
+[32m[   11.138014] [0m[33mtype=1400 audit(14.147:32)[0m: avc: granted { getattr } for pid=1877 comm="ip6tables" path="/vendor" dev="rootfs" ino=9076 scontext=u:r:netd:s0 tcontext=u:object_r:rootfs:s0 tclass=lnk_file
+[32m[   11.156379] [0m[33mtype=1400 audit(14.147:32)[0m: avc: granted { getattr } for pid=1877 comm="ip6tables" path="/vendor" dev="rootfs" ino=9076 scontext=u:r:netd:s0 tcontext=u:object_r:rootfs:s0 tclass=lnk_file
+[32m[   11.174347] [0m[33mtype=1400 audit(14.159:33)[0m: avc: granted { getattr } for pid=1879 comm="iptables" path="/vendor" dev="rootfs" ino=9076 scontext=u:r:netd:s0 tcontext=u:object_r:rootfs:s0 tclass=lnk_file
+[32m[   11.192608] [0m[33mtype=1400 audit(14.159:33)[0m: avc: granted { getattr } for pid=1879 comm="iptables" path="/vendor" dev="rootfs" ino=9076 scontext=u:r:netd:s0 tcontext=u:object_r:rootfs:s0 tclass=lnk_file
+[32m[   11.210457] [0m[33mtype=1400 audit(14.175:34)[0m: avc: granted { getattr } for pid=1881 comm="ip6tables" path="/vendor" dev="rootfs" ino=9076 scontext=u:r:netd:s0 tcontext=u:object_r:rootfs:s0 tclass=lnk_file
+[32m[   11.228808] [0m[33mtype=1400 audit(14.175:34)[0m: avc: granted { getattr } for pid=1881 comm="ip6tables" path="/vendor" dev="rootfs" ino=9076 scontext=u:r:netd:s0 tcontext=u:object_r:rootfs:s0 tclass=lnk_file
+[32m[   11.246787] [0m[33mtype=1400 audit(14.187:35)[0m: avc: granted { read } for pid=1811 comm="uim" name="install" dev="sysfs" ino=10022 scontext=u:r:hci_attach:s0 tcontext=u:object_r:sysfs:s0 tclass=file
+[32m[   11.264308] [0m[33mtype=1400 audit(14.187:35)[0m: avc: granted { read } for pid=1811 comm="uim" name="install" dev="sysfs" ino=10022 scontext=u:r:hci_attach:s0 tcontext=u:object_r:sysfs:s0 tclass=file
+[32m[   11.281593] [0m[33mtype=1400 audit(14.187:36)[0m: avc: granted { read open } for pid=1811 comm="uim" path="/sys/devices/platform/kim/install" dev="sysfs" ino=10022 scontext=u:r:hci_attach:s0 tcontext=u:object_r:sysfs:s0 tclass=file
+[32m[   11.301810] [0m[33mtype=1400 audit(14.187:36)[0m: avc: granted { read open } for pid=1811 comm="uim" path="/sys/devices/platform/kim/install" dev="sysfs" ino=10022 scontext=u:r:hci_attach:s0 tcontext=u:object_r:sysfs:s0 tclass=file
+[32m[   11.321755] [0m[33mtype=1400 audit(14.187:37)[0m: avc: granted { read } for pid=1811 comm="uim" name="dev_name" dev="sysfs" ino=10023 scontext=u:r:hci_attach:s0 tcontext=u:object_r:sysfs:s0 tclass=file
+[32m[   11.339279] [0m[33mtype=1400 audit(14.187:37)[0m: avc: granted { read } for pid=1811 comm="uim" name="dev_name" dev="sysfs" ino=10023 scontext=u:r:hci_attach:s0 tcontext=u:object_r:sysfs:s0 tclass=file
+[32m[   11.356591] [0m[33mtype=1400 audit(14.187:38)[0m: avc: granted { read open } for pid=1811 comm="uim" path="/sys/devices/platform/kim/dev_name" dev="sysfs" ino=10023 scontext=u:r:hci_attach:s0 tcontext=u:object_r:sysfs:s0 tclass=file
+[32m[   11.376839] [0m[33mtype=1400 audit(14.187:38)[0m: avc: granted { read open } for pid=1811 comm="uim" path="/sys/devices/platform/kim/dev_name" dev="sysfs" ino=10023 scontext=u:r:hci_attach:s0 tcontext=u:object_r:sysfs:s0 tclass=file
+[32m[   11.396978] [0m[33mtype=1400 audit(14.187:39)[0m: avc: granted { read } for pid=1811 comm="uim" name="baud_rate" dev="sysfs" ino=10024 scontext=u:r:hci_attach:s0 tcontext=u:object_r:sysfs:s0 tclass=file
+[32m[   11.414895] [0m[33mtype=1400 audit(14.187:39)[0m: avc: granted { read } for pid=1811 comm="uim" name="baud_rate" dev="sysfs" ino=10024 scontext=u:r:hci_attach:s0 tcontext=u:object_r:sysfs:s0 tclass=file
+[32m[   11.432309] [0m[33mtype=1400 audit(14.187:40)[0m: avc: granted { read open } for pid=1811 comm="uim" path="/sys/devices/platform/kim/baud_rate" dev="sysfs" ino=10024 scontext=u:r:hci_attach:s0 tcontext=u:object_r:sysfs:s0 tclass=file
+[32m[   11.432486] [0m[33mtype=1400 audit(14.187:40)[0m: avc: granted { read open } for pid=1811 comm="uim" path="/sys/devices/platform/kim/baud_rate" dev="sysfs" ino=10024 scontext=u:r:hci_attach:s0 tcontext=u:object_r:sysfs:s0 tclass=file
+[32m[   11.432494] [0m[33mtype=1400 audit(14.187:41)[0m: avc: granted { read } for pid=1811 comm="uim" name="flow_cntrl" dev="sysfs" ino=10025 scontext=u:r:hci_attach:s0 tcontext=u:object_r:sysfs:s0 tclass=file
+[32m[   11.432574] [0m[33mtype=1400 audit(14.187:41)[0m: avc: granted { read } for pid=1811 comm="uim" name="flow_cntrl" dev="sysfs" ino=10025 scontext=u:r:hci_attach:s0 tcontext=u:object_r:sysfs:s0 tclass=file
+[32m[   11.432582] [0m[33mtype=1400 audit(14.187:42)[0m: avc: granted { read open } for pid=1811 comm="uim" path="/sys/devices/platform/kim/flow_cntrl" dev="sysfs" ino=10025 scontext=u:r:hci_attach:s0 tcontext=u:object_r:sysfs:s0 tclass=file
+[32m[   11.432659] [0m[33mtype=1400 audit(14.187:42)[0m: avc: granted { read open } for pid=1811 comm="uim" path="/sys/devices/platform/kim/flow_cntrl" dev="sysfs" ino=10025 scontext=u:r:hci_attach:s0 tcontext=u:object_r:sysfs:s0 tclass=file
+[32m[   11.432666] [0m[33mtype=1400 audit(14.191:43)[0m: avc: granted { getattr } for pid=1882 comm="iptables" path="/vendor" dev="rootfs" ino=9076 scontext=u:r:netd:s0 tcontext=u:object_r:rootfs:s0 tclass=lnk_file
+[32m[   11.432937] [0m[33mtype=1400 audit(14.191:43)[0m: avc: granted { getattr } for pid=1882 comm="iptables" path="/vendor" dev="rootfs" ino=9076 scontext=u:r:netd:s0 tcontext=u:object_r:rootfs:s0 tclass=lnk_file
+[32m[   11.432945] [0m[33mtype=1400 audit(14.807:90)[0m: avc: granted { getattr } for pid=1930 comm="iptables" path="/vendor" dev="rootfs" ino=9076 scontext=u:r:netd:s0 tcontext=u:object_r:rootfs:s0 tclass=lnk_file
+[32m[   11.433167] [0m[33mtype=1400 audit(14.807:90)[0m: avc: granted { getattr } for pid=1930 comm="iptables" path="/vendor" dev="rootfs" ino=9076 scontext=u:r:netd:s0 tcontext=u:object_r:rootfs:s0 tclass=lnk_file
+[32m[   11.433175] [0m[33mtype=1400 audit(14.819:91)[0m: avc: granted { getattr } for pid=1931 comm="ip6tables" path="/vendor" dev="rootfs" ino=9076 scontext=u:r:netd:s0 tcontext=u:object_r:rootfs:s0 tclass=lnk_file
+[32m[   11.433434] [0m[33mtype=1400 audit(14.819:91)[0m: avc: granted { getattr } for pid=1931 comm="ip6tables" path="/vendor" dev="rootfs" ino=9076 scontext=u:r:netd:s0 tcontext=u:object_r:rootfs:s0 tclass=lnk_file
+[32m[   11.433442] [0m[33mtype=1400 audit(14.831:92)[0m: avc: granted { getattr } for pid=1932 comm="iptables" path="/vendor" dev="rootfs" ino=9076 scontext=u:r:netd:s0 tcontext=u:object_r:rootfs:s0 tclass=lnk_file
+[32m[   11.433661] [0m[33mtype=1400 audit(14.831:92)[0m: avc: granted { getattr } for pid=1932 comm="iptables" path="/vendor" dev="rootfs" ino=9076 scontext=u:r:netd:s0 tcontext=u:object_r:rootfs:s0 tclass=lnk_file
+[32m[   11.433670] [0m[33mtype=1400 audit(14.847:93)[0m: avc: granted { getattr } for pid=1933 comm="ip6tables" path="/vendor" dev="rootfs" ino=9076 scontext=u:r:netd:s0 tcontext=u:object_r:rootfs:s0 tclass=lnk_file
+[32m[   11.433893] [0m[33mtype=1400 audit(14.847:93)[0m: avc: granted { getattr } for pid=1933 comm="ip6tables" path="/vendor" dev="rootfs" ino=9076 scontext=u:r:netd:s0 tcontext=u:object_r:rootfs:s0 tclass=lnk_file
+[32m[   11.433901] [0m[33mtype=1400 audit(14.859:94)[0m: avc: granted { getattr } for pid=1934 comm="iptables" path="/vendor" dev="rootfs" ino=9076 scontext=u:r:netd:s0 tcontext=u:object_r:rootfs:s0 tclass=lnk_file
+[32m[   11.434138] [0m[33mtype=1400 audit(14.859:94)[0m: avc: granted { getattr } for pid=1934 comm="iptables" path="/vendor" dev="rootfs" ino=9076 scontext=u:r:netd:s0 tcontext=u:object_r:rootfs:s0 tclass=lnk_file
+[32m[   11.434146] [0m[33mtype=1400 audit(14.871:95)[0m: avc: granted { getattr } for pid=1935 comm="ip6tables" path="/vendor" dev="rootfs" ino=9076 scontext=u:r:netd:s0 tcontext=u:object_r:rootfs:s0 tclass=lnk_file
+[32m[   11.434365] [0m[33mtype=1400 audit(14.871:95)[0m: avc: granted { getattr } for pid=1935 comm="ip6tables" path="/vendor" dev="rootfs" ino=9076 scontext=u:r:netd:s0 tcontext=u:object_r:rootfs:s0 tclass=lnk_file
+[32m[   11.434373] [0m[33mtype=1400 audit(14.887:96)[0m: avc: granted { getattr } for pid=1936 comm="iptables" path="/vendor" dev="rootfs" ino=9076 scontext=u:r:netd:s0 tcontext=u:object_r:rootfs:s0 tclass=lnk_file
+[32m[   11.434633] [0m[33mtype=1400 audit(14.887:96)[0m: avc: granted { getattr } for pid=1936 comm="iptables" path="/vendor" dev="rootfs" ino=9076 scontext=u:r:netd:s0 tcontext=u:object_r:rootfs:s0 tclass=lnk_file
+[32m[   11.434641] [0m[33mtype=1400 audit(14.899:97)[0m: avc: granted { getattr } for pid=1937 comm="ip6tables" path="/vendor" dev="rootfs" ino=9076 scontext=u:r:netd:s0 tcontext=u:object_r:rootfs:s0 tclass=lnk_file
+[32m[   11.435199] [0m[33mtype=1400 audit(14.899:97)[0m: avc: granted { getattr } for pid=1937 comm="ip6tables" path="/vendor" dev="rootfs" ino=9076 scontext=u:r:netd:s0 tcontext=u:object_r:rootfs:s0 tclass=lnk_file
+[32m[   11.435208] [0m[33mtype=1400 audit(14.915:98)[0m: avc: granted { getattr } for pid=1938 comm="iptables" path="/vendor" dev="rootfs" ino=9076 scontext=u:r:netd:s0 tcontext=u:object_r:rootfs:s0 tclass=lnk_file
+[32m[   11.435445] [0m[33mtype=1400 audit(14.915:98)[0m: avc: granted { getattr } for pid=1938 comm="iptables" path="/vendor" dev="rootfs" ino=9076 scontext=u:r:netd:s0 tcontext=u:object_r:rootfs:s0 tclass=lnk_file
+[32m[   11.435453] [0m[33mtype=1400 audit(14.931:99)[0m: avc: granted { getattr } for pid=1939 comm="ip6tables" path="/vendor" dev="rootfs" ino=9076 scontext=u:r:netd:s0 tcontext=u:object_r:rootfs:s0 tclass=lnk_file
+[32m[   11.435687] [0m[33mtype=1400 audit(14.931:99)[0m: avc: granted { getattr } for pid=1939 comm="ip6tables" path="/vendor" dev="rootfs" ino=9076 scontext=u:r:netd:s0 tcontext=u:object_r:rootfs:s0 tclass=lnk_file
+[32m[   11.435695] [0m[33mtype=1400 audit(14.947:100)[0m: avc: granted { getattr } for pid=1940 comm="iptables" path="/vendor" dev="rootfs" ino=9076 scontext=u:r:netd:s0 tcontext=u:object_r:rootfs:s0 tclass=lnk_file
+[32m[   11.435916] [0m[33mtype=1400 audit(14.947:100)[0m: avc: granted { getattr } for pid=1940 comm="iptables" path="/vendor" dev="rootfs" ino=9076 scontext=u:r:netd:s0 tcontext=u:object_r:rootfs:s0 tclass=lnk_file
+[32m[   11.435924] [0m[33mtype=1400 audit(14.959:101)[0m: avc: granted { getattr } for pid=1942 comm="ip6tables" path="/vendor" dev="rootfs" ino=9076 scontext=u:r:netd:s0 tcontext=u:object_r:rootfs:s0 tclass=lnk_file
+[32m[   11.436172] [0m[33mtype=1400 audit(14.959:101)[0m: avc: granted { getattr } for pid=1942 comm="ip6tables" path="/vendor" dev="rootfs" ino=9076 scontext=u:r:netd:s0 tcontext=u:object_r:rootfs:s0 tclass=lnk_file
+[32m[   11.436180] [0m[33mtype=1400 audit(14.975:102)[0m: avc: granted { getattr } for pid=1943 comm="iptables" path="/vendor" dev="rootfs" ino=9076 scontext=u:r:netd:s0 tcontext=u:object_r:rootfs:s0 tclass=lnk_file
+[32m[   11.436418] [0m[33mtype=1400 audit(14.975:102)[0m: avc: granted { getattr } for pid=1943 comm="iptables" path="/vendor" dev="rootfs" ino=9076 scontext=u:r:netd:s0 tcontext=u:object_r:rootfs:s0 tclass=lnk_file
+[32m[   11.436425] [0m[33mtype=1400 audit(14.991:103)[0m: avc: granted { getattr } for pid=1944 comm="ip6tables" path="/vendor" dev="rootfs" ino=9076 scontext=u:r:netd:s0 tcontext=u:object_r:rootfs:s0 tclass=lnk_file
+[32m[   11.436652] [0m[33mtype=1400 audit(14.991:103)[0m: avc: granted { getattr } for pid=1944 comm="ip6tables" path="/vendor" dev="rootfs" ino=9076 scontext=u:r:netd:s0 tcontext=u:object_r:rootfs:s0 tclass=lnk_file
+[32m[   11.436660] [0m[33mtype=1400 audit(15.007:104)[0m: avc: granted { getattr } for pid=1948 comm="iptables" path="/vendor" dev="rootfs" ino=9076 scontext=u:r:netd:s0 tcontext=u:object_r:rootfs:s0 tclass=lnk_file
+[32m[   11.436908] [0m[33mtype=1400 audit(15.007:104)[0m: avc: granted { getattr } for pid=1948 comm="iptables" path="/vendor" dev="rootfs" ino=9076 scontext=u:r:netd:s0 tcontext=u:object_r:rootfs:s0 tclass=lnk_file
+[32m[   11.436916] [0m[33mtype=1400 audit(15.027:105)[0m: avc: granted { getattr } for pid=1949 comm="ip6tables" path="/vendor" dev="rootfs" ino=9076 scontext=u:r:netd:s0 tcontext=u:object_r:rootfs:s0 tclass=lnk_file
+[32m[   11.437140] [0m[33mtype=1400 audit(15.027:105)[0m: avc: granted { getattr } for pid=1949 comm="ip6tables" path="/vendor" dev="rootfs" ino=9076 scontext=u:r:netd:s0 tcontext=u:object_r:rootfs:s0 tclass=lnk_file
+[32m[   11.437148] [0m[33mtype=1400 audit(15.043:106)[0m: avc: granted { getattr } for pid=1950 comm="iptables" path="/vendor" dev="rootfs" ino=9076 scontext=u:r:netd:s0 tcontext=u:object_r:rootfs:s0 tclass=lnk_file
+[32m[   11.437363] [0m[33mtype=1400 audit(15.043:106)[0m: avc: granted { getattr } for pid=1950 comm="iptables" path="/vendor" dev="rootfs" ino=9076 scontext=u:r:netd:s0 tcontext=u:object_r:rootfs:s0 tclass=lnk_file
+[32m[   11.437372] [0m[33mtype=1400 audit(15.055:107)[0m: avc: granted { getattr } for pid=1951 comm="ip6tables" path="/vendor" dev="rootfs" ino=9076 scontext=u:r:netd:s0 tcontext=u:object_r:rootfs:s0 tclass=lnk_file
+[32m[   11.452923] [0m[33mtype=1400 audit(15.055:107)[0m: avc: granted { getattr } for pid=1951 comm="ip6tables" path="/vendor" dev="rootfs" ino=9076 scontext=u:r:netd:s0 tcontext=u:object_r:rootfs:s0 tclass=lnk_file
+[32m[   11.452943] [0m[33mtype=1400 audit(15.071:108)[0m: avc: granted { getattr } for pid=1952 comm="iptables" path="/vendor" dev="rootfs" ino=9076 scontext=u:r:netd:s0 tcontext=u:object_r:rootfs:s0 tclass=lnk_file
+[32m[   11.456583] [0m[33mtype=1400 audit(15.071:108)[0m: avc: granted { getattr } for pid=1952 comm="iptables" path="/vendor" dev="rootfs" ino=9076 scontext=u:r:netd:s0 tcontext=u:object_r:rootfs:s0 tclass=lnk_file
+[32m[   11.456597] [0m[33mtype=1400 audit(15.087:109)[0m: avc: granted { getattr } for pid=1953 comm="ip6tables" path="/vendor" dev="rootfs" ino=9076 scontext=u:r:netd:s0 tcontext=u:object_r:rootfs:s0 tclass=lnk_file
+[32m[   11.588146] [0m[33maudit[0m: audit_lost=55 audit_rate_limit=20 audit_backlog_limit=64
+[32m[   11.588153] [0m[33maudit[0m[31m: rate limit exceeded[0m
+[32m[   11.696838] [0m[33m(stc)[0m: add_channel_to_table: id 4
+[32m[   11.696844] [0m[33m(stc)[0m: add_channel_to_table: id 2
+[32m[   11.696847] [0m[33m(stc)[0m: add_channel_to_table: id 3
+[32m[   12.187971] [0m[33mtype=1400 audit(15.087:109)[0m: avc: granted { getattr } for pid=1953 comm="ip6tables" path="/vendor" dev="rootfs" ino=9076 scontext=u:r:netd:s0 tcontext=u:object_r:rootfs:s0 tclass=lnk_file
+[32m[   12.187982] [0m[33mtype=1400 audit(15.819:163)[0m: avc: granted { getattr } for pid=2010 comm="ip6tables" path="/vendor" dev="rootfs" ino=9076 scontext=u:r:netd:s0 tcontext=u:object_r:rootfs:s0 tclass=lnk_file
+[32m[   12.201578] [0m[33mtype=1400 audit(15.819:163)[0m: avc: granted { getattr } for pid=2010 comm="ip6tables" path="/vendor" dev="rootfs" ino=9076 scontext=u:r:netd:s0 tcontext=u:object_r:rootfs:s0 tclass=lnk_file
+[32m[   12.201590] [0m[33mtype=1400 audit(15.831:164)[0m: avc: granted { getattr } for pid=2011 comm="iptables" path="/vendor" dev="rootfs" ino=9076 scontext=u:r:netd:s0 tcontext=u:object_r:rootfs:s0 tclass=lnk_file
+[32m[   12.215169] [0m[33mtype=1400 audit(15.831:164)[0m: avc: granted { getattr } for pid=2011 comm="iptables" path="/vendor" dev="rootfs" ino=9076 scontext=u:r:netd:s0 tcontext=u:object_r:rootfs:s0 tclass=lnk_file
+[32m[   12.215178] [0m[33mtype=1400 audit(15.847:165)[0m: avc: granted { getattr } for pid=2013 comm="ip6tables" path="/vendor" dev="rootfs" ino=9076 scontext=u:r:netd:s0 tcontext=u:object_r:rootfs:s0 tclass=lnk_file
+[32m[   12.276124] [0m[33mtype=1400 audit(15.847:165)[0m: avc: granted { getattr } for pid=2013 comm="ip6tables" path="/vendor" dev="rootfs" ino=9076 scontext=u:r:netd:s0 tcontext=u:object_r:rootfs:s0 tclass=lnk_file
+[32m[   12.276134] [0m[33mtype=1400 audit(15.907:166)[0m: avc: granted { getattr } for pid=2014 comm="iptables" path="/vendor" dev="rootfs" ino=9076 scontext=u:r:netd:s0 tcontext=u:object_r:rootfs:s0 tclass=lnk_file
+[32m[   12.288967] [0m[33mtype=1400 audit(15.907:166)[0m: avc: granted { getattr } for pid=2014 comm="iptables" path="/vendor" dev="rootfs" ino=9076 scontext=u:r:netd:s0 tcontext=u:object_r:rootfs:s0 tclass=lnk_file
+[32m[   12.288978] [0m[33mtype=1400 audit(15.919:167)[0m: avc: granted { getattr } for pid=2015 comm="ip6tables" path="/vendor" dev="rootfs" ino=9076 scontext=u:r:netd:s0 tcontext=u:object_r:rootfs:s0 tclass=lnk_file
+[32m[   12.302058] [0m[33mtype=1400 audit(15.919:167)[0m: avc: granted { getattr } for pid=2015 comm="ip6tables" path="/vendor" dev="rootfs" ino=9076 scontext=u:r:netd:s0 tcontext=u:object_r:rootfs:s0 tclass=lnk_file
+[32m[   12.302069] [0m[33mtype=1400 audit(15.931:168)[0m: avc: granted { getattr } for pid=2016 comm="iptables" path="/vendor" dev="rootfs" ino=9076 scontext=u:r:netd:s0 tcontext=u:object_r:rootfs:s0 tclass=lnk_file
+[32m[   12.314946] [0m[33mtype=1400 audit(15.931:168)[0m: avc: granted { getattr } for pid=2016 comm="iptables" path="/vendor" dev="rootfs" ino=9076 scontext=u:r:netd:s0 tcontext=u:object_r:rootfs:s0 tclass=lnk_file
+[32m[   12.314957] [0m[33mtype=1400 audit(15.943:169)[0m: avc: granted { getattr } for pid=2017 comm="ip6tables" path="/vendor" dev="rootfs" ino=9076 scontext=u:r:netd:s0 tcontext=u:object_r:rootfs:s0 tclass=lnk_file
+[32m[   12.379577] [0m[33mtype=1400 audit(15.943:169)[0m: avc: granted { getattr } for pid=2017 comm="ip6tables" path="/vendor" dev="rootfs" ino=9076 scontext=u:r:netd:s0 tcontext=u:object_r:rootfs:s0 tclass=lnk_file
+[32m[   12.379589] [0m[33mtype=1400 audit(16.011:170)[0m: avc: granted { getattr } for pid=2018 comm="iptables" path="/vendor" dev="rootfs" ino=9076 scontext=u:r:netd:s0 tcontext=u:object_r:rootfs:s0 tclass=lnk_file
+[32m[   12.393579] [0m[33mtype=1400 audit(16.011:170)[0m: avc: granted { getattr } for pid=2018 comm="iptables" path="/vendor" dev="rootfs" ino=9076 scontext=u:r:netd:s0 tcontext=u:object_r:rootfs:s0 tclass=lnk_file
+[32m[   12.393590] [0m[33mtype=1400 audit(16.023:171)[0m: avc: granted { getattr } for pid=2019 comm="ip6tables" path="/vendor" dev="rootfs" ino=9076 scontext=u:r:netd:s0 tcontext=u:object_r:rootfs:s0 tclass=lnk_file
+[32m[   12.406325] [0m[33mtype=1400 audit(16.023:171)[0m: avc: granted { getattr } for pid=2019 comm="ip6tables" path="/vendor" dev="rootfs" ino=9076 scontext=u:r:netd:s0 tcontext=u:object_r:rootfs:s0 tclass=lnk_file
+[32m[   12.406337] [0m[33mtype=1400 audit(16.035:172)[0m: avc: granted { getattr } for pid=2020 comm="iptables" path="/vendor" dev="rootfs" ino=9076 scontext=u:r:netd:s0 tcontext=u:object_r:rootfs:s0 tclass=lnk_file
+[32m[   12.419100] [0m[33mtype=1400 audit(16.035:172)[0m: avc: granted { getattr } for pid=2020 comm="iptables" path="/vendor" dev="rootfs" ino=9076 scontext=u:r:netd:s0 tcontext=u:object_r:rootfs:s0 tclass=lnk_file
+[32m[   12.419111] [0m[33mtype=1400 audit(16.051:173)[0m: avc: granted { getattr } for pid=2021 comm="ip6tables" path="/vendor" dev="rootfs" ino=9076 scontext=u:r:netd:s0 tcontext=u:object_r:rootfs:s0 tclass=lnk_file
+[32m[   12.431880] [0m[33mtype=1400 audit(16.051:173)[0m: avc: granted { getattr } for pid=2021 comm="ip6tables" path="/vendor" dev="rootfs" ino=9076 scontext=u:r:netd:s0 tcontext=u:object_r:rootfs:s0 tclass=lnk_file
+[32m[   12.431891] [0m[33mtype=1400 audit(16.063:174)[0m: avc: granted { getattr } for pid=2022 comm="iptables" path="/vendor" dev="rootfs" ino=9076 scontext=u:r:netd:s0 tcontext=u:object_r:rootfs:s0 tclass=lnk_file
+[32m[   12.444804] [0m[33mtype=1400 audit(16.063:174)[0m: avc: granted { getattr } for pid=2022 comm="iptables" path="/vendor" dev="rootfs" ino=9076 scontext=u:r:netd:s0 tcontext=u:object_r:rootfs:s0 tclass=lnk_file
+[32m[   12.444816] [0m[33mtype=1400 audit(16.075:175)[0m: avc: granted { getattr } for pid=2023 comm="ip6tables" path="/vendor" dev="rootfs" ino=9076 scontext=u:r:netd:s0 tcontext=u:object_r:rootfs:s0 tclass=lnk_file
+[32m[   12.458018] [0m[33mtype=1400 audit(16.075:175)[0m: avc: granted { getattr } for pid=2023 comm="ip6tables" path="/vendor" dev="rootfs" ino=9076 scontext=u:r:netd:s0 tcontext=u:object_r:rootfs:s0 tclass=lnk_file
+[32m[   12.458029] [0m[33mtype=1400 audit(16.087:176)[0m: avc: granted { getattr } for pid=2024 comm="iptables" path="/vendor" dev="rootfs" ino=9076 scontext=u:r:netd:s0 tcontext=u:object_r:rootfs:s0 tclass=lnk_file
+[32m[   12.471266] [0m[33mtype=1400 audit(16.087:176)[0m: avc: granted { getattr } for pid=2024 comm="iptables" path="/vendor" dev="rootfs" ino=9076 scontext=u:r:netd:s0 tcontext=u:object_r:rootfs:s0 tclass=lnk_file
+[32m[   12.471278] [0m[33mtype=1400 audit(16.099:177)[0m: avc: granted { getattr } for pid=2025 comm="ip6tables" path="/vendor" dev="rootfs" ino=9076 scontext=u:r:netd:s0 tcontext=u:object_r:rootfs:s0 tclass=lnk_file
+[32m[   12.533726] [0m[33mtype=1400 audit(16.099:177)[0m: avc: granted { getattr } for pid=2025 comm="ip6tables" path="/vendor" dev="rootfs" ino=9076 scontext=u:r:netd:s0 tcontext=u:object_r:rootfs:s0 tclass=lnk_file
+[32m[   12.533737] [0m[33mtype=1400 audit(16.163:178)[0m: avc: granted { getattr } for pid=2026 comm="iptables" path="/vendor" dev="rootfs" ino=9076 scontext=u:r:netd:s0 tcontext=u:object_r:rootfs:s0 tclass=lnk_file
+[32m[   12.546747] [0m[33mtype=1400 audit(16.163:178)[0m: avc: granted { getattr } for pid=2026 comm="iptables" path="/vendor" dev="rootfs" ino=9076 scontext=u:r:netd:s0 tcontext=u:object_r:rootfs:s0 tclass=lnk_file
+[32m[   12.546759] [0m[33mtype=1400 audit(16.175:179)[0m: avc: granted { getattr } for pid=2027 comm="ip6tables" path="/vendor" dev="rootfs" ino=9076 scontext=u:r:netd:s0 tcontext=u:object_r:rootfs:s0 tclass=lnk_file
+[32m[   12.605166] [0m[33mtype=1400 audit(16.175:179)[0m: avc: granted { getattr } for pid=2027 comm="ip6tables" path="/vendor" dev="rootfs" ino=9076 scontext=u:r:netd:s0 tcontext=u:object_r:rootfs:s0 tclass=lnk_file
+[32m[   12.605178] [0m[33mtype=1400 audit(16.235:180)[0m: avc: granted { getattr } for pid=2028 comm="iptables" path="/vendor" dev="rootfs" ino=9076 scontext=u:r:netd:s0 tcontext=u:object_r:rootfs:s0 tclass=lnk_file
+[32m[   12.617992] [0m[33mtype=1400 audit(16.235:180)[0m: avc: granted { getattr } for pid=2028 comm="iptables" path="/vendor" dev="rootfs" ino=9076 scontext=u:r:netd:s0 tcontext=u:object_r:rootfs:s0 tclass=lnk_file
+[32m[   12.618003] [0m[33mtype=1400 audit(16.247:181)[0m: avc: granted { getattr } for pid=2029 comm="ip6tables" path="/vendor" dev="rootfs" ino=9076 scontext=u:r:netd:s0 tcontext=u:object_r:rootfs:s0 tclass=lnk_file
+[32m[   12.630976] [0m[33mtype=1400 audit(16.247:181)[0m: avc: granted { getattr } for pid=2029 comm="ip6tables" path="/vendor" dev="rootfs" ino=9076 scontext=u:r:netd:s0 tcontext=u:object_r:rootfs:s0 tclass=lnk_file
+[32m[   12.630988] [0m[33mtype=1400 audit(16.259:182)[0m: avc: granted { getattr } for pid=2030 comm="iptables" path="/vendor" dev="rootfs" ino=9076 scontext=u:r:netd:s0 tcontext=u:object_r:rootfs:s0 tclass=lnk_file
+[32m[   12.643404] [0m[33maudit[0m: audit_lost=100 audit_rate_limit=20 audit_backlog_limit=64
+[32m[   12.643410] [0m[33maudit[0m[31m: rate limit exceeded[0m
+[32m[   13.194488] [0m[33mtype=1400 audit(16.259:182)[0m: avc: granted { getattr } for pid=2030 comm="iptables" path="/vendor" dev="rootfs" ino=9076 scontext=u:r:netd:s0 tcontext=u:object_r:rootfs:s0 tclass=lnk_file
+[32m[   13.212784] [0m[33mtype=1400 audit(16.823:224)[0m: avc: granted { getattr } for pid=2072 comm="ip6tables" path="/vendor" dev="rootfs" ino=9076 scontext=u:r:netd:s0 tcontext=u:object_r:rootfs:s0 tclass=lnk_file
+[32m[   13.231244] [0m[33mtype=1400 audit(16.823:224)[0m: avc: granted { getattr } for pid=2072 comm="ip6tables" path="/vendor" dev="rootfs" ino=9076 scontext=u:r:netd:s0 tcontext=u:object_r:rootfs:s0 tclass=lnk_file
+[32m[   13.249346] [0m[33mtype=1400 audit(16.839:225)[0m: avc: granted { getattr } for pid=2073 comm="iptables" path="/vendor" dev="rootfs" ino=9076 scontext=u:r:netd:s0 tcontext=u:object_r:rootfs:s0 tclass=lnk_file
+[32m[   13.268991] [0m[33mtype=1400 audit(16.839:225)[0m: avc: granted { getattr } for pid=2073 comm="iptables" path="/vendor" dev="rootfs" ino=9076 scontext=u:r:netd:s0 tcontext=u:object_r:rootfs:s0 tclass=lnk_file
+[32m[   13.287113] [0m[33mtype=1400 audit(16.855:226)[0m: avc: granted { getattr } for pid=2074 comm="ip6tables" path="/vendor" dev="rootfs" ino=9076 scontext=u:r:netd:s0 tcontext=u:object_r:rootfs:s0 tclass=lnk_file
+[32m[   13.287451] [0m[33mtype=1400 audit(16.855:226)[0m: avc: granted { getattr } for pid=2074 comm="ip6tables" path="/vendor" dev="rootfs" ino=9076 scontext=u:r:netd:s0 tcontext=u:object_r:rootfs:s0 tclass=lnk_file
+[32m[   13.287459] [0m[33mtype=1400 audit(16.867:227)[0m: avc: granted { getattr } for pid=2075 comm="iptables" path="/vendor" dev="rootfs" ino=9076 scontext=u:r:netd:s0 tcontext=u:object_r:rootfs:s0 tclass=lnk_file
+[32m[   13.287700] [0m[33mtype=1400 audit(16.867:227)[0m: avc: granted { getattr } for pid=2075 comm="iptables" path="/vendor" dev="rootfs" ino=9076 scontext=u:r:netd:s0 tcontext=u:object_r:rootfs:s0 tclass=lnk_file
+[32m[   13.287709] [0m[33mtype=1400 audit(16.883:228)[0m: avc: granted { getattr } for pid=2076 comm="ip6tables" path="/vendor" dev="rootfs" ino=9076 scontext=u:r:netd:s0 tcontext=u:object_r:rootfs:s0 tclass=lnk_file
+[32m[   13.287947] [0m[33mtype=1400 audit(16.883:228)[0m: avc: granted { getattr } for pid=2076 comm="ip6tables" path="/vendor" dev="rootfs" ino=9076 scontext=u:r:netd:s0 tcontext=u:object_r:rootfs:s0 tclass=lnk_file
+[32m[   13.287956] [0m[33mtype=1400 audit(16.895:229)[0m: avc: granted { getattr } for pid=2077 comm="iptables" path="/vendor" dev="rootfs" ino=9076 scontext=u:r:netd:s0 tcontext=u:object_r:rootfs:s0 tclass=lnk_file
+[32m[   13.288175] [0m[33mtype=1400 audit(16.895:229)[0m: avc: granted { getattr } for pid=2077 comm="iptables" path="/vendor" dev="rootfs" ino=9076 scontext=u:r:netd:s0 tcontext=u:object_r:rootfs:s0 tclass=lnk_file
+[32m[   13.288183] [0m[33mtype=1400 audit(16.911:230)[0m: avc: granted { getattr } for pid=2078 comm="sh" path="/vendor" dev="rootfs" ino=9076 scontext=u:r:netd:s0 tcontext=u:object_r:rootfs:s0 tclass=lnk_file
+[32m[   13.292768] [0m[33mtype=1400 audit(16.911:230)[0m: avc: granted { getattr } for pid=2078 comm="sh" path="/vendor" dev="rootfs" ino=9076 scontext=u:r:netd:s0 tcontext=u:object_r:rootfs:s0 tclass=lnk_file
+[32m[   13.292780] [0m[33mtype=1400 audit(16.923:231)[0m: avc: granted { getattr } for pid=2078 comm="iptables" path="/vendor" dev="rootfs" ino=9076 scontext=u:r:netd:s0 tcontext=u:object_r:rootfs:s0 tclass=lnk_file
+[32m[   13.307653] [0m[33mtype=1400 audit(16.923:231)[0m: avc: granted { getattr } for pid=2078 comm="iptables" path="/vendor" dev="rootfs" ino=9076 scontext=u:r:netd:s0 tcontext=u:object_r:rootfs:s0 tclass=lnk_file
+[32m[   13.307671] [0m[33mtype=1400 audit(16.935:232)[0m: avc: granted { getattr } for pid=2079 comm="iptables-restor" path="/vendor" dev="rootfs" ino=9076 scontext=u:r:netd:s0 tcontext=u:object_r:rootfs:s0 tclass=lnk_file
+[32m[   13.321667] [0m[33mtype=1400 audit(16.935:232)[0m: avc: granted { getattr } for pid=2079 comm="iptables-restor" path="/vendor" dev="rootfs" ino=9076 scontext=u:r:netd:s0 tcontext=u:object_r:rootfs:s0 tclass=lnk_file
+[32m[   13.321677] [0m[33mtype=1400 audit(16.951:233)[0m: avc: granted { getattr } for pid=2080 comm="ip6tables-resto" path="/vendor" dev="rootfs" ino=9076 scontext=u:r:netd:s0 tcontext=u:object_r:rootfs:s0 tclass=lnk_file
+[32m[   13.335283] [0m[33mtype=1400 audit(16.951:233)[0m: avc: granted { getattr } for pid=2080 comm="ip6tables-resto" path="/vendor" dev="rootfs" ino=9076 scontext=u:r:netd:s0 tcontext=u:object_r:rootfs:s0 tclass=lnk_file
+[32m[   13.335299] [0m[33mtype=1400 audit(16.967:234)[0m: avc: granted { getattr } for pid=2081 comm="sh" path="/vendor" dev="rootfs" ino=9076 scontext=u:r:netd:s0 tcontext=u:object_r:rootfs:s0 tclass=lnk_file
+[32m[   13.346430] [0m[33mtype=1400 audit(16.967:234)[0m: avc: granted { getattr } for pid=2081 comm="sh" path="/vendor" dev="rootfs" ino=9076 scontext=u:r:netd:s0 tcontext=u:object_r:rootfs:s0 tclass=lnk_file
+[32m[   13.346442] [0m[33mtype=1400 audit(16.975:235)[0m: avc: granted { getattr } for pid=2081 comm="iptables" path="/vendor" dev="rootfs" ino=9076 scontext=u:r:netd:s0 tcontext=u:object_r:rootfs:s0 tclass=lnk_file
+[32m[   13.360038] [0m[33mtype=1400 audit(16.975:235)[0m: avc: granted { getattr } for pid=2081 comm="iptables" path="/vendor" dev="rootfs" ino=9076 scontext=u:r:netd:s0 tcontext=u:object_r:rootfs:s0 tclass=lnk_file
+[32m[   13.360050] [0m[33mtype=1400 audit(16.991:236)[0m: avc: granted { getattr } for pid=2082 comm="iptables-restor" path="/vendor" dev="rootfs" ino=9076 scontext=u:r:netd:s0 tcontext=u:object_r:rootfs:s0 tclass=lnk_file
+[32m[   13.374504] [0m[33mtype=1400 audit(16.991:236)[0m: avc: granted { getattr } for pid=2082 comm="iptables-restor" path="/vendor" dev="rootfs" ino=9076 scontext=u:r:netd:s0 tcontext=u:object_r:rootfs:s0 tclass=lnk_file
+[32m[   13.374517] [0m[33mtype=1400 audit(17.003:237)[0m: avc: granted { getattr } for pid=2083 comm="ip6tables-resto" path="/vendor" dev="rootfs" ino=9076 scontext=u:r:netd:s0 tcontext=u:object_r:rootfs:s0 tclass=lnk_file
+[32m[   13.389199] [0m[33mtype=1400 audit(17.003:237)[0m: avc: granted { getattr } for pid=2083 comm="ip6tables-resto" path="/vendor" dev="rootfs" ino=9076 scontext=u:r:netd:s0 tcontext=u:object_r:rootfs:s0 tclass=lnk_file
+[32m[   13.389211] [0m[33mtype=1400 audit(17.019:238)[0m: avc: granted { getattr } for pid=2084 comm="iptables-restor" path="/vendor" dev="rootfs" ino=9076 scontext=u:r:netd:s0 tcontext=u:object_r:rootfs:s0 tclass=lnk_file
+[32m[   13.406834] [0m[33mtype=1400 audit(17.019:238)[0m: avc: granted { getattr } for pid=2084 comm="iptables-restor" path="/vendor" dev="rootfs" ino=9076 scontext=u:r:netd:s0 tcontext=u:object_r:rootfs:s0 tclass=lnk_file
+[32m[   13.406845] [0m[33mtype=1400 audit(17.035:239)[0m: avc: granted { getattr } for pid=2085 comm="ip6tables-resto" path="/vendor" dev="rootfs" ino=9076 scontext=u:r:netd:s0 tcontext=u:object_r:rootfs:s0 tclass=lnk_file
+[32m[   13.425257] [0m[33mtype=1400 audit(17.035:239)[0m: avc: granted { getattr } for pid=2085 comm="ip6tables-resto" path="/vendor" dev="rootfs" ino=9076 scontext=u:r:netd:s0 tcontext=u:object_r:rootfs:s0 tclass=lnk_file
+[32m[   13.425275] [0m[33mtype=1400 audit(17.055:240)[0m: avc: granted { getattr } for pid=2086 comm="ip" path="/vendor" dev="rootfs" ino=9076 scontext=u:r:netd:s0 tcontext=u:object_r:rootfs:s0 tclass=lnk_file
+[32m[   13.452848] [0m[33mtype=1400 audit(17.055:240)[0m: avc: granted { getattr } for pid=2086 comm="ip" path="/vendor" dev="rootfs" ino=9076 scontext=u:r:netd:s0 tcontext=u:object_r:rootfs:s0 tclass=lnk_file
+[32m[   13.452860] [0m[33mtype=1400 audit(17.083:241)[0m: avc: granted { getattr } for pid=2087 comm="ip" path="/vendor" dev="rootfs" ino=9076 scontext=u:r:netd:s0 tcontext=u:object_r:rootfs:s0 tclass=lnk_file
+[32m[   13.714784] [0m[33m(stc)[0m: remove_channel_from_table: id 3
+[32m[   13.714788] [0m[33m(stc)[0m: remove_channel_from_table: id 2
+[32m[   13.714792] [0m[33m(stc)[0m: remove_channel_from_table: id 4
+[32m[   13.714812] [0m[33m(stc)[0m:  all chnl_ids unregistered 
+[32m[   13.715289] [0m(stk) :ldisc_install = 0
+[32m[   13.715430] [0m[33m(stc)[0m: st_tty_close 
+[32m[   13.715431] [0m[33mtype=1400 audit(17.083:241)[0m: avc: granted { getattr } for pid=2087 comm="ip" path="/vendor" dev="rootfs" ino=9076 scontext=u:r:netd:s0 tcontext=u:object_r:rootfs:s0 tclass=lnk_file
+[32m[   13.715443] [0m[33mtype=1400 audit(17.347:242)[0m: avc: granted { read } for pid=1811 comm="uim" name="install" dev="sysfs" ino=10022 scontext=u:r:hci_attach:s0 tcontext=u:object_r:sysfs:s0 tclass=file
+[32m[   13.715590] [0m[33mtype=1400 audit(17.347:242)[0m: avc: granted { read } for pid=1811 comm="uim" name="install" dev="sysfs" ino=10022 scontext=u:r:hci_attach:s0 tcontext=u:object_r:sysfs:s0 tclass=file
+[32m[   13.715599] [0m[33mtype=1400 audit(17.347:243)[0m: avc: granted { read open } for pid=1811 comm="uim" path="/sys/devices/platform/kim/install" dev="sysfs" ino=10022 scontext=u:r:hci_attach:s0 tcontext=u:object_r:sysfs:s0 tclass=file
+[32m[   14.158748] [0m[33mcfg80211[0m: Timeout while waiting for CRDA to reply, restoring regulatory settings
+[32m[   14.158774] [0m[33mcfg80211[0m: Restoring regulatory settings
+[32m[   14.158800] [0m[33mcfg80211[0m: Kicking the queue
+[32m[   17.034899] [0m[33mcapability[0m: warning: `main' uses 32-bit capabilities (legacy support in use)
+[32m[   17.311064] [0m[33mcfg80211[0m: Timeout while waiting for CRDA to reply, restoring regulatory settings
+[32m[   17.311143] [0m[33mcfg80211[0m: Restoring regulatory settings
+[32m[   17.311235] [0m[33mcfg80211[0m: Kicking the queue
+[32m[   20.463008] [0m[33mcfg80211[0m: Timeout while waiting for CRDA to reply, restoring regulatory settings
+[32m[   20.463035] [0m[33mcfg80211[0m: Restoring regulatory settings
+[32m[   20.463064] [0m[33mcfg80211[0m: Kicking the queue
+[32m[   23.567420] [0m[33mhealthd[0m: battery l=100 v=0 t=42.4 h=2 st=2 chg=a
+[32m[   23.614935] [0m[33mcfg80211[0m: Timeout while waiting for CRDA to reply, restoring regulatory settings
+[32m[   23.614962] [0m[33mcfg80211[0m: Restoring regulatory settings
+[32m[   23.614995] [0m[33mcfg80211[0m: Kicking the queue
+[32m[   24.165939] [0m[33minit[0m: processing action (sys.sysctl.extra_free_kbytes=*)
+[32m[   25.381892] [0macc_open
+[32m[   25.384240] [0macc_release
+[32m[   25.895815] [0m[33mtype=1400 audit(17.347:243)[0m: avc: granted { read open } for pid=1811 comm="uim" path="/sys/devices/platform/kim/install" dev="sysfs" ino=10022 scontext=u:r:hci_attach:s0 tcontext=u:object_r:sysfs:s0 tclass=file
+[32m[   25.917372] [0m[33mtype=1400 audit(29.527:244)[0m: avc: granted { getattr } for pid=2205 comm="sdcard" path="/vendor" dev="rootfs" ino=9076 scontext=u:r:sdcardd:s0 tcontext=u:object_r:rootfs:s0 tclass=lnk_file
+[32m[   26.063825] [0m[33mtype=1400 audit(29.527:244)[0m: avc: granted { getattr } for pid=2205 comm="sdcard" path="/vendor" dev="rootfs" ino=9076 scontext=u:r:sdcardd:s0 tcontext=u:object_r:rootfs:s0 tclass=lnk_file
+[32m[   26.083319] [0m[33mtype=1400 audit(29.695:245)[0m: avc: granted { getattr } for pid=2258 comm="sh" path="/vendor" dev="rootfs" ino=9076 scontext=u:r:netd:s0 tcontext=u:object_r:rootfs:s0 tclass=lnk_file
+[32m[   26.102530] [0m[33mtype=1400 audit(29.695:245)[0m: avc: granted { getattr } for pid=2258 comm="sh" path="/vendor" dev="rootfs" ino=9076 scontext=u:r:netd:s0 tcontext=u:object_r:rootfs:s0 tclass=lnk_file
+[32m[   26.119957] [0m[33mtype=1400 audit(29.707:246)[0m: avc: granted { getattr } for pid=2258 comm="iptables" path="/vendor" dev="rootfs" ino=9076 scontext=u:r:netd:s0 tcontext=u:object_r:rootfs:s0 tclass=lnk_file
+[32m[   26.138382] [0m[33mtype=1400 audit(29.707:246)[0m: avc: granted { getattr } for pid=2258 comm="iptables" path="/vendor" dev="rootfs" ino=9076 scontext=u:r:netd:s0 tcontext=u:object_r:rootfs:s0 tclass=lnk_file
+[32m[   26.156561] [0m[33mtype=1400 audit(29.731:247)[0m: avc: granted { getattr } for pid=2284 comm="iptables-restor" path="/vendor" dev="rootfs" ino=9076 scontext=u:r:netd:s0 tcontext=u:object_r:rootfs:s0 tclass=lnk_file
+[32m[   26.175676] [0m[33mtype=1400 audit(29.731:247)[0m: avc: granted { getattr } for pid=2284 comm="iptables-restor" path="/vendor" dev="rootfs" ino=9076 scontext=u:r:netd:s0 tcontext=u:object_r:rootfs:s0 tclass=lnk_file
+[32m[   26.194421] [0m[33mtype=1400 audit(29.747:248)[0m: avc: granted { getattr } for pid=2287 comm="ip6tables-resto" path="/vendor" dev="rootfs" ino=9076 scontext=u:r:netd:s0 tcontext=u:object_r:rootfs:s0 tclass=lnk_file
+[32m[   26.213549] [0m[33mtype=1400 audit(29.747:248)[0m: avc: granted { getattr } for pid=2287 comm="ip6tables-resto" path="/vendor" dev="rootfs" ino=9076 scontext=u:r:netd:s0 tcontext=u:object_r:rootfs:s0 tclass=lnk_file
+[32m[   26.232307] [0m[33mtype=1400 audit(29.767:249)[0m: avc: granted { getattr } for pid=2289 comm="iptables-restor" path="/vendor" dev="rootfs" ino=9076 scontext=u:r:netd:s0 tcontext=u:object_r:rootfs:s0 tclass=lnk_file
+[32m[   26.232631] [0m[33mtype=1400 audit(29.767:249)[0m: avc: granted { getattr } for pid=2289 comm="iptables-restor" path="/vendor" dev="rootfs" ino=9076 scontext=u:r:netd:s0 tcontext=u:object_r:rootfs:s0 tclass=lnk_file
+[32m[   26.232640] [0m[33mtype=1400 audit(29.783:250)[0m: avc: granted { getattr } for pid=2291 comm="ip6tables-resto" path="/vendor" dev="rootfs" ino=9076 scontext=u:r:netd:s0 tcontext=u:object_r:rootfs:s0 tclass=lnk_file
+[32m[   26.232873] [0m[33mtype=1400 audit(29.783:250)[0m: avc: granted { getattr } for pid=2291 comm="ip6tables-resto" path="/vendor" dev="rootfs" ino=9076 scontext=u:r:netd:s0 tcontext=u:object_r:rootfs:s0 tclass=lnk_file
+[32m[   26.232881] [0m[33mtype=1400 audit(29.799:251)[0m: avc: granted { getattr } for pid=2292 comm="iptables-restor" path="/vendor" dev="rootfs" ino=9076 scontext=u:r:netd:s0 tcontext=u:object_r:rootfs:s0 tclass=lnk_file
+[32m[   26.233096] [0m[33mtype=1400 audit(29.799:251)[0m: avc: granted { getattr } for pid=2292 comm="iptables-restor" path="/vendor" dev="rootfs" ino=9076 scontext=u:r:netd:s0 tcontext=u:object_r:rootfs:s0 tclass=lnk_file
+[32m[   26.233105] [0m[33mtype=1400 audit(29.815:252)[0m: avc: granted { getattr } for pid=2293 comm="ip6tables-resto" path="/vendor" dev="rootfs" ino=9076 scontext=u:r:netd:s0 tcontext=u:object_r:rootfs:s0 tclass=lnk_file
+[32m[   26.233334] [0m[33mtype=1400 audit(29.815:252)[0m: avc: granted { getattr } for pid=2293 comm="ip6tables-resto" path="/vendor" dev="rootfs" ino=9076 scontext=u:r:netd:s0 tcontext=u:object_r:rootfs:s0 tclass=lnk_file
+[32m[   26.233343] [0m[33mtype=1400 audit(29.827:253)[0m: avc: granted { getattr } for pid=2294 comm="iptables-restor" path="/vendor" dev="rootfs" ino=9076 scontext=u:r:netd:s0 tcontext=u:object_r:rootfs:s0 tclass=lnk_file
+[32m[   26.233558] [0m[33mtype=1400 audit(29.827:253)[0m: avc: granted { getattr } for pid=2294 comm="iptables-restor" path="/vendor" dev="rootfs" ino=9076 scontext=u:r:netd:s0 tcontext=u:object_r:rootfs:s0 tclass=lnk_file
+[32m[   26.233567] [0m[33mtype=1400 audit(29.843:254)[0m: avc: granted { getattr } for pid=2295 comm="ip6tables-resto" path="/vendor" dev="rootfs" ino=9076 scontext=u:r:netd:s0 tcontext=u:object_r:rootfs:s0 tclass=lnk_file
+[32m[   26.257271] [0m[33mtype=1400 audit(29.843:254)[0m: avc: granted { getattr } for pid=2295 comm="ip6tables-resto" path="/vendor" dev="rootfs" ino=9076 scontext=u:r:netd:s0 tcontext=u:object_r:rootfs:s0 tclass=lnk_file
+[32m[   26.257287] [0m[33mtype=1400 audit(29.887:255)[0m: avc: granted { getattr } for pid=2299 comm="iptables" path="/vendor" dev="rootfs" ino=9076 scontext=u:r:netd:s0 tcontext=u:object_r:rootfs:s0 tclass=lnk_file
+[32m[   26.271786] [0m[33mtype=1400 audit(29.887:255)[0m: avc: granted { getattr } for pid=2299 comm="iptables" path="/vendor" dev="rootfs" ino=9076 scontext=u:r:netd:s0 tcontext=u:object_r:rootfs:s0 tclass=lnk_file
+[32m[   26.271799] [0m[33mtype=1400 audit(29.903:256)[0m: avc: granted { getattr } for pid=2300 comm="ip6tables" path="/vendor" dev="rootfs" ino=9076 scontext=u:r:netd:s0 tcontext=u:object_r:rootfs:s0 tclass=lnk_file
+[32m[   26.290536] [0m[33mtype=1400 audit(29.903:256)[0m: avc: granted { getattr } for pid=2300 comm="ip6tables" path="/vendor" dev="rootfs" ino=9076 scontext=u:r:netd:s0 tcontext=u:object_r:rootfs:s0 tclass=lnk_file
+[32m[   26.290548] [0m[33mtype=1400 audit(29.919:257)[0m: avc: granted { getattr } for pid=2303 comm="iptables" path="/vendor" dev="rootfs" ino=9076 scontext=u:r:netd:s0 tcontext=u:object_r:rootfs:s0 tclass=lnk_file
+[32m[   26.304819] [0m[33mtype=1400 audit(29.919:257)[0m: avc: granted { getattr } for pid=2303 comm="iptables" path="/vendor" dev="rootfs" ino=9076 scontext=u:r:netd:s0 tcontext=u:object_r:rootfs:s0 tclass=lnk_file
+[32m[   26.304832] [0m[33mtype=1400 audit(29.935:258)[0m: avc: granted { getattr } for pid=2304 comm="ip6tables" path="/vendor" dev="rootfs" ino=9076 scontext=u:r:netd:s0 tcontext=u:object_r:rootfs:s0 tclass=lnk_file
+[32m[   26.766849] [0m[33mcfg80211[0m: Timeout while waiting for CRDA to reply, restoring regulatory settings
+[32m[   26.766894] [0m[33mcfg80211[0m: Restoring regulatory settings
+[32m[   26.766930] [0m[33mcfg80211[0m: Kicking the queue
+[32m[   26.903412] [0m[33mtype=1400 audit(29.935:258)[0m: avc: granted { getattr } for pid=2304 comm="ip6tables" path="/vendor" dev="rootfs" ino=9076 scontext=u:r:netd:s0 tcontext=u:object_r:rootfs:s0 tclass=lnk_file
+[32m[   26.923082] [0m[33mtype=1400 audit(30.535:259)[0m: avc: granted { getattr } for pid=2327 comm="iptables-restor" path="/vendor" dev="rootfs" ino=9076 scontext=u:r:netd:s0 tcontext=u:object_r:rootfs:s0 tclass=lnk_file
+[32m[   26.948701] [0m[33mtype=1400 audit(30.535:259)[0m: avc: granted { getattr } for pid=2327 comm="iptables-restor" path="/vendor" dev="rootfs" ino=9076 scontext=u:r:netd:s0 tcontext=u:object_r:rootfs:s0 tclass=lnk_file
+[32m[   26.969866] [0m[33mtype=1400 audit(30.579:260)[0m: avc: granted { getattr } for pid=2330 comm="ip6tables-resto" path="/vendor" dev="rootfs" ino=9076 scontext=u:r:netd:s0 tcontext=u:object_r:rootfs:s0 tclass=lnk_file
+[32m[   26.990220] [0m[33mtype=1400 audit(30.579:260)[0m: avc: granted { getattr } for pid=2330 comm="ip6tables-resto" path="/vendor" dev="rootfs" ino=9076 scontext=u:r:netd:s0 tcontext=u:object_r:rootfs:s0 tclass=lnk_file
+[32m[   27.009463] [0m[33mtype=1400 audit(30.603:261)[0m: avc: granted { getattr } for pid=2334 comm="iptables" path="/vendor" dev="rootfs" ino=9076 scontext=u:r:netd:s0 tcontext=u:object_r:rootfs:s0 tclass=lnk_file
+[32m[   27.028168] [0m[33mtype=1400 audit(30.603:261)[0m: avc: granted { getattr } for pid=2334 comm="iptables" path="/vendor" dev="rootfs" ino=9076 scontext=u:r:netd:s0 tcontext=u:object_r:rootfs:s0 tclass=lnk_file
+[32m[   27.046352] [0m[33mtype=1400 audit(30.615:262)[0m: avc: granted { getattr } for pid=2335 comm="ip6tables" path="/vendor" dev="rootfs" ino=9076 scontext=u:r:netd:s0 tcontext=u:object_r:rootfs:s0 tclass=lnk_file
+[32m[   27.065822] [0m[33mtype=1400 audit(30.615:262)[0m: avc: granted { getattr } for pid=2335 comm="ip6tables" path="/vendor" dev="rootfs" ino=9076 scontext=u:r:netd:s0 tcontext=u:object_r:rootfs:s0 tclass=lnk_file
+[32m[   27.084196] [0m[33mtype=1400 audit(30.631:263)[0m: avc: granted { getattr } for pid=2336 comm="iptables" path="/vendor" dev="rootfs" ino=9076 scontext=u:r:netd:s0 tcontext=u:object_r:rootfs:s0 tclass=lnk_file
+[32m[   27.105921] [0m[33mtype=1400 audit(30.631:263)[0m: avc: granted { getattr } for pid=2336 comm="iptables" path="/vendor" dev="rootfs" ino=9076 scontext=u:r:netd:s0 tcontext=u:object_r:rootfs:s0 tclass=lnk_file
+[32m[   27.124337] [0m[33mtype=1400 audit(30.647:264)[0m: avc: granted { getattr } for pid=2337 comm="ip6tables" path="/vendor" dev="rootfs" ino=9076 scontext=u:r:netd:s0 tcontext=u:object_r:rootfs:s0 tclass=lnk_file
+[32m[   27.914288] [0m[33m(hci_tty)[0m: inside hci_tty_open (ffffffc0739f9600, ffffffc05ec0b500)
+[32m[   27.923489] [0m[33m(stc)[0m:  chnl_id list empty :4 
+[32m[   27.927770] [0m[33m(stk) [0m: st_kim_start
+[32m[   28.036277] [0m(stk) :ldisc_install = 1
+[32m[   28.040745] [0m[33mtype=1400 audit(30.647:264)[0m: avc: granted { getattr } for pid=2337 comm="ip6tables" path="/vendor" dev="rootfs" ino=9076 scontext=u:r:netd:s0 tcontext=u:object_r:rootfs:s0 tclass=lnk_file
+[32m[   28.060557] [0m[33mtype=1400 audit(31.671:265)[0m: avc: granted { read } for pid=1811 comm="uim" name="install" dev="sysfs" ino=10022 scontext=u:r:hci_attach:s0 tcontext=u:object_r:sysfs:s0 tclass=file
+[32m[   28.078402] [0m[33mtype=1400 audit(31.671:265)[0m: avc: granted { read } for pid=1811 comm="uim" name="install" dev="sysfs" ino=10022 scontext=u:r:hci_attach:s0 tcontext=u:object_r:sysfs:s0 tclass=file
+[32m[   28.092299] [0m[33m(stc)[0m: st_tty_open 
+[32m[   28.095942] [0m(stk) :line discipline installed
+[32m[   28.096235] [0m(stk) :ti-connectivity/TIInit_11.8.32.bts
+[32m[   28.096240] [0m(stk) :change remote baud rate command in firmware
+[32m[   28.096242] [0m(stk) :skipping the wait event of change remote baud
+[32m[   28.114997] [0m[33mtype=1400 audit(31.671:266)[0m: avc: granted { read open } for pid=1811 comm="uim" path="/sys/devices/platform/kim/install" dev="sysfs" ino=10022 scontext=u:r:hci_attach:s0 tcontext=u:object_r:sysfs:s0 tclass=file
+[32m[   28.115200] [0m[33mtype=1400 audit(31.671:266)[0m: avc: granted { read open } for pid=1811 comm="uim" path="/sys/devices/platform/kim/install" dev="sysfs" ino=10022 scontext=u:r:hci_attach:s0 tcontext=u:object_r:sysfs:s0 tclass=file
+[32m[   28.115209] [0m[33mtype=1400 audit(31.671:267)[0m: avc: granted { read } for pid=1811 comm="uim" name="dev_name" dev="sysfs" ino=10023 scontext=u:r:hci_attach:s0 tcontext=u:object_r:sysfs:s0 tclass=file
+[32m[   28.115290] [0m[33mtype=1400 audit(31.671:267)[0m: avc: granted { read } for pid=1811 comm="uim" name="dev_name" dev="sysfs" ino=10023 scontext=u:r:hci_attach:s0 tcontext=u:object_r:sysfs:s0 tclass=file
+[32m[   28.115298] [0m[33mtype=1400 audit(31.671:268)[0m: avc: granted { read open } for pid=1811 comm="uim" path="/sys/devices/platform/kim/dev_name" dev="sysfs" ino=10023 scontext=u:r:hci_attach:s0 tcontext=u:object_r:sysfs:s0 tclass=file
+[32m[   28.115375] [0m[33mtype=1400 audit(31.671:268)[0m: avc: granted { read open } for pid=1811 comm="uim" path="/sys/devices/platform/kim/dev_name" dev="sysfs" ino=10023 scontext=u:r:hci_attach:s0 tcontext=u:object_r:sysfs:s0 tclass=file
+[32m[   28.115383] [0m[33mtype=1400 audit(31.671:269)[0m: avc: granted { read } for pid=1811 comm="uim" name="baud_rate" dev="sysfs" ino=10024 scontext=u:r:hci_attach:s0 tcontext=u:object_r:sysfs:s0 tclass=file
+[32m[   28.115511] [0m[33mtype=1400 audit(31.671:269)[0m: avc: granted { read } for pid=1811 comm="uim" name="baud_rate" dev="sysfs" ino=10024 scontext=u:r:hci_attach:s0 tcontext=u:object_r:sysfs:s0 tclass=file
+[32m[   28.115519] [0m[33mtype=1400 audit(31.671:270)[0m: avc: granted { read open } for pid=1811 comm="uim" path="/sys/devices/platform/kim/baud_rate" dev="sysfs" ino=10024 scontext=u:r:hci_attach:s0 tcontext=u:object_r:sysfs:s0 tclass=file
+[32m[   28.115594] [0m[33mtype=1400 audit(31.671:270)[0m: avc: granted { read open } for pid=1811 comm="uim" path="/sys/devices/platform/kim/baud_rate" dev="sysfs" ino=10024 scontext=u:r:hci_attach:s0 tcontext=u:object_r:sysfs:s0 tclass=file
+[32m[   28.115603] [0m[33mtype=1400 audit(31.671:271)[0m: avc: granted { read } for pid=1811 comm="uim" name="flow_cntrl" dev="sysfs" ino=10025 scontext=u:r:hci_attach:s0 tcontext=u:object_r:sysfs:s0 tclass=file
+[32m[   28.115678] [0m[33mtype=1400 audit(31.671:271)[0m: avc: granted { read } for pid=1811 comm="uim" name="flow_cntrl" dev="sysfs" ino=10025 scontext=u:r:hci_attach:s0 tcontext=u:object_r:sysfs:s0 tclass=file
+[32m[   28.115686] [0m[33mtype=1400 audit(31.671:272)[0m: avc: granted { read open } for pid=1811 comm="uim" path="/sys/devices/platform/kim/flow_cntrl" dev="sysfs" ino=10025 scontext=u:r:hci_attach:s0 tcontext=u:object_r:sysfs:s0 tclass=file
+[32m[   28.588763] [0m[33minit[0m: Service 'bootanim' (pid 1884) exited with status 0
+[32m[   28.833566] [0m[33minit[0m: processing action (sys.boot_completed=1)
+[32m[   28.839726] [0m[33minit[0m: computing context for service 'exec 3 (/system/bin/bootstat)'
+[32m[   28.844031] [0m[33mtype=1400 audit(31.671:272)[0m: avc: granted { read open } for pid=1811 comm="uim" path="/sys/devices/platform/kim/flow_cntrl" dev="sysfs" ino=10025 scontext=u:r:hci_attach:s0 tcontext=u:object_r:sysfs:s0 tclass=file
+[32m[   28.844046] [0m[33mtype=1400 audit(32.463:273)[0m: avc: granted { getattr } for pid=2480 comm="iptables" path="/vendor" dev="rootfs" ino=9076 scontext=u:r:netd:s0 tcontext=u:object_r:rootfs:s0 tclass=lnk_file
+[32m[   28.854689] [0m[33mtype=1400 audit(32.463:273)[0m: avc: granted { getattr } for pid=2480 comm="iptables" path="/vendor" dev="rootfs" ino=9076 scontext=u:r:netd:s0 tcontext=u:object_r:rootfs:s0 tclass=lnk_file
+[32m[   28.854736] [0m[33mtype=1400 audit(32.483:274)[0m: avc: granted { getattr } for pid=2490 comm="ip6tables" path="/vendor" dev="rootfs" ino=9076 scontext=u:r:netd:s0 tcontext=u:object_r:rootfs:s0 tclass=lnk_file
+[32m[   28.871806] [0m[33mtype=1400 audit(32.483:274)[0m: avc: granted { getattr } for pid=2490 comm="ip6tables" path="/vendor" dev="rootfs" ino=9076 scontext=u:r:netd:s0 tcontext=u:object_r:rootfs:s0 tclass=lnk_file
+[32m[   28.871821] [0m[33mtype=1400 audit(32.503:275)[0m: avc: granted { getattr } for pid=2495 comm="iptables" path="/vendor" dev="rootfs" ino=9076 scontext=u:r:netd:s0 tcontext=u:object_r:rootfs:s0 tclass=lnk_file
+[32m[   28.894853] [0m[33mtype=1400 audit(32.503:275)[0m: avc: granted { getattr } for pid=2495 comm="iptables" path="/vendor" dev="rootfs" ino=9076 scontext=u:r:netd:s0 tcontext=u:object_r:rootfs:s0 tclass=lnk_file
+[32m[   28.894867] [0m[33mtype=1400 audit(32.515:276)[0m: avc: granted { getattr } for pid=2496 comm="ip6tables" path="/vendor" dev="rootfs" ino=9076 scontext=u:r:netd:s0 tcontext=u:object_r:rootfs:s0 tclass=lnk_file
+[32m[   28.906752] [0m[33m(stc)[0m: add_channel_to_table: id 4
+[32m[   28.906758] [0m[33m(stc)[0m: add_channel_to_table: id 2
+[32m[   28.906761] [0m[33m(stc)[0m: add_channel_to_table: id 3
+[32m[   29.008184] [0m[33minit[0m: starting service 'exec 3 (/system/bin/bootstat)'...
+[32m[   29.016636] [0m[33minit[0m: SVC_EXEC pid 2500 (uid 0 gid 0+0 context default) started; waiting...
+[32m[   29.024903] [0m[33minit[0m: Command 'exec - root root -- /system/bin/bootstat --record_boot_complete' action=sys.boot_completed=1 (/system/etc/init/bootstat.rc:17) returned 0 took 185.634ms.
+[32m[   29.025772] [0m[33mtype=1400 audit(32.515:276)[0m: avc: granted { getattr } for pid=2496 comm="ip6tables" path="/vendor" dev="rootfs" ino=9076 scontext=u:r:netd:s0 tcontext=u:object_r:rootfs:s0 tclass=lnk_file
+[32m[   29.025784] [0m[33mtype=1400 audit(32.655:277)[0m: avc: denied { getattr } for pid=2500 comm="bootstat" path="/vendor" dev="rootfs" ino=9076 scontext=u:r:bootstat:s0 tcontext=u:object_r:rootfs:s0 tclass=lnk_file permissive=0
+[32m[   29.079356] [0m[33minit[0m: Service 'exec 3 (/system/bin/bootstat)' (pid 2500) exited with status 0
+[32m[   29.087731] [0m[33minit[0m: SVC_EXEC pid 2500 finished...
+[32m[   29.092563] [0m[33minit[0m: computing context for service 'exec 4 (/system/bin/bootstat)'
+[32m[   29.100343] [0m[33minit[0m: starting service 'exec 4 (/system/bin/bootstat)'...
+[32m[   29.108309] [0m[33minit[0m: SVC_EXEC pid 2501 (uid 0 gid 0+0 context default) started; waiting...
+[32m[   29.110749] [0m[33mtype=1400 audit(32.655:277)[0m: avc: denied { getattr } for pid=2500 comm="bootstat" path="/vendor" dev="rootfs" ino=9076 scontext=u:r:bootstat:s0 tcontext=u:object_r:rootfs:s0 tclass=lnk_file permissive=0
+[32m[   29.110762] [0m[33mtype=1400 audit(32.739:278)[0m: avc: denied { getattr } for pid=2501 comm="bootstat" path="/vendor" dev="rootfs" ino=9076 scontext=u:r:bootstat:s0 tcontext=u:object_r:rootfs:s0 tclass=lnk_file permissive=0
+[32m[   29.155256] [0m[33minit[0m: Command 'exec - root root -- /system/bin/bootstat --record_boot_reason' action=sys.boot_completed=1 (/system/etc/init/bootstat.rc:20) returned 0 took 62.6842ms.
+[32m[   29.171732] [0m[33minit[0m: Service 'exec 4 (/system/bin/bootstat)' (pid 2501) exited with status 0
+[32m[   29.180123] [0m[33minit[0m: SVC_EXEC pid 2501 finished...
+[32m[   29.184967] [0m[33minit[0m: computing context for service 'exec 5 (/system/bin/bootstat)'
+[32m[   29.192743] [0m[33minit[0m: starting service 'exec 5 (/system/bin/bootstat)'...
+[32m[   29.200592] [0m[33minit[0m: SVC_EXEC pid 2502 (uid 0 gid 0+0 context default) started; waiting...
+[32m[   29.202884] [0m[33mtype=1400 audit(32.739:278)[0m: avc: denied { getattr } for pid=2501 comm="bootstat" path="/vendor" dev="rootfs" ino=9076 scontext=u:r:bootstat:s0 tcontext=u:object_r:rootfs:s0 tclass=lnk_file permissive=0
+[32m[   29.202896] [0m[33mtype=1400 audit(32.831:279)[0m: avc: denied { getattr } for pid=2502 comm="bootstat" path="/vendor" dev="rootfs" ino=9076 scontext=u:r:bootstat:s0 tcontext=u:object_r:rootfs:s0 tclass=lnk_file permissive=0
+[32m[   29.247502] [0m[33minit[0m: Command 'exec - root root -- /system/bin/bootstat --record_time_since_factory_reset' action=sys.boot_completed=1 (/system/etc/init/bootstat.rc:23) returned 0 took 62.5417ms.
+[32m[   29.265156] [0m[33minit[0m: Service 'exec 5 (/system/bin/bootstat)' (pid 2502) exited with status 0
+[32m[   29.273568] [0m[33minit[0m: SVC_EXEC pid 2502 finished...
+[32m[   29.278402] [0m[33minit[0m: computing context for service 'exec 6 (/system/bin/bootstat)'
+[32m[   29.286178] [0m[33minit[0m: starting service 'exec 6 (/system/bin/bootstat)'...
+[32m[   29.294022] [0m[33minit[0m: SVC_EXEC pid 2503 (uid 0 gid 0+0 context default) started; waiting...
+[32m[   29.296933] [0m[33mtype=1400 audit(32.831:279)[0m: avc: denied { getattr } for pid=2502 comm="bootstat" path="/vendor" dev="rootfs" ino=9076 scontext=u:r:bootstat:s0 tcontext=u:object_r:rootfs:s0 tclass=lnk_file permissive=0
+[32m[   29.296945] [0m[33mtype=1400 audit(32.923:280)[0m: avc: denied { getattr } for pid=2503 comm="bootstat" path="/vendor" dev="rootfs" ino=9076 scontext=u:r:bootstat:s0 tcontext=u:object_r:rootfs:s0 tclass=lnk_file permissive=0
+[32m[   29.340976] [0m[33minit[0m: Command 'exec - root root -- /system/bin/bootstat -l' action=sys.boot_completed=1 (/system/etc/init/bootstat.rc:26) returned 0 took 62.5583ms.
+[32m[   29.358331] [0m[33minit[0m: Service 'exec 6 (/system/bin/bootstat)' (pid 2503) exited with status 0
+[32m[   29.367281] [0m[33minit[0m: SVC_EXEC pid 2503 finished...
+[32m[   29.918867] [0m[33mcfg80211[0m: Timeout while waiting for CRDA to reply, restoring regulatory settings
+[32m[   29.918924] [0m[33mcfg80211[0m: Restoring regulatory settings
+[32m[   29.918968] [0m[33mcfg80211[0m: Kicking the queue
+[32m[   30.995747] [0m[33mtype=1400 audit(32.923:280)[0m: avc: denied { getattr } for pid=2503 comm="bootstat" path="/vendor" dev="rootfs" ino=9076 scontext=u:r:bootstat:s0 tcontext=u:object_r:rootfs:s0 tclass=lnk_file permissive=0
+[32m[   31.015264] [0m[33mtype=1400 audit(34.623:281)[0m: avc: granted { getattr } for pid=2197 comm="ndroid.systemui" path="/" dev="rootfs" ino=2 scontext=u:r:platform_app:s0:c512,c768 tcontext=u:object_r:rootfs:s0 tclass=dir
+[32m[   31.128455] [0m[33maudit[0m: audit_lost=141 audit_rate_limit=20 audit_backlog_limit=64
+[32m[   31.135656] [0m[33maudit[0m[31m: rate limit exceeded[0m
+[32m[   33.070960] [0m[33mcfg80211[0m: Timeout while waiting for CRDA to reply, restoring regulatory settings
+[32m[   33.070992] [0m[33mcfg80211[0m: Restoring regulatory settings
+[32m[   33.071028] [0m[33mcfg80211[0m: Kicking the queue
+[32m[   36.223500] [0m[33mcfg80211[0m: Timeout while waiting for CRDA to reply, restoring regulatory settings
+[32m[   36.223579] [0m[33mcfg80211[0m: Restoring regulatory settings
+[32m[   36.223752] [0m[33mcfg80211[0m: Kicking the queue
+[32m[   57.759193] [0m[33mdwc2 f72c0000.usb[0m: dwc2_hsotg_ep_stop_xfr: timeout DIEPINT.NAKEFF
+[32m[   57.766515] [0m[33mdwc2 f72c0000.usb[0m: dwc2_hsotg_ep_stop_xfr: timeout DOEPCTL.EPDisable
+[32m[   57.774080] [0m[33mdwc2 f72c0000.usb[0m: dwc2_hsotg_ep_stop_xfr: timeout flushing fifos
+[32m[   57.784218] [0m[33mandroid_work[0m: sent uevent USB_STATE=DISCONNECTED
+[32m[   57.791026] [0m[33mconfigfs-gadget gadget[0m[31m: unbind function 'Function FS Gadget'/ffffffc073a5f038[0m
+[32m[   57.799340] [0m[33mandroid_work[0m: did not send uevent (0 0           (null))
+[32m[   57.811476] [0m[33minit[0m: Service 'adbd' (pid 1810) exited with status 1
+[32m[   57.817623] [0m[33minit[0m: Sending signal 9 to service 'adbd' (pid 1810) process group...
+[32m[   57.826014] [0m[33minit[0m[31m: kill(1810, 9) failed: No such process[0m
+[32m[   57.838145] [0m[33minit[0m: starting service 'adbd'...
+[32m[   57.845999] [0m[33minit[0m: Created socket '/dev/socket/adbd', mode 660, user 1000, group 1000
+[32m[   57.859558] [0m[33minit[0m[31m: property_set("ro.boottime.adbd", "57796630827") failed: property already set[0m
+[32m[   57.878126] [0mread descriptors
+[32m[   57.881093] [0mread descriptors
+[32m[   57.884053] [0mread strings
+[32m[   57.893381] [0m[33minit[0m: processing action (sys.usb.config=adb sys.usb.configfs=1 sys.usb.ffs.ready=1)
+[32m[   57.908543] [0m[33mdwc2 f72c0000.usb[0m: bound driver configfs-gadget
+[32m[   58.088704] [0m[33mdwc2 f72c0000.usb[0m: new device is high-speed
+[32m[   58.151434] [0m[33mandroid_work[0m: sent uevent USB_STATE=CONNECTED
+[32m[   58.161134] [0m[33mdwc2 f72c0000.usb[0m: new device is high-speed
+[32m[   58.221274] [0m[33mdwc2 f72c0000.usb[0m: new address 102
+[32m[   58.250699] [0m[33mconfigfs-gadget gadget[0m: high-speed config #1: b
+[32m[   58.260785] [0m[33mandroid_work[0m: sent uevent USB_STATE=CONFIGURED
+[32m[   66.637160] [0m[33mPM[0m: suspend entry 1970-01-01 00:01:10.272068327 UTC
+[32m[   66.643256] [0m[33mPM[0m: Syncing filesystems ... done.
+[32m[   66.659114] [0m[33mPM[0m: Preparing system for sleep (mem)
+[32m[   66.661616] [0mFreezing user space processes ... 
+[32m[   66.669877] [0m[33mdwc2 f72c0000.usb[0m: dwc2_hsotg_ep_stop_xfr: timeout DOEPCTL.EPDisable
+[32m[   66.677572] [0m[33mdwc2 f72c0000.usb[0m: GINNakEff triggered
+[32m[   66.688232] [0m(elapsed 0.022 seconds) done.
+[32m[   66.692457] [0mFreezing remaining freezable tasks ... (elapsed 0.003 seconds) done.
+[32m[   66.703322] [0m[33mPM[0m: Suspending system (mem)
+[32m[   66.703350] [0mSuspending console(s) (use no_console_suspend to debug)
+[32m[   66.806007] [0m[33mPM[0m: suspend of devices complete after 41.104 msecs
+[32m[   66.811142] [0m[33mPM[0m: late suspend of devices complete after 5.104 msecs
+[32m[   66.815084] [0m[33mPM[0m: noirq suspend of devices complete after 3.917 msecs
+[32m[   66.815097] [0mDisabling non-boot CPUs ...
+[32m[   66.818826] [0m[33mCPU5[0m: update max cpu_capacity 1024
+[32m[   66.827679] [0mIRQ5 no longer affine to CPU1
+[32m[   66.828238] [0m[33mCPU1[0m: shutdown
+[32m[   66.828251] [0m[33mpsci[0m: CPU1 killed.
+[32m[   66.854875] [0m[33mCPU0[0m: update max cpu_capacity 1024
+[32m[   66.867464] [0m[33mCPU2[0m: shutdown
+[32m[   66.867479] [0m[33mpsci[0m: CPU2 killed.
+[32m[   66.868521] [0m[33mNOHZ[0m: local_softirq_pending 20
+[32m[   66.894727] [0m[33mCPU7[0m: update max cpu_capacity 1024
+[32m[   66.899480] [0m[33mCPU3[0m: shutdown
+[32m[   66.899494] [0m[33mpsci[0m: CPU3 killed.
+[32m[   66.900480] [0m[33mNOHZ[0m: local_softirq_pending 20
+[32m[   66.922723] [0m[33mCPU7[0m: update max cpu_capacity 1024
+[32m[   66.927528] [0m[33mCPU4[0m: shutdown
+[32m[   66.942771] [0m[33mpsci[0m: Retrying again to check for CPU kill
+[32m[   66.942781] [0m[33mpsci[0m: CPU4 killed.
+[32m[   66.943690] [0m[33mNOHZ[0m: local_softirq_pending 20
+[32m[   66.962834] [0m[33mCPU0[0m: update max cpu_capacity 1024
+[32m[   66.971472] [0m[33mCPU5[0m: shutdown
+[32m[   66.986767] [0m[33mpsci[0m: Retrying again to check for CPU kill
+[32m[   66.986777] [0m[33mpsci[0m: CPU5 killed.
+[32m[   66.987626] [0m[33mNOHZ[0m: local_softirq_pending 20
+[32m[   67.006833] [0m[33mCPU0[0m: update max cpu_capacity 1024
+[32m[   67.015444] [0m[33mCPU6[0m: shutdown
+[32m[   67.030765] [0m[33mpsci[0m: Retrying again to check for CPU kill
+[32m[   67.030775] [0m[33mpsci[0m: CPU6 killed.
+[32m[   67.031651] [0m[33mNOHZ[0m: local_softirq_pending 20
+[32m[   67.059381] [0m[33mCPU7[0m: shutdown
+[32m[   67.074754] [0m[33mpsci[0m: Retrying again to check for CPU kill
+[32m[   67.074765] [0m[33mpsci[0m: CPU7 killed.
+[32m[   67.089913] [0mEnabling non-boot CPUs ...
+[32m[   67.108815] [0mDetected VIPT I-cache on CPU1
+[32m[   67.108922] [0m[33mCPU1[0m: update cpu_capacity 1024
+[32m[   67.108930] [0m[33mCPU1[0m: Booted secondary processor [410fd033]
+[32m[   67.109833] [0m[33m cache[0m: parent cpu1 should not be sleeping
+[32m[   67.110328] [0mCPU1 is up
+[32m[   67.111189] [0m[33mCPU0[0m: update max cpu_capacity 1024
+[32m[   67.141227] [0mDetected VIPT I-cache on CPU2
+[32m[   67.141320] [0m[33mCPU2[0m: update cpu_capacity 1024
+[32m[   67.141327] [0m[33mCPU2[0m: Booted secondary processor [410fd033]
+[32m[   67.142378] [0m[33m cache[0m: parent cpu2 should not be sleeping
+[32m[   67.143039] [0mCPU2 is up
+[32m[   67.143170] [0m[33mCPU2[0m: update max cpu_capacity 1024
+[32m[   67.165738] [0mDetected VIPT I-cache on CPU3
+[32m[   67.165831] [0m[33mCPU3[0m: update cpu_capacity 1024
+[32m[   67.165838] [0m[33mCPU3[0m: Booted secondary processor [410fd033]
+[32m[   67.166656] [0m[33mCPU3[0m: update max cpu_capacity 1024
+[32m[   67.167319] [0m[33m cache[0m: parent cpu3 should not be sleeping
+[32m[   67.167817] [0mCPU3 is up
+[32m[   67.190357] [0mDetected VIPT I-cache on CPU4
+[32m[   67.190470] [0m[33mCPU4[0m: update cpu_capacity 1024
+[32m[   67.190477] [0m[33mCPU4[0m: Booted secondary processor [410fd033]
+[32m[   67.192357] [0m[33m cache[0m: parent cpu4 should not be sleeping
+[32m[   67.192875] [0mCPU4 is up
+[32m[   67.194778] [0m[33mCPU0[0m: update max cpu_capacity 1024
+[32m[   67.215035] [0mDetected VIPT I-cache on CPU5
+[32m[   67.215116] [0m[33mCPU5[0m: update cpu_capacity 1024
+[32m[   67.215123] [0m[33mCPU5[0m: Booted secondary processor [410fd033]
+[32m[   67.217231] [0m[33m cache[0m: parent cpu5 should not be sleeping
+[32m[   67.217752] [0mCPU5 is up
+[32m[   67.218799] [0m[33mCPU0[0m: update max cpu_capacity 1024
+[32m[   67.239604] [0mDetected VIPT I-cache on CPU6
+[32m[   67.239686] [0m[33mCPU6[0m: update cpu_capacity 1024
+[32m[   67.239693] [0m[33mCPU6[0m: Booted secondary processor [410fd033]
+[32m[   67.242155] [0m[33m cache[0m: parent cpu6 should not be sleeping
+[32m[   67.242868] [0mCPU6 is up
+[32m[   67.243013] [0m[33mCPU6[0m: update max cpu_capacity 1024
+[32m[   67.267921] [0mDetected VIPT I-cache on CPU7
+[32m[   67.268002] [0m[33mCPU7[0m: update cpu_capacity 1024
+[32m[   67.268009] [0m[33mCPU7[0m: Booted secondary processor [410fd033]
+[32m[   67.270983] [0m[33mCPU7[0m: update max cpu_capacity 1024
+[32m[   67.271052] [0m[33m cache[0m: parent cpu7 should not be sleeping
+[32m[   67.271578] [0mCPU7 is up
+[32m[   67.273960] [0m[33mPM[0m: noirq resume of devices complete after 2.246 msecs
+[32m[   67.277507] [0m[33mPM[0m: early resume of devices complete after 2.965 msecs
+[32m[   67.320630] [0m[33mmmc_host mmc0[0m: Bus speed (slot 0) = 24800000Hz (slot req 400000Hz, actual 400000HZ div = 31)
+[32m[   67.390180] [0m[33mmmc_host mmc0[0m: Bus speed (slot 0) = 51756522Hz (slot req 52000000Hz, actual 51756522HZ div = 0)
+[32m[   67.500831] [0m[33mmmc_host mmc2[0m: Bus speed (slot 0) = 24800000Hz (slot req 400000Hz, actual 400000HZ div = 31)
+[32m[   67.557535] [0m[33mmmc_host mmc2[0m: Bus speed (slot 0) = 24800000Hz (slot req 25000000Hz, actual 24800000HZ div = 0)
+[32m[   67.562206] [0m[33mPM[0m: resume of devices complete after 284.681 msecs
+[32m[   67.998356] [0m[33mPM[0m: Finishing wakeup.
+[32m[   67.998375] [0mRestarting tasks ... done.
+[32m[   68.014321] [0m[33mueventd[0m: fixup /sys/devices/system/cpu/cpu1/cpufreq/scaling_max_freq 1000 1000 664
+[32m[   68.023230] [0m[33mPM[0m: suspend exit 1970-01-01 00:01:19.724645000 UTC
+[32m[   68.031539] [0m[33mueventd[0m: fixup /sys/devices/system/cpu/cpu1/cpufreq/scaling_min_freq 1000 1000 664
+[32m[   68.085695] [0m[33mueventd[0m: fixup /sys/devices/system/cpu/cpu2/cpufreq/scaling_max_freq 1000 1000 664
+[32m[   68.095388] [0m[33mueventd[0m: fixup /sys/devices/system/cpu/cpu2/cpufreq/scaling_min_freq 1000 1000 664
+[32m[   68.135473] [0m[33mueventd[0m: fixup /sys/devices/system/cpu/cpu3/cpufreq/scaling_max_freq 1000 1000 664
+[32m[   68.144765] [0m[33mueventd[0m: fixup /sys/devices/system/cpu/cpu3/cpufreq/scaling_min_freq 1000 1000 664
+[32m[   68.193520] [0m[33mueventd[0m: fixup /sys/devices/system/cpu/cpu4/cpufreq/scaling_max_freq 1000 1000 664
+[32m[   68.202785] [0m[33mueventd[0m: fixup /sys/devices/system/cpu/cpu4/cpufreq/scaling_min_freq 1000 1000 664
+[32m[   68.250350] [0m[33mueventd[0m: fixup /sys/devices/system/cpu/cpu5/cpufreq/scaling_max_freq 1000 1000 664
+[32m[   68.259567] [0m[33mueventd[0m: fixup /sys/devices/system/cpu/cpu5/cpufreq/scaling_min_freq 1000 1000 664
+[32m[   68.307353] [0m[33mueventd[0m: fixup /sys/devices/system/cpu/cpu6/cpufreq/scaling_max_freq 1000 1000 664
+[32m[   68.316562] [0m[33mueventd[0m: fixup /sys/devices/system/cpu/cpu6/cpufreq/scaling_min_freq 1000 1000 664
+[32m[   68.364172] [0m[33mueventd[0m: fixup /sys/devices/system/cpu/cpu7/cpufreq/scaling_max_freq 1000 1000 664
+[32m[   68.373375] [0m[33mueventd[0m: fixup /sys/devices/system/cpu/cpu7/cpufreq/scaling_min_freq 1000 1000 664
+[32m[   96.272271] [0m[33mcfg80211[0m: Verifying active interfaces after reg change
+[32m[  178.081474] [0m[33mPM[0m: suspend entry 1970-01-01 00:03:09.782882490 UTC
+[32m[  178.087656] [0m[33mPM[0m: Syncing filesystems ... done.
+[32m[  178.102493] [0m[33mPM[0m: Preparing system for sleep (mem)
+[32m[  178.104125] [0mFreezing user space processes ... 
+[32m[  178.112347] [0m[33mdwc2 f72c0000.usb[0m: dwc2_hsotg_ep_stop_xfr: timeout DOEPCTL.EPDisable
+[32m[  178.120046] [0m[33mdwc2 f72c0000.usb[0m: GINNakEff triggered
+[32m[  178.130311] [0m(elapsed 0.021 seconds) done.
+[32m[  178.134492] [0mFreezing remaining freezable tasks ... (elapsed 0.002 seconds) done.
+[32m[  178.145126] [0m[33mPM[0m: Suspending system (mem)
+[32m[  178.145172] [0mSuspending console(s) (use no_console_suspend to debug)
+[32m[  178.247252] [0m[33mPM[0m: suspend of devices complete after 48.922 msecs
+[32m[  178.252345] [0m[33mPM[0m: late suspend of devices complete after 5.061 msecs
+[32m[  178.256014] [0m[33mPM[0m: noirq suspend of devices complete after 3.648 msecs
+[32m[  178.256026] [0mDisabling non-boot CPUs ...
+[32m[  178.258759] [0m[33mCPU3[0m: update max cpu_capacity 1024
+[32m[  178.279554] [0m[33mCPU1[0m: shutdown
+[32m[  178.294709] [0m[33mpsci[0m: Retrying again to check for CPU kill
+[32m[  178.294719] [0m[33mpsci[0m: CPU1 killed.
+[32m[  178.295783] [0m[33mNOHZ[0m: local_softirq_pending 20
+[32m[  178.318731] [0m[33mCPU0[0m: update max cpu_capacity 1024
+[32m[  178.339464] [0m[33mCPU2[0m: shutdown
+[32m[  178.354698] [0m[33mpsci[0m: Retrying again to check for CPU kill
+[32m[  178.354707] [0m[33mpsci[0m: CPU2 killed.
+[32m[  178.355674] [0m[33mNOHZ[0m: local_softirq_pending 20
+[32m[  178.374766] [0m[33mCPU4[0m: update max cpu_capacity 1024
+[32m[  178.387747] [0m[33mCPU3[0m: shutdown
+[32m[  178.402696] [0m[33mpsci[0m: Retrying again to check for CPU kill
+[32m[  178.402705] [0m[33mpsci[0m: CPU3 killed.
+[32m[  178.403712] [0m[33mNOHZ[0m: local_softirq_pending 20
+[32m[  178.426717] [0m[33mCPU0[0m: update max cpu_capacity 1024
+[32m[  178.435177] [0mIRQ5 no longer affine to CPU4
+[32m[  178.435679] [0m[33mCPU4[0m: shutdown
+[32m[  178.450695] [0m[33mpsci[0m: Retrying again to check for CPU kill
+[32m[  178.450705] [0m[33mpsci[0m: CPU4 killed.
+[32m[  178.451540] [0m[33mNOHZ[0m: local_softirq_pending 20
+[32m[  178.470757] [0m[33mCPU0[0m: update max cpu_capacity 1024
+[32m[  178.479549] [0m[33mCPU5[0m: shutdown
+[32m[  178.479561] [0m[33mpsci[0m: CPU5 killed.
+[32m[  178.480454] [0m[33mNOHZ[0m: local_softirq_pending 20
+[32m[  178.498759] [0m[33mCPU0[0m: update max cpu_capacity 1024
+[32m[  178.507506] [0m[33mCPU6[0m: shutdown
+[32m[  178.522693] [0m[33mpsci[0m: Retrying again to check for CPU kill
+[32m[  178.522703] [0m[33mpsci[0m: CPU6 killed.
+[32m[  178.551392] [0m[33mCPU7[0m: shutdown
+[32m[  178.566681] [0m[33mpsci[0m: Retrying again to check for CPU kill
+[32m[  178.566691] [0m[33mpsci[0m: CPU7 killed.
+[32m[  178.581651] [0mEnabling non-boot CPUs ...
+[32m[  178.600734] [0mDetected VIPT I-cache on CPU1
+[32m[  178.600841] [0m[33mCPU1[0m: update cpu_capacity 1024
+[32m[  178.600849] [0m[33mCPU1[0m: Booted secondary processor [410fd033]
+[32m[  178.601758] [0m[33m cache[0m: parent cpu1 should not be sleeping
+[32m[  178.602257] [0mCPU1 is up
+[32m[  178.603110] [0m[33mCPU0[0m: update max cpu_capacity 1024
+[32m[  178.633153] [0mDetected VIPT I-cache on CPU2
+[32m[  178.633248] [0m[33mCPU2[0m: update cpu_capacity 1024
+[32m[  178.633254] [0m[33mCPU2[0m: Booted secondary processor [410fd033]
+[32m[  178.634315] [0m[33m cache[0m: parent cpu2 should not be sleeping
+[32m[  178.634976] [0mCPU2 is up
+[32m[  178.635105] [0m[33mCPU2[0m: update max cpu_capacity 1024
+[32m[  178.657665] [0mDetected VIPT I-cache on CPU3
+[32m[  178.657760] [0m[33mCPU3[0m: update cpu_capacity 1024
+[32m[  178.657766] [0m[33mCPU3[0m: Booted secondary processor [410fd033]
+[32m[  178.658578] [0m[33mCPU3[0m: update max cpu_capacity 1024
+[32m[  178.659246] [0m[33m cache[0m: parent cpu3 should not be sleeping
+[32m[  178.659740] [0mCPU3 is up
+[32m[  178.682250] [0mDetected VIPT I-cache on CPU4
+[32m[  178.682363] [0m[33mCPU4[0m: update cpu_capacity 1024
+[32m[  178.682370] [0m[33mCPU4[0m: Booted secondary processor [410fd033]
+[32m[  178.684265] [0m[33m cache[0m: parent cpu4 should not be sleeping
+[32m[  178.684778] [0mCPU4 is up
+[32m[  178.686701] [0m[33mCPU0[0m: update max cpu_capacity 1024
+[32m[  178.706945] [0mDetected VIPT I-cache on CPU5
+[32m[  178.707027] [0m[33mCPU5[0m: update cpu_capacity 1024
+[32m[  178.707034] [0m[33mCPU5[0m: Booted secondary processor [410fd033]
+[32m[  178.709134] [0m[33m cache[0m: parent cpu5 should not be sleeping
+[32m[  178.709652] [0mCPU5 is up
+[32m[  178.710714] [0m[33mCPU0[0m: update max cpu_capacity 1024
+[32m[  178.731539] [0mDetected VIPT I-cache on CPU6
+[32m[  178.731621] [0m[33mCPU6[0m: update cpu_capacity 1024
+[32m[  178.731628] [0m[33mCPU6[0m: Booted secondary processor [410fd033]
+[32m[  178.734109] [0m[33m cache[0m: parent cpu6 should not be sleeping
+[32m[  178.734817] [0mCPU6 is up
+[32m[  178.734962] [0m[33mCPU6[0m: update max cpu_capacity 1024
+[32m[  178.759840] [0mDetected VIPT I-cache on CPU7
+[32m[  178.759921] [0m[33mCPU7[0m: update cpu_capacity 1024
+[32m[  178.759928] [0m[33mCPU7[0m: Booted secondary processor [410fd033]
+[32m[  178.762926] [0m[33mCPU7[0m: update max cpu_capacity 1024
+[32m[  178.763000] [0m[33m cache[0m: parent cpu7 should not be sleeping
+[32m[  178.763527] [0mCPU7 is up
+[32m[  178.765887] [0m[33mPM[0m: noirq resume of devices complete after 2.225 msecs
+[32m[  178.769509] [0m[33mPM[0m: early resume of devices complete after 3.038 msecs
+[32m[  178.812745] [0m[33mmmc_host mmc0[0m: Bus speed (slot 0) = 24800000Hz (slot req 400000Hz, actual 400000HZ div = 31)
+[32m[  178.881626] [0m[33mmmc_host mmc0[0m: Bus speed (slot 0) = 51756522Hz (slot req 52000000Hz, actual 51756522HZ div = 0)
+[32m[  178.992734] [0m[33mmmc_host mmc2[0m: Bus speed (slot 0) = 24800000Hz (slot req 400000Hz, actual 400000HZ div = 31)
+[32m[  179.049378] [0m[33mmmc_host mmc2[0m: Bus speed (slot 0) = 24800000Hz (slot req 25000000Hz, actual 24800000HZ div = 0)
+[32m[  179.053972] [0m[33mPM[0m: resume of devices complete after 284.445 msecs
+[32m[  179.497111] [0m[33mPM[0m: Finishing wakeup.
+[32m[  179.497132] [0mRestarting tasks ... 
+[32m[  179.502108] [0m[33mueventd[0m: fixup /sys/devices/system/cpu/cpu1/cpufreq/scaling_max_freq 1000 1000 664
+[32m[  179.505242] [0mdone.
+[32m[  179.514959] [0m[33mueventd[0m: fixup /sys/devices/system/cpu/cpu1/cpufreq/scaling_min_freq 1000 1000 664
+[32m[  179.524174] [0m[33mPM[0m: suspend exit 1970-01-01 00:03:19.733731667 UTC
+[32m[  179.563044] [0m[33mueventd[0m: fixup /sys/devices/system/cpu/cpu2/cpufreq/scaling_max_freq 1000 1000 664
+[32m[  179.572265] [0m[33mueventd[0m: fixup /sys/devices/system/cpu/cpu2/cpufreq/scaling_min_freq 1000 1000 664
+[32m[  179.619959] [0m[33mueventd[0m: fixup /sys/devices/system/cpu/cpu3/cpufreq/scaling_max_freq 1000 1000 664
+[32m[  179.629169] [0m[33mueventd[0m: fixup /sys/devices/system/cpu/cpu3/cpufreq/scaling_min_freq 1000 1000 664
+[32m[  179.676802] [0m[33mueventd[0m: fixup /sys/devices/system/cpu/cpu4/cpufreq/scaling_max_freq 1000 1000 664
+[32m[  179.685995] [0m[33mueventd[0m: fixup /sys/devices/system/cpu/cpu4/cpufreq/scaling_min_freq 1000 1000 664
+[32m[  179.733587] [0m[33mueventd[0m: fixup /sys/devices/system/cpu/cpu5/cpufreq/scaling_max_freq 1000 1000 664
+[32m[  179.742835] [0m[33mueventd[0m: fixup /sys/devices/system/cpu/cpu5/cpufreq/scaling_min_freq 1000 1000 664
+[32m[  179.790832] [0m[33mueventd[0m: fixup /sys/devices/system/cpu/cpu6/cpufreq/scaling_max_freq 1000 1000 664
+[32m[  179.800028] [0m[33mueventd[0m: fixup /sys/devices/system/cpu/cpu6/cpufreq/scaling_min_freq 1000 1000 664
+[32m[  179.847661] [0m[33mueventd[0m: fixup /sys/devices/system/cpu/cpu7/cpufreq/scaling_max_freq 1000 1000 664
+[32m[  179.856864] [0m[33mueventd[0m: fixup /sys/devices/system/cpu/cpu7/cpufreq/scaling_min_freq 1000 1000 664
+[32m[  746.733771] [0m[33mPM[0m: suspend entry 1970-01-01 00:12:46.943319946 UTC
+[32m[  746.739896] [0m[33mPM[0m: Syncing filesystems ... done.
+[32m[  746.756798] [0m[33mPM[0m: Preparing system for sleep (mem)
+[32m[  746.758327] [0mFreezing user space processes ... 
+[32m[  746.766567] [0m[33mdwc2 f72c0000.usb[0m: dwc2_hsotg_ep_stop_xfr: timeout DOEPCTL.EPDisable
+[32m[  746.774267] [0m[33mdwc2 f72c0000.usb[0m: GINNakEff triggered
+[32m[  746.785763] [0m(elapsed 0.022 seconds) done.
+[32m[  746.789906] [0mFreezing remaining freezable tasks ... (elapsed 0.002 seconds) done.
+[32m[  746.800338] [0m[33mPM[0m: Suspending system (mem)
+[32m[  746.800356] [0mSuspending console(s) (use no_console_suspend to debug)
+[32m[  746.903164] [0m[33mPM[0m: suspend of devices complete after 48.901 msecs
+[32m[  746.908257] [0m[33mPM[0m: late suspend of devices complete after 5.064 msecs
+[32m[  746.912094] [0m[33mPM[0m: noirq suspend of devices complete after 3.816 msecs
+[32m[  746.912106] [0mDisabling non-boot CPUs ...
+[32m[  746.914683] [0m[33mCPU3[0m: update max cpu_capacity 1024
+[32m[  746.930908] [0mIRQ5 no longer affine to CPU1
+[32m[  746.931460] [0m[33mCPU1[0m: shutdown
+[32m[  746.946627] [0m[33mpsci[0m: Retrying again to check for CPU kill
+[32m[  746.946637] [0m[33mpsci[0m: CPU1 killed.
+[32m[  746.966682] [0m[33mCPU3[0m: update max cpu_capacity 1024
+[32m[  746.983474] [0m[33mCPU2[0m: shutdown
+[32m[  746.998619] [0m[33mpsci[0m: Retrying again to check for CPU kill
+[32m[  746.998629] [0m[33mpsci[0m: CPU2 killed.
+[32m[  747.022635] [0m[33mCPU0[0m: update max cpu_capacity 1024
+[32m[  747.031629] [0m[33mCPU3[0m: shutdown
+[32m[  747.046629] [0m[33mpsci[0m: Retrying again to check for CPU kill
+[32m[  747.046638] [0m[33mpsci[0m: CPU3 killed.
+[32m[  747.070710] [0m[33mCPU0[0m: update max cpu_capacity 1024
+[32m[  747.075662] [0m[33mCPU4[0m: shutdown
+[32m[  747.090622] [0m[33mpsci[0m: Retrying again to check for CPU kill
+[32m[  747.090631] [0m[33mpsci[0m: CPU4 killed.
+[32m[  747.110686] [0m[33mCPU0[0m: update max cpu_capacity 1024
+[32m[  747.119450] [0m[33mCPU5[0m: shutdown
+[32m[  747.119462] [0m[33mpsci[0m: CPU5 killed.
+[32m[  747.138687] [0m[33mCPU0[0m: update max cpu_capacity 1024
+[32m[  747.147438] [0m[33mCPU6[0m: shutdown
+[32m[  747.162616] [0m[33mpsci[0m: Retrying again to check for CPU kill
+[32m[  747.162626] [0m[33mpsci[0m: CPU6 killed.
+[32m[  747.191316] [0m[33mCPU7[0m: shutdown
+[32m[  747.191330] [0m[33mpsci[0m: CPU7 killed.
+[32m[  747.205592] [0mEnabling non-boot CPUs ...
+[32m[  747.224652] [0mDetected VIPT I-cache on CPU1
+[32m[  747.224758] [0m[33mCPU1[0m: update cpu_capacity 1024
+[32m[  747.224766] [0m[33mCPU1[0m: Booted secondary processor [410fd033]
+[32m[  747.225690] [0m[33m cache[0m: parent cpu1 should not be sleeping
+[32m[  747.226188] [0mCPU1 is up
+[32m[  747.227042] [0m[33mCPU0[0m: update max cpu_capacity 1024
+[32m[  747.257095] [0mDetected VIPT I-cache on CPU2
+[32m[  747.257187] [0m[33mCPU2[0m: update cpu_capacity 1024
+[32m[  747.257194] [0m[33mCPU2[0m: Booted secondary processor [410fd033]
+[32m[  747.258246] [0m[33m cache[0m: parent cpu2 should not be sleeping
+[32m[  747.258909] [0mCPU2 is up
+[32m[  747.259041] [0m[33mCPU2[0m: update max cpu_capacity 1024
+[32m[  747.281572] [0mDetected VIPT I-cache on CPU3
+[32m[  747.281665] [0m[33mCPU3[0m: update cpu_capacity 1024
+[32m[  747.281672] [0m[33mCPU3[0m: Booted secondary processor [410fd033]
+[32m[  747.282503] [0m[33mCPU3[0m: update max cpu_capacity 1024
+[32m[  747.283157] [0m[33m cache[0m: parent cpu3 should not be sleeping
+[32m[  747.283651] [0mCPU3 is up
+[32m[  747.306157] [0mDetected VIPT I-cache on CPU4
+[32m[  747.306267] [0m[33mCPU4[0m: update cpu_capacity 1024
+[32m[  747.306275] [0m[33mCPU4[0m: Booted secondary processor [410fd033]
+[32m[  747.308178] [0m[33m cache[0m: parent cpu4 should not be sleeping
+[32m[  747.308677] [0mCPU4 is up
+[32m[  747.310626] [0m[33mCPU0[0m: update max cpu_capacity 1024
+[32m[  747.330842] [0mDetected VIPT I-cache on CPU5
+[32m[  747.330924] [0m[33mCPU5[0m: update cpu_capacity 1024
+[32m[  747.330931] [0m[33mCPU5[0m: Booted secondary processor [410fd033]
+[32m[  747.333046] [0m[33m cache[0m: parent cpu5 should not be sleeping
+[32m[  747.333544] [0mCPU5 is up
+[32m[  747.334640] [0m[33mCPU0[0m: update max cpu_capacity 1024
+[32m[  747.355439] [0mDetected VIPT I-cache on CPU6
+[32m[  747.355521] [0m[33mCPU6[0m: update cpu_capacity 1024
+[32m[  747.355527] [0m[33mCPU6[0m: Booted secondary processor [410fd033]
+[32m[  747.357973] [0m[33m cache[0m: parent cpu6 should not be sleeping
+[32m[  747.358672] [0mCPU6 is up
+[32m[  747.358817] [0m[33mCPU6[0m: update max cpu_capacity 1024
+[32m[  747.383773] [0mDetected VIPT I-cache on CPU7
+[32m[  747.383854] [0m[33mCPU7[0m: update cpu_capacity 1024
+[32m[  747.383861] [0m[33mCPU7[0m: Booted secondary processor [410fd033]
+[32m[  747.386624] [0m[33mCPU7[0m: update max cpu_capacity 1024
+[32m[  747.387000] [0m[33m cache[0m: parent cpu7 should not be sleeping
+[32m[  747.387527] [0mCPU7 is up
+[32m[  747.389906] [0m[33mPM[0m: noirq resume of devices complete after 2.230 msecs
+[32m[  747.393753] [0m[33mPM[0m: early resume of devices complete after 3.195 msecs
+[32m[  747.436655] [0m[33mmmc_host mmc0[0m: Bus speed (slot 0) = 24800000Hz (slot req 400000Hz, actual 400000HZ div = 31)
+[32m[  747.505930] [0m[33mmmc_host mmc0[0m: Bus speed (slot 0) = 51756522Hz (slot req 52000000Hz, actual 51756522HZ div = 0)
+[32m[  747.616676] [0m[33mmmc_host mmc2[0m: Bus speed (slot 0) = 24800000Hz (slot req 400000Hz, actual 400000HZ div = 31)
+[32m[  747.670304] [0m[33mmmc_host mmc2[0m: Bus speed (slot 0) = 24800000Hz (slot req 25000000Hz, actual 24800000HZ div = 0)
+[32m[  747.675978] [0m[33mPM[0m: resume of devices complete after 282.206 msecs
+[32m[  748.096238] [0m[33mPM[0m: Finishing wakeup.
+[32m[  748.096258] [0mRestarting tasks ... 
+[32m[  748.101126] [0m[33mueventd[0m: fixup /sys/devices/system/cpu/cpu1/cpufreq/scaling_max_freq 1000 1000 664
+[32m[  748.104189] [0mdone.
+[32m[  748.113807] [0m[33mueventd[0m: fixup /sys/devices/system/cpu/cpu1/cpufreq/scaling_min_freq 1000 1000 664
+[32m[  748.122891] [0m[33mPM[0m: suspend exit 1970-01-01 00:12:57.707920833 UTC
+[32m[  748.161586] [0m[33mueventd[0m: fixup /sys/devices/system/cpu/cpu2/cpufreq/scaling_max_freq 1000 1000 664
+[32m[  748.170851] [0m[33mueventd[0m: fixup /sys/devices/system/cpu/cpu2/cpufreq/scaling_min_freq 1000 1000 664
+[32m[  748.218399] [0m[33mueventd[0m: fixup /sys/devices/system/cpu/cpu3/cpufreq/scaling_max_freq 1000 1000 664
+[32m[  748.227603] [0m[33mueventd[0m: fixup /sys/devices/system/cpu/cpu3/cpufreq/scaling_min_freq 1000 1000 664
+[32m[  748.275262] [0m[33mueventd[0m: fixup /sys/devices/system/cpu/cpu4/cpufreq/scaling_max_freq 1000 1000 664
+[32m[  748.284440] [0m[33mueventd[0m: fixup /sys/devices/system/cpu/cpu4/cpufreq/scaling_min_freq 1000 1000 664
+[32m[  748.331984] [0m[33mueventd[0m: fixup /sys/devices/system/cpu/cpu5/cpufreq/scaling_max_freq 1000 1000 664
+[32m[  748.341180] [0m[33mueventd[0m: fixup /sys/devices/system/cpu/cpu5/cpufreq/scaling_min_freq 1000 1000 664
+[32m[  748.388753] [0m[33mueventd[0m: fixup /sys/devices/system/cpu/cpu6/cpufreq/scaling_max_freq 1000 1000 664
+[32m[  748.397937] [0m[33mueventd[0m: fixup /sys/devices/system/cpu/cpu6/cpufreq/scaling_min_freq 1000 1000 664
+[32m[  748.445447] [0m[33mueventd[0m: fixup /sys/devices/system/cpu/cpu7/cpufreq/scaling_max_freq 1000 1000 664
+[32m[  748.454700] [0m[33mueventd[0m: fixup /sys/devices/system/cpu/cpu7/cpufreq/scaling_min_freq 1000 1000 664
+[32m[  775.648680] [0m[33mPM[0m: suspend entry 1970-01-01 00:13:25.233700830 UTC
+[32m[  775.654842] [0m[33mPM[0m: Syncing filesystems ... done.
+[32m[  775.664662] [0m[33mPM[0m: Preparing system for sleep (mem)
+[32m[  775.666195] [0mFreezing user space processes ... 
+[32m[  775.674516] [0m[33mdwc2 f72c0000.usb[0m: dwc2_hsotg_ep_stop_xfr: timeout DOEPCTL.EPDisable
+[32m[  775.682433] [0m[33mdwc2 f72c0000.usb[0m: GINNakEff triggered
+[32m[  775.690970] [0m(elapsed 0.020 seconds) done.
+[32m[  775.695109] [0mFreezing remaining freezable tasks ... (elapsed 0.002 seconds) done.
+[32m[  775.705436] [0m[33mPM[0m: Suspending system (mem)
+[32m[  775.705454] [0mSuspending console(s) (use no_console_suspend to debug)
+[32m[  775.811066] [0m[33mPM[0m: suspend of devices complete after 51.098 msecs
+[32m[  775.816489] [0m[33mPM[0m: late suspend of devices complete after 5.393 msecs
+[32m[  775.820193] [0m[33mPM[0m: noirq suspend of devices complete after 3.682 msecs
+[32m[  775.820205] [0mDisabling non-boot CPUs ...
+[32m[  775.822642] [0m[33mCPU4[0m: update max cpu_capacity 1024
+[32m[  775.843388] [0m[33mCPU1[0m: shutdown
+[32m[  775.858552] [0m[33mpsci[0m: Retrying again to check for CPU kill
+[32m[  775.858562] [0m[33mpsci[0m: CPU1 killed.
+[32m[  775.878642] [0m[33mCPU4[0m: update max cpu_capacity 1024
+[32m[  775.895398] [0m[33mCPU2[0m: shutdown
+[32m[  775.910548] [0m[33mpsci[0m: Retrying again to check for CPU kill
+[32m[  775.910559] [0m[33mpsci[0m: CPU2 killed.
+[32m[  775.930583] [0m[33mCPU4[0m: update max cpu_capacity 1024
+[32m[  775.943056] [0mIRQ5 no longer affine to CPU3
+[32m[  775.943569] [0m[33mCPU3[0m: shutdown
+[32m[  775.958544] [0m[33mpsci[0m: Retrying again to check for CPU kill
+[32m[  775.958553] [0m[33mpsci[0m: CPU3 killed.
+[32m[  775.982561] [0m[33mCPU0[0m: update max cpu_capacity 1024
+[32m[  775.991537] [0m[33mCPU4[0m: shutdown
+[32m[  776.006540] [0m[33mpsci[0m: Retrying again to check for CPU kill
+[32m[  776.006550] [0m[33mpsci[0m: CPU4 killed.
+[32m[  776.026603] [0m[33mCPU0[0m: update max cpu_capacity 1024
+[32m[  776.035394] [0m[33mCPU5[0m: shutdown
+[32m[  776.035406] [0m[33mpsci[0m: CPU5 killed.
+[32m[  776.054605] [0m[33mCPU0[0m: update max cpu_capacity 1024
+[32m[  776.063348] [0m[33mCPU6[0m: shutdown
+[32m[  776.078538] [0m[33mpsci[0m: Retrying again to check for CPU kill
+[32m[  776.078548] [0m[33mpsci[0m: CPU6 killed.
+[32m[  776.107235] [0m[33mCPU7[0m: shutdown
+[32m[  776.107247] [0m[33mpsci[0m: CPU7 killed.
+[32m[  776.121513] [0mEnabling non-boot CPUs ...
+[32m[  776.140573] [0mDetected VIPT I-cache on CPU1
+[32m[  776.140681] [0m[33mCPU1[0m: update cpu_capacity 1024
+[32m[  776.140688] [0m[33mCPU1[0m: Booted secondary processor [410fd033]
+[32m[  776.141612] [0m[33m cache[0m: parent cpu1 should not be sleeping
+[32m[  776.142112] [0mCPU1 is up
+[32m[  776.142970] [0m[33mCPU0[0m: update max cpu_capacity 1024
+[32m[  776.173022] [0mDetected VIPT I-cache on CPU2
+[32m[  776.173117] [0m[33mCPU2[0m: update cpu_capacity 1024
+[32m[  776.173124] [0m[33mCPU2[0m: Booted secondary processor [410fd033]
+[32m[  776.174176] [0m[33m cache[0m: parent cpu2 should not be sleeping
+[32m[  776.174838] [0mCPU2 is up
+[32m[  776.174972] [0m[33mCPU2[0m: update max cpu_capacity 1024
+[32m[  776.197501] [0mDetected VIPT I-cache on CPU3
+[32m[  776.197595] [0m[33mCPU3[0m: update cpu_capacity 1024
+[32m[  776.197602] [0m[33mCPU3[0m: Booted secondary processor [410fd033]
+[32m[  776.198423] [0m[33mCPU3[0m: update max cpu_capacity 1024
+[32m[  776.199086] [0m[33m cache[0m: parent cpu3 should not be sleeping
+[32m[  776.199589] [0mCPU3 is up
+[32m[  776.222087] [0mDetected VIPT I-cache on CPU4
+[32m[  776.222200] [0m[33mCPU4[0m: update cpu_capacity 1024
+[32m[  776.222208] [0m[33mCPU4[0m: Booted secondary processor [410fd033]
+[32m[  776.224094] [0m[33m cache[0m: parent cpu4 should not be sleeping
+[32m[  776.224588] [0mCPU4 is up
+[32m[  776.226545] [0m[33mCPU0[0m: update max cpu_capacity 1024
+[32m[  776.246761] [0mDetected VIPT I-cache on CPU5
+[32m[  776.246843] [0m[33mCPU5[0m: update cpu_capacity 1024
+[32m[  776.246849] [0m[33mCPU5[0m: Booted secondary processor [410fd033]
+[32m[  776.248950] [0m[33m cache[0m: parent cpu5 should not be sleeping
+[32m[  776.249445] [0mCPU5 is up
+[32m[  776.250565] [0m[33mCPU0[0m: update max cpu_capacity 1024
+[32m[  776.271355] [0mDetected VIPT I-cache on CPU6
+[32m[  776.271437] [0m[33mCPU6[0m: update cpu_capacity 1024
+[32m[  776.271443] [0m[33mCPU6[0m: Booted secondary processor [410fd033]
+[32m[  776.273883] [0m[33m cache[0m: parent cpu6 should not be sleeping
+[32m[  776.274582] [0mCPU6 is up
+[32m[  776.274728] [0m[33mCPU6[0m: update max cpu_capacity 1024
+[32m[  776.299701] [0mDetected VIPT I-cache on CPU7
+[32m[  776.299782] [0m[33mCPU7[0m: update cpu_capacity 1024
+[32m[  776.299789] [0m[33mCPU7[0m: Booted secondary processor [410fd033]
+[32m[  776.302769] [0m[33mCPU7[0m: update max cpu_capacity 1024
+[32m[  776.302853] [0m[33m cache[0m: parent cpu7 should not be sleeping
+[32m[  776.303375] [0mCPU7 is up
+[32m[  776.305746] [0m[33mPM[0m: noirq resume of devices complete after 2.236 msecs
+[32m[  776.309383] [0m[33mPM[0m: early resume of devices complete after 3.059 msecs
+[32m[  776.352230] [0m[33mmmc_host mmc0[0m: Bus speed (slot 0) = 24800000Hz (slot req 400000Hz, actual 400000HZ div = 31)
+[32m[  776.423879] [0m[33mmmc_host mmc0[0m: Bus speed (slot 0) = 51756522Hz (slot req 52000000Hz, actual 51756522HZ div = 0)
+[32m[  776.536611] [0m[33mmmc_host mmc2[0m: Bus speed (slot 0) = 24800000Hz (slot req 400000Hz, actual 400000HZ div = 31)
+[32m[  776.592666] [0m[33mmmc_host mmc2[0m: Bus speed (slot 0) = 24800000Hz (slot req 25000000Hz, actual 24800000HZ div = 0)
+[32m[  776.597293] [0m[33mPM[0m: resume of devices complete after 287.892 msecs
+[32m[  777.015626] [0m[33mPM[0m: Finishing wakeup.
+[32m[  777.015645] [0mRestarting tasks ... 
+[32m[  777.020529] [0m[33mueventd[0m: fixup /sys/devices/system/cpu/cpu1/cpufreq/scaling_max_freq 1000 1000 664
+[32m[  777.023476] [0mdone.
+[32m[  777.033794] [0m[33mueventd[0m: fixup /sys/devices/system/cpu/cpu1/cpufreq/scaling_min_freq 1000 1000 664
+[32m[  777.043142] [0m[33mPM[0m: suspend exit 1970-01-01 00:13:35.712870833 UTC
+[32m[  777.081714] [0m[33mueventd[0m: fixup /sys/devices/system/cpu/cpu2/cpufreq/scaling_max_freq 1000 1000 664
+[32m[  777.090903] [0m[33mueventd[0m: fixup /sys/devices/system/cpu/cpu2/cpufreq/scaling_min_freq 1000 1000 664
+[32m[  777.138314] [0m[33mueventd[0m: fixup /sys/devices/system/cpu/cpu3/cpufreq/scaling_max_freq 1000 1000 664
+[32m[  777.147491] [0m[33mueventd[0m: fixup /sys/devices/system/cpu/cpu3/cpufreq/scaling_min_freq 1000 1000 664
+[32m[  777.194928] [0m[33mueventd[0m: fixup /sys/devices/system/cpu/cpu4/cpufreq/scaling_max_freq 1000 1000 664
+[32m[  777.204116] [0m[33mueventd[0m: fixup /sys/devices/system/cpu/cpu4/cpufreq/scaling_min_freq 1000 1000 664
+[32m[  777.251539] [0m[33mueventd[0m: fixup /sys/devices/system/cpu/cpu5/cpufreq/scaling_max_freq 1000 1000 664
+[32m[  777.260725] [0m[33mueventd[0m: fixup /sys/devices/system/cpu/cpu5/cpufreq/scaling_min_freq 1000 1000 664
+[32m[  777.308212] [0m[33mueventd[0m: fixup /sys/devices/system/cpu/cpu6/cpufreq/scaling_max_freq 1000 1000 664
+[32m[  777.317389] [0m[33mueventd[0m: fixup /sys/devices/system/cpu/cpu6/cpufreq/scaling_min_freq 1000 1000 664
+[32m[  777.364820] [0m[33mueventd[0m: fixup /sys/devices/system/cpu/cpu7/cpufreq/scaling_max_freq 1000 1000 664
+[32m[  777.373996] [0m[33mueventd[0m: fixup /sys/devices/system/cpu/cpu7/cpufreq/scaling_min_freq 1000 1000 664
+[32m[  804.676912] [0m[33mPM[0m: suspend entry 1970-01-01 00:14:03.346634164 UTC
+[32m[  804.683131] [0m[33mPM[0m: Syncing filesystems ... done.
+[32m[  804.695685] [0m[33mPM[0m: Preparing system for sleep (mem)
+[32m[  804.699566] [0mFreezing user space processes ... 
+[32m[  804.708115] [0m[33mdwc2 f72c0000.usb[0m: dwc2_hsotg_ep_stop_xfr: timeout DOEPCTL.EPDisable
+[32m[  804.715811] [0m[33mdwc2 f72c0000.usb[0m: GINNakEff triggered
+[32m[  804.725991] [0m(elapsed 0.022 seconds) done.
+[32m[  804.730138] [0mFreezing remaining freezable tasks ... (elapsed 0.002 seconds) done.
+[32m[  804.740410] [0m[33mPM[0m: Suspending system (mem)
+[32m[  804.740429] [0mSuspending console(s) (use no_console_suspend to debug)
+[32m[  804.843670] [0m[33mPM[0m: suspend of devices complete after 49.680 msecs
+[32m[  804.849311] [0m[33mPM[0m: late suspend of devices complete after 5.610 msecs
+[32m[  804.853273] [0m[33mPM[0m: noirq suspend of devices complete after 3.936 msecs
+[32m[  804.853285] [0mDisabling non-boot CPUs ...
+[32m[  804.858446] [0m[33mCPU2[0m: update max cpu_capacity 1024
+[32m[  804.875243] [0m[33mCPU1[0m: shutdown
+[32m[  804.890748] [0m[33mpsci[0m: Retrying again to check for CPU kill
+[32m[  804.890985] [0m[33mpsci[0m: CPU1 killed.
+[32m[  804.910531] [0m[33mCPU4[0m: update max cpu_capacity 1024
+[32m[  804.931319] [0m[33mCPU2[0m: shutdown
+[32m[  804.946513] [0m[33mpsci[0m: Retrying again to check for CPU kill
+[32m[  804.946523] [0m[33mpsci[0m: CPU2 killed.
+[32m[  804.970543] [0m[33mCPU0[0m: update max cpu_capacity 1024
+[32m[  804.975036] [0mIRQ5 no longer affine to CPU3
+[32m[  804.975539] [0m[33mCPU3[0m: shutdown
+[32m[  804.990462] [0m[33mpsci[0m: Retrying again to check for CPU kill
+[32m[  804.990472] [0m[33mpsci[0m: CPU3 killed.
+[32m[  805.014547] [0m[33mCPU0[0m: update max cpu_capacity 1024
+[32m[  805.019493] [0m[33mCPU4[0m: shutdown
+[32m[  805.034459] [0m[33mpsci[0m: Retrying again to check for CPU kill
+[32m[  805.034469] [0m[33mpsci[0m: CPU4 killed.
+[32m[  805.054523] [0m[33mCPU0[0m: update max cpu_capacity 1024
+[32m[  805.063317] [0m[33mCPU5[0m: shutdown
+[32m[  805.063329] [0m[33mpsci[0m: CPU5 killed.
+[32m[  805.082525] [0m[33mCPU0[0m: update max cpu_capacity 1024
+[32m[  805.091286] [0m[33mCPU6[0m: shutdown
+[32m[  805.091300] [0m[33mpsci[0m: CPU6 killed.
+[32m[  805.119153] [0m[33mCPU7[0m: shutdown
+[32m[  805.119166] [0m[33mpsci[0m: CPU7 killed.
+[32m[  805.133421] [0mEnabling non-boot CPUs ...
+[32m[  805.152501] [0mDetected VIPT I-cache on CPU1
+[32m[  805.152606] [0m[33mCPU1[0m: update cpu_capacity 1024
+[32m[  805.152614] [0m[33mCPU1[0m: Booted secondary processor [410fd033]
+[32m[  805.153543] [0m[33m cache[0m: parent cpu1 should not be sleeping
+[32m[  805.154042] [0mCPU1 is up
+[32m[  805.154907] [0m[33mCPU0[0m: update max cpu_capacity 1024
+[32m[  805.184919] [0mDetected VIPT I-cache on CPU2
+[32m[  805.185011] [0m[33mCPU2[0m: update cpu_capacity 1024
+[32m[  805.185018] [0m[33mCPU2[0m: Booted secondary processor [410fd033]
+[32m[  805.186075] [0m[33m cache[0m: parent cpu2 should not be sleeping
+[32m[  805.186740] [0mCPU2 is up
+[32m[  805.186871] [0m[33mCPU2[0m: update max cpu_capacity 1024
+[32m[  805.209431] [0mDetected VIPT I-cache on CPU3
+[32m[  805.209526] [0m[33mCPU3[0m: update cpu_capacity 1024
+[32m[  805.209533] [0m[33mCPU3[0m: Booted secondary processor [410fd033]
+[32m[  805.210341] [0m[33mCPU3[0m: update max cpu_capacity 1024
+[32m[  805.211027] [0m[33m cache[0m: parent cpu3 should not be sleeping
+[32m[  805.211527] [0mCPU3 is up
+[32m[  805.234018] [0mDetected VIPT I-cache on CPU4
+[32m[  805.234130] [0m[33mCPU4[0m: update cpu_capacity 1024
+[32m[  805.234137] [0m[33mCPU4[0m: Booted secondary processor [410fd033]
+[32m[  805.236028] [0m[33m cache[0m: parent cpu4 should not be sleeping
+[32m[  805.236526] [0mCPU4 is up
+[32m[  805.238464] [0m[33mCPU0[0m: update max cpu_capacity 1024
+[32m[  805.258713] [0mDetected VIPT I-cache on CPU5
+[32m[  805.258795] [0m[33mCPU5[0m: update cpu_capacity 1024
+[32m[  805.258802] [0m[33mCPU5[0m: Booted secondary processor [410fd033]
+[32m[  805.260905] [0m[33m cache[0m: parent cpu5 should not be sleeping
+[32m[  805.261406] [0mCPU5 is up
+[32m[  805.262479] [0m[33mCPU0[0m: update max cpu_capacity 1024
+[32m[  805.283300] [0mDetected VIPT I-cache on CPU6
+[32m[  805.283382] [0m[33mCPU6[0m: update cpu_capacity 1024
+[32m[  805.283388] [0m[33mCPU6[0m: Booted secondary processor [410fd033]
+[32m[  805.285859] [0m[33m cache[0m: parent cpu6 should not be sleeping
+[32m[  805.286561] [0mCPU6 is up
+[32m[  805.286705] [0m[33mCPU6[0m: update max cpu_capacity 1024
+[32m[  805.311616] [0mDetected VIPT I-cache on CPU7
+[32m[  805.311697] [0m[33mCPU7[0m: update cpu_capacity 1024
+[32m[  805.311704] [0m[33mCPU7[0m: Booted secondary processor [410fd033]
+[32m[  805.314341] [0m[33mCPU7[0m: update max cpu_capacity 1024
+[32m[  805.314839] [0m[33m cache[0m: parent cpu7 should not be sleeping
+[32m[  805.315371] [0mCPU7 is up
+[32m[  805.317781] [0m[33mPM[0m: noirq resume of devices complete after 2.273 msecs
+[32m[  805.321693] [0m[33mPM[0m: early resume of devices complete after 3.126 msecs
+[32m[  805.364484] [0m[33mmmc_host mmc0[0m: Bus speed (slot 0) = 24800000Hz (slot req 400000Hz, actual 400000HZ div = 31)
+[32m[  805.434251] [0m[33mmmc_host mmc0[0m: Bus speed (slot 0) = 51756522Hz (slot req 52000000Hz, actual 51756522HZ div = 0)
+[32m[  805.544494] [0m[33mmmc_host mmc2[0m: Bus speed (slot 0) = 24800000Hz (slot req 400000Hz, actual 400000HZ div = 31)
+[32m[  805.600173] [0m[33mmmc_host mmc2[0m: Bus speed (slot 0) = 24800000Hz (slot req 25000000Hz, actual 24800000HZ div = 0)
+[32m[  805.604797] [0m[33mPM[0m: resume of devices complete after 283.085 msecs
+[32m[  806.017875] [0m[33mPM[0m: Finishing wakeup.
+[32m[  806.017894] [0mRestarting tasks ... 
+[32m[  806.022604] [0m[33mueventd[0m: fixup /sys/devices/system/cpu/cpu1/cpufreq/scaling_max_freq 1000 1000 664
+[32m[  806.025746] [0mdone.
+[32m[  806.036350] [0m[33mueventd[0m: fixup /sys/devices/system/cpu/cpu1/cpufreq/scaling_min_freq 1000 1000 664
+[32m[  806.045541] [0m[33mPM[0m: suspend exit 1970-01-01 00:14:13.702072500 UTC
+[32m[  806.084830] [0m[33mueventd[0m: fixup /sys/devices/system/cpu/cpu2/cpufreq/scaling_max_freq 1000 1000 664
+[32m[  806.094026] [0m[33mueventd[0m: fixup /sys/devices/system/cpu/cpu2/cpufreq/scaling_min_freq 1000 1000 664
+[32m[  806.141686] [0m[33mueventd[0m: fixup /sys/devices/system/cpu/cpu3/cpufreq/scaling_max_freq 1000 1000 664
+[32m[  806.150901] [0m[33mueventd[0m: fixup /sys/devices/system/cpu/cpu3/cpufreq/scaling_min_freq 1000 1000 664
+[32m[  806.198573] [0m[33mueventd[0m: fixup /sys/devices/system/cpu/cpu4/cpufreq/scaling_max_freq 1000 1000 664
+[32m[  806.207764] [0m[33mueventd[0m: fixup /sys/devices/system/cpu/cpu4/cpufreq/scaling_min_freq 1000 1000 664
+[32m[  806.255457] [0m[33mueventd[0m: fixup /sys/devices/system/cpu/cpu5/cpufreq/scaling_max_freq 1000 1000 664
+[32m[  806.264647] [0m[33mueventd[0m: fixup /sys/devices/system/cpu/cpu5/cpufreq/scaling_min_freq 1000 1000 664
+[32m[  806.312290] [0m[33mueventd[0m: fixup /sys/devices/system/cpu/cpu6/cpufreq/scaling_max_freq 1000 1000 664
+[32m[  806.321502] [0m[33mueventd[0m: fixup /sys/devices/system/cpu/cpu6/cpufreq/scaling_min_freq 1000 1000 664
+[32m[  806.369131] [0m[33mueventd[0m: fixup /sys/devices/system/cpu/cpu7/cpufreq/scaling_max_freq 1000 1000 664
+[32m[  806.378380] [0m[33mueventd[0m: fixup /sys/devices/system/cpu/cpu7/cpufreq/scaling_min_freq 1000 1000 664
+[32m[  834.193706] [0m[33mPM[0m: suspend entry 1970-01-01 00:14:41.850230831 UTC
+[32m[  834.199859] [0m[33mPM[0m: Syncing filesystems ... done.
+[32m[  834.209855] [0m[33mPM[0m: Preparing system for sleep (mem)
+[32m[  834.211542] [0mFreezing user space processes ... 
+[32m[  834.220085] [0m[33mdwc2 f72c0000.usb[0m: dwc2_hsotg_ep_stop_xfr: timeout DOEPCTL.EPDisable
+[32m[  834.227818] [0m[33mdwc2 f72c0000.usb[0m: GINNakEff triggered
+[32m[  834.237822] [0m(elapsed 0.021 seconds) done.
+[32m[  834.241966] [0mFreezing remaining freezable tasks ... (elapsed 0.002 seconds) done.
+[32m[  834.252692] [0m[33mPM[0m: Suspending system (mem)
+[32m[  834.252714] [0mSuspending console(s) (use no_console_suspend to debug)
+[32m[  834.358446] [0m[33mPM[0m: suspend of devices complete after 50.480 msecs
+[32m[  834.363533] [0m[33mPM[0m: late suspend of devices complete after 5.056 msecs
+[32m[  834.367388] [0m[33mPM[0m: noirq suspend of devices complete after 3.834 msecs
+[32m[  834.367399] [0mDisabling non-boot CPUs ...
+[32m[  834.370459] [0m[33mCPU5[0m: update max cpu_capacity 1024
+[32m[  834.383349] [0m[33mCPU1[0m: shutdown
+[32m[  834.398402] [0m[33mpsci[0m: Retrying again to check for CPU kill
+[32m[  834.398412] [0m[33mpsci[0m: CPU1 killed.
+[32m[  834.418443] [0m[33mCPU5[0m: update max cpu_capacity 1024
+[32m[  834.439217] [0m[33mCPU2[0m: shutdown
+[32m[  834.454390] [0m[33mpsci[0m: Retrying again to check for CPU kill
+[32m[  834.454400] [0m[33mpsci[0m: CPU2 killed.
+[32m[  834.482394] [0m[33mCPU0[0m: update max cpu_capacity 1024
+[32m[  834.491402] [0m[33mCPU3[0m: shutdown
+[32m[  834.506380] [0m[33mpsci[0m: Retrying again to check for CPU kill
+[32m[  834.506389] [0m[33mpsci[0m: CPU3 killed.
+[32m[  834.530466] [0m[33mCPU0[0m: update max cpu_capacity 1024
+[32m[  834.535409] [0m[33mCPU4[0m: shutdown
+[32m[  834.550380] [0m[33mpsci[0m: Retrying again to check for CPU kill
+[32m[  834.550389] [0m[33mpsci[0m: CPU4 killed.
+[32m[  834.570443] [0m[33mCPU0[0m: update max cpu_capacity 1024
+[32m[  834.579225] [0m[33mCPU5[0m: shutdown
+[32m[  834.594378] [0m[33mpsci[0m: Retrying again to check for CPU kill
+[32m[  834.594388] [0m[33mpsci[0m: CPU5 killed.
+[32m[  834.614443] [0m[33mCPU0[0m: update max cpu_capacity 1024
+[32m[  834.623186] [0m[33mCPU6[0m: shutdown
+[32m[  834.638378] [0m[33mpsci[0m: Retrying again to check for CPU kill
+[32m[  834.638388] [0m[33mpsci[0m: CPU6 killed.
+[32m[  834.667069] [0m[33mCPU7[0m: shutdown
+[32m[  834.682362] [0m[33mpsci[0m: Retrying again to check for CPU kill
+[32m[  834.682372] [0m[33mpsci[0m: CPU7 killed.
+[32m[  834.697347] [0mEnabling non-boot CPUs ...
+[32m[  834.716421] [0mDetected VIPT I-cache on CPU1
+[32m[  834.716528] [0m[33mCPU1[0m: update cpu_capacity 1024
+[32m[  834.716535] [0m[33mCPU1[0m: Booted secondary processor [410fd033]
+[32m[  834.717441] [0m[33m cache[0m: parent cpu1 should not be sleeping
+[32m[  834.717943] [0mCPU1 is up
+[32m[  834.718819] [0m[33mCPU0[0m: update max cpu_capacity 1024
+[32m[  834.748838] [0mDetected VIPT I-cache on CPU2
+[32m[  834.748933] [0m[33mCPU2[0m: update cpu_capacity 1024
+[32m[  834.748941] [0m[33mCPU2[0m: Booted secondary processor [410fd033]
+[32m[  834.749999] [0m[33m cache[0m: parent cpu2 should not be sleeping
+[32m[  834.750663] [0mCPU2 is up
+[32m[  834.750796] [0m[33mCPU2[0m: update max cpu_capacity 1024
+[32m[  834.773356] [0mDetected VIPT I-cache on CPU3
+[32m[  834.773452] [0m[33mCPU3[0m: update cpu_capacity 1024
+[32m[  834.773459] [0m[33mCPU3[0m: Booted secondary processor [410fd033]
+[32m[  834.774261] [0m[33mCPU3[0m: update max cpu_capacity 1024
+[32m[  834.774956] [0m[33m cache[0m: parent cpu3 should not be sleeping
+[32m[  834.775458] [0mCPU3 is up
+[32m[  834.797923] [0mDetected VIPT I-cache on CPU4
+[32m[  834.798036] [0m[33mCPU4[0m: update cpu_capacity 1024
+[32m[  834.798044] [0m[33mCPU4[0m: Booted secondary processor [410fd033]
+[32m[  834.799929] [0m[33m cache[0m: parent cpu4 should not be sleeping
+[32m[  834.800427] [0mCPU4 is up
+[32m[  834.802386] [0m[33mCPU0[0m: update max cpu_capacity 1024
+[32m[  834.822617] [0mDetected VIPT I-cache on CPU5
+[32m[  834.822699] [0m[33mCPU5[0m: update cpu_capacity 1024
+[32m[  834.822706] [0m[33mCPU5[0m: Booted secondary processor [410fd033]
+[32m[  834.824809] [0m[33m cache[0m: parent cpu5 should not be sleeping
+[32m[  834.825309] [0mCPU5 is up
+[32m[  834.826400] [0m[33mCPU0[0m: update max cpu_capacity 1024
+[32m[  834.847206] [0mDetected VIPT I-cache on CPU6
+[32m[  834.847288] [0m[33mCPU6[0m: update cpu_capacity 1024
+[32m[  834.847295] [0m[33mCPU6[0m: Booted secondary processor [410fd033]
+[32m[  834.849748] [0m[33m cache[0m: parent cpu6 should not be sleeping
+[32m[  834.850447] [0mCPU6 is up
+[32m[  834.850592] [0m[33mCPU6[0m: update max cpu_capacity 1024
+[32m[  834.875540] [0mDetected VIPT I-cache on CPU7
+[32m[  834.875622] [0m[33mCPU7[0m: update cpu_capacity 1024
+[32m[  834.875628] [0m[33mCPU7[0m: Booted secondary processor [410fd033]
+[32m[  834.878262] [0m[33mCPU7[0m: update max cpu_capacity 1024
+[32m[  834.878764] [0m[33m cache[0m: parent cpu7 should not be sleeping
+[32m[  834.879371] [0mCPU7 is up
+[32m[  834.881789] [0m[33mPM[0m: noirq resume of devices complete after 2.279 msecs
+[32m[  834.885682] [0m[33mPM[0m: early resume of devices complete after 3.101 msecs
+[32m[  834.928425] [0m[33mmmc_host mmc0[0m: Bus speed (slot 0) = 24800000Hz (slot req 400000Hz, actual 400000HZ div = 31)
+[32m[  834.998139] [0m[33mmmc_host mmc0[0m: Bus speed (slot 0) = 51756522Hz (slot req 52000000Hz, actual 51756522HZ div = 0)
+[32m[  835.108416] [0m[33mmmc_host mmc2[0m: Bus speed (slot 0) = 24800000Hz (slot req 400000Hz, actual 400000HZ div = 31)
+[32m[  835.166043] [0m[33mmmc_host mmc2[0m: Bus speed (slot 0) = 24800000Hz (slot req 25000000Hz, actual 24800000HZ div = 0)
+[32m[  835.170330] [0m[33mPM[0m: resume of devices complete after 284.626 msecs
+[32m[  835.594659] [0m[33mPM[0m: Finishing wakeup.
+[32m[  835.594678] [0mRestarting tasks ... 
+[32m[  835.599504] [0m[33mueventd[0m: fixup /sys/devices/system/cpu/cpu1/cpufreq/scaling_max_freq 1000 1000 664
+[32m[  835.602821] [0mdone.
+[32m[  835.611844] [0m[33mueventd[0m: fixup /sys/devices/system/cpu/cpu1/cpufreq/scaling_min_freq 1000 1000 664
+[32m[  835.621271] [0m[33mPM[0m: suspend exit 1970-01-01 00:14:51.714607500 UTC
+[32m[  835.661859] [0m[33mueventd[0m: fixup /sys/devices/system/cpu/cpu2/cpufreq/scaling_max_freq 1000 1000 664
+[32m[  835.671062] [0m[33mueventd[0m: fixup /sys/devices/system/cpu/cpu2/cpufreq/scaling_min_freq 1000 1000 664
+[32m[  835.718675] [0m[33mueventd[0m: fixup /sys/devices/system/cpu/cpu3/cpufreq/scaling_max_freq 1000 1000 664
+[32m[  835.727869] [0m[33mueventd[0m: fixup /sys/devices/system/cpu/cpu3/cpufreq/scaling_min_freq 1000 1000 664
+[32m[  835.775432] [0m[33mueventd[0m: fixup /sys/devices/system/cpu/cpu4/cpufreq/scaling_max_freq 1000 1000 664
+[32m[  835.784611] [0m[33mueventd[0m: fixup /sys/devices/system/cpu/cpu4/cpufreq/scaling_min_freq 1000 1000 664
+[32m[  835.832187] [0m[33mueventd[0m: fixup /sys/devices/system/cpu/cpu5/cpufreq/scaling_max_freq 1000 1000 664
+[32m[  835.841365] [0m[33mueventd[0m: fixup /sys/devices/system/cpu/cpu5/cpufreq/scaling_min_freq 1000 1000 664
+[32m[  835.889243] [0m[33mueventd[0m: fixup /sys/devices/system/cpu/cpu6/cpufreq/scaling_max_freq 1000 1000 664
+[32m[  835.898499] [0m[33mueventd[0m: fixup /sys/devices/system/cpu/cpu6/cpufreq/scaling_min_freq 1000 1000 664
+[32m[  835.946120] [0m[33mueventd[0m: fixup /sys/devices/system/cpu/cpu7/cpufreq/scaling_max_freq 1000 1000 664
+[32m[  835.955321] [0m[33mueventd[0m: fixup /sys/devices/system/cpu/cpu7/cpufreq/scaling_min_freq 1000 1000 664
+[32m[  863.571378] [0m[33mPM[0m: suspend entry 1970-01-01 00:15:19.664711664 UTC
+[32m[  863.577495] [0m[33mPM[0m: Syncing filesystems ... done.
+[32m[  863.587690] [0m[33mPM[0m: Preparing system for sleep (mem)
+[32m[  863.589999] [0mFreezing user space processes ... 
+[32m[  863.598941] [0m[33mdwc2 f72c0000.usb[0m: dwc2_hsotg_ep_stop_xfr: timeout DOEPCTL.EPDisable
+[32m[  863.606634] [0m[33mdwc2 f72c0000.usb[0m: GINNakEff triggered
+[32m[  863.613862] [0m(elapsed 0.019 seconds) done.
+[32m[  863.618077] [0mFreezing remaining freezable tasks ... (elapsed 0.002 seconds) done.
+[32m[  863.628376] [0m[33mPM[0m: Suspending system (mem)
+[32m[  863.628394] [0mSuspending console(s) (use no_console_suspend to debug)
+[32m[  863.731865] [0m[33mPM[0m: suspend of devices complete after 50.766 msecs
+[32m[  863.736948] [0m[33mPM[0m: late suspend of devices complete after 5.051 msecs
+[32m[  863.740585] [0m[33mPM[0m: noirq suspend of devices complete after 3.615 msecs
+[32m[  863.740597] [0mDisabling non-boot CPUs ...
+[32m[  863.742414] [0m[33mCPU4[0m: update max cpu_capacity 1024
+[32m[  863.763197] [0m[33mCPU1[0m: shutdown
+[32m[  863.778312] [0m[33mpsci[0m: Retrying again to check for CPU kill
+[32m[  863.778322] [0m[33mpsci[0m: CPU1 killed.
+[32m[  863.798360] [0m[33mCPU4[0m: update max cpu_capacity 1024
+[32m[  863.819143] [0m[33mCPU2[0m: shutdown
+[32m[  863.834316] [0m[33mpsci[0m: Retrying again to check for CPU kill
+[32m[  863.834326] [0m[33mpsci[0m: CPU2 killed.
+[32m[  863.854341] [0m[33mCPU4[0m: update max cpu_capacity 1024
+[32m[  863.867304] [0m[33mCPU3[0m: shutdown
+[32m[  863.882308] [0m[33mpsci[0m: Retrying again to check for CPU kill
+[32m[  863.882318] [0m[33mpsci[0m: CPU3 killed.
+[32m[  863.902342] [0m[33mCPU6[0m: update max cpu_capacity 1024
+[32m[  863.915143] [0m[33mCPU4[0m: shutdown
+[32m[  863.930359] [0m[33mpsci[0m: Retrying again to check for CPU kill
+[32m[  863.930369] [0m[33mpsci[0m: CPU4 killed.
+[32m[  863.950346] [0m[33mCPU0[0m: update max cpu_capacity 1024
+[32m[  863.963138] [0m[33mCPU5[0m: shutdown
+[32m[  863.963151] [0m[33mpsci[0m: CPU5 killed.
+[32m[  863.982336] [0m[33mCPU0[0m: update max cpu_capacity 1024
+[32m[  863.995086] [0m[33mCPU6[0m: shutdown
+[32m[  863.995099] [0m[33mpsci[0m: CPU6 killed.
+[32m[  864.022618] [0mIRQ5 no longer affine to CPU7
+[32m[  864.023002] [0m[33mCPU7[0m: shutdown
+[32m[  864.023016] [0m[33mpsci[0m: CPU7 killed.
+[32m[  864.037254] [0mEnabling non-boot CPUs ...
+[32m[  864.056335] [0mDetected VIPT I-cache on CPU1
+[32m[  864.056440] [0m[33mCPU1[0m: update cpu_capacity 1024
+[32m[  864.056448] [0m[33mCPU1[0m: Booted secondary processor [410fd033]
+[32m[  864.057362] [0m[33m cache[0m: parent cpu1 should not be sleeping
+[32m[  864.057860] [0mCPU1 is up
+[32m[  864.058716] [0m[33mCPU0[0m: update max cpu_capacity 1024
+[32m[  864.088750] [0mDetected VIPT I-cache on CPU2
+[32m[  864.088844] [0m[33mCPU2[0m: update cpu_capacity 1024
+[32m[  864.088851] [0m[33mCPU2[0m: Booted secondary processor [410fd033]
+[32m[  864.089911] [0m[33m cache[0m: parent cpu2 should not be sleeping
+[32m[  864.090573] [0mCPU2 is up
+[32m[  864.090706] [0m[33mCPU2[0m: update max cpu_capacity 1024
+[32m[  864.113263] [0mDetected VIPT I-cache on CPU3
+[32m[  864.113358] [0m[33mCPU3[0m: update cpu_capacity 1024
+[32m[  864.113365] [0m[33mCPU3[0m: Booted secondary processor [410fd033]
+[32m[  864.114183] [0m[33mCPU3[0m: update max cpu_capacity 1024
+[32m[  864.114863] [0m[33m cache[0m: parent cpu3 should not be sleeping
+[32m[  864.115370] [0mCPU3 is up
+[32m[  864.137849] [0mDetected VIPT I-cache on CPU4
+[32m[  864.137962] [0m[33mCPU4[0m: update cpu_capacity 1024
+[32m[  864.137970] [0m[33mCPU4[0m: Booted secondary processor [410fd033]
+[32m[  864.139852] [0m[33m cache[0m: parent cpu4 should not be sleeping
+[32m[  864.140352] [0mCPU4 is up
+[32m[  864.142306] [0m[33mCPU0[0m: update max cpu_capacity 1024
+[32m[  864.162532] [0mDetected VIPT I-cache on CPU5
+[32m[  864.162613] [0m[33mCPU5[0m: update cpu_capacity 1024
+[32m[  864.162620] [0m[33mCPU5[0m: Booted secondary processor [410fd033]
+[32m[  864.164717] [0m[33m cache[0m: parent cpu5 should not be sleeping
+[32m[  864.165215] [0mCPU5 is up
+[32m[  864.166320] [0m[33mCPU0[0m: update max cpu_capacity 1024
+[32m[  864.187136] [0mDetected VIPT I-cache on CPU6
+[32m[  864.187218] [0m[33mCPU6[0m: update cpu_capacity 1024
+[32m[  864.187225] [0m[33mCPU6[0m: Booted secondary processor [410fd033]
+[32m[  864.189669] [0m[33m cache[0m: parent cpu6 should not be sleeping
+[32m[  864.190375] [0mCPU6 is up
+[32m[  864.190521] [0m[33mCPU6[0m: update max cpu_capacity 1024
+[32m[  864.215432] [0mDetected VIPT I-cache on CPU7
+[32m[  864.215514] [0m[33mCPU7[0m: update cpu_capacity 1024
+[32m[  864.215521] [0m[33mCPU7[0m: Booted secondary processor [410fd033]
+[32m[  864.218274] [0m[33mCPU7[0m: update max cpu_capacity 1024
+[32m[  864.218635] [0m[33m cache[0m: parent cpu7 should not be sleeping
+[32m[  864.219157] [0mCPU7 is up
+[32m[  864.221522] [0m[33mPM[0m: noirq resume of devices complete after 2.223 msecs
+[32m[  864.225504] [0m[33mPM[0m: early resume of devices complete after 3.400 msecs
+[32m[  864.268367] [0m[33mmmc_host mmc0[0m: Bus speed (slot 0) = 24800000Hz (slot req 400000Hz, actual 400000HZ div = 31)
+[32m[  864.338032] [0m[33mmmc_host mmc0[0m: Bus speed (slot 0) = 51756522Hz (slot req 52000000Hz, actual 51756522HZ div = 0)
+[32m[  864.448362] [0m[33mmmc_host mmc2[0m: Bus speed (slot 0) = 24800000Hz (slot req 400000Hz, actual 400000HZ div = 31)
+[32m[  864.503789] [0m[33mmmc_host mmc2[0m: Bus speed (slot 0) = 24800000Hz (slot req 25000000Hz, actual 24800000HZ div = 0)
+[32m[  864.508255] [0m[33mPM[0m: resume of devices complete after 282.732 msecs
+[32m[  864.920325] [0m[33mPM[0m: Finishing wakeup.
+[32m[  864.920344] [0mRestarting tasks ... 
+[32m[  864.926436] [0m[33mueventd[0m: fixup /sys/devices/system/cpu/cpu1/cpufreq/scaling_max_freq 1000 1000 664
+[32m[  864.928347] [0mdone.
+[32m[  864.938399] [0m[33mueventd[0m: fixup /sys/devices/system/cpu/cpu1/cpufreq/scaling_min_freq 1000 1000 664
+[32m[  864.947726] [0m[33mPM[0m: suspend exit 1970-01-01 00:15:29.700482500 UTC
+[32m[  864.986372] [0m[33mueventd[0m: fixup /sys/devices/system/cpu/cpu2/cpufreq/scaling_max_freq 1000 1000 664
+[32m[  864.995574] [0m[33mueventd[0m: fixup /sys/devices/system/cpu/cpu2/cpufreq/scaling_min_freq 1000 1000 664
+[32m[  865.043122] [0m[33mueventd[0m: fixup /sys/devices/system/cpu/cpu3/cpufreq/scaling_max_freq 1000 1000 664
+[32m[  865.052308] [0m[33mueventd[0m: fixup /sys/devices/system/cpu/cpu3/cpufreq/scaling_min_freq 1000 1000 664
+[32m[  865.099787] [0m[33mueventd[0m: fixup /sys/devices/system/cpu/cpu4/cpufreq/scaling_max_freq 1000 1000 664
+[32m[  865.108964] [0m[33mueventd[0m: fixup /sys/devices/system/cpu/cpu4/cpufreq/scaling_min_freq 1000 1000 664
+[32m[  865.156449] [0m[33mueventd[0m: fixup /sys/devices/system/cpu/cpu5/cpufreq/scaling_max_freq 1000 1000 664
+[32m[  865.165627] [0m[33mueventd[0m: fixup /sys/devices/system/cpu/cpu5/cpufreq/scaling_min_freq 1000 1000 664
+[32m[  865.213119] [0m[33mueventd[0m: fixup /sys/devices/system/cpu/cpu6/cpufreq/scaling_max_freq 1000 1000 664
+[32m[  865.222349] [0m[33mueventd[0m: fixup /sys/devices/system/cpu/cpu6/cpufreq/scaling_min_freq 1000 1000 664
+[32m[  865.269744] [0m[33mueventd[0m: fixup /sys/devices/system/cpu/cpu7/cpufreq/scaling_max_freq 1000 1000 664
+[32m[  865.278915] [0m[33mueventd[0m: fixup /sys/devices/system/cpu/cpu7/cpufreq/scaling_min_freq 1000 1000 664
+[32m[  881.992930] [0m[33mPM[0m: suspend entry 1970-01-01 00:15:46.745678332 UTC
+[32m[  881.999056] [0m[33mPM[0m: Syncing filesystems ... done.
+[32m[  882.014105] [0m[33mPM[0m: Preparing system for sleep (freeze)
+[32m[  882.016096] [0mFreezing user space processes ... 
+[32m[  882.025789] [0m[33mdwc2 f72c0000.usb[0m: dwc2_hsotg_ep_stop_xfr: timeout DOEPCTL.EPDisable
+[32m[  882.033562] [0m[33mdwc2 f72c0000.usb[0m: GINNakEff triggered
+[32m[  882.044373] [0m(elapsed 0.023 seconds) done.
+[32m[  882.048713] [0mFreezing remaining freezable tasks ... (elapsed 0.005 seconds) done.
+[32m[  882.061870] [0m[33mPM[0m: Suspending system (freeze)
+[32m[  882.061915] [0mSuspending console(s) (use no_console_suspend to debug)
+[32m[  882.182380] [0m[33mPM[0m: suspend of devices complete after 49.883 msecs
+[32m[  882.186949] [0m[33mPM[0m: late suspend of devices complete after 4.546 msecs
+[32m[  882.190803] [0m[33mPM[0m: noirq suspend of devices complete after 3.836 msecs
+[32m[  882.190842] [0m[33mPM[0m: suspend-to-idle
+[32m[  891.037529] [0m[33mPM[0m: resume from suspend-to-idle
+[32m[  891.039934] [0m[33mPM[0m: noirq resume of devices complete after 2.328 msecs
+[32m[  891.043727] [0m[33mPM[0m: early resume of devices complete after 3.205 msecs
+[32m[  891.084433] [0m[33mmmc_host mmc0[0m: Bus speed (slot 0) = 24800000Hz (slot req 400000Hz, actual 400000HZ div = 31)
+[32m[  891.153971] [0m[33mmmc_host mmc0[0m: Bus speed (slot 0) = 51756522Hz (slot req 52000000Hz, actual 51756522HZ div = 0)
+[32m[  891.264501] [0m[33mmmc_host mmc2[0m: Bus speed (slot 0) = 24800000Hz (slot req 400000Hz, actual 400000HZ div = 31)
+[32m[  891.317986] [0m[33mmmc_host mmc2[0m: Bus speed (slot 0) = 24800000Hz (slot req 25000000Hz, actual 24800000HZ div = 0)
+[32m[  891.322364] [0m[33mPM[0m: resume of devices complete after 278.619 msecs
+[32m[  891.456436] [0m[33mPM[0m: Finishing wakeup.
+[32m[  891.456456] [0mRestarting tasks ... done.
+[32m[  891.475889] [0m[33mPM[0m: suspend exit 1970-01-01 00:15:56.413856667 UTC
+[32m[  919.549854] [0m[33mPM[0m: suspend entry 1970-01-01 00:16:24.487819164 UTC
+[32m[  919.556006] [0m[33mPM[0m: Syncing filesystems ... done.
+[32m[  919.565856] [0m[33mPM[0m: Preparing system for sleep (freeze)
+[32m[  919.568444] [0mFreezing user space processes ... 
+[32m[  919.576919] [0m[33mdwc2 f72c0000.usb[0m: dwc2_hsotg_ep_stop_xfr: timeout DOEPCTL.EPDisable
+[32m[  919.584657] [0m[33mdwc2 f72c0000.usb[0m: GINNakEff triggered
+[32m[  919.595392] [0m(elapsed 0.022 seconds) done.
+[32m[  919.599732] [0mFreezing remaining freezable tasks ... (elapsed 0.003 seconds) done.
+[32m[  919.610983] [0m[33mPM[0m: Suspending system (freeze)
+[32m[  919.611010] [0mSuspending console(s) (use no_console_suspend to debug)
+[32m[  919.719733] [0m[33mPM[0m: suspend of devices complete after 47.791 msecs
+[32m[  919.724832] [0m[33mPM[0m: late suspend of devices complete after 5.070 msecs
+[32m[  919.728582] [0m[33mPM[0m: noirq suspend of devices complete after 3.729 msecs
+[32m[  919.728621] [0m[33mPM[0m: suspend-to-idle
+[32m[  929.041581] [0m[33mPM[0m: resume from suspend-to-idle
+[32m[  929.044081] [0m[33mPM[0m: noirq resume of devices complete after 2.423 msecs
+[32m[  929.047904] [0m[33mPM[0m: early resume of devices complete after 3.249 msecs
+[32m[  929.088275] [0m[33mmmc_host mmc0[0m: Bus speed (slot 0) = 24800000Hz (slot req 400000Hz, actual 400000HZ div = 31)
+[32m[  929.158988] [0m[33mmmc_host mmc0[0m: Bus speed (slot 0) = 51756522Hz (slot req 52000000Hz, actual 51756522HZ div = 0)
+[32m[  929.268257] [0m[33mmmc_host mmc2[0m: Bus speed (slot 0) = 24800000Hz (slot req 400000Hz, actual 400000HZ div = 31)
+[32m[  929.321060] [0m[33mmmc_host mmc2[0m: Bus speed (slot 0) = 24800000Hz (slot req 25000000Hz, actual 24800000HZ div = 0)
+[32m[  929.325826] [0m[33mPM[0m: resume of devices complete after 277.902 msecs
+[32m[  929.461347] [0m[33mPM[0m: Finishing wakeup.
+[32m[  929.461367] [0mRestarting tasks ... done.
+[32m[  929.478734] [0m[33mPM[0m: suspend exit 1970-01-01 00:16:34.416699997 UTC
