@@ -52,6 +52,7 @@ import re
 import platform
 from datetime import datetime
 import struct
+import csv
 
 # ----------------- CLASSES --------------------
 
@@ -85,6 +86,7 @@ class SystemValues:
 	teststamp = ''
 	dmesgfile = ''
 	ftracefile = ''
+	csvfile=""
 	htmlfile = ''
 	rtcwake = False
 	rtcwaketime = 10
@@ -531,10 +533,20 @@ class Data:
 		return self.deviceIDs(devlist, phase)
 	def printDetails(self):
 		vprint('          test start: %f' % self.start)
+		path=os.path.split(sysvals.ftracefile)
+		sysvals.csvfile=path[0]+'/summary.csv'
+		csvfile=file(sysvals.csvfile, 'wb')
+		writer=csv.writer(csvfile)
 		for phase in self.phases:
 			dc = len(self.dmesg[phase]['list'])
 			vprint('    %16s: %f - %f (%d devices)' % (phase, \
 				self.dmesg[phase]['start'], self.dmesg[phase]['end'], dc))
+			devlist=self.dmesg[phase]['list']
+			writer.writerow([phase, '' ,self.dmesg[phase]['end']-self.dmesg[phase]['start'] ])
+			for devname in devlist:
+				dev = devlist[devname]
+				writer.writerow([ '',devname, dev['end']-dev['start']])
+		csvfile.close()
 		vprint('            test end: %f' % self.end)
 	def masterTopology(self, name, list, depth):
 		node = DeviceNode(name, depth)
