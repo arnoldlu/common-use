@@ -52,7 +52,6 @@ import re
 import platform
 from datetime import datetime
 import struct
-import csv
 
 # ----------------- CLASSES --------------------
 
@@ -86,7 +85,6 @@ class SystemValues:
 	teststamp = ''
 	dmesgfile = ''
 	ftracefile = ''
-	csvfile=""
 	htmlfile = ''
 	rtcwake = False
 	rtcwaketime = 10
@@ -533,21 +531,10 @@ class Data:
 		return self.deviceIDs(devlist, phase)
 	def printDetails(self):
 		vprint('          test start: %f' % self.start)
-		path=os.path.split(sysvals.ftracefile)
-		sysvals.csvfile=path[0]+'/summary_phase_dev.csv'
-		csvfile=file(sysvals.csvfile, 'wb')
-		writer=csv.writer(csvfile)
-		writer.writerow(['Phase','Dev','Duration(ms)'])
 		for phase in self.phases:
 			dc = len(self.dmesg[phase]['list'])
-			vprint('    %16s: %f ms (%d devices)' % (phase, \
-				(self.dmesg[phase]['end'] - self.dmesg[phase]['start'])*1000, dc))
-			devlist=self.dmesg[phase]['list']
-			writer.writerow([phase, '' ,(self.dmesg[phase]['end']-self.dmesg[phase]['start'])*1000 ])
-			for devname in devlist:
-				dev = devlist[devname]
-				writer.writerow([ '',devname, (dev['end']-dev['start'])*1000])
-		csvfile.close()
+			vprint('    %16s: %f - %f (%d devices)' % (phase, \
+				self.dmesg[phase]['start'], self.dmesg[phase]['end'], dc))
 		vprint('            test end: %f' % self.end)
 	def masterTopology(self, name, list, depth):
 		node = DeviceNode(name, depth)
@@ -951,10 +938,7 @@ def initFtraceAndroid():
 	global sysvals
 
 	tp = sysvals.tpath
-	cf = 'dpm_run_callback'
-	if(sysvals.usetraceeventsonly):
-		cf = '-e dpm_prepare -e dpm_complete -e dpm_run_callback'
-	if(sysvals.usecallgraph or sysvals.usetraceevents):
+	if(sysvals.usetraceevents):
 		print('INITIALIZING FTRACE...')
 		# turn trace off
 		os.system(sysvals.adb+" shell 'echo 0 > "+tp+"tracing_on'")
@@ -962,23 +946,12 @@ def initFtraceAndroid():
 		os.system(sysvals.adb+" shell 'echo global > "+tp+"trace_clock'")
 		# set trace buffer to a huge value
 		os.system(sysvals.adb+" shell 'echo nop > "+tp+"current_tracer'")
-		os.system(sysvals.adb+" shell 'echo 100000 > "+tp+"buffer_size_kb'")
-		# initialize the callgraph trace, unless this is an x2 run
-		if(sysvals.usecallgraph and sysvals.execcount == 1):
-			# set trace type
-			os.system(sysvals.adb+" shell 'echo function_graph > "+tp+"current_tracer'")
-			os.system(sysvals.adb+" shell 'echo "" > "+tp+"set_ftrace_filter'")
-			# set trace format options
-			os.system(sysvals.adb+" shell 'echo funcgraph-abstime > "+tp+"trace_options'")
-			os.system(sysvals.adb+" shell 'echo funcgraph-proc > "+tp+"trace_options'")
-			# focus only on device suspend and resume
-			os.system(sysvals.adb+" shell 'cat "+tp+"available_filter_functions | grep "+cf+" > "+tp+"set_graph_function'")
-		if(sysvals.usetraceevents):
-			# turn trace events on
-			events = iter(sysvals.traceevents)
-			for e in events:
-				os.system(sysvals.adb+" shell 'echo 1 > "+\
-					sysvals.epath+e+"/enable'")
+		os.system(sysvals.adb+" shell 'echo 10000 > "+tp+"buffer_size_kb'")
+		# turn trace events on
+		events = iter(sysvals.traceevents)
+		for e in events:
+			os.system(sysvals.adb+" shell 'echo 1 > "+\
+				sysvals.epath+e+"/enable'")
 		# clear the trace buffer
 		os.system(sysvals.adb+" shell 'echo \"\" > "+tp+"trace'")
 
@@ -2173,36 +2146,6 @@ def createHTMLSummarySimple(testruns, htmlfile):
 	hf.write('</body>\n</html>\n')
 	hf.close()
 
-# Function: createCSVSummarySimple
-# Description:
-#	Create a summary csv file for s series of tests
-# Arguments:
-#	testruns: array of data objects from parseTraceLog
-#	csvfile: output file name
-def createCSVSummarySimple(testruns, csvfile):
-	global sysvals
-	num = 0
-
-	summaryfile=file(csvfile, 'wb')
-	writer = csv.writer(summaryfile)
-	writer.writerow(['test#','suspend_prepare', 'suspend','suspend_late',\
-					'suspend_noirq','suspend_machine',\
-					'resume_machine','resume_noirq',\
-					'resume_early','resume','resume_complete'])
-	for data in testruns:
-		num += 1
-		writer.writerow(['test '+bytes(num), (data.dmesg['suspend_prepare']['end']-data.dmesg['suspend_prepare']['start'])*1000,\
-					(data.dmesg['suspend']['end']-data.dmesg['suspend']['start'])*1000,\
-					(data.dmesg['suspend_late']['end']-data.dmesg['suspend_late']['start'])*1000,\
-					(data.dmesg['suspend_noirq']['end']-data.dmesg['suspend_noirq']['start'])*1000,\
-					(data.dmesg['suspend_machine']['end']-data.dmesg['suspend_machine']['start'])*1000,\
-					(data.dmesg['resume_machine']['end']-data.dmesg['resume_machine']['start'])*1000,\
-					(data.dmesg['resume_noirq']['end']-data.dmesg['resume_noirq']['start'])*1000,\
-					(data.dmesg['resume_early']['end']-data.dmesg['resume_early']['start'])*1000,\
-					(data.dmesg['resume']['end']-data.dmesg['resume']['start'])*1000,\
-					(data.dmesg['resume_complete']['end']-data.dmesg['resume_complete']['start'])*1000])
-	summaryfile.close()
-
 # Function: createHTML
 # Description:
 #	 Create the output html file from the resident test data
@@ -2850,13 +2793,7 @@ def executeAndroidSuspend():
 			if(sysvals.usetraceevents):
 				os.system(sysvals.adb+\
 					" shell 'echo SUSPEND START > "+tp+"trace_marker'")
-			if(sysvals.rtcwake):
-				print('SUSPEND START')
-				print('will autoresume in %d seconds' % sysvals.rtcwaketime)
-				os.system(sysvals.adb+" shell 'echo +%d > /sys/class/rtc/rtc0/wakealarm'"%(sysvals.rtcwaketime))
-			else:
-				print('SUSPEND START (press a key to resume)')
-
+			print('SUSPEND START (press a key on the device to resume)')
 			os.system(sysvals.adb+" shell 'echo "+sysvals.suspendmode+\
 				" > "+sysvals.powerfile+"'")
 			# execution will pause here, then adb will exit
@@ -3429,7 +3366,6 @@ def runSummary(subdir, output):
 		testruns.append(data)
 
 	createHTMLSummarySimple(testruns, subdir+'/summary.html')
-	createCSVSummarySimple(testruns, subdir+'/summary_phase.csv')
 
 # Function: printHelp
 # Description:
@@ -3620,9 +3556,9 @@ if __name__ == '__main__':
 
 	# run test on android device
 	if(sysvals.android):
-		#if(sysvals.usecallgraph):
-		#	doError('ftrace (-f) is not yet supported '+\
-		#		'in the android kernel', False)
+		if(sysvals.usecallgraph):
+			doError('ftrace (-f) is not yet supported '+\
+				'in the android kernel', False)
 		if(sysvals.notestrun):
 			doError('cannot analyze test files on the '+\
 				'android device', False)
