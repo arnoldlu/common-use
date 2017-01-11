@@ -1397,7 +1397,11 @@ def parseTraceLog():
 					data.newPhase(phase, t.time, t.time, '#FF9966', -1)
 				else:
 					testrun.inthepipe = False
+				#data.setEnd(t.time)
+				continue
+			if((t.type == 'suspend_resume') and (re.match('thaw_processes\[.*] end', t.name))):
 				data.setEnd(t.time)
+				vprint('resume completed\n')
 				continue
 			if(phase == 'post_resume'):
 				data.setEnd(t.time)
