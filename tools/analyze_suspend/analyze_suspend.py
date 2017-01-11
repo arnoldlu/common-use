@@ -534,18 +534,19 @@ class Data:
 	def printDetails(self):
 		vprint('          test start: %f' % self.start)
 		path=os.path.split(sysvals.ftracefile)
-		sysvals.csvfile=path[0]+'/summary.csv'
+		sysvals.csvfile=path[0]+'/summary_phase_dev.csv'
 		csvfile=file(sysvals.csvfile, 'wb')
 		writer=csv.writer(csvfile)
+		writer.writerow(['Phase','Dev','Duration(ms)'])
 		for phase in self.phases:
 			dc = len(self.dmesg[phase]['list'])
-			vprint('    %16s: %f - %f (%d devices)' % (phase, \
-				self.dmesg[phase]['start'], self.dmesg[phase]['end'], dc))
+			vprint('    %16s: %f ms (%d devices)' % (phase, \
+				(self.dmesg[phase]['end'] - self.dmesg[phase]['start'])*1000, dc))
 			devlist=self.dmesg[phase]['list']
-			writer.writerow([phase, '' ,self.dmesg[phase]['end']-self.dmesg[phase]['start'] ])
+			writer.writerow([phase, '' ,(self.dmesg[phase]['end']-self.dmesg[phase]['start'])*1000 ])
 			for devname in devlist:
 				dev = devlist[devname]
-				writer.writerow([ '',devname, dev['end']-dev['start']])
+				writer.writerow([ '',devname, (dev['end']-dev['start'])*1000])
 		csvfile.close()
 		vprint('            test end: %f' % self.end)
 	def masterTopology(self, name, list, depth):
@@ -2172,6 +2173,36 @@ def createHTMLSummarySimple(testruns, htmlfile):
 	hf.write('</body>\n</html>\n')
 	hf.close()
 
+# Function: createCSVSummarySimple
+# Description:
+#	Create a summary csv file for s series of tests
+# Arguments:
+#	testruns: array of data objects from parseTraceLog
+#	csvfile: output file name
+def createCSVSummarySimple(testruns, csvfile):
+	global sysvals
+	num = 0
+
+	summaryfile=file(csvfile, 'wb')
+	writer = csv.writer(summaryfile)
+	writer.writerow(['test#','suspend_prepare', 'suspend','suspend_late',\
+					'suspend_noirq','suspend_machine',\
+					'resume_machine','resume_noirq',\
+					'resume_early','resume','resume_complete'])
+	for data in testruns:
+		num += 1
+		writer.writerow(['test '+bytes(num), (data.dmesg['suspend_prepare']['end']-data.dmesg['suspend_prepare']['start'])*1000,\
+					(data.dmesg['suspend']['end']-data.dmesg['suspend']['start'])*1000,\
+					(data.dmesg['suspend_late']['end']-data.dmesg['suspend_late']['start'])*1000,\
+					(data.dmesg['suspend_noirq']['end']-data.dmesg['suspend_noirq']['start'])*1000,\
+					(data.dmesg['suspend_machine']['end']-data.dmesg['suspend_machine']['start'])*1000,\
+					(data.dmesg['resume_machine']['end']-data.dmesg['resume_machine']['start'])*1000,\
+					(data.dmesg['resume_noirq']['end']-data.dmesg['resume_noirq']['start'])*1000,\
+					(data.dmesg['resume_early']['end']-data.dmesg['resume_early']['start'])*1000,\
+					(data.dmesg['resume']['end']-data.dmesg['resume']['start'])*1000,\
+					(data.dmesg['resume_complete']['end']-data.dmesg['resume_complete']['start'])*1000])
+	summaryfile.close()
+
 # Function: createHTML
 # Description:
 #	 Create the output html file from the resident test data
@@ -3398,6 +3429,7 @@ def runSummary(subdir, output):
 		testruns.append(data)
 
 	createHTMLSummarySimple(testruns, subdir+'/summary.html')
+	createCSVSummarySimple(testruns, subdir+'/summary_phase.csv')
 
 # Function: printHelp
 # Description:
