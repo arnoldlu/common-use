@@ -546,7 +546,7 @@ class Data:
 			writer.writerow([phase, '' ,(self.dmesg[phase]['end']-self.dmesg[phase]['start'])*1000 ])
 			for devname in devlist:
 				dev = devlist[devname]
-				writer.writerow([ '',devname, (dev['end']-dev['start'])*1000])
+				writer.writerow([ phase,devname, (dev['end']-dev['start'])*1000])
 		csvfile.close()
 		vprint('            test end: %f' % self.end)
 	def masterTopology(self, name, list, depth):
