@@ -1316,6 +1316,16 @@ def parseTraceLog():
 	data = 0
 	tf = open(sysvals.ftracefile, 'r')
 	phase = 'suspend_prepare'
+	pre_phase = 'suspend_prepare'
+	pre_devcall = ''
+	start_devcall = 0
+	end_devcall = 0
+	start_phase = 0
+	end_phase = 0
+	summary_devcall = file(os.path.split(sysvals.ftracefile)[0]+'/summary_devcall.csv', 'wb')
+	writer=csv.writer(summary_devcall)
+	writer.writerow(['Phase', 'Device', 'Duration(ms)'])
+
 	for line in tf:
 		# remove any latent carriage returns
 		line = line.replace('\r\n', '')
@@ -1511,6 +1521,15 @@ def parseTraceLog():
 				p = m.group('p')
 				if(n and p):
 					data.newAction(phase, n, pid, p, t.time, -1, drv)
+
+				start_devcall = t.time
+				if(phase != pre_phase):
+					writer.writerow([pre_phase, '', (end_phase - start_phase)*1000])
+				if(len(data.dmesg[phase]['list']) == 1):
+					start_phase = t.time
+					pre_phase = phase
+				if(len(data.dmesg[phase]['list']) > 1):
+					writer.writerow([phase, pre_devcall+'->'+n, (start_devcall - end_devcall)*1000])
 			# device callback finish
 			elif(t.type == 'device_pm_callback_end'):
 				m = re.match('(?P<drv>.*) (?P<d>.*), err.*', t.name);
@@ -1522,6 +1541,11 @@ def parseTraceLog():
 					dev = list[n]
 					dev['length'] = t.time - dev['start']
 					dev['end'] = t.time
+				end_devcall = t.time
+				end_phase = t.time
+				pre_devcall = n
+				writer.writerow([phase, pre_devcall, (end_devcall - start_devcall)*1000])
+
 		# callgraph processing
 		elif sysvals.usecallgraph:
 			# this shouldn't happen, but JIC, ignore callgraph data post-res
@@ -1535,6 +1559,7 @@ def parseTraceLog():
 			cg = testrun.ftemp[pid][-1]
 			if(cg.addLine(t, m)):
 				testrun.ftemp[pid].append(FTraceCallGraph())
+	summary_devcall.close()
 	tf.close()
 
 	for test in testruns:
