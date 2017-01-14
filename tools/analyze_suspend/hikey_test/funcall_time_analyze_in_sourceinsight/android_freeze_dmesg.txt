@@ -1,0 +1,893 @@
+# suspend-011317-104510 android freeze 4.4.17-229955-gbe4da1f-dirty
+[32m[  230.238437] [0m[33mPM[0m: suspend exit 1970-01-01 00:04:02.328429166 UTC
+[32m[  230.239649] [0m[33mueventd[0m: fixup /sys/devices/system/cpu/cpu1/cpufreq/scaling_min_freq 1000 1000 664
+[32m[  230.282637] [0m[33mueventd[0m: fixup /sys/devices/system/cpu/cpu2/cpufreq/scaling_max_freq 1000 1000 664
+[32m[  230.283109] [0m[33mueventd[0m: fixup /sys/devices/system/cpu/cpu2/cpufreq/scaling_min_freq 1000 1000 664
+[32m[  230.323489] [0m[33mueventd[0m: fixup /sys/devices/system/cpu/cpu3/cpufreq/scaling_max_freq 1000 1000 664
+[32m[  230.323991] [0m[33mueventd[0m: fixup /sys/devices/system/cpu/cpu3/cpufreq/scaling_min_freq 1000 1000 664
+[32m[  230.364780] [0m[33mueventd[0m: fixup /sys/devices/system/cpu/cpu4/cpufreq/scaling_max_freq 1000 1000 664
+[32m[  230.365308] [0m[33mueventd[0m: fixup /sys/devices/system/cpu/cpu4/cpufreq/scaling_min_freq 1000 1000 664
+[32m[  230.406193] [0m[33mueventd[0m: fixup /sys/devices/system/cpu/cpu5/cpufreq/scaling_max_freq 1000 1000 664
+[32m[  230.406768] [0m[33mueventd[0m: fixup /sys/devices/system/cpu/cpu5/cpufreq/scaling_min_freq 1000 1000 664
+[32m[  230.447198] [0m[33mueventd[0m: fixup /sys/devices/system/cpu/cpu6/cpufreq/scaling_max_freq 1000 1000 664
+[32m[  230.447714] [0m[33mueventd[0m: fixup /sys/devices/system/cpu/cpu6/cpufreq/scaling_min_freq 1000 1000 664
+[32m[  230.487646] [0m[33mueventd[0m: fixup /sys/devices/system/cpu/cpu7/cpufreq/scaling_max_freq 1000 1000 664
+[32m[  230.488142] [0m[33mueventd[0m: fixup /sys/devices/system/cpu/cpu7/cpufreq/scaling_min_freq 1000 1000 664
+[32m[  256.920885] [0m[33mPM[0m: suspend entry 1970-01-01 00:04:29.010871664 UTC
+[32m[  256.920952] [0m[33mPM[0m: Syncing filesystems ... done.
+[32m[  256.927944] [0mFreezing user space processes ... 
+[32m[  256.930657] [0m[33mdwc2 f72c0000.usb[0m: dwc2_hsotg_ep_stop_xfr: timeout DOEPCTL.EPDisable
+[32m[  256.930707] [0m[33mdwc2 f72c0000.usb[0m: GINNakEff triggered
+[32m[  256.932264] [0m(elapsed 0.004 seconds) done.
+[32m[  256.932342] [0mFreezing remaining freezable tasks ... (elapsed 0.002 seconds) done.
+[32m[  256.934958] [0mSuspending console(s) (use no_console_suspend to debug)
+[32m[  257.028787] [0m[33mPM[0m: suspend of devices complete after 47.615 msecs
+[32m[  257.033670] [0m[33mPM[0m: late suspend of devices complete after 4.836 msecs
+[32m[  257.037198] [0m[33mPM[0m: noirq suspend of devices complete after 3.488 msecs
+[32m[  257.037219] [0mDisabling non-boot CPUs ...
+[32m[  257.051213] [0m[33mCPU1[0m: shutdown
+[32m[  257.051239] [0m[33mpsci[0m: CPU1 killed.
+[32m[  257.083066] [0m[33mCPU2[0m: shutdown
+[32m[  257.083094] [0m[33mpsci[0m: CPU2 killed.
+[32m[  257.084019] [0m[33mNOHZ[0m: local_softirq_pending 20
+[32m[  257.115049] [0m[33mCPU3[0m: shutdown
+[32m[  257.115077] [0m[33mpsci[0m: CPU3 killed.
+[32m[  257.115918] [0m[33mNOHZ[0m: local_softirq_pending 20
+[32m[  257.143121] [0m[33mCPU4[0m: shutdown
+[32m[  257.143145] [0m[33mpsci[0m: CPU4 killed.
+[32m[  257.144012] [0m[33mNOHZ[0m: local_softirq_pending 20
+[32m[  257.171097] [0m[33mCPU5[0m: shutdown
+[32m[  257.171123] [0m[33mpsci[0m: CPU5 killed.
+[32m[  257.172050] [0m[33mNOHZ[0m: local_softirq_pending 20
+[32m[  257.203068] [0m[33mCPU6[0m: shutdown
+[32m[  257.203097] [0m[33mpsci[0m: CPU6 killed.
+[32m[  257.227061] [0m[33mCPU7[0m: shutdown
+[32m[  257.227088] [0m[33mpsci[0m: CPU7 killed.
+[32m[  257.241351] [0mEnabling non-boot CPUs ...
+[32m[  257.260466] [0mDetected VIPT I-cache on CPU1
+[32m[  257.260574] [0m[33mCPU1[0m: Booted secondary processor [410fd033]
+[32m[  257.261129] [0m[33m cache[0m: parent cpu1 should not be sleeping
+[32m[  257.261636] [0mCPU1 is up
+[32m[  257.280870] [0mDetected VIPT I-cache on CPU2
+[32m[  257.280956] [0m[33mCPU2[0m: Booted secondary processor [410fd033]
+[32m[  257.281526] [0m[33m cache[0m: parent cpu2 should not be sleeping
+[32m[  257.282028] [0mCPU2 is up
+[32m[  257.305353] [0mDetected VIPT I-cache on CPU3
+[32m[  257.305440] [0m[33mCPU3[0m: Booted secondary processor [410fd033]
+[32m[  257.305996] [0m[33m cache[0m: parent cpu3 should not be sleeping
+[32m[  257.306529] [0mCPU3 is up
+[32m[  257.333911] [0mDetected VIPT I-cache on CPU4
+[32m[  257.334016] [0m[33mCPU4[0m: Booted secondary processor [410fd033]
+[32m[  257.334658] [0m[33m cache[0m: parent cpu4 should not be sleeping
+[32m[  257.335166] [0mCPU4 is up
+[32m[  257.362317] [0mDetected VIPT I-cache on CPU5
+[32m[  257.362398] [0m[33mCPU5[0m: Booted secondary processor [410fd033]
+[32m[  257.362996] [0m[33m cache[0m: parent cpu5 should not be sleeping
+[32m[  257.363504] [0mCPU5 is up
+[32m[  257.390824] [0mDetected VIPT I-cache on CPU6
+[32m[  257.390905] [0m[33mCPU6[0m: Booted secondary processor [410fd033]
+[32m[  257.391554] [0m[33m cache[0m: parent cpu6 should not be sleeping
+[32m[  257.392064] [0mCPU6 is up
+[32m[  257.419337] [0mDetected VIPT I-cache on CPU7
+[32m[  257.419417] [0m[33mCPU7[0m: Booted secondary processor [410fd033]
+[32m[  257.420142] [0m[33m cache[0m: parent cpu7 should not be sleeping
+[32m[  257.420668] [0mCPU7 is up
+[32m[  257.422938] [0m[33mPM[0m: noirq resume of devices complete after 2.159 msecs
+[32m[  257.426815] [0m[33mPM[0m: early resume of devices complete after 3.378 msecs
+[32m[  257.464507] [0m[33mmmc_host mmc0[0m: Bus speed (slot 0) = 24800000Hz (slot req 400000Hz, actual 400000HZ div = 31)
+[32m[  257.532263] [0m[33mmmc_host mmc0[0m: Bus speed (slot 0) = 51756522Hz (slot req 52000000Hz, actual 51756522HZ div = 0)
+[32m[  257.644446] [0m[33mmmc_host mmc2[0m: Bus speed (slot 0) = 24800000Hz (slot req 400000Hz, actual 400000HZ div = 31)
+[32m[  257.697173] [0m[33mmmc_host mmc2[0m: Bus speed (slot 0) = 24800000Hz (slot req 25000000Hz, actual 24800000HZ div = 0)
+[32m[  257.701803] [0m[33mPM[0m: resume of devices complete after 274.956 msecs
+[32m[  257.755892] [0mRestarting tasks ... 
+[32m[  257.757556] [0m[33mueventd[0m: fixup /sys/devices/system/cpu/cpu1/cpufreq/scaling_max_freq 1000 1000 664
+[32m[  257.758920] [0m[33mueventd[0m: fixup /sys/devices/system/cpu/cpu1/cpufreq/scaling_min_freq 1000 1000 664
+[32m[  257.759539] [0mdone.
+[32m[  257.770310] [0m[33mPM[0m: suspend exit 1970-01-01 00:04:39.324977500 UTC
+[32m[  257.797865] [0m[33mueventd[0m: fixup /sys/devices/system/cpu/cpu2/cpufreq/scaling_max_freq 1000 1000 664
+[32m[  257.798387] [0m[33mueventd[0m: fixup /sys/devices/system/cpu/cpu2/cpufreq/scaling_min_freq 1000 1000 664
+[32m[  257.836849] [0m[33mueventd[0m: fixup /sys/devices/system/cpu/cpu3/cpufreq/scaling_max_freq 1000 1000 664
+[32m[  257.837299] [0m[33mueventd[0m: fixup /sys/devices/system/cpu/cpu3/cpufreq/scaling_min_freq 1000 1000 664
+[32m[  257.875856] [0m[33mueventd[0m: fixup /sys/devices/system/cpu/cpu4/cpufreq/scaling_max_freq 1000 1000 664
+[32m[  257.876309] [0m[33mueventd[0m: fixup /sys/devices/system/cpu/cpu4/cpufreq/scaling_min_freq 1000 1000 664
+[32m[  257.914791] [0m[33mueventd[0m: fixup /sys/devices/system/cpu/cpu5/cpufreq/scaling_max_freq 1000 1000 664
+[32m[  257.915237] [0m[33mueventd[0m: fixup /sys/devices/system/cpu/cpu5/cpufreq/scaling_min_freq 1000 1000 664
+[32m[  257.953671] [0m[33mueventd[0m: fixup /sys/devices/system/cpu/cpu6/cpufreq/scaling_max_freq 1000 1000 664
+[32m[  257.954123] [0m[33mueventd[0m: fixup /sys/devices/system/cpu/cpu6/cpufreq/scaling_min_freq 1000 1000 664
+[32m[  257.992620] [0m[33mueventd[0m: fixup /sys/devices/system/cpu/cpu7/cpufreq/scaling_max_freq 1000 1000 664
+[32m[  257.993071] [0m[33mueventd[0m: fixup /sys/devices/system/cpu/cpu7/cpufreq/scaling_min_freq 1000 1000 664
+[32m[  286.339941] [0m[33mPM[0m: suspend entry 1970-01-01 00:05:07.894600830 UTC
+[32m[  286.340006] [0m[33mPM[0m: Syncing filesystems ... done.
+[32m[  286.347096] [0mFreezing user space processes ... 
+[32m[  286.349583] [0m[33mdwc2 f72c0000.usb[0m: dwc2_hsotg_ep_stop_xfr: timeout DOEPCTL.EPDisable
+[32m[  286.349638] [0m[33mdwc2 f72c0000.usb[0m: GINNakEff triggered
+[32m[  286.351251] [0m(elapsed 0.004 seconds) done.
+[32m[  286.351332] [0mFreezing remaining freezable tasks ... (elapsed 0.002 seconds) done.
+[32m[  286.353842] [0mSuspending console(s) (use no_console_suspend to debug)
+[32m[  286.444827] [0m[33mPM[0m: suspend of devices complete after 44.547 msecs
+[32m[  286.450179] [0m[33mPM[0m: late suspend of devices complete after 5.302 msecs
+[32m[  286.453817] [0m[33mPM[0m: noirq suspend of devices complete after 3.604 msecs
+[32m[  286.453842] [0mDisabling non-boot CPUs ...
+[32m[  286.475099] [0m[33mCPU1[0m: shutdown
+[32m[  286.475123] [0m[33mpsci[0m: CPU1 killed.
+[32m[  286.507096] [0m[33mCPU2[0m: shutdown
+[32m[  286.507126] [0m[33mpsci[0m: CPU2 killed.
+[32m[  286.539092] [0m[33mCPU3[0m: shutdown
+[32m[  286.539121] [0m[33mpsci[0m: CPU3 killed.
+[32m[  286.575079] [0m[33mCPU4[0m: shutdown
+[32m[  286.575105] [0m[33mpsci[0m: CPU4 killed.
+[32m[  286.607010] [0m[33mCPU5[0m: shutdown
+[32m[  286.607038] [0m[33mpsci[0m: CPU5 killed.
+[32m[  286.635010] [0m[33mCPU6[0m: shutdown
+[32m[  286.635035] [0m[33mpsci[0m: CPU6 killed.
+[32m[  286.658632] [0mIRQ5 no longer affine to CPU7
+[32m[  286.658997] [0m[33mCPU7[0m: shutdown
+[32m[  286.659026] [0m[33mpsci[0m: CPU7 killed.
+[32m[  286.673252] [0mEnabling non-boot CPUs ...
+[32m[  286.692430] [0mDetected VIPT I-cache on CPU1
+[32m[  286.692536] [0m[33mCPU1[0m: Booted secondary processor [410fd033]
+[32m[  286.693088] [0m[33m cache[0m: parent cpu1 should not be sleeping
+[32m[  286.693593] [0mCPU1 is up
+[32m[  286.712799] [0mDetected VIPT I-cache on CPU2
+[32m[  286.712887] [0m[33mCPU2[0m: Booted secondary processor [410fd033]
+[32m[  286.713457] [0m[33m cache[0m: parent cpu2 should not be sleeping
+[32m[  286.713960] [0mCPU2 is up
+[32m[  286.737299] [0mDetected VIPT I-cache on CPU3
+[32m[  286.737387] [0m[33mCPU3[0m: Booted secondary processor [410fd033]
+[32m[  286.737976] [0m[33m cache[0m: parent cpu3 should not be sleeping
+[32m[  286.738524] [0mCPU3 is up
+[32m[  286.765826] [0mDetected VIPT I-cache on CPU4
+[32m[  286.765931] [0m[33mCPU4[0m: Booted secondary processor [410fd033]
+[32m[  286.766584] [0m[33m cache[0m: parent cpu4 should not be sleeping
+[32m[  286.767082] [0mCPU4 is up
+[32m[  286.794235] [0mDetected VIPT I-cache on CPU5
+[32m[  286.794317] [0m[33mCPU5[0m: Booted secondary processor [410fd033]
+[32m[  286.794906] [0m[33m cache[0m: parent cpu5 should not be sleeping
+[32m[  286.795403] [0mCPU5 is up
+[32m[  286.818866] [0mDetected VIPT I-cache on CPU6
+[32m[  286.818948] [0m[33mCPU6[0m: Booted secondary processor [410fd033]
+[32m[  286.819650] [0m[33m cache[0m: parent cpu6 should not be sleeping
+[32m[  286.820173] [0mCPU6 is up
+[32m[  286.843309] [0mDetected VIPT I-cache on CPU7
+[32m[  286.843391] [0m[33mCPU7[0m: Booted secondary processor [410fd033]
+[32m[  286.844137] [0m[33m cache[0m: parent cpu7 should not be sleeping
+[32m[  286.844655] [0mCPU7 is up
+[32m[  286.846875] [0m[33mPM[0m: noirq resume of devices complete after 2.110 msecs
+[32m[  286.850916] [0m[33mPM[0m: early resume of devices complete after 3.541 msecs
+[32m[  286.888433] [0m[33mmmc_host mmc0[0m: Bus speed (slot 0) = 24800000Hz (slot req 400000Hz, actual 400000HZ div = 31)
+[32m[  286.956390] [0m[33mmmc_host mmc0[0m: Bus speed (slot 0) = 51756522Hz (slot req 52000000Hz, actual 51756522HZ div = 0)
+[32m[  287.068374] [0m[33mmmc_host mmc2[0m: Bus speed (slot 0) = 24800000Hz (slot req 400000Hz, actual 400000HZ div = 31)
+[32m[  287.112991] [0m[33mmmc_host mmc2[0m: Bus speed (slot 0) = 24800000Hz (slot req 25000000Hz, actual 24800000HZ div = 0)
+[32m[  287.117530] [0m[33mPM[0m: resume of devices complete after 266.579 msecs
+[32m[  287.172033] [0mRestarting tasks ... 
+[32m[  287.173827] [0m[33mueventd[0m: fixup /sys/devices/system/cpu/cpu1/cpufreq/scaling_max_freq 1000 1000 664
+[32m[  287.174832] [0m[33mueventd[0m: fixup /sys/devices/system/cpu/cpu1/cpufreq/scaling_min_freq 1000 1000 664
+[32m[  287.176052] [0mdone.
+[32m[  287.186606] [0m[33mPM[0m: suspend exit 1970-01-01 00:05:18.317385000 UTC
+[32m[  287.214000] [0m[33mueventd[0m: fixup /sys/devices/system/cpu/cpu2/cpufreq/scaling_max_freq 1000 1000 664
+[32m[  287.214523] [0m[33mueventd[0m: fixup /sys/devices/system/cpu/cpu2/cpufreq/scaling_min_freq 1000 1000 664
+[32m[  287.252995] [0m[33mueventd[0m: fixup /sys/devices/system/cpu/cpu3/cpufreq/scaling_max_freq 1000 1000 664
+[32m[  287.253457] [0m[33mueventd[0m: fixup /sys/devices/system/cpu/cpu3/cpufreq/scaling_min_freq 1000 1000 664
+[32m[  287.292084] [0m[33mueventd[0m: fixup /sys/devices/system/cpu/cpu4/cpufreq/scaling_max_freq 1000 1000 664
+[32m[  287.292542] [0m[33mueventd[0m: fixup /sys/devices/system/cpu/cpu4/cpufreq/scaling_min_freq 1000 1000 664
+[32m[  287.331066] [0m[33mueventd[0m: fixup /sys/devices/system/cpu/cpu5/cpufreq/scaling_max_freq 1000 1000 664
+[32m[  287.331520] [0m[33mueventd[0m: fixup /sys/devices/system/cpu/cpu5/cpufreq/scaling_min_freq 1000 1000 664
+[32m[  287.369987] [0m[33mueventd[0m: fixup /sys/devices/system/cpu/cpu6/cpufreq/scaling_max_freq 1000 1000 664
+[32m[  287.370488] [0m[33mueventd[0m: fixup /sys/devices/system/cpu/cpu6/cpufreq/scaling_min_freq 1000 1000 664
+[32m[  287.408879] [0m[33mueventd[0m: fixup /sys/devices/system/cpu/cpu7/cpufreq/scaling_max_freq 1000 1000 664
+[32m[  287.409325] [0m[33mueventd[0m: fixup /sys/devices/system/cpu/cpu7/cpufreq/scaling_min_freq 1000 1000 664
+[32m[  314.751840] [0m[33mPM[0m: suspend entry 1970-01-01 00:05:45.882609998 UTC
+[32m[  314.751900] [0m[33mPM[0m: Syncing filesystems ... done.
+[32m[  314.758148] [0mFreezing user space processes ... 
+[32m[  314.761056] [0m[33mdwc2 f72c0000.usb[0m: dwc2_hsotg_ep_stop_xfr: timeout DOEPCTL.EPDisable
+[32m[  314.761122] [0m[33mdwc2 f72c0000.usb[0m: GINNakEff triggered
+[32m[  314.762995] [0m(elapsed 0.004 seconds) done.
+[32m[  314.763080] [0mFreezing remaining freezable tasks ... (elapsed 0.002 seconds) done.
+[32m[  314.765625] [0mSuspending console(s) (use no_console_suspend to debug)
+[32m[  314.857427] [0m[33mPM[0m: suspend of devices complete after 44.668 msecs
+[32m[  314.862251] [0m[33mPM[0m: late suspend of devices complete after 4.779 msecs
+[32m[  314.865993] [0m[33mPM[0m: noirq suspend of devices complete after 3.622 msecs
+[32m[  314.866016] [0mDisabling non-boot CPUs ...
+[32m[  314.883083] [0m[33mCPU1[0m: shutdown
+[32m[  314.883110] [0m[33mpsci[0m: CPU1 killed.
+[32m[  314.914983] [0m[33mCPU2[0m: shutdown
+[32m[  314.915008] [0m[33mpsci[0m: CPU2 killed.
+[32m[  314.946951] [0m[33mCPU3[0m: shutdown
+[32m[  314.946980] [0m[33mpsci[0m: CPU3 killed.
+[32m[  314.978968] [0m[33mCPU4[0m: shutdown
+[32m[  314.978991] [0m[33mpsci[0m: CPU4 killed.
+[32m[  315.010901] [0m[33mCPU5[0m: shutdown
+[32m[  315.010925] [0m[33mpsci[0m: CPU5 killed.
+[32m[  315.038881] [0m[33mCPU6[0m: shutdown
+[32m[  315.038913] [0m[33mpsci[0m: CPU6 killed.
+[32m[  315.062497] [0mIRQ5 no longer affine to CPU7
+[32m[  315.062867] [0m[33mCPU7[0m: shutdown
+[32m[  315.062893] [0m[33mpsci[0m: CPU7 killed.
+[32m[  315.077207] [0mEnabling non-boot CPUs ...
+[32m[  315.096361] [0mDetected VIPT I-cache on CPU1
+[32m[  315.096467] [0m[33mCPU1[0m: Booted secondary processor [410fd033]
+[32m[  315.097021] [0m[33m cache[0m: parent cpu1 should not be sleeping
+[32m[  315.097527] [0mCPU1 is up
+[32m[  315.116733] [0mDetected VIPT I-cache on CPU2
+[32m[  315.116821] [0m[33mCPU2[0m: Booted secondary processor [410fd033]
+[32m[  315.117377] [0m[33m cache[0m: parent cpu2 should not be sleeping
+[32m[  315.117878] [0mCPU2 is up
+[32m[  315.141227] [0mDetected VIPT I-cache on CPU3
+[32m[  315.141317] [0m[33mCPU3[0m: Booted secondary processor [410fd033]
+[32m[  315.141880] [0m[33m cache[0m: parent cpu3 should not be sleeping
+[32m[  315.142418] [0mCPU3 is up
+[32m[  315.169765] [0mDetected VIPT I-cache on CPU4
+[32m[  315.169871] [0m[33mCPU4[0m: Booted secondary processor [410fd033]
+[32m[  315.170510] [0m[33m cache[0m: parent cpu4 should not be sleeping
+[32m[  315.171009] [0mCPU4 is up
+[32m[  315.198169] [0mDetected VIPT I-cache on CPU5
+[32m[  315.198250] [0m[33mCPU5[0m: Booted secondary processor [410fd033]
+[32m[  315.198847] [0m[33m cache[0m: parent cpu5 should not be sleeping
+[32m[  315.199337] [0mCPU5 is up
+[32m[  315.222745] [0mDetected VIPT I-cache on CPU6
+[32m[  315.222826] [0m[33mCPU6[0m: Booted secondary processor [410fd033]
+[32m[  315.223503] [0m[33m cache[0m: parent cpu6 should not be sleeping
+[32m[  315.224003] [0mCPU6 is up
+[32m[  315.247254] [0mDetected VIPT I-cache on CPU7
+[32m[  315.247334] [0m[33mCPU7[0m: Booted secondary processor [410fd033]
+[32m[  315.248073] [0m[33m cache[0m: parent cpu7 should not be sleeping
+[32m[  315.248579] [0mCPU7 is up
+[32m[  315.250827] [0m[33mPM[0m: noirq resume of devices complete after 2.135 msecs
+[32m[  315.254854] [0m[33mPM[0m: early resume of devices complete after 3.531 msecs
+[32m[  315.292343] [0m[33mmmc_host mmc0[0m: Bus speed (slot 0) = 24800000Hz (slot req 400000Hz, actual 400000HZ div = 31)
+[32m[  315.360810] [0m[33mmmc_host mmc0[0m: Bus speed (slot 0) = 51756522Hz (slot req 52000000Hz, actual 51756522HZ div = 0)
+[32m[  315.472314] [0m[33mmmc_host mmc2[0m: Bus speed (slot 0) = 24800000Hz (slot req 400000Hz, actual 400000HZ div = 31)
+[32m[  315.524393] [0m[33mmmc_host mmc2[0m: Bus speed (slot 0) = 24800000Hz (slot req 25000000Hz, actual 24800000HZ div = 0)
+[32m[  315.528971] [0m[33mPM[0m: resume of devices complete after 274.081 msecs
+[32m[  315.583662] [0mRestarting tasks ... 
+[32m[  315.585387] [0m[33mueventd[0m: fixup /sys/devices/system/cpu/cpu1/cpufreq/scaling_max_freq 1000 1000 664
+[32m[  315.586522] [0m[33mueventd[0m: fixup /sys/devices/system/cpu/cpu1/cpufreq/scaling_min_freq 1000 1000 664
+[32m[  315.587714] [0mdone.
+[32m[  315.598433] [0m[33mPM[0m: suspend exit 1970-01-01 00:05:56.325156666 UTC
+[32m[  315.625308] [0m[33mueventd[0m: fixup /sys/devices/system/cpu/cpu2/cpufreq/scaling_max_freq 1000 1000 664
+[32m[  315.625770] [0m[33mueventd[0m: fixup /sys/devices/system/cpu/cpu2/cpufreq/scaling_min_freq 1000 1000 664
+[32m[  315.664339] [0m[33mueventd[0m: fixup /sys/devices/system/cpu/cpu3/cpufreq/scaling_max_freq 1000 1000 664
+[32m[  315.664804] [0m[33mueventd[0m: fixup /sys/devices/system/cpu/cpu3/cpufreq/scaling_min_freq 1000 1000 664
+[32m[  315.703342] [0m[33mueventd[0m: fixup /sys/devices/system/cpu/cpu4/cpufreq/scaling_max_freq 1000 1000 664
+[32m[  315.703792] [0m[33mueventd[0m: fixup /sys/devices/system/cpu/cpu4/cpufreq/scaling_min_freq 1000 1000 664
+[32m[  315.742294] [0m[33mueventd[0m: fixup /sys/devices/system/cpu/cpu5/cpufreq/scaling_max_freq 1000 1000 664
+[32m[  315.742748] [0m[33mueventd[0m: fixup /sys/devices/system/cpu/cpu5/cpufreq/scaling_min_freq 1000 1000 664
+[32m[  315.781231] [0m[33mueventd[0m: fixup /sys/devices/system/cpu/cpu6/cpufreq/scaling_max_freq 1000 1000 664
+[32m[  315.781683] [0m[33mueventd[0m: fixup /sys/devices/system/cpu/cpu6/cpufreq/scaling_min_freq 1000 1000 664
+[32m[  315.820177] [0m[33mueventd[0m: fixup /sys/devices/system/cpu/cpu7/cpufreq/scaling_max_freq 1000 1000 664
+[32m[  315.820627] [0m[33mueventd[0m: fixup /sys/devices/system/cpu/cpu7/cpufreq/scaling_min_freq 1000 1000 664
+[32m[  342.983643] [0m[33mPM[0m: suspend entry 1970-01-01 00:06:23.710358330 UTC
+[32m[  342.983708] [0m[33mPM[0m: Syncing filesystems ... done.
+[32m[  342.991015] [0mFreezing user space processes ... 
+[32m[  342.993563] [0m[33mdwc2 f72c0000.usb[0m: dwc2_hsotg_ep_stop_xfr: timeout DOEPCTL.EPDisable
+[32m[  342.993614] [0m[33mdwc2 f72c0000.usb[0m: GINNakEff triggered
+[32m[  342.995253] [0m(elapsed 0.004 seconds) done.
+[32m[  342.995332] [0mFreezing remaining freezable tasks ... (elapsed 0.002 seconds) done.
+[32m[  342.997863] [0mSuspending console(s) (use no_console_suspend to debug)
+[32m[  343.089289] [0m[33mPM[0m: suspend of devices complete after 44.752 msecs
+[32m[  343.093672] [0m[33mPM[0m: late suspend of devices complete after 4.342 msecs
+[32m[  343.097201] [0m[33mPM[0m: noirq suspend of devices complete after 3.500 msecs
+[32m[  343.097223] [0mDisabling non-boot CPUs ...
+[32m[  343.110601] [0mIRQ5 no longer affine to CPU1
+[32m[  343.111057] [0m[33mCPU1[0m: shutdown
+[32m[  343.111082] [0m[33mpsci[0m: CPU1 killed.
+[32m[  343.142963] [0m[33mCPU2[0m: shutdown
+[32m[  343.142991] [0m[33mpsci[0m: CPU2 killed.
+[32m[  343.170935] [0m[33mCPU3[0m: shutdown
+[32m[  343.170964] [0m[33mpsci[0m: CPU3 killed.
+[32m[  343.199052] [0m[33mCPU4[0m: shutdown
+[32m[  343.199084] [0m[33mpsci[0m: CPU4 killed.
+[32m[  343.226935] [0m[33mCPU5[0m: shutdown
+[32m[  343.226960] [0m[33mpsci[0m: CPU5 killed.
+[32m[  343.254872] [0m[33mCPU6[0m: shutdown
+[32m[  343.254896] [0m[33mpsci[0m: CPU6 killed.
+[32m[  343.282853] [0m[33mCPU7[0m: shutdown
+[32m[  343.282882] [0m[33mpsci[0m: CPU7 killed.
+[32m[  343.297142] [0mEnabling non-boot CPUs ...
+[32m[  343.316295] [0mDetected VIPT I-cache on CPU1
+[32m[  343.316403] [0m[33mCPU1[0m: Booted secondary processor [410fd033]
+[32m[  343.316958] [0m[33m cache[0m: parent cpu1 should not be sleeping
+[32m[  343.317464] [0mCPU1 is up
+[32m[  343.336664] [0mDetected VIPT I-cache on CPU2
+[32m[  343.336753] [0m[33mCPU2[0m: Booted secondary processor [410fd033]
+[32m[  343.337318] [0m[33m cache[0m: parent cpu2 should not be sleeping
+[32m[  343.337815] [0mCPU2 is up
+[32m[  343.361153] [0mDetected VIPT I-cache on CPU3
+[32m[  343.361240] [0m[33mCPU3[0m: Booted secondary processor [410fd033]
+[32m[  343.361837] [0m[33m cache[0m: parent cpu3 should not be sleeping
+[32m[  343.362382] [0mCPU3 is up
+[32m[  343.389702] [0mDetected VIPT I-cache on CPU4
+[32m[  343.389808] [0m[33mCPU4[0m: Booted secondary processor [410fd033]
+[32m[  343.390461] [0m[33m cache[0m: parent cpu4 should not be sleeping
+[32m[  343.390954] [0mCPU4 is up
+[32m[  343.418110] [0mDetected VIPT I-cache on CPU5
+[32m[  343.418191] [0m[33mCPU5[0m: Booted secondary processor [410fd033]
+[32m[  343.418783] [0m[33m cache[0m: parent cpu5 should not be sleeping
+[32m[  343.419276] [0mCPU5 is up
+[32m[  343.442757] [0mDetected VIPT I-cache on CPU6
+[32m[  343.442838] [0m[33mCPU6[0m: Booted secondary processor [410fd033]
+[32m[  343.443532] [0m[33m cache[0m: parent cpu6 should not be sleeping
+[32m[  343.444049] [0mCPU6 is up
+[32m[  343.467175] [0mDetected VIPT I-cache on CPU7
+[32m[  343.467256] [0m[33mCPU7[0m: Booted secondary processor [410fd033]
+[32m[  343.468022] [0m[33m cache[0m: parent cpu7 should not be sleeping
+[32m[  343.468529] [0mCPU7 is up
+[32m[  343.470799] [0m[33mPM[0m: noirq resume of devices complete after 2.157 msecs
+[32m[  343.474021] [0m[33mPM[0m: early resume of devices complete after 2.731 msecs
+[32m[  343.512287] [0m[33mmmc_host mmc0[0m: Bus speed (slot 0) = 24800000Hz (slot req 400000Hz, actual 400000HZ div = 31)
+[32m[  343.579988] [0m[33mmmc_host mmc0[0m: Bus speed (slot 0) = 51756522Hz (slot req 52000000Hz, actual 51756522HZ div = 0)
+[32m[  343.692248] [0m[33mmmc_host mmc2[0m: Bus speed (slot 0) = 24800000Hz (slot req 400000Hz, actual 400000HZ div = 31)
+[32m[  343.741499] [0m[33mmmc_host mmc2[0m: Bus speed (slot 0) = 24800000Hz (slot req 25000000Hz, actual 24800000HZ div = 0)
+[32m[  343.745809] [0m[33mPM[0m: resume of devices complete after 271.760 msecs
+[32m[  343.799551] [0mRestarting tasks ... 
+[32m[  343.801300] [0m[33mueventd[0m: fixup /sys/devices/system/cpu/cpu1/cpufreq/scaling_max_freq 1000 1000 664
+[32m[  343.802050] [0m[33mueventd[0m: fixup /sys/devices/system/cpu/cpu1/cpufreq/scaling_min_freq 1000 1000 664
+[32m[  343.803502] [0mdone.
+[32m[  343.814043] [0m[33mPM[0m: suspend exit 1970-01-01 00:06:33.324157500 UTC
+[32m[  343.841089] [0m[33mueventd[0m: fixup /sys/devices/system/cpu/cpu2/cpufreq/scaling_max_freq 1000 1000 664
+[32m[  343.841552] [0m[33mueventd[0m: fixup /sys/devices/system/cpu/cpu2/cpufreq/scaling_min_freq 1000 1000 664
+[32m[  343.880194] [0m[33mueventd[0m: fixup /sys/devices/system/cpu/cpu3/cpufreq/scaling_max_freq 1000 1000 664
+[32m[  343.880649] [0m[33mueventd[0m: fixup /sys/devices/system/cpu/cpu3/cpufreq/scaling_min_freq 1000 1000 664
+[32m[  343.919148] [0m[33mueventd[0m: fixup /sys/devices/system/cpu/cpu4/cpufreq/scaling_max_freq 1000 1000 664
+[32m[  343.919599] [0m[33mueventd[0m: fixup /sys/devices/system/cpu/cpu4/cpufreq/scaling_min_freq 1000 1000 664
+[32m[  343.958056] [0m[33mueventd[0m: fixup /sys/devices/system/cpu/cpu5/cpufreq/scaling_max_freq 1000 1000 664
+[32m[  343.958549] [0m[33mueventd[0m: fixup /sys/devices/system/cpu/cpu5/cpufreq/scaling_min_freq 1000 1000 664
+[32m[  343.997005] [0m[33mueventd[0m: fixup /sys/devices/system/cpu/cpu6/cpufreq/scaling_max_freq 1000 1000 664
+[32m[  343.997448] [0m[33mueventd[0m: fixup /sys/devices/system/cpu/cpu6/cpufreq/scaling_min_freq 1000 1000 664
+[32m[  344.035931] [0m[33mueventd[0m: fixup /sys/devices/system/cpu/cpu7/cpufreq/scaling_max_freq 1000 1000 664
+[32m[  344.036376] [0m[33mueventd[0m: fixup /sys/devices/system/cpu/cpu7/cpufreq/scaling_min_freq 1000 1000 664
+[32m[  359.368281] [0m[33mPM[0m: suspend entry 1970-01-01 00:06:48.878385832 UTC
+[32m[  359.368348] [0m[33mPM[0m: Syncing filesystems ... done.
+[32m[  359.379986] [0mFreezing user space processes ... 
+[32m[  359.382739] [0m[33mdwc2 f72c0000.usb[0m: dwc2_hsotg_ep_stop_xfr: timeout DOEPCTL.EPDisable
+[32m[  359.382790] [0m[33mdwc2 f72c0000.usb[0m: GINNakEff triggered
+[32m[  359.384183] [0m(elapsed 0.004 seconds) done.
+[32m[  359.384267] [0mFreezing remaining freezable tasks ... (elapsed 0.002 seconds) done.
+[32m[  359.386812] [0mSuspending console(s) (use no_console_suspend to debug)
+[32m[  359.480790] [0m[33mPM[0m: suspend of devices complete after 47.706 msecs
+[32m[  359.485911] [0m[33mPM[0m: late suspend of devices complete after 5.073 msecs
+[32m[  359.489483] [0m[33mPM[0m: noirq suspend of devices complete after 3.533 msecs
+[32m[  369.299575] [0m[33mPM[0m: noirq resume of devices complete after 2.215 msecs
+[32m[  369.303201] [0m[33mPM[0m: early resume of devices complete after 3.038 msecs
+[32m[  369.344343] [0m[33mmmc_host mmc0[0m: Bus speed (slot 0) = 24800000Hz (slot req 400000Hz, actual 400000HZ div = 31)
+[32m[  369.412661] [0m[33mmmc_host mmc0[0m: Bus speed (slot 0) = 51756522Hz (slot req 52000000Hz, actual 51756522HZ div = 0)
+[32m[  369.524329] [0m[33mmmc_host mmc2[0m: Bus speed (slot 0) = 24800000Hz (slot req 400000Hz, actual 400000HZ div = 31)
+[32m[  369.578985] [0m[33mmmc_host mmc2[0m: Bus speed (slot 0) = 24800000Hz (slot req 25000000Hz, actual 24800000HZ div = 0)
+[32m[  369.582872] [0m[33mPM[0m: resume of devices complete after 279.639 msecs
+[32m[  369.639299] [0mRestarting tasks ... done.
+[32m[  369.655097] [0m[33mPM[0m: suspend exit 1970-01-01 00:06:59.333339167 UTC
+[32m[  396.943663] [0m[33mPM[0m: suspend entry 1970-01-01 00:07:26.621896664 UTC
+[32m[  396.943732] [0m[33mPM[0m: Syncing filesystems ... done.
+[32m[  396.951740] [0mFreezing user space processes ... 
+[32m[  396.954193] [0m[33mdwc2 f72c0000.usb[0m: dwc2_hsotg_ep_stop_xfr: timeout DOEPCTL.EPDisable
+[32m[  396.954248] [0m[33mdwc2 f72c0000.usb[0m: GINNakEff triggered
+[32m[  396.955860] [0m(elapsed 0.004 seconds) done.
+[32m[  396.955949] [0mFreezing remaining freezable tasks ... (elapsed 0.002 seconds) done.
+[32m[  396.958540] [0mSuspending console(s) (use no_console_suspend to debug)
+[32m[  397.049189] [0m[33mPM[0m: suspend of devices complete after 44.208 msecs
+[32m[  397.053745] [0m[33mPM[0m: late suspend of devices complete after 4.520 msecs
+[32m[  397.057440] [0m[33mPM[0m: noirq suspend of devices complete after 3.665 msecs
+[32m[  406.303500] [0m[33mPM[0m: noirq resume of devices complete after 2.188 msecs
+[32m[  406.307643] [0m[33mPM[0m: early resume of devices complete after 3.614 msecs
+[32m[  406.343965] [0m[33mmmc_host mmc0[0m: Bus speed (slot 0) = 24800000Hz (slot req 400000Hz, actual 400000HZ div = 31)
+[32m[  406.412422] [0m[33mmmc_host mmc0[0m: Bus speed (slot 0) = 51756522Hz (slot req 52000000Hz, actual 51756522HZ div = 0)
+[32m[  406.524145] [0m[33mmmc_host mmc2[0m: Bus speed (slot 0) = 24800000Hz (slot req 400000Hz, actual 400000HZ div = 31)
+[32m[  406.575438] [0m[33mmmc_host mmc2[0m: Bus speed (slot 0) = 24800000Hz (slot req 25000000Hz, actual 24800000HZ div = 0)
+[32m[  406.579837] [0m[33mPM[0m: resume of devices complete after 272.165 msecs
+[32m[  406.636422] [0mRestarting tasks ... done.
+[32m[  406.651463] [0m[33mPM[0m: suspend exit 1970-01-01 00:07:36.329696663 UTC
+[32m[  434.791870] [0m[33mPM[0m: suspend entry 1970-01-01 00:08:04.470104160 UTC
+[32m[  434.791931] [0m[33mPM[0m: Syncing filesystems ... done.
+[32m[  434.798907] [0mFreezing user space processes ... 
+[32m[  434.801366] [0m[33mdwc2 f72c0000.usb[0m: dwc2_hsotg_ep_stop_xfr: timeout DOEPCTL.EPDisable
+[32m[  434.801416] [0m[33mdwc2 f72c0000.usb[0m: GINNakEff triggered
+[32m[  434.802901] [0m(elapsed 0.003 seconds) done.
+[32m[  434.802989] [0mFreezing remaining freezable tasks ... (elapsed 0.002 seconds) done.
+[32m[  434.805505] [0mSuspending console(s) (use no_console_suspend to debug)
+[32m[  434.901349] [0m[33mPM[0m: suspend of devices complete after 47.915 msecs
+[32m[  434.906262] [0m[33mPM[0m: late suspend of devices complete after 4.869 msecs
+[32m[  434.909742] [0m[33mPM[0m: noirq suspend of devices complete after 3.443 msecs
+[32m[  444.307566] [0m[33mPM[0m: noirq resume of devices complete after 2.230 msecs
+[32m[  444.311173] [0m[33mPM[0m: early resume of devices complete after 3.021 msecs
+[32m[  444.348170] [0m[33mmmc_host mmc0[0m: Bus speed (slot 0) = 24800000Hz (slot req 400000Hz, actual 400000HZ div = 31)
+[32m[  444.416830] [0m[33mmmc_host mmc0[0m: Bus speed (slot 0) = 51756522Hz (slot req 52000000Hz, actual 51756522HZ div = 0)
+[32m[  444.528170] [0m[33mmmc_host mmc2[0m: Bus speed (slot 0) = 24800000Hz (slot req 400000Hz, actual 400000HZ div = 31)
+[32m[  444.579860] [0m[33mmmc_host mmc2[0m: Bus speed (slot 0) = 24800000Hz (slot req 25000000Hz, actual 24800000HZ div = 0)
+[32m[  444.584618] [0m[33mPM[0m: resume of devices complete after 273.413 msecs
+[32m[  444.641661] [0mRestarting tasks ... done.
+[32m[  444.656341] [0m[33mPM[0m: suspend exit 1970-01-01 00:08:14.334580826 UTC
+[32m[  472.258814] [0m[33mPM[0m: suspend entry 1970-01-01 00:08:41.937049990 UTC
+[32m[  472.258876] [0m[33mPM[0m: Syncing filesystems ... done.
+[32m[  472.265340] [0mFreezing user space processes ... 
+[32m[  472.268183] [0m[33mdwc2 f72c0000.usb[0m: dwc2_hsotg_ep_stop_xfr: timeout DOEPCTL.EPDisable
+[32m[  472.268233] [0m[33mdwc2 f72c0000.usb[0m: GINNakEff triggered
+[32m[  472.269545] [0m(elapsed 0.004 seconds) done.
+[32m[  472.269631] [0mFreezing remaining freezable tasks ... (elapsed 0.002 seconds) done.
+[32m[  472.272266] [0mSuspending console(s) (use no_console_suspend to debug)
+[32m[  472.364833] [0m[33mPM[0m: suspend of devices complete after 46.691 msecs
+[32m[  472.369604] [0m[33mPM[0m: late suspend of devices complete after 4.723 msecs
+[32m[  472.373121] [0m[33mPM[0m: noirq suspend of devices complete after 3.484 msecs
+[32m[  481.311590] [0m[33mPM[0m: noirq resume of devices complete after 2.315 msecs
+[32m[  481.315630] [0m[33mPM[0m: early resume of devices complete after 3.456 msecs
+[32m[  481.356182] [0m[33mmmc_host mmc0[0m: Bus speed (slot 0) = 24800000Hz (slot req 400000Hz, actual 400000HZ div = 31)
+[32m[  481.424518] [0m[33mmmc_host mmc0[0m: Bus speed (slot 0) = 51756522Hz (slot req 52000000Hz, actual 51756522HZ div = 0)
+[32m[  481.536172] [0m[33mmmc_host mmc2[0m: Bus speed (slot 0) = 24800000Hz (slot req 400000Hz, actual 400000HZ div = 31)
+[32m[  481.585782] [0m[33mmmc_host mmc2[0m: Bus speed (slot 0) = 24800000Hz (slot req 25000000Hz, actual 24800000HZ div = 0)
+[32m[  481.591504] [0m[33mPM[0m: resume of devices complete after 275.835 msecs
+[32m[  481.648404] [0mRestarting tasks ... done.
+[32m[  481.662594] [0m[33mPM[0m: suspend exit 1970-01-01 00:08:51.340833323 UTC
+[32m[  508.631556] [0m[33mPM[0m: suspend entry 1970-01-01 00:09:18.309789987 UTC
+[32m[  508.631623] [0m[33mPM[0m: Syncing filesystems ... done.
+[32m[  508.638881] [0mFreezing user space processes ... 
+[32m[  508.641395] [0m[33mdwc2 f72c0000.usb[0m: dwc2_hsotg_ep_stop_xfr: timeout DOEPCTL.EPDisable
+[32m[  508.641443] [0m[33mdwc2 f72c0000.usb[0m: GINNakEff triggered
+[32m[  508.643067] [0m(elapsed 0.004 seconds) done.
+[32m[  508.643146] [0mFreezing remaining freezable tasks ... (elapsed 0.002 seconds) done.
+[32m[  508.645678] [0mSuspending console(s) (use no_console_suspend to debug)
+[32m[  508.737286] [0m[33mPM[0m: suspend of devices complete after 45.207 msecs
+[32m[  508.742220] [0m[33mPM[0m: late suspend of devices complete after 4.887 msecs
+[32m[  508.745697] [0m[33mPM[0m: noirq suspend of devices complete after 3.440 msecs
+[32m[  518.315423] [0m[33mPM[0m: noirq resume of devices complete after 2.201 msecs
+[32m[  518.319013] [0m[33mPM[0m: early resume of devices complete after 2.998 msecs
+[32m[  518.356170] [0m[33mmmc_host mmc0[0m: Bus speed (slot 0) = 24800000Hz (slot req 400000Hz, actual 400000HZ div = 31)
+[32m[  518.424697] [0m[33mmmc_host mmc0[0m: Bus speed (slot 0) = 51756522Hz (slot req 52000000Hz, actual 51756522HZ div = 0)
+[32m[  518.536158] [0m[33mmmc_host mmc2[0m: Bus speed (slot 0) = 24800000Hz (slot req 400000Hz, actual 400000HZ div = 31)
+[32m[  518.585073] [0m[33mmmc_host mmc2[0m: Bus speed (slot 0) = 24800000Hz (slot req 25000000Hz, actual 24800000HZ div = 0)
+[32m[  518.589700] [0m[33mPM[0m: resume of devices complete after 270.654 msecs
+[32m[  518.647642] [0mRestarting tasks ... done.
+[32m[  518.662123] [0m[33mPM[0m: suspend exit 1970-01-01 00:09:28.340364152 UTC
+[32m[ 2038.154928] [0m[33mtype=1400 audit(26.775:312)[0m: avc: granted { getattr } for pid=2685 comm="ip6tables" path="/vendor" dev="rootfs" ino=11325 scontext=u:r:netd:s0 tcontext=u:object_r:rootfs:s0 tclass=lnk_file
+[32m[ 2038.154984] [0m[33mtype=1400 audit(2087.828:313)[0m: avc: denied { getattr } for pid=3703 comm=4173796E635461736B202331 path="/data/user_de/0/com.android.phone" dev="mmcblk0p10" ino=114002 scontext=u:r:system_app:s0 tcontext=u:object_r:radio_data_file:s0 tclass=dir permissive=0
+[32m[ 2038.427884] [0m[33mtype=1400 audit(2087.828:313)[0m: avc: denied { getattr } for pid=3703 comm=4173796E635461736B202331 path="/data/user_de/0/com.android.phone" dev="mmcblk0p10" ino=114002 scontext=u:r:system_app:s0 tcontext=u:object_r:radio_data_file:s0 tclass=dir permissive=0
+[32m[ 2038.427931] [0m[33mtype=1400 audit(2088.104:314)[0m: avc: granted { read } for pid=3707 comm="SummaryLoader" name="pagetypeinfo" dev="proc" ino=4026531984 scontext=u:r:system_app:s0 tcontext=u:object_r:proc:s0 tclass=file
+[32m[ 2038.428851] [0m[33mtype=1400 audit(2088.104:314)[0m: avc: granted { read } for pid=3707 comm="SummaryLoader" name="pagetypeinfo" dev="proc" ino=4026531984 scontext=u:r:system_app:s0 tcontext=u:object_r:proc:s0 tclass=file
+[32m[ 2038.428883] [0m[33mtype=1400 audit(2088.104:315)[0m: avc: granted { read open } for pid=3707 comm="SummaryLoader" path="/proc/pagetypeinfo" dev="proc" ino=4026531984 scontext=u:r:system_app:s0 tcontext=u:object_r:proc:s0 tclass=file
+[32m[ 2038.428996] [0m[33mtype=1400 audit(2088.104:315)[0m: avc: granted { read open } for pid=3707 comm="SummaryLoader" path="/proc/pagetypeinfo" dev="proc" ino=4026531984 scontext=u:r:system_app:s0 tcontext=u:object_r:proc:s0 tclass=file
+[32m[ 2038.429024] [0m[33mtype=1400 audit(2088.104:316)[0m: avc: granted { getattr } for pid=3707 comm="SummaryLoader" path="/proc/pagetypeinfo" dev="proc" ino=4026531984 scontext=u:r:system_app:s0 tcontext=u:object_r:proc:s0 tclass=file
+[32m[ 2238.999549] [0m[33mtype=1400 audit(2088.104:317)[0m: avc: granted { getattr } for pid=3707 comm="SummaryLoader" path="/proc/pagetypeinfo" dev="proc" ino=4026531984 scontext=u:r:system_app:s0 tcontext=u:object_r:proc:s0 tclass=file
+[32m[ 2238.999594] [0m[33mtype=1400 audit(2288.676:318)[0m: avc: granted { read } for pid=3707 comm="SummaryLoader" name="pagetypeinfo" dev="proc" ino=4026531984 scontext=u:r:system_app:s0 tcontext=u:object_r:proc:s0 tclass=file
+[32m[ 2239.000005] [0m[33mtype=1400 audit(2288.676:318)[0m: avc: granted { read } for pid=3707 comm="SummaryLoader" name="pagetypeinfo" dev="proc" ino=4026531984 scontext=u:r:system_app:s0 tcontext=u:object_r:proc:s0 tclass=file
+[32m[ 2239.000035] [0m[33mtype=1400 audit(2288.676:319)[0m: avc: granted { read open } for pid=3707 comm="SummaryLoader" path="/proc/pagetypeinfo" dev="proc" ino=4026531984 scontext=u:r:system_app:s0 tcontext=u:object_r:proc:s0 tclass=file
+[32m[ 2239.000145] [0m[33mtype=1400 audit(2288.676:319)[0m: avc: granted { read open } for pid=3707 comm="SummaryLoader" path="/proc/pagetypeinfo" dev="proc" ino=4026531984 scontext=u:r:system_app:s0 tcontext=u:object_r:proc:s0 tclass=file
+[32m[ 2239.000173] [0m[33mtype=1400 audit(2288.676:320)[0m: avc: granted { getattr } for pid=3707 comm="SummaryLoader" path="/proc/pagetypeinfo" dev="proc" ino=4026531984 scontext=u:r:system_app:s0 tcontext=u:object_r:proc:s0 tclass=file
+[32m[ 2408.177436] [0m[33mtype=1400 audit(2288.676:321)[0m: avc: granted { getattr } for pid=3707 comm="SummaryLoader" path="/proc/pagetypeinfo" dev="proc" ino=4026531984 scontext=u:r:system_app:s0 tcontext=u:object_r:proc:s0 tclass=file
+[32m[ 2408.177480] [0m[33mtype=1400 audit(2457.852:322)[0m: avc: granted { read } for pid=3707 comm="SummaryLoader" name="pagetypeinfo" dev="proc" ino=4026531984 scontext=u:r:system_app:s0 tcontext=u:object_r:proc:s0 tclass=file
+[32m[ 2408.177924] [0m[33mtype=1400 audit(2457.852:322)[0m: avc: granted { read } for pid=3707 comm="SummaryLoader" name="pagetypeinfo" dev="proc" ino=4026531984 scontext=u:r:system_app:s0 tcontext=u:object_r:proc:s0 tclass=file
+[32m[ 2408.177966] [0m[33mtype=1400 audit(2457.852:323)[0m: avc: granted { read open } for pid=3707 comm="SummaryLoader" path="/proc/pagetypeinfo" dev="proc" ino=4026531984 scontext=u:r:system_app:s0 tcontext=u:object_r:proc:s0 tclass=file
+[32m[ 2408.178250] [0m[33mtype=1400 audit(2457.852:323)[0m: avc: granted { read open } for pid=3707 comm="SummaryLoader" path="/proc/pagetypeinfo" dev="proc" ino=4026531984 scontext=u:r:system_app:s0 tcontext=u:object_r:proc:s0 tclass=file
+[32m[ 2408.178281] [0m[33mtype=1400 audit(2457.852:324)[0m: avc: granted { getattr } for pid=3707 comm="SummaryLoader" path="/proc/pagetypeinfo" dev="proc" ino=4026531984 scontext=u:r:system_app:s0 tcontext=u:object_r:proc:s0 tclass=file
+[32m[ 2526.070868] [0m[33m(hci_tty)[0m: inside hci_tty_release (ffffffc073f042c8, ffffffc06cee4f00)
+[32m[ 2526.070904] [0m[33m(stc)[0m: remove_channel_from_table: id 4
+[32m[ 2526.070922] [0m[33m(stc)[0m: remove_channel_from_table: id 2
+[32m[ 2526.070938] [0m[33m(stc)[0m: remove_channel_from_table: id 3
+[32m[ 2526.070953] [0m[33m(stc)[0m:  all chnl_ids unregistered 
+[32m[ 2526.070990] [0m(stk) :ldisc_install = 0
+[32m[ 2526.073604] [0m[33m(stc)[0m: st_tty_close 
+[32m[ 2526.073824] [0m[33mtype=1400 audit(2457.856:325)[0m: avc: granted { getattr } for pid=3707 comm="SummaryLoader" path="/proc/pagetypeinfo" dev="proc" ino=4026531984 scontext=u:r:system_app:s0 tcontext=u:object_r:proc:s0 tclass=file
+[32m[ 2526.073862] [0m[33mtype=1400 audit(2575.748:326)[0m: avc: granted { read } for pid=1805 comm="uim" name="install" dev="sysfs" ino=9994 scontext=u:r:hci_attach:s0 tcontext=u:object_r:sysfs:s0 tclass=file
+[32m[ 2526.074008] [0m[33mtype=1400 audit(2575.748:326)[0m: avc: granted { read } for pid=1805 comm="uim" name="install" dev="sysfs" ino=9994 scontext=u:r:hci_attach:s0 tcontext=u:object_r:sysfs:s0 tclass=file
+[32m[ 2526.074036] [0m[33mtype=1400 audit(2575.748:327)[0m: avc: granted { read open } for pid=1805 comm="uim" path="/sys/devices/platform/kim/install" dev="sysfs" ino=9994 scontext=u:r:hci_attach:s0 tcontext=u:object_r:sysfs:s0 tclass=file
+[32m[ 2577.998842] [0m[33mtype=1400 audit(2575.748:327)[0m: avc: granted { read open } for pid=1805 comm="uim" path="/sys/devices/platform/kim/install" dev="sysfs" ino=9994 scontext=u:r:hci_attach:s0 tcontext=u:object_r:sysfs:s0 tclass=file
+[32m[ 2577.998915] [0m[33mtype=1400 audit(2627.672:328)[0m: avc: granted { read } for pid=3707 comm="SummaryLoader" name="pagetypeinfo" dev="proc" ino=4026531984 scontext=u:r:system_app:s0 tcontext=u:object_r:proc:s0 tclass=file
+[32m[ 2577.999338] [0m[33mtype=1400 audit(2627.672:328)[0m: avc: granted { read } for pid=3707 comm="SummaryLoader" name="pagetypeinfo" dev="proc" ino=4026531984 scontext=u:r:system_app:s0 tcontext=u:object_r:proc:s0 tclass=file
+[32m[ 2577.999372] [0m[33mtype=1400 audit(2627.672:329)[0m: avc: granted { read open } for pid=3707 comm="SummaryLoader" path="/proc/pagetypeinfo" dev="proc" ino=4026531984 scontext=u:r:system_app:s0 tcontext=u:object_r:proc:s0 tclass=file
+[32m[ 2577.999923] [0m[33mtype=1400 audit(2627.672:329)[0m: avc: granted { read open } for pid=3707 comm="SummaryLoader" path="/proc/pagetypeinfo" dev="proc" ino=4026531984 scontext=u:r:system_app:s0 tcontext=u:object_r:proc:s0 tclass=file
+[32m[ 2577.999957] [0m[33mtype=1400 audit(2627.672:330)[0m: avc: granted { getattr } for pid=3707 comm="SummaryLoader" path="/proc/pagetypeinfo" dev="proc" ino=4026531984 scontext=u:r:system_app:s0 tcontext=u:object_r:proc:s0 tclass=file
+[32m[ 3886.641904] [0m[33mPM[0m: suspend entry 1970-01-01 01:05:36.320128831 UTC
+[32m[ 3886.641966] [0m[33mPM[0m: Syncing filesystems ... done.
+[32m[ 3886.654266] [0mFreezing user space processes ... 
+[32m[ 3886.656555] [0m[33mdwc2 f72c0000.usb[0m: dwc2_hsotg_ep_stop_xfr: timeout DOEPCTL.EPDisable
+[32m[ 3886.656608] [0m[33mdwc2 f72c0000.usb[0m: GINNakEff triggered
+[32m[ 3886.658216] [0m(elapsed 0.003 seconds) done.
+[32m[ 3886.658295] [0mFreezing remaining freezable tasks ... (elapsed 0.002 seconds) done.
+[32m[ 3886.660809] [0mSuspending console(s) (use no_console_suspend to debug)
+[32m[ 3886.753129] [0m[33mPM[0m: suspend of devices complete after 46.030 msecs
+[32m[ 3886.757513] [0m[33mPM[0m: late suspend of devices complete after 4.350 msecs
+[32m[ 3886.761164] [0m[33mPM[0m: noirq suspend of devices complete after 3.619 msecs
+[32m[ 3886.761188] [0mDisabling non-boot CPUs ...
+[32m[ 3886.775592] [0m[33mCPU1[0m: shutdown
+[32m[ 3886.775617] [0m[33mpsci[0m: CPU1 killed.
+[32m[ 3886.810893] [0m[33mCPU2[0m: shutdown
+[32m[ 3886.810923] [0m[33mpsci[0m: CPU2 killed.
+[32m[ 3886.842949] [0m[33mCPU3[0m: shutdown
+[32m[ 3886.842972] [0m[33mpsci[0m: CPU3 killed.
+[32m[ 3886.871002] [0m[33mCPU4[0m: shutdown
+[32m[ 3886.871028] [0m[33mpsci[0m: CPU4 killed.
+[32m[ 3886.898855] [0m[33mCPU5[0m: shutdown
+[32m[ 3886.898883] [0m[33mpsci[0m: CPU5 killed.
+[32m[ 3886.926798] [0m[33mCPU6[0m: shutdown
+[32m[ 3886.926825] [0m[33mpsci[0m: CPU6 killed.
+[32m[ 3886.950439] [0mIRQ5 no longer affine to CPU7
+[32m[ 3886.950801] [0m[33mCPU7[0m: shutdown
+[32m[ 3886.950829] [0m[33mpsci[0m: CPU7 killed.
+[32m[ 3886.965060] [0mEnabling non-boot CPUs ...
+[32m[ 3886.984240] [0mDetected VIPT I-cache on CPU1
+[32m[ 3886.984347] [0m[33mCPU1[0m: Booted secondary processor [410fd033]
+[32m[ 3886.984900] [0m[33m cache[0m: parent cpu1 should not be sleeping
+[32m[ 3886.985404] [0mCPU1 is up
+[32m[ 3887.004613] [0mDetected VIPT I-cache on CPU2
+[32m[ 3887.004700] [0m[33mCPU2[0m: Booted secondary processor [410fd033]
+[32m[ 3887.005248] [0m[33m cache[0m: parent cpu2 should not be sleeping
+[32m[ 3887.005745] [0mCPU2 is up
+[32m[ 3887.029114] [0mDetected VIPT I-cache on CPU3
+[32m[ 3887.029202] [0m[33mCPU3[0m: Booted secondary processor [410fd033]
+[32m[ 3887.029760] [0m[33m cache[0m: parent cpu3 should not be sleeping
+[32m[ 3887.030306] [0mCPU3 is up
+[32m[ 3887.057676] [0mDetected VIPT I-cache on CPU4
+[32m[ 3887.057781] [0m[33mCPU4[0m: Booted secondary processor [410fd033]
+[32m[ 3887.058409] [0m[33m cache[0m: parent cpu4 should not be sleeping
+[32m[ 3887.058911] [0mCPU4 is up
+[32m[ 3887.086085] [0mDetected VIPT I-cache on CPU5
+[32m[ 3887.086166] [0m[33mCPU5[0m: Booted secondary processor [410fd033]
+[32m[ 3887.086761] [0m[33m cache[0m: parent cpu5 should not be sleeping
+[32m[ 3887.087256] [0mCPU5 is up
+[32m[ 3887.110639] [0mDetected VIPT I-cache on CPU6
+[32m[ 3887.110721] [0m[33mCPU6[0m: Booted secondary processor [410fd033]
+[32m[ 3887.111401] [0m[33m cache[0m: parent cpu6 should not be sleeping
+[32m[ 3887.111941] [0mCPU6 is up
+[32m[ 3887.135163] [0mDetected VIPT I-cache on CPU7
+[32m[ 3887.135244] [0m[33mCPU7[0m: Booted secondary processor [410fd033]
+[32m[ 3887.135977] [0m[33m cache[0m: parent cpu7 should not be sleeping
+[32m[ 3887.136491] [0mCPU7 is up
+[32m[ 3887.138750] [0m[33mPM[0m: noirq resume of devices complete after 2.148 msecs
+[32m[ 3887.142405] [0m[33mPM[0m: early resume of devices complete after 3.165 msecs
+[32m[ 3887.180244] [0m[33mmmc_host mmc0[0m: Bus speed (slot 0) = 24800000Hz (slot req 400000Hz, actual 400000HZ div = 31)
+[32m[ 3887.248615] [0m[33mmmc_host mmc0[0m: Bus speed (slot 0) = 51756522Hz (slot req 52000000Hz, actual 51756522HZ div = 0)
+[32m[ 3887.360211] [0m[33mmmc_host mmc2[0m: Bus speed (slot 0) = 24800000Hz (slot req 400000Hz, actual 400000HZ div = 31)
+[32m[ 3887.407072] [0m[33mmmc_host mmc2[0m: Bus speed (slot 0) = 24800000Hz (slot req 25000000Hz, actual 24800000HZ div = 0)
+[32m[ 3887.410882] [0m[33mPM[0m: resume of devices complete after 268.446 msecs
+[32m[ 3887.464676] [0mRestarting tasks ... done.
+[32m[ 3887.472117] [0m[33mueventd[0m: fixup /sys/devices/system/cpu/cpu1/cpufreq/scaling_max_freq 1000 1000 664
+[32m[ 3887.476866] [0m[33mueventd[0m: fixup /sys/devices/system/cpu/cpu1/cpufreq/scaling_min_freq 1000 1000 664
+[32m[ 3887.479742] [0m[33mPM[0m: suspend exit 1970-01-01 01:05:45.318575833 UTC
+[32m[ 3887.518747] [0m[33mueventd[0m: fixup /sys/devices/system/cpu/cpu2/cpufreq/scaling_max_freq 1000 1000 664
+[32m[ 3887.519213] [0m[33mueventd[0m: fixup /sys/devices/system/cpu/cpu2/cpufreq/scaling_min_freq 1000 1000 664
+[32m[ 3887.557860] [0m[33mueventd[0m: fixup /sys/devices/system/cpu/cpu3/cpufreq/scaling_max_freq 1000 1000 664
+[32m[ 3887.558374] [0m[33mueventd[0m: fixup /sys/devices/system/cpu/cpu3/cpufreq/scaling_min_freq 1000 1000 664
+[32m[ 3887.596981] [0m[33mueventd[0m: fixup /sys/devices/system/cpu/cpu4/cpufreq/scaling_max_freq 1000 1000 664
+[32m[ 3887.597441] [0m[33mueventd[0m: fixup /sys/devices/system/cpu/cpu4/cpufreq/scaling_min_freq 1000 1000 664
+[32m[ 3887.636075] [0m[33mueventd[0m: fixup /sys/devices/system/cpu/cpu5/cpufreq/scaling_max_freq 1000 1000 664
+[32m[ 3887.636532] [0m[33mueventd[0m: fixup /sys/devices/system/cpu/cpu5/cpufreq/scaling_min_freq 1000 1000 664
+[32m[ 3887.675147] [0m[33mueventd[0m: fixup /sys/devices/system/cpu/cpu6/cpufreq/scaling_max_freq 1000 1000 664
+[32m[ 3887.675607] [0m[33mueventd[0m: fixup /sys/devices/system/cpu/cpu6/cpufreq/scaling_min_freq 1000 1000 664
+[32m[ 3887.714253] [0m[33mueventd[0m: fixup /sys/devices/system/cpu/cpu7/cpufreq/scaling_max_freq 1000 1000 664
+[32m[ 3887.714712] [0m[33mueventd[0m: fixup /sys/devices/system/cpu/cpu7/cpufreq/scaling_min_freq 1000 1000 664
+[32m[ 3914.503934] [0m[33mPM[0m: suspend entry 1970-01-01 01:06:12.342764164 UTC
+[32m[ 3914.503996] [0m[33mPM[0m: Syncing filesystems ... done.
+[32m[ 3914.511165] [0mFreezing user space processes ... 
+[32m[ 3914.513442] [0m[33mdwc2 f72c0000.usb[0m: dwc2_hsotg_ep_stop_xfr: timeout DOEPCTL.EPDisable
+[32m[ 3914.513491] [0m[33mdwc2 f72c0000.usb[0m: GINNakEff triggered
+[32m[ 3914.515758] [0m(elapsed 0.004 seconds) done.
+[32m[ 3914.515836] [0mFreezing remaining freezable tasks ... (elapsed 0.002 seconds) done.
+[32m[ 3914.518375] [0mSuspending console(s) (use no_console_suspend to debug)
+[32m[ 3914.609150] [0m[33mPM[0m: suspend of devices complete after 44.144 msecs
+[32m[ 3914.613468] [0m[33mPM[0m: late suspend of devices complete after 4.280 msecs
+[32m[ 3914.617009] [0m[33mPM[0m: noirq suspend of devices complete after 3.513 msecs
+[32m[ 3914.617030] [0mDisabling non-boot CPUs ...
+[32m[ 3914.634839] [0m[33mCPU1[0m: shutdown
+[32m[ 3914.634863] [0m[33mpsci[0m: CPU1 killed.
+[32m[ 3914.666842] [0m[33mCPU2[0m: shutdown
+[32m[ 3914.666871] [0m[33mpsci[0m: CPU2 killed.
+[32m[ 3914.702818] [0m[33mCPU3[0m: shutdown
+[32m[ 3914.702846] [0m[33mpsci[0m: CPU3 killed.
+[32m[ 3914.738903] [0m[33mCPU4[0m: shutdown
+[32m[ 3914.738934] [0m[33mpsci[0m: CPU4 killed.
+[32m[ 3914.770678] [0m[33mCPU5[0m: shutdown
+[32m[ 3914.770707] [0m[33mpsci[0m: CPU5 killed.
+[32m[ 3914.806658] [0m[33mCPU6[0m: shutdown
+[32m[ 3914.806687] [0m[33mpsci[0m: CPU6 killed.
+[32m[ 3914.834313] [0mIRQ5 no longer affine to CPU7
+[32m[ 3914.834671] [0m[33mCPU7[0m: shutdown
+[32m[ 3914.834698] [0m[33mpsci[0m: CPU7 killed.
+[32m[ 3914.848977] [0mEnabling non-boot CPUs ...
+[32m[ 3914.868158] [0mDetected VIPT I-cache on CPU1
+[32m[ 3914.868265] [0m[33mCPU1[0m: Booted secondary processor [410fd033]
+[32m[ 3914.868822] [0m[33m cache[0m: parent cpu1 should not be sleeping
+[32m[ 3914.869371] [0mCPU1 is up
+[32m[ 3914.888551] [0mDetected VIPT I-cache on CPU2
+[32m[ 3914.888641] [0m[33mCPU2[0m: Booted secondary processor [410fd033]
+[32m[ 3914.889215] [0m[33m cache[0m: parent cpu2 should not be sleeping
+[32m[ 3914.889715] [0mCPU2 is up
+[32m[ 3914.921031] [0mDetected VIPT I-cache on CPU3
+[32m[ 3914.921118] [0m[33mCPU3[0m: Booted secondary processor [410fd033]
+[32m[ 3914.921674] [0m[33m cache[0m: parent cpu3 should not be sleeping
+[32m[ 3914.922225] [0mCPU3 is up
+[32m[ 3914.945587] [0mDetected VIPT I-cache on CPU4
+[32m[ 3914.945692] [0m[33mCPU4[0m: Booted secondary processor [410fd033]
+[32m[ 3914.946301] [0m[33m cache[0m: parent cpu4 should not be sleeping
+[32m[ 3914.946798] [0mCPU4 is up
+[32m[ 3914.969995] [0mDetected VIPT I-cache on CPU5
+[32m[ 3914.970076] [0m[33mCPU5[0m: Booted secondary processor [410fd033]
+[32m[ 3914.970675] [0m[33m cache[0m: parent cpu5 should not be sleeping
+[32m[ 3914.971169] [0mCPU5 is up
+[32m[ 3914.994545] [0mDetected VIPT I-cache on CPU6
+[32m[ 3914.994626] [0m[33mCPU6[0m: Booted secondary processor [410fd033]
+[32m[ 3914.995277] [0m[33m cache[0m: parent cpu6 should not be sleeping
+[32m[ 3914.995773] [0mCPU6 is up
+[32m[ 3915.023048] [0mDetected VIPT I-cache on CPU7
+[32m[ 3915.023129] [0m[33mCPU7[0m: Booted secondary processor [410fd033]
+[32m[ 3915.023860] [0m[33m cache[0m: parent cpu7 should not be sleeping
+[32m[ 3915.024391] [0mCPU7 is up
+[32m[ 3915.026643] [0m[33mPM[0m: noirq resume of devices complete after 2.137 msecs
+[32m[ 3915.029899] [0m[33mPM[0m: early resume of devices complete after 2.768 msecs
+[32m[ 3915.063828] [0m[33mmmc_host mmc0[0m: Bus speed (slot 0) = 24800000Hz (slot req 400000Hz, actual 400000HZ div = 31)
+[32m[ 3915.131963] [0m[33mmmc_host mmc0[0m: Bus speed (slot 0) = 51756522Hz (slot req 52000000Hz, actual 51756522HZ div = 0)
+[32m[ 3915.244140] [0m[33mmmc_host mmc2[0m: Bus speed (slot 0) = 24800000Hz (slot req 400000Hz, actual 400000HZ div = 31)
+[32m[ 3915.287747] [0m[33mmmc_host mmc2[0m: Bus speed (slot 0) = 24800000Hz (slot req 25000000Hz, actual 24800000HZ div = 0)
+[32m[ 3915.292264] [0m[33mPM[0m: resume of devices complete after 262.338 msecs
+[32m[ 3915.345862] [0mRestarting tasks ... 
+[32m[ 3915.348823] [0m[33mueventd[0m: fixup /sys/devices/system/cpu/cpu1/cpufreq/scaling_max_freq 1000 1000 664
+[32m[ 3915.349385] [0m[33mueventd[0m: fixup /sys/devices/system/cpu/cpu1/cpufreq/scaling_min_freq 1000 1000 664
+[32m[ 3915.349714] [0mdone.
+[32m[ 3915.360245] [0m[33mPM[0m: suspend exit 1970-01-01 01:06:22.314441667 UTC
+[32m[ 3915.388408] [0m[33mueventd[0m: fixup /sys/devices/system/cpu/cpu2/cpufreq/scaling_max_freq 1000 1000 664
+[32m[ 3915.388872] [0m[33mueventd[0m: fixup /sys/devices/system/cpu/cpu2/cpufreq/scaling_min_freq 1000 1000 664
+[32m[ 3915.427543] [0m[33mueventd[0m: fixup /sys/devices/system/cpu/cpu3/cpufreq/scaling_max_freq 1000 1000 664
+[32m[ 3915.428001] [0m[33mueventd[0m: fixup /sys/devices/system/cpu/cpu3/cpufreq/scaling_min_freq 1000 1000 664
+[32m[ 3915.466573] [0m[33mueventd[0m: fixup /sys/devices/system/cpu/cpu4/cpufreq/scaling_max_freq 1000 1000 664
+[32m[ 3915.467032] [0m[33mueventd[0m: fixup /sys/devices/system/cpu/cpu4/cpufreq/scaling_min_freq 1000 1000 664
+[32m[ 3915.505614] [0m[33mueventd[0m: fixup /sys/devices/system/cpu/cpu5/cpufreq/scaling_max_freq 1000 1000 664
+[32m[ 3915.506123] [0m[33mueventd[0m: fixup /sys/devices/system/cpu/cpu5/cpufreq/scaling_min_freq 1000 1000 664
+[32m[ 3915.544628] [0m[33mueventd[0m: fixup /sys/devices/system/cpu/cpu6/cpufreq/scaling_max_freq 1000 1000 664
+[32m[ 3915.545079] [0m[33mueventd[0m: fixup /sys/devices/system/cpu/cpu6/cpufreq/scaling_min_freq 1000 1000 664
+[32m[ 3915.583649] [0m[33mueventd[0m: fixup /sys/devices/system/cpu/cpu7/cpufreq/scaling_max_freq 1000 1000 664
+[32m[ 3915.584106] [0m[33mueventd[0m: fixup /sys/devices/system/cpu/cpu7/cpufreq/scaling_min_freq 1000 1000 664
+[32m[ 3942.747925] [0m[33mPM[0m: suspend entry 1970-01-01 01:06:49.702111664 UTC
+[32m[ 3942.747990] [0m[33mPM[0m: Syncing filesystems ... done.
+[32m[ 3942.754984] [0mFreezing user space processes ... 
+[32m[ 3942.757394] [0m[33mdwc2 f72c0000.usb[0m: dwc2_hsotg_ep_stop_xfr: timeout DOEPCTL.EPDisable
+[32m[ 3942.757443] [0m[33mdwc2 f72c0000.usb[0m: GINNakEff triggered
+[32m[ 3942.758823] [0m(elapsed 0.003 seconds) done.
+[32m[ 3942.758911] [0mFreezing remaining freezable tasks ... (elapsed 0.002 seconds) done.
+[32m[ 3942.761378] [0mSuspending console(s) (use no_console_suspend to debug)
+[32m[ 3942.852738] [0m[33mPM[0m: suspend of devices complete after 44.372 msecs
+[32m[ 3942.857187] [0m[33mPM[0m: late suspend of devices complete after 4.412 msecs
+[32m[ 3942.861015] [0m[33mPM[0m: noirq suspend of devices complete after 3.800 msecs
+[32m[ 3942.861037] [0mDisabling non-boot CPUs ...
+[32m[ 3942.878302] [0mIRQ5 no longer affine to CPU1
+[32m[ 3942.878759] [0m[33mCPU1[0m: shutdown
+[32m[ 3942.878784] [0m[33mpsci[0m: CPU1 killed.
+[32m[ 3942.910847] [0m[33mCPU2[0m: shutdown
+[32m[ 3942.910876] [0m[33mpsci[0m: CPU2 killed.
+[32m[ 3942.942733] [0m[33mCPU3[0m: shutdown
+[32m[ 3942.942760] [0m[33mpsci[0m: CPU3 killed.
+[32m[ 3942.974766] [0m[33mCPU4[0m: shutdown
+[32m[ 3942.974792] [0m[33mpsci[0m: CPU4 killed.
+[32m[ 3943.006627] [0m[33mCPU5[0m: shutdown
+[32m[ 3943.006652] [0m[33mpsci[0m: CPU5 killed.
+[32m[ 3943.038593] [0m[33mCPU6[0m: shutdown
+[32m[ 3943.038621] [0m[33mpsci[0m: CPU6 killed.
+[32m[ 3943.070619] [0m[33mCPU7[0m: shutdown
+[32m[ 3943.070649] [0m[33mpsci[0m: CPU7 killed.
+[32m[ 3943.084925] [0mEnabling non-boot CPUs ...
+[32m[ 3943.104107] [0mDetected VIPT I-cache on CPU1
+[32m[ 3943.104214] [0m[33mCPU1[0m: Booted secondary processor [410fd033]
+[32m[ 3943.104769] [0m[33m cache[0m: parent cpu1 should not be sleeping
+[32m[ 3943.105276] [0mCPU1 is up
+[32m[ 3943.124493] [0mDetected VIPT I-cache on CPU2
+[32m[ 3943.124581] [0m[33mCPU2[0m: Booted secondary processor [410fd033]
+[32m[ 3943.125132] [0m[33m cache[0m: parent cpu2 should not be sleeping
+[32m[ 3943.125631] [0mCPU2 is up
+[32m[ 3943.148976] [0mDetected VIPT I-cache on CPU3
+[32m[ 3943.149064] [0m[33mCPU3[0m: Booted secondary processor [410fd033]
+[32m[ 3943.149622] [0m[33m cache[0m: parent cpu3 should not be sleeping
+[32m[ 3943.150161] [0mCPU3 is up
+[32m[ 3943.177508] [0mDetected VIPT I-cache on CPU4
+[32m[ 3943.177612] [0m[33mCPU4[0m: Booted secondary processor [410fd033]
+[32m[ 3943.178225] [0m[33m cache[0m: parent cpu4 should not be sleeping
+[32m[ 3943.178720] [0mCPU4 is up
+[32m[ 3943.205952] [0mDetected VIPT I-cache on CPU5
+[32m[ 3943.206033] [0m[33mCPU5[0m: Booted secondary processor [410fd033]
+[32m[ 3943.206627] [0m[33m cache[0m: parent cpu5 should not be sleeping
+[32m[ 3943.207120] [0mCPU5 is up
+[32m[ 3943.230512] [0mDetected VIPT I-cache on CPU6
+[32m[ 3943.230594] [0m[33mCPU6[0m: Booted secondary processor [410fd033]
+[32m[ 3943.231270] [0m[33m cache[0m: parent cpu6 should not be sleeping
+[32m[ 3943.231772] [0mCPU6 is up
+[32m[ 3943.254991] [0mDetected VIPT I-cache on CPU7
+[32m[ 3943.255072] [0m[33mCPU7[0m: Booted secondary processor [410fd033]
+[32m[ 3943.255823] [0m[33m cache[0m: parent cpu7 should not be sleeping
+[32m[ 3943.256342] [0mCPU7 is up
+[32m[ 3943.258569] [0m[33mPM[0m: noirq resume of devices complete after 2.113 msecs
+[32m[ 3943.262639] [0m[33mPM[0m: early resume of devices complete after 3.570 msecs
+[32m[ 3943.300085] [0m[33mmmc_host mmc0[0m: Bus speed (slot 0) = 24800000Hz (slot req 400000Hz, actual 400000HZ div = 31)
+[32m[ 3943.368580] [0m[33mmmc_host mmc0[0m: Bus speed (slot 0) = 51756522Hz (slot req 52000000Hz, actual 51756522HZ div = 0)
+[32m[ 3943.480106] [0m[33mmmc_host mmc2[0m: Bus speed (slot 0) = 24800000Hz (slot req 400000Hz, actual 400000HZ div = 31)
+[32m[ 3943.532467] [0m[33mmmc_host mmc2[0m: Bus speed (slot 0) = 24800000Hz (slot req 25000000Hz, actual 24800000HZ div = 0)
+[32m[ 3943.537832] [0m[33mPM[0m: resume of devices complete after 275.144 msecs
+[32m[ 3943.591650] [0mRestarting tasks ... 
+[32m[ 3943.594239] [0m[33mueventd[0m: fixup /sys/devices/system/cpu/cpu1/cpufreq/scaling_max_freq 1000 1000 664
+[32m[ 3943.594809] [0m[33mueventd[0m: fixup /sys/devices/system/cpu/cpu1/cpufreq/scaling_min_freq 1000 1000 664
+[32m[ 3943.595573] [0mdone.
+[32m[ 3943.606269] [0m[33mPM[0m: suspend exit 1970-01-01 01:06:59.325040833 UTC
+[32m[ 3943.633840] [0m[33mueventd[0m: fixup /sys/devices/system/cpu/cpu2/cpufreq/scaling_max_freq 1000 1000 664
+[32m[ 3943.634337] [0m[33mueventd[0m: fixup /sys/devices/system/cpu/cpu2/cpufreq/scaling_min_freq 1000 1000 664
+[32m[ 3943.672965] [0m[33mueventd[0m: fixup /sys/devices/system/cpu/cpu3/cpufreq/scaling_max_freq 1000 1000 664
+[32m[ 3943.673426] [0m[33mueventd[0m: fixup /sys/devices/system/cpu/cpu3/cpufreq/scaling_min_freq 1000 1000 664
+[32m[ 3943.712144] [0m[33mueventd[0m: fixup /sys/devices/system/cpu/cpu4/cpufreq/scaling_max_freq 1000 1000 664
+[32m[ 3943.712602] [0m[33mueventd[0m: fixup /sys/devices/system/cpu/cpu4/cpufreq/scaling_min_freq 1000 1000 664
+[32m[ 3943.751260] [0m[33mueventd[0m: fixup /sys/devices/system/cpu/cpu5/cpufreq/scaling_max_freq 1000 1000 664
+[32m[ 3943.751722] [0m[33mueventd[0m: fixup /sys/devices/system/cpu/cpu5/cpufreq/scaling_min_freq 1000 1000 664
+[32m[ 3943.790394] [0m[33mueventd[0m: fixup /sys/devices/system/cpu/cpu6/cpufreq/scaling_max_freq 1000 1000 664
+[32m[ 3943.790861] [0m[33mueventd[0m: fixup /sys/devices/system/cpu/cpu6/cpufreq/scaling_min_freq 1000 1000 664
+[32m[ 3943.829510] [0m[33mueventd[0m: fixup /sys/devices/system/cpu/cpu7/cpufreq/scaling_max_freq 1000 1000 664
+[32m[ 3943.830018] [0m[33mueventd[0m: fixup /sys/devices/system/cpu/cpu7/cpufreq/scaling_min_freq 1000 1000 664
+[32m[ 3970.351388] [0m[33mPM[0m: suspend entry 1970-01-01 01:07:26.070153330 UTC
+[32m[ 3970.351452] [0m[33mPM[0m: Syncing filesystems ... done.
+[32m[ 3970.358682] [0mFreezing user space processes ... 
+[32m[ 3970.361181] [0m[33mdwc2 f72c0000.usb[0m: dwc2_hsotg_ep_stop_xfr: timeout DOEPCTL.EPDisable
+[32m[ 3970.361232] [0m[33mdwc2 f72c0000.usb[0m: GINNakEff triggered
+[32m[ 3970.362673] [0m(elapsed 0.003 seconds) done.
+[32m[ 3970.362757] [0mFreezing remaining freezable tasks ... (elapsed 0.002 seconds) done.
+[32m[ 3970.365238] [0mSuspending console(s) (use no_console_suspend to debug)
+[32m[ 3970.456996] [0m[33mPM[0m: suspend of devices complete after 44.535 msecs
+[32m[ 3970.462336] [0m[33mPM[0m: late suspend of devices complete after 5.295 msecs
+[32m[ 3970.465884] [0m[33mPM[0m: noirq suspend of devices complete after 3.514 msecs
+[32m[ 3970.465905] [0mDisabling non-boot CPUs ...
+[32m[ 3970.482803] [0m[33mCPU1[0m: shutdown
+[32m[ 3970.482828] [0m[33mpsci[0m: CPU1 killed.
+[32m[ 3970.514693] [0m[33mCPU2[0m: shutdown
+[32m[ 3970.514723] [0m[33mpsci[0m: CPU2 killed.
+[32m[ 3970.546747] [0m[33mCPU3[0m: shutdown
+[32m[ 3970.546781] [0m[33mpsci[0m: CPU3 killed.
+[32m[ 3970.578663] [0m[33mCPU4[0m: shutdown
+[32m[ 3970.578691] [0m[33mpsci[0m: CPU4 killed.
+[32m[ 3970.610627] [0m[33mCPU5[0m: shutdown
+[32m[ 3970.610655] [0m[33mpsci[0m: CPU5 killed.
+[32m[ 3970.638588] [0m[33mCPU6[0m: shutdown
+[32m[ 3970.638617] [0m[33mpsci[0m: CPU6 killed.
+[32m[ 3970.666248] [0mIRQ5 no longer affine to CPU7
+[32m[ 3970.666622] [0m[33mCPU7[0m: shutdown
+[32m[ 3970.666646] [0m[33mpsci[0m: CPU7 killed.
+[32m[ 3970.680888] [0mEnabling non-boot CPUs ...
+[32m[ 3970.700042] [0mDetected VIPT I-cache on CPU1
+[32m[ 3970.700148] [0m[33mCPU1[0m: Booted secondary processor [410fd033]
+[32m[ 3970.700705] [0m[33m cache[0m: parent cpu1 should not be sleeping
+[32m[ 3970.701210] [0mCPU1 is up
+[32m[ 3970.720412] [0mDetected VIPT I-cache on CPU2
+[32m[ 3970.720501] [0m[33mCPU2[0m: Booted secondary processor [410fd033]
+[32m[ 3970.721057] [0m[33m cache[0m: parent cpu2 should not be sleeping
+[32m[ 3970.721554] [0mCPU2 is up
+[32m[ 3970.744905] [0mDetected VIPT I-cache on CPU3
+[32m[ 3970.744994] [0m[33mCPU3[0m: Booted secondary processor [410fd033]
+[32m[ 3970.745554] [0m[33m cache[0m: parent cpu3 should not be sleeping
+[32m[ 3970.746092] [0mCPU3 is up
+[32m[ 3970.773436] [0mDetected VIPT I-cache on CPU4
+[32m[ 3970.773541] [0m[33mCPU4[0m: Booted secondary processor [410fd033]
+[32m[ 3970.774147] [0m[33m cache[0m: parent cpu4 should not be sleeping
+[32m[ 3970.774641] [0mCPU4 is up
+[32m[ 3970.801846] [0mDetected VIPT I-cache on CPU5
+[32m[ 3970.801927] [0m[33mCPU5[0m: Booted secondary processor [410fd033]
+[32m[ 3970.802523] [0m[33m cache[0m: parent cpu5 should not be sleeping
+[32m[ 3970.803015] [0mCPU5 is up
+[32m[ 3970.826431] [0mDetected VIPT I-cache on CPU6
+[32m[ 3970.826512] [0m[33mCPU6[0m: Booted secondary processor [410fd033]
+[32m[ 3970.827206] [0m[33m cache[0m: parent cpu6 should not be sleeping
+[32m[ 3970.827707] [0mCPU6 is up
+[32m[ 3970.850921] [0mDetected VIPT I-cache on CPU7
+[32m[ 3970.851002] [0m[33mCPU7[0m: Booted secondary processor [410fd033]
+[32m[ 3970.851727] [0m[33m cache[0m: parent cpu7 should not be sleeping
+[32m[ 3970.852230] [0mCPU7 is up
+[32m[ 3970.854470] [0m[33mPM[0m: noirq resume of devices complete after 2.128 msecs
+[32m[ 3970.858415] [0m[33mPM[0m: early resume of devices complete after 3.446 msecs
+[32m[ 3970.900021] [0m[33mmmc_host mmc0[0m: Bus speed (slot 0) = 24800000Hz (slot req 400000Hz, actual 400000HZ div = 31)
+[32m[ 3970.968497] [0m[33mmmc_host mmc0[0m: Bus speed (slot 0) = 51756522Hz (slot req 52000000Hz, actual 51756522HZ div = 0)
+[32m[ 3971.080009] [0m[33mmmc_host mmc2[0m: Bus speed (slot 0) = 24800000Hz (slot req 400000Hz, actual 400000HZ div = 31)
+[32m[ 3971.124209] [0m[33mmmc_host mmc2[0m: Bus speed (slot 0) = 24800000Hz (slot req 25000000Hz, actual 24800000HZ div = 0)
+[32m[ 3971.128667] [0m[33mPM[0m: resume of devices complete after 270.221 msecs
+[32m[ 3971.183168] [0mRestarting tasks ... 
+[32m[ 3971.184813] [0m[33mueventd[0m: fixup /sys/devices/system/cpu/cpu1/cpufreq/scaling_max_freq 1000 1000 664
+[32m[ 3971.185365] [0m[33mueventd[0m: fixup /sys/devices/system/cpu/cpu1/cpufreq/scaling_min_freq 1000 1000 664
+[32m[ 3971.187198] [0mdone.
+[32m[ 3971.197740] [0m[33mPM[0m: suspend exit 1970-01-01 01:07:36.319147500 UTC
+[32m[ 3971.224309] [0m[33mueventd[0m: fixup /sys/devices/system/cpu/cpu2/cpufreq/scaling_max_freq 1000 1000 664
+[32m[ 3971.224766] [0m[33mueventd[0m: fixup /sys/devices/system/cpu/cpu2/cpufreq/scaling_min_freq 1000 1000 664
+[32m[ 3971.263401] [0m[33mueventd[0m: fixup /sys/devices/system/cpu/cpu3/cpufreq/scaling_max_freq 1000 1000 664
+[32m[ 3971.263860] [0m[33mueventd[0m: fixup /sys/devices/system/cpu/cpu3/cpufreq/scaling_min_freq 1000 1000 664
+[32m[ 3971.302435] [0m[33mueventd[0m: fixup /sys/devices/system/cpu/cpu4/cpufreq/scaling_max_freq 1000 1000 664
+[32m[ 3971.302886] [0m[33mueventd[0m: fixup /sys/devices/system/cpu/cpu4/cpufreq/scaling_min_freq 1000 1000 664
+[32m[ 3971.341469] [0m[33mueventd[0m: fixup /sys/devices/system/cpu/cpu5/cpufreq/scaling_max_freq 1000 1000 664
+[32m[ 3971.341973] [0m[33mueventd[0m: fixup /sys/devices/system/cpu/cpu5/cpufreq/scaling_min_freq 1000 1000 664
+[32m[ 3971.380472] [0m[33mueventd[0m: fixup /sys/devices/system/cpu/cpu6/cpufreq/scaling_max_freq 1000 1000 664
+[32m[ 3971.380928] [0m[33mueventd[0m: fixup /sys/devices/system/cpu/cpu6/cpufreq/scaling_min_freq 1000 1000 664
+[32m[ 3971.419520] [0m[33mueventd[0m: fixup /sys/devices/system/cpu/cpu7/cpufreq/scaling_max_freq 1000 1000 664
+[32m[ 3971.419977] [0m[33mueventd[0m: fixup /sys/devices/system/cpu/cpu7/cpufreq/scaling_min_freq 1000 1000 664
+[32m[ 3998.438391] [0m[33mPM[0m: suspend entry 1970-01-01 01:08:03.559793331 UTC
+[32m[ 3998.438452] [0m[33mPM[0m: Syncing filesystems ... done.
+[32m[ 3998.445323] [0mFreezing user space processes ... 
+[32m[ 3998.447863] [0m[33mdwc2 f72c0000.usb[0m: dwc2_hsotg_ep_stop_xfr: timeout DOEPCTL.EPDisable
+[32m[ 3998.447912] [0m[33mdwc2 f72c0000.usb[0m: GINNakEff triggered
+[32m[ 3998.449525] [0m(elapsed 0.004 seconds) done.
+[32m[ 3998.449603] [0mFreezing remaining freezable tasks ... (elapsed 0.002 seconds) done.
+[32m[ 3998.452185] [0mSuspending console(s) (use no_console_suspend to debug)
+[32m[ 3998.545026] [0m[33mPM[0m: suspend of devices complete after 46.465 msecs
+[32m[ 3998.549553] [0m[33mPM[0m: late suspend of devices complete after 4.490 msecs
+[32m[ 3998.553249] [0m[33mPM[0m: noirq suspend of devices complete after 3.667 msecs
+[32m[ 3998.553273] [0mDisabling non-boot CPUs ...
+[32m[ 3998.574625] [0m[33mCPU1[0m: shutdown
+[32m[ 3998.574653] [0m[33mpsci[0m: CPU1 killed.
+[32m[ 3998.606548] [0m[33mCPU2[0m: shutdown
+[32m[ 3998.606574] [0m[33mpsci[0m: CPU2 killed.
+[32m[ 3998.634556] [0m[33mCPU3[0m: shutdown
+[32m[ 3998.634580] [0m[33mpsci[0m: CPU3 killed.
+[32m[ 3998.662564] [0m[33mCPU4[0m: shutdown
+[32m[ 3998.662587] [0m[33mpsci[0m: CPU4 killed.
+[32m[ 3998.694601] [0m[33mCPU5[0m: shutdown
+[32m[ 3998.694625] [0m[33mpsci[0m: CPU5 killed.
+[32m[ 3998.722559] [0m[33mCPU6[0m: shutdown
+[32m[ 3998.722586] [0m[33mpsci[0m: CPU6 killed.
+[32m[ 3998.746508] [0m[33mCPU7[0m: shutdown
+[32m[ 3998.746533] [0m[33mpsci[0m: CPU7 killed.
+[32m[ 3998.760782] [0mEnabling non-boot CPUs ...
+[32m[ 3998.779953] [0mDetected VIPT I-cache on CPU1
+[32m[ 3998.780060] [0m[33mCPU1[0m: Booted secondary processor [410fd033]
+[32m[ 3998.780618] [0m[33m cache[0m: parent cpu1 should not be sleeping
+[32m[ 3998.781128] [0mCPU1 is up
+[32m[ 3998.800379] [0mDetected VIPT I-cache on CPU2
+[32m[ 3998.800469] [0m[33mCPU2[0m: Booted secondary processor [410fd033]
+[32m[ 3998.801023] [0m[33m cache[0m: parent cpu2 should not be sleeping
+[32m[ 3998.801525] [0mCPU2 is up
+[32m[ 3998.832832] [0mDetected VIPT I-cache on CPU3
+[32m[ 3998.832922] [0m[33mCPU3[0m: Booted secondary processor [410fd033]
+[32m[ 3998.833518] [0m[33m cache[0m: parent cpu3 should not be sleeping
+[32m[ 3998.834104] [0mCPU3 is up
+[32m[ 3998.861401] [0mDetected VIPT I-cache on CPU4
+[32m[ 3998.861508] [0m[33mCPU4[0m: Booted secondary processor [410fd033]
+[32m[ 3998.862119] [0m[33m cache[0m: parent cpu4 should not be sleeping
+[32m[ 3998.862630] [0mCPU4 is up
+[32m[ 3998.885841] [0mDetected VIPT I-cache on CPU5
+[32m[ 3998.885922] [0m[33mCPU5[0m: Booted secondary processor [410fd033]
+[32m[ 3998.886551] [0m[33m cache[0m: parent cpu5 should not be sleeping
+[32m[ 3998.887052] [0mCPU5 is up
+[32m[ 3998.910353] [0mDetected VIPT I-cache on CPU6
+[32m[ 3998.910434] [0m[33mCPU6[0m: Booted secondary processor [410fd033]
+[32m[ 3998.911081] [0m[33m cache[0m: parent cpu6 should not be sleeping
+[32m[ 3998.911572] [0mCPU6 is up
+[32m[ 3998.938818] [0mDetected VIPT I-cache on CPU7
+[32m[ 3998.938899] [0m[33mCPU7[0m: Booted secondary processor [410fd033]
+[32m[ 3998.939636] [0m[33m cache[0m: parent cpu7 should not be sleeping
+[32m[ 3998.940137] [0mCPU7 is up
+[32m[ 3998.942397] [0m[33mPM[0m: noirq resume of devices complete after 2.144 msecs
+[32m[ 3998.946316] [0m[33mPM[0m: early resume of devices complete after 3.418 msecs
+[32m[ 3998.983948] [0m[33mmmc_host mmc0[0m: Bus speed (slot 0) = 24800000Hz (slot req 400000Hz, actual 400000HZ div = 31)
+[32m[ 3999.052384] [0m[33mmmc_host mmc0[0m: Bus speed (slot 0) = 51756522Hz (slot req 52000000Hz, actual 51756522HZ div = 0)
+[32m[ 3999.163932] [0m[33mmmc_host mmc2[0m: Bus speed (slot 0) = 24800000Hz (slot req 400000Hz, actual 400000HZ div = 31)
+[32m[ 3999.217655] [0m[33mmmc_host mmc2[0m: Bus speed (slot 0) = 24800000Hz (slot req 25000000Hz, actual 24800000HZ div = 0)
+[32m[ 3999.223291] [0m[33mPM[0m: resume of devices complete after 276.944 msecs
+[32m[ 3999.275892] [0mRestarting tasks ... 
+[32m[ 3999.277631] [0m[33mueventd[0m: fixup /sys/devices/system/cpu/cpu1/cpufreq/scaling_max_freq 1000 1000 664
+[32m[ 3999.278309] [0m[33mueventd[0m: fixup /sys/devices/system/cpu/cpu1/cpufreq/scaling_min_freq 1000 1000 664
+[32m[ 3999.279404] [0mdone.
+[32m[ 3999.290185] [0m[33mPM[0m: suspend exit 1970-01-01 01:08:13.325436667 UTC
+[32m[ 3999.317565] [0m[33mueventd[0m: fixup /sys/devices/system/cpu/cpu2/cpufreq/scaling_max_freq 1000 1000 664
+[32m[ 3999.318095] [0m[33mueventd[0m: fixup /sys/devices/system/cpu/cpu2/cpufreq/scaling_min_freq 1000 1000 664
+[32m[ 3999.356707] [0m[33mueventd[0m: fixup /sys/devices/system/cpu/cpu3/cpufreq/scaling_max_freq 1000 1000 664
+[32m[ 3999.357164] [0m[33mueventd[0m: fixup /sys/devices/system/cpu/cpu3/cpufreq/scaling_min_freq 1000 1000 664
+[32m[ 3999.395762] [0m[33mueventd[0m: fixup /sys/devices/system/cpu/cpu4/cpufreq/scaling_max_freq 1000 1000 664
+[32m[ 3999.396220] [0m[33mueventd[0m: fixup /sys/devices/system/cpu/cpu4/cpufreq/scaling_min_freq 1000 1000 664
+[32m[ 3999.434902] [0m[33mueventd[0m: fixup /sys/devices/system/cpu/cpu5/cpufreq/scaling_max_freq 1000 1000 664
+[32m[ 3999.435361] [0m[33mueventd[0m: fixup /sys/devices/system/cpu/cpu5/cpufreq/scaling_min_freq 1000 1000 664
+[32m[ 3999.473961] [0m[33mueventd[0m: fixup /sys/devices/system/cpu/cpu6/cpufreq/scaling_max_freq 1000 1000 664
+[32m[ 3999.474415] [0m[33mueventd[0m: fixup /sys/devices/system/cpu/cpu6/cpufreq/scaling_min_freq 1000 1000 664
+[32m[ 3999.513035] [0m[33mueventd[0m: fixup /sys/devices/system/cpu/cpu7/cpufreq/scaling_max_freq 1000 1000 664
+[32m[ 3999.513493] [0m[33mueventd[0m: fixup /sys/devices/system/cpu/cpu7/cpufreq/scaling_min_freq 1000 1000 664
+[32m[ 4013.811698] [0m[33mPM[0m: suspend entry 1970-01-01 01:08:27.846944166 UTC
+[32m[ 4013.811765] [0m[33mPM[0m: Syncing filesystems ... done.
+[32m[ 4013.826528] [0mFreezing user space processes ... 
+[32m[ 4013.828866] [0m[33mdwc2 f72c0000.usb[0m: dwc2_hsotg_ep_stop_xfr: timeout DOEPCTL.EPDisable
+[32m[ 4013.828921] [0m[33mdwc2 f72c0000.usb[0m: GINNakEff triggered
+[32m[ 4013.830504] [0m(elapsed 0.003 seconds) done.
+[32m[ 4013.830589] [0mFreezing remaining freezable tasks ... (elapsed 0.002 seconds) done.
+[32m[ 4013.833067] [0mSuspending console(s) (use no_console_suspend to debug)
+[32m[ 4013.924416] [0m[33mPM[0m: suspend of devices complete after 43.969 msecs
+[32m[ 4013.929482] [0m[33mPM[0m: late suspend of devices complete after 5.017 msecs
+[32m[ 4013.933008] [0m[33mPM[0m: noirq suspend of devices complete after 3.490 msecs
+[32m[ 4022.762964] [0m[33mPM[0m: noirq resume of devices complete after 2.209 msecs
+[32m[ 4022.766654] [0m[33mPM[0m: early resume of devices complete after 3.099 msecs
+[32m[ 4022.804003] [0m[33mmmc_host mmc0[0m: Bus speed (slot 0) = 24800000Hz (slot req 400000Hz, actual 400000HZ div = 31)
+[32m[ 4022.873098] [0m[33mmmc_host mmc0[0m: Bus speed (slot 0) = 51756522Hz (slot req 52000000Hz, actual 51756522HZ div = 0)
+[32m[ 4022.984012] [0m[33mmmc_host mmc2[0m: Bus speed (slot 0) = 24800000Hz (slot req 400000Hz, actual 400000HZ div = 31)
+[32m[ 4023.039605] [0m[33mmmc_host mmc2[0m: Bus speed (slot 0) = 24800000Hz (slot req 25000000Hz, actual 24800000HZ div = 0)
+[32m[ 4023.044169] [0m[33mPM[0m: resume of devices complete after 277.483 msecs
+[32m[ 4023.100407] [0mRestarting tasks ... done.
+[32m[ 4023.115468] [0m[33mPM[0m: suspend exit 1970-01-01 01:08:37.330084167 UTC
