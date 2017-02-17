@@ -1,0 +1,15 @@
+diff --git a/device-common.mk b/device-common.mk
+index 3dda70e..5ed33aa 100644
+--- a/device-common.mk
++++ b/device-common.mk
+@@ -57,6 +57,10 @@ PRODUCT_PACKAGES +=	TIInit_11.8.32.bts \
+ # PowerHAL
+ PRODUCT_PACKAGES += android.hardware.power@1.0-impl
+ 
++PRODUCT_COPY_FILES +=  \
++        vendor/mali/64bit/gralloc.hikey.so:system/lib/gralloc.hikey.so \
++        vendor/mali/64bit/libGLES_mali.so:system/lib/libGLES_mali.so
++
+ # Copy hardware config file(s)
+ PRODUCT_COPY_FILES +=  \
+         device/linaro/hikey/etc/permissions/android.hardware.screen.xml:system/etc/permissions/android.hardware.screen.xml \
