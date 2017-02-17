@@ -1,15 +1,18 @@
 diff --git a/device-common.mk b/device-common.mk
-index 3dda70e..5ed33aa 100644
+index d3ecf60..9b12c64 100644
 --- a/device-common.mk
 +++ b/device-common.mk
-@@ -57,6 +57,10 @@ PRODUCT_PACKAGES +=	TIInit_11.8.32.bts \
- # PowerHAL
- PRODUCT_PACKAGES += android.hardware.power@1.0-impl
+@@ -65,6 +65,13 @@ PRODUCT_COPY_FILES +=  \
+         frameworks/native/data/etc/android.hardware.usb.accessory.xml:system/etc/permissions/android.hardware.usb.accessory.xml \
+         frameworks/native/data/etc/android.hardware.usb.host.xml:system/etc/permissions/android.hardware.usb.host.xml
  
-+PRODUCT_COPY_FILES +=  \
-+        vendor/mali/64bit/gralloc.hikey.so:system/lib/gralloc.hikey.so \
-+        vendor/mali/64bit/libGLES_mali.so:system/lib/libGLES_mali.so
++#Copy Graphics binaries
++PRODUCT_COPY_FILES += $(call add-to-product-copy-files-if-exists,\
++                       vendor/mali/64bit/libGLES_mali.so:system/lib64/egl/libGLES_mali.so\
++                       vendor/mali/64bit/gralloc.hikey.so:system/lib64/hw/gralloc.hikey.so\
++                       vendor/mali/32bit/libGLES_mali.so:system/lib/egl/libGLES_mali.so \
++                       vendor/mali/32bit/gralloc.hikey.so:system/lib/hw/gralloc.hikey.so)
 +
- # Copy hardware config file(s)
- PRODUCT_COPY_FILES +=  \
-         device/linaro/hikey/etc/permissions/android.hardware.screen.xml:system/etc/permissions/android.hardware.screen.xml \
+ # Include BT modules
+ $(call inherit-product-if-exists, device/linaro/hikey/wpan/ti-wpan-products.mk)
+ 

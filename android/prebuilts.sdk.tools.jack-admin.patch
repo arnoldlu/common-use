@@ -1,0 +1,13 @@
+diff --git a/tools/jack-admin b/tools/jack-admin
+index 96a4dc3..13055d3 100755
+--- a/tools/jack-admin
++++ b/tools/jack-admin
+@@ -26,7 +26,7 @@ umask 077
+ JACK_HOME="${JACK_HOME:=$HOME/.jack-server}"
+ JACK_CLIENT_SETTING="${JACK_CLIENT_SETTING:=$HOME/.jack-settings}"
+ TMPDIR=${TMPDIR:=/tmp}
+-JACK_SERVER_VM_ARGUMENTS="${JACK_SERVER_VM_ARGUMENTS:=-Dfile.encoding=UTF-8}"
++JACK_SERVER_VM_ARGUMENTS="${JACK_SERVER_VM_ARGUMENTS:=-Dfile.encoding=UTF-8 -XX:+TieredCompilation -Xmx4096m}"
+ JACK_EXTRA_CURL_OPTIONS=${JACK_EXTRA_CURL_OPTIONS:=}
+ 
+ LAUNCHER_JAR="$JACK_HOME/launcher.jar"
