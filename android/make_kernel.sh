@@ -4,5 +4,5 @@ PWD=$(pwd)
 
 make hikey_defconfig
 make -j4
-cp arch/arm64/boot/dts/hisilicon/hi6220-hikey.dtb $PWD/../../device/linaro/hikey-kernel/
-cp arch/arm64/boot/Image $PWD/../../device/linaro/hikey-kernel/
+cp arch/arm64/boot/dts/hisilicon/hi6220-hikey.dtb $PWD/../../device/linaro/hikey-kernel/hi6220-hikey.dtb-4.4
+cp arch/arm64/boot/Image-dtb $PWD/../../device/linaro/hikey-kernel/Image-dtb-4.4
