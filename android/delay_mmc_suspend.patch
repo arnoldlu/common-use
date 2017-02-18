@@ -1,0 +1,28 @@
+diff --git a/arch/arm64/boot/dts/hisilicon/hi6220.dtsi b/arch/arm64/boot/dts/hisilicon/hi6220.dtsi
+index c1028c8..1bb4d63 100644
+--- a/arch/arm64/boot/dts/hisilicon/hi6220.dtsi
++++ b/arch/arm64/boot/dts/hisilicon/hi6220.dtsi
+@@ -813,6 +813,7 @@
+ 		        clock-names = "ciu", "biu";
+ 			resets = <&sys_ctrl PERIPH_RSTDIS0_MMC0>;
+ 			bus-width = <0x8>;
++			runtime-suspend;
+ 			vmmc-supply = <&ldo19>;
+ 			pinctrl-names = "default";
+ 			pinctrl-0 = <&emmc_pmx_func &emmc_clk_cfg_func
+diff --git a/drivers/mmc/host/dw_mmc.c b/drivers/mmc/host/dw_mmc.c
+index ee5c009..ed337c0 100644
+--- a/drivers/mmc/host/dw_mmc.c
++++ b/drivers/mmc/host/dw_mmc.c
+@@ -2917,7 +2917,10 @@ static struct dw_mci_board *dw_mci_parse_dt(struct dw_mci *host)
+ 		if (ret)
+ 			return ERR_PTR(ret);
+ 	}
+-
++	if (of_find_property(np, "runtime-suspend", NULL)) {
++	        dev_info(dev, "supports-highspeed property is deprecated.\n");
++	        pdata->caps |=  MMC_CAP_RUNTIME_RESUME;
++	}
+ 	if (of_find_property(np, "supports-highspeed", NULL)) {
+ 		dev_info(dev, "supports-highspeed property is deprecated.\n");
+ 		pdata->caps |= MMC_CAP_SD_HIGHSPEED | MMC_CAP_MMC_HIGHSPEED;
