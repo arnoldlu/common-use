@@ -9,6 +9,7 @@ void dump_list(struct list_head *head)
     struct list_head *p;
 
     printk("@@@@@@@@@@dump_list start@@@@@@@@@@\n");
+
     if(!list_empty(head))
     {
         printk("Empty list.\n");
