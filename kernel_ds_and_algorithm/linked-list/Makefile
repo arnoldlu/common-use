@@ -1,4 +1,4 @@
-obj-m:=linked-list.o
+obj-m:=doubly-linked-list.o hlist.o
 
 KERNELBUILD:=/lib/modules/$(shell uname -r)/build
 
