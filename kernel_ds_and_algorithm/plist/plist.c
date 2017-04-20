@@ -146,6 +146,35 @@ void plist_requeue(struct plist_node *node, struct plist_head *head)
         plist_check_head(head);
 }
 
+static dump_list(void)
+{
+	struct plist_node *node_pos, *first_node, *last_node;
+	int i;
+
+	printk(KERN_DEBUG "%s start\n", __func__);
+	printk("node_list: ");
+	list_for_each_entry(node_pos, &test_head.node_list, node_list) {
+		printk("%d ", node_pos->prio);
+	}
+	printk("\n");
+
+	first_node = plist_first(&test_head);
+	last_node = plist_last(&test_head);
+	printk("prio_list: %d ", first_node->prio);
+	list_for_each_entry(node_pos, &first_node->prio_list, prio_list) {
+		printk("%d ", node_pos->prio);
+	}
+	printk("\n");
+
+#if 0
+	for (i = 0; i < ARRAY_SIZE(test_node); i++) {
+		if(!plist_node_empty(test_node+i))
+			printk(KERN_DEBUG "(test_node+%d)->prio=%d\n", i, (test_node+i)->prio);
+	}
+#endif
+	printk(KERN_DEBUG "MIN(prio)=%d MAX(prio)=%d\n", first_node->prio, last_node->prio);
+	printk(KERN_DEBUG "%s end\n", __func__);
+}
 
 static void __init plist_test_check(int nr_expect)
 {
@@ -157,9 +186,7 @@ static void __init plist_test_check(int nr_expect)
 	}
 
 	prio_pos = first = plist_first(&test_head);
-	printk(KERN_DEBUG "plist_for_each test_head start\n");
 	plist_for_each(node_pos, &test_head) {
-		printk(KERN_DEBUG "node_pos->prio=%d\n", node_pos->prio);
 		if (nr_expect-- < 0)
 			break;
 		if (node_pos == first)
@@ -173,7 +200,6 @@ static void __init plist_test_check(int nr_expect)
 		BUG_ON(prio_pos->prio_list.next != &node_pos->prio_list);
 		prio_pos = node_pos;
 	}
-	printk(KERN_DEBUG "plist_for_each test_head end\n");
 
 	BUG_ON(nr_expect != 0);
 	BUG_ON(prio_pos->prio_list.next != &first->prio_list);
@@ -197,12 +223,12 @@ static int  __init plist_test(void)
 	for (i = 0; i < ARRAY_SIZE(test_node); i++)
 		plist_node_init(test_node + i, 0);
 
-	for (loop = 0; loop < 1000; loop++) {
+	for (loop = 0; loop < 10; loop++) {
 		r = r * 193939 % 47629;
 		i = r % ARRAY_SIZE(test_node);
 		if (plist_node_empty(test_node + i)) {
 			r = r * 193939 % 47629;
-			test_node[i].prio = r % 99;
+			test_node[i].prio = r % 10;
 			plist_add(test_node + i, &test_head);
 			nr_expect++;
 		} else {
@@ -216,7 +242,7 @@ static int  __init plist_test(void)
 		}
 	}
 
-        printk(KERN_DEBUG "nr_expect=%d\n", nr_expect);
+	dump_list();
 
 	for (i = 0; i < ARRAY_SIZE(test_node); i++) {
 		if (plist_node_empty(test_node + i))
@@ -238,4 +264,4 @@ module_init(plist_test);
 module_exit(plist_exit);
 MODULE_AUTHOR("Arnold Lu");
 MODULE_LICENSE("GPL");
-MODULE_DESCRIPTION("Linked list test");
+MODULE_DESCRIPTION("Priority list test");
