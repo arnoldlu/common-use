@@ -1,0 +1,15 @@
+diff --git a/tools/analyze_suspend/analyze_suspend.py b/tools/analyze_suspend/analyze_suspend.py
+index c4e8d9f..6c75280 100755
+--- a/tools/analyze_suspend/analyze_suspend.py
++++ b/tools/analyze_suspend/analyze_suspend.py
+@@ -979,6 +979,10 @@ def initFtraceAndroid():
+ 			for e in events:
+ 				os.system(sysvals.adb+" shell 'echo 1 > "+\
+ 					sysvals.epath+e+"/enable'")
++			os.system(sysvals.adb+" shell 'echo 1 > /sys/kernel/debug/tracing/events/printk/enable'")
++			os.system(sysvals.adb+" shell 'echo 1 > /sys/kernel/debug/tracing/events/printk/console_lock/enable'")
++			os.system(sysvals.adb+" shell 'echo 0 > /sys/kernel/debug/tracing/events/printk/console/enable'")
++
+ 		# clear the trace buffer
+ 		os.system(sysvals.adb+" shell 'echo \"\" > "+tp+"trace'")
+ 
