@@ -2884,13 +2884,13 @@ def executeAndroidSuspend():
 					" shell 'echo SUSPEND START > "+tp+"trace_marker'")
 			if(sysvals.rtcwake):
 				print('SUSPEND START')
-				print('Android will autoresume in %d seconds' % sysvals.rtcwaketime)
-				os.system(sysvals.adb+" shell 'echo +%d > /sys/class/rtc/rtc0/wakealarm'"%(sysvals.rtcwaketime))
+				print('Android will autoresume in %d seconds %s %s' % (sysvals.rtcwaketime, sysvals.suspendmode, sysvals.powerfile))
+				os.system(sysvals.adb+" shell 'echo +%d > /sys/class/rtc/rtc0/wakealarm && echo %s > %s'"%\
+					(sysvals.rtcwaketime, sysvals.suspendmode, sysvals.powerfile))
 			else:
 				print('SUSPEND START (press a key on the device to resume)')
+				os.system(sysvals.adb+" shell 'echo "+sysvals.suspendmode+" > "+sysvals.powerfile+"'")
 
-			os.system(sysvals.adb+" shell 'echo "+sysvals.suspendmode+\
-				" > "+sysvals.powerfile+"'")
 			# execution will pause here, then adb will exit
 			while(True):
 				check = os.popen(sysvals.adb+\
