@@ -39,6 +39,7 @@ import re
 import platform
 from datetime import datetime, timedelta
 from subprocess import Popen, PIPE
+import csv
 
 # ----------------- CLASSES --------------------
 
@@ -259,6 +260,8 @@ def loadKernelLog():
 			continue
 		if(re.match('^Freeing unused kernel memory.*', msg)):
 			break
+		if(re.match('^Freeing init memory.*', msg)):
+			break
 
 	data.dmesg['boot']['end'] = data.end
 	lf.close()
@@ -439,6 +442,21 @@ def createBootGraph(data, embedded):
 			(data.start, data.initstart))
 	hf.close()
 	return True
+
+def createBootCSV(data):
+	csvfile = file("./boot_summary.csv", 'wb')
+	writer = csv.writer(csvfile);
+	writer.writerow(['phase', 'dev', 'Duration(ms)'])
+
+	phase = 'boot';
+	phaselist = data.dmesg[phase]['list']
+
+	for d in phaselist:
+		name = d
+		dev = phaselist[d]
+		writer.writerow([phase, name, (dev['end']-dev['start'])*1000])
+		print ("%s,%s,%f"%(phase, name, (dev['end']-dev['start'])*1000))
+	csvfile.close()
 
 # Function: addScriptCode
 # Description:
@@ -830,3 +848,4 @@ if __name__ == '__main__':
 	print('    init start: %.3f' % (data.initstart * 1000))
 
 	createBootGraph(data, sysvals.phoronix)
+	createBootCSV(data)
