@@ -1,0 +1,1113 @@
+=~=~=~=~=~=~=~=~=~=~=~= PuTTY log 2017.05.12 14:35:32 =~=~=~=~=~=~=~=~=~=~=~=
+
+MODE:SPI NAND
+TURN TO USB
+eS-
+NOLINK
+flag bypass
+
+
+U-Boot 2011.09 (May 12 2017 - 12:01:13) for ZXIC 
+
+U-Boot code: 0x27EF0000 -> 0x27F82B30  BSS: -> 0x27F8986C
+
+CPU:     ZX297520V3
+Board:	 ZX297520V3
+monitor len: 0x00100000
+ramsize: 0x08000000
+TLB table at: 0x27ff0000
+Top of RAM usable for U-Boot at: 0x27ff0000
+Reserving 1024k for U-Boot at: 0x27ef0000
+Reserving 16k for nand dma buffer at: 0x27eec000
+Reserving 2080k for malloc() at: 0x27ce4000
+Reserving 24 Bytes for Board Info at: 0x27ce3fe8
+Reserving 120 Bytes for Global Data at: 0x27ce3f70
+New Stack Pointer is: 0x27ce3f60
+RAM Configuration:
+Bank #0: 0x20000800 128 MiB
+relocation Offset is: 0x00000000
+dram_bank_mmu_setup: bank: 0
+monitor flash len: 0x00092B30
+Now running in RAM - U-Boot at: 0x27EF0000
+Using default environment
+
+Destroy Hash Table: 27f83034 table = (null)
+Create Hash Table: N=91
+DELETE CANDIDATE: "bootargs"
+hdelete: DELETE key "bootargs"
+DELETE ERROR ##############################
+DELETE CANDIDATE: "bootcmd"
+hdelete: DELETE key "bootcmd"
+DELETE ERROR ##############################
+INSERT: table 27f83034, filled 1/97 rv 27ce82ec ==> name="bootdelay" value="0"
+INSERT: table 27f83034, filled 2/97 rv 27ce819c ==> name="baudrate" value="115200"
+INSERT: table 27f83034, filled 3/97 rv 27ce82bc ==> name="ethaddr" value="ec:1d:7f:b0:2f:32"
+INSERT: table 27f83034, filled 4/97 rv 27ce8178 ==> name="ipaddr" value="192.168.1.1"
+INSERT: table 27f83034, filled 5/97 rv 27ce8550 ==> name="serverip" value="192.168.1.20"
+INSERT: table 27f83034, filled 6/97 rv 27ce84d8 ==> name="gatewayip" value="192.168.1.1"
+INSERT: table 27f83034, filled 7/97 rv 27ce834c ==> name="netmask" value="255.255.255.0"
+INSERT: table 27f83034, filled 8/97 rv 27ce82e0 ==> name="hostname" value="unknown"
+INSERT: table 27f83034, filled 9/97 rv 27ce8238 ==> name="bootfile" value="ZX297520V3.bin"
+INSERT: table 27f83034, filled 10/97 rv 27ce852c ==> name="loadaddr" value="0x22000000"
+INSERT: free(data = 27ce8008)
+INSERT: done
+In:    serial
+Out:   serial
+Err:   serial
+[UBOOT]NOTICE->[sys_entry]<521>Entry ...
+[UBOOT]NOTICE->[get_load_mode]<86>g_load_mode=0(ZLOAD_MODE).
+	[zx234290_get_boot_reason_prev][START_UP_STATUS = 0x1] ...
+	[zx234290_get_boot_reason_prev][USER_RESERVED   = 0x0] ...
+read 177363 lcd id = 0x7c;
+Flash:  spi-nand  
+[SPI-NAND]: maf_id = 0xc8
+[SPI-NAND]: dev_id = 0xc1
+[SPI-NAND][A0] = 0x0
+[SPI-NAND][B0] = 0x11
+Bad block table found at page 65408, version 0x10
+Bad block table found at page 65344, version 0x10
+[UBOOT]NOTICE->[nand_init]<137>128 MiB.
+    [nand_init] --------------------- takes [670] us
+    [read_partition_and_check] ------ takes [8] us
+    [zftl_init] is_writed[0] = 4
+    [zftl_init] is_writed[1] = 26
+    [zftl_init] is_writed[2] = 1
+[UBOOT]ERR->[zftl_init]<697>CanNOT find the partition [-ramdisk-]! ignored
+    [zftl_init] is_writed[4] = 12
+    [zftl_init] is_writed[5] = 0
+    [zftl_init] there is no data in the zftl partition.
+    [zftl_init] erase the partition form [block 164] to [block 168]
+    [zftl_init] initialize the three table.
+    [zftl_init] is_writed[6] = 0
+    [zftl_init] there is no data in the zftl partition.
+    [zftl_init] erase the partition form [block 688] to [block 692]
+    [zftl_init] initialize the three table.
+[UBOOT]ERR->[zftl_init]<697>CanNOT find the partition [-simnv-]! ignored
+[UBOOT]ERR->[zftl_init]<697>CanNOT find the partition [-simnvfac-]! ignored
+    [zftl_read]  nand->read( -0x8e8440-, -0x5-)
+
+[UBOOT]NOTICE->[GetEfuseStatus]<282>secure_flag!=0xFF, SecureVerify->Disable.
+[UBOOT]NOTICE->[sys_entry]<658>AMT VALUE = 0x0!
+    [zftl_read]  nand->read( -0xb10000-, -0x1-)
+
+    [zftl_read]  nand->read( -0xb10001-, -0x1-)
+
+    [zftl_read]  nand->read( -0xd60000-, -0x20-)
+
+    [zftl_read]  nand->read( -0xd60020-, -0x20-)
+
+[UBOOT]NOTICE->[sys_entry]<760>poweron_type=0x0.
+[UBOOT]NOTICE->[get_battery_detect_flag]<451>part offset = 0x600000
+    [zftl_read]  nand->read( -0x8ead00-, -0x1-)
+
+[UBOOT]NOTICE->[get_battery_detect_flag]<462>batdetcet_flag=0xff.
+[UBOOT]NOTICE->[get_battery_detect_flag]<492> battery_det_flag=1
+adc2 get adc,break num =3 ...
+
+[UBOOT]NOTICE->[load_arm_image_zsp]<854>[cpuzsp] [size=0x44f4d0] from [0xe00000] to [0x25000000]
+[UBOOT]NOTICE->[load_arm_image_zsp]<876>[loading...] -------------------- takes [41627] us.
+
+[UBOOT]NOTICE->[load_arm_image_ps]<314>(cpups) Size=0xc15160, Load From 0x1500000 -> 0x21a00000.
+[UBOOT]NOTICE->[load_arm_image_ps]<321>(cpups) CRC Checksum=0xbf0e0fd1.
+[UBOOT]NOTICE->[load_arm_image_ps]<340>(cpups) load image finished
+[UBOOT]NOTICE->[load_arm_image_ps]<356>(cpups) Skip Secure Verify...
+
+[UBOOT]NOTICE->[load_arm_image_linux_ap]<723>(cpuap) Size=0x29f2f8, Load From 0x2300000 -> 0x23507fc0.
+[UBOOT]NOTICE->[load_arm_image_linux_ap]<730>(cpuap) CRC Checksum=0xff54729b.
+[UBOOT]NOTICE->[load_arm_image_linux_ap]<746>(cpuap)load image finished
+[UBOOT]NOTICE->[load_arm_image_linux_ap]<762>(cpuap) Skip Secure Verify...
+[UBOOT]NOTICE->[load_arm_ddr_zsp]<937>move zsp to dest addr start
+[UBOOT]NOTICE->[load_arm_ddr_zsp]<958>move zsp to dest addr end
+### main_loop entered: bootdelay=0
+
+### main_loop: bootcmd=" bootm 0x23507fc0"
+## Current stack ends at 0x27ce3dc0 *  kernel: cmdline image address = 0x23507fc0
+show_boot_progress(1)
+## Booting kernel from Legacy Image at 23507fc0 ...
+show_boot_progress(2)
+show_boot_progress(3)
+   Image Name:   Linux-3.4.110
+   Image Type:   ARM Linux Kernel Image (uncompressed)
+   Data Size:    2749176 Bytes = 2.6 MiB
+   Load Address: 23508000
+   Entry Point:  23508000
+   Verifying Checksum ... len = 29f2f8,dcrc = ff54729b,cal=ff54729b
+OK
+show_boot_progress(4)
+show_boot_progress(5)
+show_boot_progress(6)
+   kernel data at 0x23508000, len = 0x0029f2f8 (2749176)
+show_boot_progress(14)
+## No init Ramdisk
+   ramdisk start = 0x00000000, ramdisk end = 0x00000000
+@@@entry bootm_load_os uncompressing@@@
+   XIP Kernel Image ... OK
+OK
+   kernel loaded at 0x23508000, end = 0x237a72f8
+show_boot_progress(7)
+images.os.start = 0x23507FC0, images.os.end = 0x237a72f8
+images.os.load = 0x23508000, load_end = 0x237a72f8
+show_boot_progress(8)
+show_boot_progress(15)
+## Transferring control to Linux (at address 23508000) ...
+
+Starting kernel ...
+[UBOOT]NOTICE->[start_other_cores]<1263>Starting the arm_r7 ...
+===chiid=0x1d63,boot_params=0x23500100
+Uncompressing Linux... done, booting the kernel.
+Bad inittab entry at line 3
+Starting mdevd...
+Welcome to
+    _  _
+   | ||_|                 
+   | | _ ____  _   _  _  _ 
+   | || |  _ \| | | |\ \/ /
+   | || | | | | |_| |/    \
+   |_||_|_| |_|\____|\_/\_/
+
+For further information check:
+http://www.kernel.org/
+
+sh: write error: Device or resource busy
+mknod: /dev/tun: File exists
+sh: ==: argument expected
+nv error:nv value illegal!
+usage: cfg [get name] [set name=value] [unset name] [show] [erase] [save] [restore]
+/sbin/cfgnv_init.sh: line 253: can't create /proc/sys/net/ipv6/conf/sw0.200/accept_ra: nonexistent directory
+/sbin/cfgnv_init.sh: line 254: can't create /proc/sys/net/ipv6/conf/wlan0-vxd/accept_ra: nonexistent directory
+/etc/rc: line 142: can't create /proc/sys/vm/drop-cache: nonexistent directory
+mount: mounting none on /proc/bus/usb failed: No such file or directory
+/etc/rc: line 128: zxic_mainctrl: not found
+Set usb port ok. iFd == 3
+notify_atctl close 3 0
+notify_atctl send /dev/ttyGS0 0
+Set usb port ok. iFd == 3
+notify_atctl close 3 0
+notify_atctl send /dev/ttyGS1 0
+Set usb port ok. iFd == 3
+notify_atctl close 3 0
+notify_atctl send /dev/ttyS0 0
+drvcom begin to rcv msg from queue 65538. 
+ln: /system/bin/sh: File exists
+chown: unknown user/group root:root
+[usbCfgMng] main start
+near_ps[0] is: 3
+[usbCfgMng]Creating usbCfgMng message queue success! MSG_ID_USBCFGMNG=98307
+linux_at_channel_init:397 near_ps[0] is: 3
+[usbCfgMng]usb_initUsbCfgMsg
+near_ps[1] is: 5
+linux_at_channel_init:397 near_ps[1] is: 5
+[usbCfgMng]usb_initUsbCfgMsg Register finish!!
+near_ps[2] is: 6
+linux_at_channel_init:397 near_ps[2] is: 6
+[usbCfgMng]usbcfg_browse_Partnum_ByPartname start!
+[usbCfgMng]usbcfg_browse_cdrom succeed! part_num=14
+near_ps[3] is: 7
+date: invalid date '%H:%M:%S'
+linux_at_channel_init:397 near_ps[3] is: 7
+[usbCfgMng]usbcfg_browse_cdrom g_usbcfg_cdrom_partition_name =/dev/zftl14
+cid_resource_init cid_resumed:13,str:13
+[usbCfgMng] usb_NvGetUsbModeType ret = 0, tempModeType =debug
+[usbCfgMng] usb_NvGetUsbModeType#### g_USBRefNV.nvModeType =0
+pdp_setResumeCid:13
+recv_mainloop: select ret=4 max_fd=7 
+write at_str = AT+ZRESUMECID=13
+ 
+parase_at_cmd msg at_str = AT+ZRESUMECID=13
+
+read cmd is: 
++ZMSRI
+
+prs_at req3 prel=11 parl=4 prefix= ZRESUMECID=13
+
+read cmd is: 
++ZMSRI
+
+write near_ps fd:3, data:AT+ZRESUMECID=13
+, len:18
+at_write_by_context:1000 read cmd is: 
++ZMSRI
+
+read cmd is: 
++ZMSRI
+
+write near_ps fd:3, data:AT+ZRESUMECID=13
+, len:18
+recv_mainloop: select ret=4 max_fd=7 
+[usbCfgMng] usb_PlugInProc plugType = 0
+read cmd is: 
++ZICCID: 00000000000000000000
+
+read cmd is: 
++ZICCID: 00000000000000000000
+
+read cmd is: 
++ZICCID: 00000000000000000000
+
+read cmd is: 
++ZICCID: 00000000000000000000
+
+recv_mainloop: select ret=4 max_fd=7 
+read cmd is: 
++CIREPI: 0
+
+read cmd is: 
++CIREPI: 0
+
+read cmd is: 
++CIREPI: 0
+
+recv usMsgCmd = 223a
+read cmd is: 
++CIREPI: 0
+
+recv_mainloop: select ret=4 max_fd=7 
+read cmd is: 
++CREG: 2
+
+read cmd is: 
++CREG: 2
+
+at_port_proc new_open /dev/ttyGS0 fd=8 index=0
+read cmd is: 
++CREG: 2
+
+recv usMsgCmd = 223a
+read cmd is: 
++CREG: 2
+
+recv_mainloop: FD_FAR_PS:8 flag:1
+at_port_proc new_open /dev/ttyGS1 fd=9 index=1
+recv_mainloop: FD_FAR_PS:9 flag:1
+recv usMsgCmd = 223a
+recv_mainloop: select ret=4 max_fd=8 
+read cmd is: 
++CGREG: 2
+
+read cmd is: 
++CGREG: 2
+
+read cmd is: 
++CGREG: 2
+
+com_config /dev/ttyS0 Baudrate 0 115200
+read cmd is: 
++CGREG: 2
+
+at_port_proc new_open /dev/ttyS0 fd=10 index=2
+recv_mainloop: FD_FAR_PS:8 flag:1
+recv usMsgCmd = 222f
+recv_mainloop: FD_FAR_PS:9 flag:1
+recv near fd:3,data:
++ZMSRI
+,len:10
+extract_atcmd:918 recv_mainloop: FD_FAR_PS:10 flag:1
+recv_mainloop: select ret=4 max_fd=10 
+read cmd is: 
++CEREG: 2
+
+recv near fd:3,data:
++ZMSRI
+,len:10
+read cmd is: 
++CEREG: 2
+
+read cmd is: 
++CEREG: 2
+
+read cmd is: 
++CEREG: 2
+
+recv_mainloop: FD_FAR_PS:8 flag:1
+recv_mainloop: FD_FAR_PS:9 flag:1
+recv_mainloop: FD_FAR_PS:10 flag:1
+recv_mainloop: select ret=4 max_fd=10 
+read cmd is: 
++ZLTENOCELL
+
+read cmd is: 
++ZLTENOCELL
+
+read cmd is: 
++ZLTENOCELL
+
+recv data:+ZMSRI, fd=3
+rcv_at_msg_proc:740 recv data:+ZMSRI, fd=3
+parase_at_cmd msg at_str = +ZMSRI
+prs_at1 prel=5 parl=0 prefix= ZMSRI
+recv aucDataBuf = +ZMSRI, len = 6
+, at_fd = 3, at_str_type = 1, at_cmd_paras: (null)
+msg->at_str: +ZMSRI
+parase_at_cmd msg at_str = +ZMSRI
+prs_at1 prel=5 parl=0 prefix= ZMSRI
+write other fd:8,data:
++ZMSRI
+,len=10
+at_write_fd:929 write other fd:8,data:
++ZMSRI
+,len=10
+write fd:8, cmd:+ZMSRI
+parase_at_cmd msg at_str = +ZMSRI
+prs_at1 prel=5 parl=0 prefix= ZMSRI
+write other fd:9,data:
++ZMSRI
+,len=10
+at_write_fd:929 write other fd:9,data:
++ZMSRI
+,len=10
+write fd:9, cmd:+ZMSRI
+parase_at_cmd msg at_str = +ZM0000000000000
+prs_at info1 prel=6 parl=20 prefix= ZICCID: 00000000000000000000
+recv aucDataBuf = +ZICCID: 00000000000000000000, len = 29
+, at_fd = 6, at_str_type = 1, at_cmd_paras: 00000000000000000000
+msg->at_str: +ZICCID: 00000000000000000000
+read cmd is: AT+ZSETTIME=2000,1,1,0,0,0
+
+recv usMsgCmd = 222f
+recv near fd:7,data:
++ZICCID: 00000000000000000000
+,len:33
+extract_atcmd:918 recv near fd:7,data:
++ZICCID: 00000000000000000000
+,len:33
+recv data:+ZICCID: 00000000000000000000, fd=7
+rcvrrent is ppp dial and ignore cmd data!!!
+at_write_fd:904 current is ppp dial and ignore cmd data!!!
+current is ppp dial and ignore cmd data!!!
+3
+at_write_fd:904 current is ppp dial and ignore cmd data!!!
+current is ppp dial and ignore cmd data!!!
+at_write_fd:904 current is ppp dial and ignore cmd data!!!
+current is ppp dial and ignore cmd data!!!
+at_write_fd:904 current is ppp dial and ignore cmd data!!!
+current is ppp dial and ignore cmd data!!!
+at_write_fd:904 current is ppp dial and ignore cmd data!!!
+current is ppp dial and ignore cmd data!!!
+at_write_fd:904 current is ppp dial and ignore cmd data!!!
+current is ppp dial and ignore cmd dn:19
+recv data:+ZSQR: 199,99,0, fd=6
+rcv_at_msg_proc:740 recv data:+ZSQR: 199,99,0, fd=6
+parase_at_cmd msg at_str = +ZSQR: 199,99,0
+prs_at info1 prel=4 parl=8 prefix= ZSQR: 199,99,0
+recv aucDataBuf = +ZSQR: 199,99,0, len = 15
+, at_fd = 6, at_str_type = 1, at_cmd_paras: 199,99,0
+msg->at_str: +ZSQR: 199,99,0
+recv usMsgCmd = 222f
+recv near fd:7,data:
++ZSQR: 199,99,0
+,len:19
+extract_atcmd:918 recv near fd:7,data:
++ZSQR: 199,99,0
+,len:19
+recv data:+ZSQR: 199,99,0, fd=7
+rcv_at_msg_proc:740 reciptables: No chain/target/match by that name.
+iptables: No chain/target/match by that name.
+recv_mainloop: select ret=4 max_fd=10 
+read cmd is: 
++ZSQR: 31,99,3
+
+recv usMsgCmd = 222f
+recv near fd:3,data:
++ZSQR: 31,99,3
+,len:18
+extract_atcmd:918 recv near fd:3,data:
++ZSQR: 31,99,3
+,len:18
+read cmd is: 
++ZSQR: 31,99,3
+
+read cmd is: 
++ZSQR: 31,99,3
+
+read cmd is: 
++ZSQR: 31,99,3
+
+recv_mainloop: FD_FAR_PS:8 flag:1
+recv_mainloop: FD_FAR_PS:9 flag:1
+recv_mainloop: FD_FAR_PS:10 flag:1
+recv data:+ZSQR: 31,99,3, fd=3
+rcv_at_msg_proc:740 recv_mainloop: select ret=4 max_fd=12, fd=6
+parase_at_cmd msg at_str = ^MODE: 3,2
+prs_at info1 prel=4 parl=3 prefix= MODE: 3,2
+recv aucDataBuf = ^MODE: 3,2, len = 10
+, at_fd = 6, at_str_type = 1, at_cmd_paras: 3,2
+msg->at_str: ^MODE: 3,2
+recv usMsgCmd = 222f
+recv near fd:7,data:
+^MODE: 3,2
+,len:14
+extract_atcmd:918 recv near fd:7,data:
+^MODE: 3,2
+,len:14
+recv data:^MODE: 3,2, fd=7
+rcv_at_msg_proc:740 recv data:^MODE: 3,2, fd=7
+parase_at_cmd msg at_str = ^MODE: 3,2
+prs_at info1 prel=4 parl=3 prefix= MODE: 3,2
+recv aucDataBrecv_mainloop: select ret=0 max_fd=10 
+recv_mainloop: FD_FAR_PS:8 flag:1
+recv_mainloop: FD_FAR_PS:9 flag:1
+recv_mainloop: FD_FAR_PS:10 flag:1
+Starting ZTE FOTA apps......!!
+
+
+BusyBox v1.21.0-uc0 (2017-05-12 09:51:53 CST) built-in shell (ash)
+Enter 'help' for a list of built-in commands.
+
+~ # [zte_ipsec_proxy]:start zte_ipsec_proxy for volte app!!!
+[zte_ipsec_proxy]:open /dev/armps_rpmsgch16 success
+jdwp_service.c::jdwp_control_init():jdwp control socket started (7)
+update_type: mifi_fota
+[FOTA][main-919]: <<<<<FOTA dmapp start>>>>>
+[FOTA][dm_mkdir_fota_dir-154]: dm_mkdir_fota_dir!
+
+[FOTA][DmApp_Ext_FOTA_GetUpdateFlag-213]: open file error:No such file or directory
+[FOTA][mdl_power_off_update_flag-203]: update_type != mdl_fota>>DM main continue!!
+[FOTA][DmApp_ContinueUpgradeFromLowBattery-635]: enter
+[FOTA][DmApp_CheckBatteryAndPackage-587]: come in.
+[FOTA][DmApp_CheckBatteryAndPackage-597]: delta.package doesn't exist!
+[FOTA][DmApp_ContinueUpgradeFromLowBattery-668]: battery | package isn't OK! Won't update!
+[FOTA][sig_init-762]: sig init enter
+[FOTA][sig_init-782]: current pthread id:3070030608 
+[FOTA][main-950]: pthread id=3070030608
+[FOTA][DmApp_HandleWebUiATMsg-674]: Thread starts, pthread id=3068912848
+[FOTA][AT_Msg_Send-337]: FOTA_ATMSG_CMD=0x2221,FOTA_ATMSG_INFO=-1!!
+[wf_get_msg_qid] module_id = 8193
+recv usMsgCmd = 2221
+write at_str = AT+CGSN
+ 
+parase_at_cmd msg at_str = AT+CGSN
+
+prs_at req4 prel=4 parl=0 prefix= CGSN
+
+write near_ps fd:3, data:AT+CGSN
+, len:nc ret=0
+recv_mainloop: select ret=0 max_fd=10 
+recv_mainloop: FD_FAR_PS:8 flag:1
+recv_mainloop: FD_FAR_PS:9 flag:1
+recv_mainloop: FD_FAR_PS:10 flag:1
+recv_mainloop: select ret=0 max_fd=10 
+recv_mainloop: FD_FAR_PS:8 flag:1
+recv_mainloop: FD_FAR_PS:9 flag:1
+recv_mainloop: FD_FAR_PS:10 flag:1
+dnsmasq: forward_query no servers
+
+dnsmasq: forward_query no servers
+
+dnsmasq: forward_query no servers
+
+[FOTA][DmApp_Ext_GetDataStatus-355]: dataCon=(0)!
+recv_mainloop:elect ret=0 maÿfd=10 
+recv_mainloop: FD_FAR_PS:8 flag:1
+recv_mainloop: FD_FAR_PS:9 flag:1
+recv_mainloopFAR_PS:10 flag:1
+recv_mainloop: select ret=0 max_fd=10 
+recv_mainloop: FD_FAR_PS:8 flag:1
+recv_mainloop: FD_FAR_PS:9 flag:1
+recv_mainloop: FD_FAR_PS:10 flag:1
+dnsmasq: forward_query no servers
+
+dnsmasq: forward_query no servers
+
+dnsmasq: forward_query no servers
+
+[FOTA][DmApp_Ext_GetDataStatus-355]: dataCon=(0)!
+recv_mainloop: select ret=4 max_fd=10 
+read cmd is: 
+^MODE: 3,3
+
+recv usMsgCmd = 222f
+recv near fd:3,data:
+^MODE: 3,3
+,len:14
+extract_atcmd:918 recv near fd:3,data:
+^MODE: 3,3
+,len:14
+read cmd is: 
+^MODE: 3,3
+
+read cmd is: 
+^MODE: 3,3
+
+read cmd is: 
+^MODE: 3,3
+
+recv_mainloop: FD_FAR_PS:8 flag:1
+recv_mainloop: FD_FAR_PS:9 flag:1
+recv_mainloop: FD_FARÿ5¥Š‚2±ÿag:1
+recv data:^MODE: 3,3, fd=3
+rcv_at_móc:740 recv data:,3, fd=3
+parase_at_cmd msg at_str = ^MODE: 3,3
+prs_at info1 prel=4 parl=ÿix= MODé 3,3
+recv aucDataBuf = ^MODE: 3,3, len = 10
+, aü
+~ # 
+~ # 
+~ # 
+~ # recv_mainloop: select ret=0 max_fd=8 
+zte_phone
+plat2:posix OSA_Init entry:
+plat2: pool_init pass.
+plat2: MEM_Init ret = 0.
+plat2: FS_Init pass.
+TIMER_Init: create mutex begin.
+TIMER_Init: create mutex end.
+TIMER_Init: create Sema begin.
+TIMER_Init: create Sema end.
+TIMER_Init: create timer thread begin.
+TIMER_Init: create timer thread end.
+plat2: TIMER_Init ret = 0.
+MMI START ++++++ zApp_Init+++++++++++ time = 0
+[tp_man_lcd_init]: start to lcd init
+[Zte_GuiCreateUpdateScreenThread]: ENTER...
+[Zte_GuiCreateUpdateScreenThread]: create a zOss mutex
+[Zte_GuiCreateUpdateScreenThread]: create a zOss thread
+[Zte_GuiCreateUpdateScreenThread]: EXIT
+MMI START++++++app_main_entry+++++++++++ time = 71
+MMI START++++++svr_power_on+++++++++++ time = 327
+[INFO]:[/home/chenyingjuan/7520V7/AP/linux_plat/base/CPU_R7/project/zx297520v3/build/linux/../../../../os/linux/user/zte_apps/zte_phone/app2/server/src/mmiIdleSvrPowerOnOff.c] svr power on [NORMAL]
+[INFO]:[/home/chenyingjuan/7520V7/AP/linux_plat/base/CPU_R7/project/zx297520v3/build/linux/../../../../os/linux/user/zte_apps/zte_phone/app2/server/src/mmiIdleSvrPowerOnOff.c] zblDoInitialize()
+psamDoInitialize OK time=353
+[INFO]:[/home/chenyingjuan/7520V7/AP/linux_plat/base/CPU_R7/project/zx297520v3/build/linux/../../../../os/linux/user/zte_apps/zte_phone/app2/server/src/mmiIdleSvrPowerOnOff.c] mmiIdleSvrAddResetCount()
+[INFO]:[/home/chenyingjuan/7520V7/AP/linux_plat/base/CPU_R7/project/zx297520v3/build/linux/../../../../os/linux/user/zte_apps/zte_phone/app2/server/src/mmiIdleSvrPowerOnOff.c] app_call_init()
+[INFO]:[/home/chenyingjuan/7520V7/AP/linux_plat/base/CPU_R7/project/zx297520v3/build/linux/../../../../os/linux/user/zte_apps/zte_phone/app2/server/src/mmiIdleSvrPowerOnOff.c] svr_start_normal_mode()
+MMI START ++++++  svr_start_normal_mode+++++++++++ time = 391
+1. ==================== tp_cpb_set_items()  ==================
+2. ==================== tp_cpb_set_items()  ==================
+3. ==================== tp_cpb_set_items()  ==================
+1. ==================== set_item()  ==================
+2. ==================== set_item() group((nil))  ==================
+3. ==================== set_item() group(NULL)  ==================
+4. ================== set_item() group(0 - 33)  ================
+1. [item_dup]: suc malloc(0x15a89a0), dup(0xdfffa4)
+1.1. [item_dup]: dup item
+2. [item_dup]: suc
+5. ==================== set_item() group  ==================
+4. ================== set_item() group(1 - 33)  ================
+1. [item_dup]: suc malloc(0x15a89c8), dup(0xdfffbc)
+1.1. [item_dup]: dup item
+2. [item_dup]: suc
+5. ==================== set_item() group  ==================
+4. ================== set_item() group(2 - 33)  ================
+1. [item_dup]: suc malloc(0x15a35a8), dup(0xdfffd4)
+1.1. [item_dup]: dup item
+2. [item_dup]: suc
+5. ==================== set_item() group  ==================
+4. ================== set_item() group(3 - 33)  ================
+1. [item_dup]: suc malloc(0x15a35d0), dup(0xdfffec)
+1.1. [item_dup]: dup item
+2. [item_dup]: suc
+5. ==================== set_item() group  ==================
+4. ================== set_item() group(4 - 33)  ================
+1. [item_dup]: suc malloc(0x15a35f8), dup(0xe00004)
+1.1. [item_dup]: dup item
+2. [item_dup]: suc
+5. ==================== set_item() group  ==================
+4. ================== set_item() group(5 - 33)  ================
+1. [item_dup]: suc malloc(0x15a3620), dup(0xe0001c)
+1.1. [item_dup]: dup item
+2. [item_dup]: suc
+5. ==================== set_item() group  ==================
+4. ================== set_item() group(6 - 33)  ================
+1. [item_dup]: suc malloc(0x15a3648), dup(0xe00034)
+1.1. [item_dup]: dup item
+2. [item_dup]: suc
+5. ==================== set_item() group  ==================
+4. ================== set_item() group(7 - 33)  ================
+1. [item_dup]: suc malloc(0x15a7a98), dup(0xe0004c)
+1.1. [item_dup]: dup item
+2. [item_dup]: suc
+5. ==================== set_item() group  ==================
+4. ================== set_item() group(8 - 33)  ================
+1. [item_dup]: suc malloc(0x15a7ac0), dup(0xe00064)
+1.1. [item_dup]: dup item
+2. [item_dup]: suc
+5. ==================== set_item() group  ==================
+4. ================== set_item() group(9 - 33)  ================
+1. [item_dup]: suc malloc(0x15a7ae8), dup(0xe0007c)
+1.1. [item_dup]: dup item
+2. [item_dup]: suc
+5. ==================== set_item() group  ==================
+4. ================== set_item() group(10 - 33)  ================
+1. [item_dup]: suc malloc(0x15a7b10), dup(0xe00094)
+1.1. [item_dup]: dup item
+2. [item_dup]: suc
+5. ==================== set_item() group  ==================
+4. ================== set_item() group(11 - 33)  ================
+1. [item_dup]: suc malloc(0x15a7b38), dup(0xe000ac)
+1.1. [item_dup]: dup item
+2. [item_dup]: suc
+5. ==================== set_item() group  ==================
+4. ================== set_item() group(12 - 33)  ================
+1. [item_dup]: suc malloc(0x15a3698), dup(0xe000c4)
+1.1. [item_dup]: dup item
+2. [item_dup]: suc
+5. ==================== set_item() group  ==================
+4. ================== set_item() group(13 - 33)  ================
+1. [item_dup]: suc malloc(0x15a36c0), dup(0xe000dc)
+1.1. [item_dup]: dup item
+2. [item_dup]: suc
+5. ==================== set_item() group  ==================
+4. ================== set_item() group(14 - 33)  ================
+1. [item_dup]: suc malloc(0x15a36e8), dup(0xe000f4)
+1.1. [item_dup]: dup item
+2. [item_dup]: suc
+5. ==================== set_item() group  ==================
+4. ================== set_item() group(15 - 33)  ================
+1. [item_dup]: suc malloc(0x15a3710), dup(0xe0010c)
+1.1. [item_dup]: dup item
+2. [item_dup]: suc
+5. ==================== set_item() group  ==================
+4. ================== set_item() group(16 - 33)  ================
+1. [item_dup]: suc malloc(0x15a3738), dup(0xe00124)
+1.1. [item_dup]: dup item
+2. [item_dup]: suc
+5. ==================== set_item() group  ==================
+4. ================== set_item() group(17 - 33)  ================
+1. [item_dup]: suc malloc(0x15a8110), dup(0xe0013c)
+1.1. [item_dup]: dup item
+2. [item_dup]: suc
+5. ==================== set_item() group  ==================
+4. ================== set_item() group(18 - 33)  ================
+1. [item_dup]: suc malloc(0x15a3798), dup(0xe00154)
+1.1. [item_dup]: dup item
+2. [item_dup]: suc
+5. ==================== set_item() group  ==================
+4. ================== set_item() group(19 - 33)  ================
+1. [item_dup]: suc malloc(0x15a37c0), dup(0xe0016c)
+1.1. [item_dup]: dup item
+2. [item_dup]: suc
+5. ==================== set_item() group  ==================
+4. ================== set_item() group(20 - 33)  ================
+1. [item_dup]: suc malloc(0x15a37e8), dup(0xe00184)
+1.1. [item_dup]: dup item
+2. [item_dup]: suc
+5. ==================== set_item() group  ==================
+4. ================== set_item() group(21 - 33)  ================
+1. [item_dup]: suc malloc(0x15a3810), dup(0xe0019c)
+1.1. [item_dup]: dup item
+2. [item_dup]: suc
+5. ==================== set_item() group  ==================
+4. ================== set_item() group(22 - 33)  ================
+1. [item_dup]: suc malloc(0x15a7780), dup(0xe001b4)
+1.1. [item_dup]: dup item
+2. [item_dup]: suc
+5. ==================== set_item() group  ==================
+4. ================== set_item() group(23 - 33)  ================
+1. [item_dup]: suc malloc(0x15a77a8), dup(0xe001cc)
+1.1. [item_dup]: dup item
+2. [item_dup]: suc
+5. ==================== set_item() group  ==================
+4. ================== set_item() group(24 - 33)  ================
+1. [item_dup]: suc malloc(0x15a77d0), dup(0xe001e4)
+1.1. [item_dup]: dup item
+2. [item_dup]: suc
+5. ==================== set_item() group  ==================
+4. ================== set_item() group(25 - 33)  ================
+1. [item_dup]: suc malloc(0x15a77f8), dup(0xe001fc)
+1.1. [item_dup]: dup item
+2. [item_dup]: suc
+5. ==================== set_item() group  ==================
+4. ================== set_item() group(26 - 33)  ================
+1. [item_dup]: suc malloc(0x15a7820), dup(0xe00214)
+1.1. [item_dup]: dup item
+2. [item_dup]: suc
+5. ==================== set_item() group  ==================
+4. ================== set_item() group(27 - 33)  ================
+1. [item_dup]: suc malloc(0x15ar set_item_to_ctl
++ 4. [update]: END
++ 6. [show]: END
++ 2. [tp_cpb_show]: END
+MMI START ++++++ MMI PLAY ANIM BEGIN+++++++++++ time = 1223,g_havePlayedAnimation = 0
+[   43.075836] audio_open
+[   43.076721] audio_open  kzalloc
+ATB2M[AT+CMGF=0]
++ 3. [update]: after set_item_to_ctl
++ 4. [update]: END
++ 1. [update]: ENTER(0x15a0370)
++ 2. [update]: call set_item_to_ctl(0x16993f8)
+svr_util_anim_win_proc  b_register_card = 0
+svr_util_anim_win_proc  SetTimer  POWER_ON_SIM_CHECK_TIMER
+[   45.809509] driver: zDrvAudio_CallbackFun
+[   45.832702] audio_ioctl AUDIO_IOCTL_PLAY_STOP ret =0
+[   45.839752] driver: audio_fasync fd=-1,on=0
+[   45.842590] audio_release
+recv_mainloop: select ret=0 max_fd=8 
+recv_mainloop: select ret=0 max_fd=8 
+MMI START++++++adpidle_hook_power_on_anim_end+++++++++++ time = 13350
+++++++ MMI PLAY ANIM STOP+++++++++++ time = 13350
+1. ==================== tp_cpb_set_items()  ==================
+2. ==================== tp_cpb_set_items()  ==================
+3. ==================== tp_cpb_set_items()  ==================
+1. ==================== set_item()  ==================
+2. ==================== set_item() group(0x15a80f0)  ==================
+3. ==================== set_item()  ==================
+4. ==================== set_item()  ==================
+8. ==================== set_item()  ==================
+9. ==================== set_item()  ==================
+10. ==================== set_item()  ==================
+3. ==================== set_item()  ==================
+4. ==================== set_item()  ==================
+8. ==================== set_item()  ==================
+9. ==================== set_item()  ==================
+10. ==================== set_item()  ==================
+3. ==================== set_item()  ==================
+4. ==================== set_item()  ==================
+8. ==================== set_item()  ==================
+9. ==================== set_item()  ==================
+10. ==================== set_item()  ==================
+3. ==================== set_item()  ==================
+4. ==================== set_item()  ==================
+8. ==================== set_item()  ==================
+9. ==================== set_item()  ==================
+10. ==================== set_item()  ==================
+3. ==================== set_item()  ==================
+4. ==================== set_item()  ==================
+8. ==================== set_item()  ==================
+9. ==================== set_item()  ==================
+10. ==================== set_item()  ==================
+3. ==================== set_item()  ==================
+4. ==================== set_item()  ==================
+8. ==================== set_item()  ==================
+9. ==================== set_item()  ==================
+10. ==================== set_item()  ==================
+3. ==================== set_item()  ==================
+4. ==================== set_item()  ==================
+8. ==================== set_item()  ==================
+9. ==================== set_item()  ==================
+10. ==================== set_item()  ==================
+3. ==================== set_item()  ==================
+4. ==================== set_item()  ==================
+8. ==================== set_item()  ==================
+9. ==================== set_item()  ==================
+10. ==================== set_item()  ==================
+3. ==================== set_item()  ==================
+4. ==================== set_item()  ==================
+8. ==================== set_item()  ==================
+9. ==================== set_item()  ==================
+10. ==================== set_item()  ==================
+3. ==================== set_item()  ==================
+4. ==================== set_item()  ==================
+8. ==================== set_item()  ==================
+9. ==================== set_item()  ==================
+10. ==================== set_item()  ==================
+3. ==================== set_item()  ==================
+4. ==================== set_item()  ==================
+8. ==================== set_item()  ==================
+9. ==================== set_item()  ==================
+10. ==================== set_item()  ==================
+3. ==================== set_item()  ==================
+4. ==================== set_item()  ==================
+8. ==================== set_item()  ==================
+9. ==================== set_item()  ==================
+10. ==================== set_item()  ==================
+3. ==================== set_item()  ==================
+4. ==================== set_item()  ==================
+8. ==================== set_item()  ==================
+9. ==================== set_item()  ==================
+10. ==================== set_item()  ==================
+3. ==================== set_item()  ==================
+4. ====================
+ set_item()  ==================
+8. ==================== set_item()  ==================
+9. ==================== set_item()  ==================
+10. ==================== set_item()  ==================
+3. ==================== set_item()  ==================
+4. ==================== set_item()  ==================
+8. ==================== set_item()  ==================
+9. ==================== set_item()  ==================
+10. =pdate]: after set_item_to_ctl
++ 4. [update]: END
+
++ 1. [update]: ENTER(0x15a0370)
++ 2. [update]: call set_item_to_ctl(0x15a5548)
++ 3. [update]: after set_item_to_ctl
++ 4. [update]: END
++ 1. [update]: ENTER(0x15a0370)
++ 2. [update]: call set_item_to_ctl(0x15a5538)
++ 3. [update]: after set_item_to_ctl
++ 4. [update]: END
+
+
+
+
++ 1. [update]: ENTER(0x15a0370)
++ 2. [update]: call set_item_to_ctl(0x15a5538)
++ 3. [update]: after set_item_to_ctl
++ 4. [update]: END
+
+
+
+
+
+
+
+
+
+
++ 1. [update]: ENTER(0x15a0370)
++ 2. [update]: call set_item_to_ctl(0x15a5548)
++ 1. [update]: ENTER(0x15a0370)
++ 2. [update]: call set_item_to_ctl(0x15a5538)
++ 3. [update]: after set_item_to_ctl
++ 4. [update]: END
++ 1. [update]: ENTER(0x15a0370)
++ 2. [update]: call set_item_to_ctl(0x15a5538)
++ 3. [update]: after set_item_to_ctl
++ 4. [update]: END
++ 1. [update]: ENTER(0x15a0370)
++ 2. [update]: call set_item_to_ctl(0x15a5548)
++ 3. [update]: after set_item_to_ctl
++ 4. [update]: END
+recv_mainloop: select ret=0 max_fd=8 
++ 1. [update]: ENTER(0x15a0370)
++ 2. [update]: call set_item_to_ctl(0x15a5538)
++ 3. [update]: after set_item_to_ctl
++ 4. [update]: END
++ 1. [update]: ENTER(0x15a0370)
++ 2. [update]: call set_item_to_ctl(0x15a5538)
++ 3. [update]: after set_item_to_ctl
++ 4. [update]: END
++ 1. [update]: ENTER(0x15a0370)
++ 2. [update]: call set_item_to_ctl(0x15a5548)
++ 3. [update]: after set_item_to_ctl
++ 4. [update]: END
++ 1. [update]: ENTER(0x15a0370)
++ 2. [update]: call set_item_to_ctl(0x15a5538)
++ 3. [update]: after set_item_to_ctl
++ 4. [update]: END
++ 1. [update]: ENTER(0x15a0370)
++ 2. [update]: call set_item_to_ctl(0x15a5538)
++ 3. [update]: after set_item_to_ctl
++ 4. [update]: END
++ 1. [update]: ENTER(0x15a0370)
++ 2. [update]: call set_item_to_ctl(0x15a5548)
++ 3. [update]: after set_item_to_ctl
++ 4. [update]: END
++ 1. [update]: ENTER(0x15a0370)
++ 2. [update]: call set_item_to_ctl(0x15a5538)
++ 3. [update]: after set_item_to_ctl
++ 4. [update]: END
++ 1. [update]: ENTER(0x15a0370)
++ 2. [update]: call set_item_to_ctl(0x15a5538)
++ 3. [update]: after set_item_to_ctl
++ 4. [update]: END
++ 1. [update]: ENTER(0x15a0370)
++ 2. [update]: call set_item_to_ctl(0x15a5548)
++ 3. [update]: after set_item_to_ctl
++ 4. [update]: END
++ 1. [update]: ENTER(0x15a0370)
++ 2. [update]: call set_item_to_ctl(0x15a5538)
++ 3. [update]: after set_item_to_ctl
++ 4. [update]: END
++ 1. [update]: ENTER(0x15a0370)
++ 2. [update]: call set_item_to_ctl(0x15a5548)
++ 3. [update]: after set_item_to_ctl
++ 4. [update]: END
++ 1. [update]: ENTER(0x15a0370)
++ 2. [update]: call set_item_to_ctl(0x15a5538)
++ 3. [update]: after set_item_to_ctl
++ 4. [update]: END
++ 1. [update]: ENTER(0x15a0370)
++ 2. [update]: call set_item_to_ctl(0x15a5538)
++ 3. [update]: after set_item_to_ctl
++ 4. [update]: END
++ 1. [update]: ENTER(0x15a0370)
++ 2. [update]: call set_item_to_ctl(0x15a5548)
++ 3. [update]: after set_item_to_ctl
++ 4. [update]: END
+recv_mainloop: select ret=0 max_fd=8 
++ 1. [update]: ENTER(0x15a0370)
++ 2. [update]: call set_item_to_ctl(0x15a5538)
++ 3. [update]: after set_item_to_ctl
++ 4. [update]: END
++ 1. [update]: ENTER(0x15a0370)
++ 2. [update]: call set_item_to_ctl(0x15a5538)
++ 3. [update]: after set_item_to_ctl
++ 4. [update]: END
++ 1. [update]: ENTER(0x15a0370)
++ 2. [update]: call set_item_to_ctl(0x15a5548)
++ 3. [update]: after set_item_to_ctl
++ 4. [update]: END
++ 1. [update]: ENTER(0x15a0370)
++ 2. [update]: call set_item_to_ctl(0x15a5538)
++ 3. [update]: after set_item_to_ctl
++ 4. [update]: END
++ 1. [update]: ENTER(0x15a0370)
++ 2. [update]: call set_item_to_ctl(0x15a5538)
++ 3. [update]: after set_item_to_ctl
++ 4. [update]: END
++ 1. [update]: ENTER(0x15a0370)
++ 2. [update]: call set_item_to_ctl(0x15a5548)
++ 3. [update]: after set_item_to_ctl
++ 4. [update]: END
++ 1. [update]: ENTER(0x15a0370)
++ 2. [update]: call set_item_to_ctl(0x15a5538)
++ 3. [update]: after set_item_to_ctl
++ 4. [update]: END
++ 1. [update]: ENTER(0x15a0370)
++ 2. [update]: call set_item_to_ctl(0x15a5538)
++ 3. [update]: after set_item_to_ctl
++ 4. [update]: END
++ 1. [update]: ENTER(0x15a0370)
++ 2. [update]: call set_item_to_ctl(0x15a5548)
++ 3. [update]: after set_item_to_ctl
++ 4. [update]: END
++ 1. [update]: ENTER(0x15a0370)
++ 2. [update]: call set_item_to_ctl(0x15a5538)
++ 3. [update]: after set_item_to_ctl
++ 4. [update]: END
++ 1. [update]: ENTER(0x15a0370)
++ 2. [update]: call set_item_to_ctl(0x15a5538)
++ 3. [update]: after set_item_to_ctl
++ 4. [update]: END
++ 1. [update]: ENTER(0x15a0370)
++ 2. [update]: call set_item_to_ctl(0x15a5548)
++ 3. [update]: after set_item_to_ctl
++ 4. [update]: END
++ 1. [update]: ENTER(0x15a0370)
++ 2. [update]: call set_item_to_ctl(0x15a5538)
++ 3. [update]: after set_item_to_ctl
++ 4. [update]: END
+[   68.150146] kpd 5X6 down code=272.
++ 1. [tp_cpb_show]: hWnd(0x15a0370), bShow(0)
++ 2. [tp_cpb_show]: call show
++ 1. [show]: ENTER show
++ 2. [show]: pGroup(0x15a80f0)
++ 5. [show]: call update
++ 1. [update]: ENTER(0x15a0370)
++ 2. [update]: call set_item_to_ctl(0x15a51e8)
++ 3. [update]: after set_item_to_ctl
++ 4. [update]: END
++ 6. [show]: END
++ 2. [tp_cpb_show]: END
++ 1. [update]: ENTER(0x15a0370)
++ 2. [update]: call set_item_to_ctl(0x15a51e8)
++ 3. [update]: after set_item_to_ctl
++ 4. [update]: END
++ 1. [update]: ENTER(0x15a0370)
++ 2. [update]: call set_item_to_ctl(0x1699288)
++ 3. [update]: after set_item_to_ctl
++ 4. [update]: END
+[   68.345428] kpd 5X6 all keys up.
+recv_mainloop: select ret=0 max_fd=8 
++ 1. [update]: ENTER(0x15a0370)
++ 2. [update]: call set_item_to_ctl(0x1699288)
++ 3. [update]: after set_item_to_ctl
++ 4. [update]: END
++ 1. [update]: ENTER(0x15a0370)
++ 2. [update]: call set_item_to_ctl(0x1699288)
++ 3. [update]: after set_item_to_ctl
++ 4. [update]: END
++ 1. [update]: ENTER(0x15a0370)
++ 2. [update]: call set_item_to_ctl(0x1699288)
++ 3. [update]: after set_item_to_ctl
++ 4. [update]: END
++ 1. [update]: ENTER(0x15a0370)
++ 2. [update]: call set_item_to_ctl(0x1699288)
++ 3. [update]: after set_item_to_ctl
++ 4. [update]: END
++ 1. [update]: ENTER(0x15a0370)
++ 2. [update]: call set_item_to_ctl(0x1699288)
++ 3. [update]: after set_item_to_ctl
++ 4. [update]: END
++ 1. [update]: ENTER(0x15a0370)
++ 2. [update]: call set_item_to_ctl(0x1699288)
++ 3. [update]: after set_item_to_ctl
++ 4. [update]: END
+[   70.523529] kpd 5X6 down code=108.
+[   70.718780] kpd 5X6 all keys up.
++ 1. [update]: ENTER(0x15a0370)
++ 2. [update]: call set_item_to_ctl(0x15a51e8)
++ 3. [update]: after set_item_to_ctl
++ 4. [update]: END
++ 1. [update]: ENTER(0x15a0370)
++ 2. [update]: call set_item_to_ctl(0x15a51e8)
++ 3. [update]: after set_item_to_ctl
++ 4. [update]: END
++ 1. [update]: ENTER(0x15a0370)
++ 2. [update]: call set_item_to_ctl(0x15a51e8)
++ 3. [update]: after set_item_to_ctl
++ 4. [update]: END
++ 1. [update]: ENTER(0x15a0370)
++ 2. [update]: call set_item_to_ctl(0x15a51e8)
++ 3. [update]: after set_item_to_ctl
++ 4. [update]: END
++ 1. [update]: ENTER(0x15a0370)
++ 2. [update]: call set_item_to_ctl(0x15a51e8)
++ 3. [update]: after set_item_to_ctl
++ 4. [update]: END
++ 1. [update]: ENTER(0x15a0370)
++ 2. [update]: call set_item_to_ctl(0x15a51e8)
++ 3. [update]: after set_item_to_ctl
++ 4. [update]: END
++ 1. [update]: ENTER(0x15a0370)
++ 2. [update]: call set_item_to_ctl(0x15a51e8)
++ 3. [update]: after set_item_to_ctl
++ 4. [update]: END
++ 1. [update]: ENTER(0x15a0370)
++ 2. [update]: call set_item_to_ctl(0x15a51e8)
++ 3. [update]: after set_item_to_ctl
++ 4. [update]: END
+recv_mainloop: select ret=0 max_fd=8 
++ 1. [update]: ENTER(0x15a0370)
++ 2. [update]: call set_item_to_ctl(0x15a51e8)
++ 3. [update]: after set_item_to_ctl
++ 4. [update]: END
++ 1. [update]: ENTER(0x15a0370)
++ 2. [update]: call set_item_to_ctl(0x15a51e8)
++ 3. [update]: after set_item_to_ctl
++ 4. [update]: END
++ 1. [update]: ENTER(0x15a0370)
++ 2. [update]: call set_item_to_ctl(0x15a51e8)
++ 3. [update]: after set_item_to_ctl
++ 4. [update]: END
++ 1. [update]: ENTER(0x15a0370)
++ 2. [update]: call set_item_to_ctl(0x15a51e8)
++ 3. [update]: after set_item_to_ctl
++ 4. [update]: END
++ 1. [update]: ENTER(0x15a0370)
++ 2. [update]: call set_item_to_ctl(0x15a51e8)
++ 3. [update]: after set_item_to_ctl
++ 4. [update]: END
++ 1. [update]: ENTER(0x15a0370)
++ 2. [update]: call set_item_to_ctl(0x15a51e8)
++ 3. [update]: after set_item_to_ctl
++ 4. [update]: END
++ 1. [update]: ENTER(0x15a0370)
++ 2. [update]: call set_item_to_ctl(0x15a51e8)
++ 3. [update]: after set_item_to_ctl
++ 4. [update]: END
++ 1. [update]: ENTER(0x15a0370)
++ 2. [update]: call set_item_to_ctl(0x15a51e8)
++ 3. [update]: after set_item_to_ctl
++ 4. [update]: END
++ 1. [update]: ENTER(0x15a0370)
++ 2. [update]: call set_item_to_ctl(0x15a51e8)
++ 3. [update]: after set_item_to_ctl
++ 4. [update]: END
++ 1. [update]: ENTER(0x15a0370)
++ 2. [update]: call set_item_to_ctl(0x15a51e8)
++ 3. [update]: after set_item_to_ctl
++ 4. [update]: END
++ 1. [update]: ENTER(0x15a0370)
++ 2. [update]: call set_item_to_ctl(0x15a51e8)
++ 3. [update]: after set_item_to_ctl
++ 4. [update]: END
++ 1. [update]: ENTER(0x15a0370)
++ 2. [update]: call set_item_to_ctl(0x15a51e8)
++ 3. [update]: after set_item_to_ctl
++ 4. [update]: END
++ 1. [update]: ENTER(0x15a0370)
++ 2. [update]: call set_item_to_ctl(0x15a51e8)
++ 3. [update]: after set_item_to_ctl
++ 4. [update]: END
+[CheckTimeValidity-138]: sntp_process_result=0
++ 1. [update]: ENTER(0x15a0370)
++ 2. [update]: call set_item_to_ctl(0x15a51e8)
++ 3. [update]: after set_item_to_ctl
++ 4. [update]: END
+recv_mainloop: select ret=0 max_fd=8 
++ 1. [update]: ENTER(0x15a0370)
++ 2. [update]: call set_item_to_ctl(0x15a51e8)
++ 3. [update]: after set_item_to_ctl
++ 4
