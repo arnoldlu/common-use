@@ -1,0 +1,1264 @@
+<1>[    0.000000] calling  start_kernel(->|rest_init)+0x0/0x0 @ 0
+<6>[    0.000000] Booting Linux on physical CPU 0
+<5>[    0.000000] Linux version 3.4.110 (SCM@ZTE) (gcc version 4.7.2 (Buildroot 2013.02) ) #2
+<4>[    0.000000] CPU: ARMv7 Processor [410fd034] revision 4 (ARMv7), cr=10c53c7d
+<4>[    0.000000] CPU: PIPT / VIPT nonaliasing data cache, VIPT aliasing instruction cache
+<4>[    0.000000] Machine: ZTE-TSP ZX297520V3
+<4>[    0.000000] Memory policy: ECC disabled, Data cache writeback
+<7>[    0.000000] On node 0 totalpages: 7680
+<7>[    0.000000] free_area_init_node: node 0, pgdat c05285cc, node_mem_map c0662000
+<7>[    0.000000]   Normal zone: 60 pages used for memmap
+<7>[    0.000000]   Normal zone: 0 pages reserved
+<7>[    0.000000]   Normal zone: 7620 pages, LIFO batch:0
+<6>[    0.000000] softspinlock init success base=0xf83029c0!
+<6>[    0.000000] [CLK] zx29 tsp clk init ok.
+<6>[    0.000000] [PCU] PCU_INIT begin.
+<6>[    0.000000] [PCU] PCU_INIT end.
+<7>[    0.000000] pcpu-alloc: s0 r0 d32768 u32768 alloc=1*32768
+<7>[    0.000000] pcpu-alloc: [0] 0 
+<4>[    0.000000] Built 1 zonelists in Zone order, mobility grouping on.  Total pages: 7620
+<5>[    0.000000] Kernel command line: console=ttyS1,115200 no_console_suspend mtdparts=spi-nand:512k@0x0(zloader),1m@0x80000(uboot),512k@0x180000(cpurpm),2m@0x200000(nvfac),2m@0x400000(nvro),7m@0x600000(nvrw),1m@0xd00000(fotaflag),6656k@0xe00000(cpuphy),512k@0x1480000(sms),14m@0x1500000(cpups),4m@0x2300000(cpuap),40448k@0x2700000(cpfs),3584k@0x4e80000(recovery),4m@0x5200000(recovery-kernel),512k@0x5600000(cdrom),28m@0x5680000(userdata),9m@0x7280000(mmi),2m@0x7b80000(securefs) root=/dev/mtdblock15 rw rootfstype=jffs2 boot_reason=0
+<6>[    0.000000] PID hash table entries: 128 (order: -3, 512 bytes)
+<6>[    0.000000] Dentry cache hash table entries: 4096 (order: 2, 16384 bytes)
+<6>[    0.000000] Inode-cache hash table entries: 2048 (order: 1, 8192 bytes)
+<6>[    0.000000] Memory: 30MB = 30MB total
+<5>[    0.000000] Memory: 23868k/23868k available, 6852k reserved, 0K highmem
+<5>[    0.000000] Virtual kernel memory layout:
+<5>[    0.000000]     vector  : 0xffff0000 - 0xffff1000   (   4 kB)
+<5>[    0.000000]     fixmap  : 0xfff00000 - 0xfffe0000   ( 896 kB)
+<5>[    0.000000]     vmalloc : 0xc2000000 - 0xff000000   ( 976 MB)
+<5>[    0.000000]     lowmem  : 0xc0000000 - 0xc1e00000   (  30 MB)
+<5>[    0.000000]     modules : 0xbf000000 - 0xc0000000   (  16 MB)
+<5>[    0.000000]       .text : 0xc0008000 - 0xc04d2624   (4906 kB)
+<5>[    0.000000]       .init : 0xc04d3000 - 0xc04f5000   ( 136 kB)
+<5>[    0.000000]       .data : 0xc04f6000 - 0xc0528d00   ( 204 kB)
+<5>[    0.000000]        .bss : 0xc0528d24 - 0xc065fea0   (1245 kB)
+<6>[    0.000000] NR_IRQS:131
+<6>[    0.000000] [GIC]ZTE-TSP zx29 GIC initialized.
+<6>[    0.000000] ce_wclk=3250000, parent=main_clk_26m 
+<6>[    0.000000] cs_wclk=32768, parent=main_clk_32k 
+<6>[    0.000000] sched_clock: 31 bits at 32kHz, resolution 30517ns, wraps every 65535999ms
+<6>[    0.000000] cd_wclk=26000000, parent=main_clk_26m 
+<6>[    0.000000] wt_wclk=32768, parent=main_clk_32k 
+<6>[    0.000000] ZTE-TSP zx297520v3 system timer initialized
+<6>[    0.000000] console [ttyS1] enabled
+<6>[    0.000000] [UART]register_console: zx29 console registered!
+<6>[    0.000000] kmemleak: Kernel memory leak detector disabled
+<6>[    0.000396] Calibrating delay loop... 1241.08 BogoMIPS (lpj=3102720)
+<6>[    0.029815] pid_max: default: 32768 minimum: 301
+<6>[    0.029968] Mount-cache hash table entries: 512
+<6>[    0.030487] CPU: Testing write buffer coherency: ok
+<1>[    0.030548] initcall  start_kernel(->|rest_init)+0x0/0x0 @ 0
+<1>[    0.030670] calling  kernel_init(->|init_post)+0x0/0x0 @ 1
+<1>[    0.030700] calling  init_static_idmap+0x0/0xe0 @ 1
+<6>[    0.030731] Setting up static identity map for 0x2387d9d0 - 0x2387da28
+<1>[    0.030731] initcall init_static_idmap+0x0/0xe0 returned 0 after 0 usecs
+<1>[    0.030761] calling  spawn_ksoftirqd+0x0/0x3c @ 1
+<1>[    0.030822] initcall spawn_ksoftirqd+0x0/0x3c returned 0 after 0 usecs
+<1>[    0.030822] calling  init_workqueues+0x0/0x250 @ 1
+<1>[    0.031005] initcall init_workqueues+0x0/0x250 returned 0 after 0 usecs
+<1>[    0.031005] calling  rcu_scheduler_really_started+0x0/0x34 @ 1
+<1>[    0.031036] initcall rcu_scheduler_really_started+0x0/0x34 returned 0 after 0 usecs
+<1>[    0.032379] calling  ipc_ns_init+0x0/0x18 @ 1
+<1>[    0.032379] initcall ipc_ns_init+0x0/0x18 returned 0 after 0 usecs
+<1>[    0.032409] calling  init_mmap_min_addr+0x0/0x20 @ 1
+<1>[    0.032409] initcall init_mmap_min_addr+0x0/0x20 returned 0 after 0 usecs
+<1>[    0.032440] calling  init_cpufreq_transition_notifier_list+0x0/0x24 @ 1
+<1>[    0.032470] initcall init_cpufreq_transition_notifier_list+0x0/0x24 returned 0 after 0 usecs
+<1>[    0.032501] calling  net_ns_init+0x0/0xe8 @ 1
+<1>[    0.032623] initcall net_ns_init+0x0/0xe8 returned 0 after 0 usecs
+<1>[    0.032836] calling  ptrace_break_init+0x0/0x2c @ 1
+<1>[    0.032867] initcall ptrace_break_init+0x0/0x2c returned 0 after 0 usecs
+<1>[    0.032867] calling  consistent_init+0x0/0x128 @ 1
+<1>[    0.032897] initcall consistent_init+0x0/0x128 returned 0 after 0 usecs
+<1>[    0.032897] calling  v6_userpage_init+0x0/0x8 @ 1
+<1>[    0.032928] initcall v6_userpage_init+0x0/0x8 returned 0 after 0 usecs
+<1>[    0.032928] calling  ksysfs_init+0x0/0xa0 @ 1
+<1>[    0.032989] initcall ksysfs_init+0x0/0xa0 returned 0 after 0 usecs
+<1>[    0.032989] calling  pm_init+0x0/0x90 @ 1
+<1>[    0.033050] initcall pm_init+0x0/0x90 returned 0 after 0 usecs
+<1>[    0.033050] calling  init_jiffies_clocksource+0x0/0xc @ 1
+<1>[    0.033081] initcall init_jiffies_clocksource+0x0/0xc returned 0 after 0 usecs
+<1>[    0.033081] calling  cpu_pm_init+0x0/0x18 @ 1
+<1>[    0.033111] initcall cpu_pm_init+0x0/0x18 returned 0 after 0 usecs
+<1>[    0.033111] calling  init_zero_pfn+0x0/0x3c @ 1
+<1>[    0.033142] initcall init_zero_pfn+0x0/0x3c returned 0 after 0 usecs
+<1>[    0.033142] calling  fsnotify_init+0x0/0x24 @ 1
+<1>[    0.033172] initcall fsnotify_init+0x0/0x24 returned 0 after 0 usecs
+<1>[    0.033203] calling  filelock_init+0x0/0x40 @ 1
+<1>[    0.033233] initcall filelock_init+0x0/0x40 returned 0 after 0 usecs
+<1>[    0.033233] calling  init_misc_binfmt+0x0/0x30 @ 1
+<1>[    0.033264] initcall init_misc_binfmt+0x0/0x30 returned 0 after 0 usecs
+<1>[    0.033264] calling  init_script_binfmt+0x0/0x1c @ 1
+<1>[    0.033294] initcall init_script_binfmt+0x0/0x1c returned 0 after 0 usecs
+<1>[    0.033294] calling  init_elf_binfmt+0x0/0x1c @ 1
+<1>[    0.033325] initcall init_elf_binfmt+0x0/0x1c returned 0 after 0 usecs
+<1>[    0.033325] calling  debugfs_init+0x0/0x64 @ 1
+<1>[    0.033355] initcall debugfs_init+0x0/0x64 returned 0 after 0 usecs
+<1>[    0.033386] calling  random32_init+0x0/0x98 @ 1
+<1>[    0.033386] initcall random32_init+0x0/0x98 returned 0 after 0 usecs
+<1>[    0.033416] calling  cpufreq_core_init+0x0/0x8c @ 1
+<1>[    0.033416] initcall cpufreq_core_init+0x0/0x8c returned 0 after 0 usecs
+<1>[    0.033447] calling  cpuidle_init+0x0/0x2c @ 1
+<1>[    0.033477] initcall cpuidle_init+0x0/0x2c returned 0 after 0 usecs
+<1>[    0.033477] calling  sock_init+0x0/0xa4 @ 1
+<1>[    0.033630] initcall sock_init+0x0/0xa4 returned 0 after 0 usecs
+<1>[    0.033630] calling  net_inuse_init+0x0/0x24 @ 1
+<1>[    0.033660] initcall net_inuse_init+0x0/0x24 returned 0 after 0 usecs
+<1>[    0.033691] calling  netlink_proto_init+0x0/0x1c4 @ 1
+<6>[    0.033691] NET: Registered protocol family 16
+<1>[    0.033752] initcall netlink_proto_init+0x0/0x1c4 returned 0 after 0 usecs
+<1>[    0.033966] calling  bdi_class_init+0x0/0x58 @ 1
+<1>[    0.034332] initcall bdi_class_init+0x0/0x58 returned 0 after 0 usecs
+<1>[    0.034332] calling  kobject_uevent_init+0x0/0x20 @ 1
+<1>[    0.034362] initcall kobject_uevent_init+0x0/0x20 returned 0 after 0 usecs
+<1>[    0.034393] calling  gpiolib_sysfs_init+0x0/0x7c @ 1
+<1>[    0.034545] initcall gpiolib_sysfs_init+0x0/0x7c returned 0 after 0 usecs
+<1>[    0.034545] calling  zx29_gpio_init+0x0/0x4c @ 1
+<6>[    0.035003] gpiochip_add: registered GPIOs 0 to 135 on device: zx29_gpio
+<6>[    0.035003] [GPIO]create sysfs interface
+<6>[    0.035034] [GPIO]ZTE-TSP zx29 GPIO initialized
+<1>[    0.035034] initcall zx29_gpio_init+0x0/0x4c returned 0 after 4882 usecs
+<1>[    0.035064] calling  tty_class_init+0x0/0x44 @ 1
+<1>[    0.035156] initcall tty_class_init+0x0/0x44 returned 0 after 0 usecs
+<1>[    0.035186] calling  wakeup_sources_debugfs_init+0x0/0x44 @ 1
+<1>[    0.035217] initcall wakeup_sources_debugfs_init+0x0/0x44 returned 0 after 0 usecs
+<1>[    0.035217] calling  spi_init+0x0/0x8c @ 1
+<1>[    0.035430] initcall spi_init+0x0/0x8c returned 0 after 0 usecs
+<1>[    0.035461] calling  i2c_init+0x0/0x74 @ 1
+<1>[    0.035644] initcall i2c_init+0x0/0x74 returned 0 after 0 usecs
+<1>[    0.035888] calling  gate_vma_init+0x0/0x44 @ 1
+<1>[    0.035919] initcall gate_vma_init+0x0/0x44 returned 0 after 0 usecs
+<1>[    0.035919] calling  customize_machine+0x0/0x28 @ 1
+<4>[    0.037506] spi_register_board_info success,devices_num=0
+<1>[    0.037536] initcall customize_machine+0x0/0x28 returned 0 after 0 usecs
+<1>[    0.037567] calling  exceptions_init+0x0/0x98 @ 1
+<1>[    0.037567] initcall exceptions_init+0x0/0x98 returned 0 after 0 usecs
+<1>[    0.037597] calling  dma_bus_init+0x0/0x14 @ 1
+<1>[    0.037689] initcall dma_bus_init+0x0/0x14 returned 0 after 0 usecs
+<1>[    0.037719] calling  dma_channel_table_init+0x0/0x12c @ 1
+<1>[    0.037780] initcall dma_channel_table_init+0x0/0x12c returned 0 after 0 usecs
+<1>[    0.038024] calling  topology_init+0x0/0x28 @ 1
+<1>[    0.038177] initcall topology_init+0x0/0x28 returned 0 after 0 usecs
+<1>[    0.038208] calling  zx29_ext_int_init+0x0/0xa0 @ 1
+<1>[    0.038299] initcall zx29_ext_int_init+0x0/0xa0 returned 0 after 0 usecs
+<1>[    0.038299] calling  param_sysfs_init+0x0/0x1a8 @ 1
+<1>[    0.066070] initcall param_sysfs_init+0x0/0x1a8 returned 0 after 29296 usecs
+<1>[    0.066101] calling  pm_sysrq_init+0x0/0x1c @ 1
+<1>[    0.066101] initcall pm_sysrq_init+0x0/0x1c returned 0 after 0 usecs
+<1>[    0.066131] calling  default_bdi_init+0x0/0xb0 @ 1
+<1>[    0.066406] initcall default_bdi_init+0x0/0xb0 returned 0 after 0 usecs
+<1>[    0.066436] calling  init_bio+0x0/0xf4 @ 1
+<6>[    0.066497] bio: create slab <bio-0> at 0
+<1>[    0.066528] initcall init_bio+0x0/0xf4 returned 0 after 0 usecs
+<1>[    0.066558] calling  fsnotify_notification_init+0x0/0x9c @ 1
+<1>[    0.066589] initcall fsnotify_notification_init+0x0/0x9c returned 0 after 0 usecs
+<1>[    0.066619] calling  crypto_wq_init+0x0/0x48 @ 1
+<1>[    0.066711] initcall crypto_wq_init+0x0/0x48 returned 0 after 0 usecs
+<1>[    0.066711] calling  cryptomgr_init+0x0/0xc @ 1
+<1>[    0.066741] initcall cryptomgr_init+0x0/0xc returned 0 after 0 usecs
+<1>[    0.066741] calling  blk_settings_init+0x0/0x34 @ 1
+<1>[    0.066772] initcall blk_settings_init+0x0/0x34 returned 0 after 0 usecs
+<1>[    0.066772] calling  blk_ioc_init+0x0/0x40 @ 1
+<1>[    0.066802] initcall blk_ioc_init+0x0/0x40 returned 0 after 0 usecs
+<1>[    0.066802] calling  blk_softirq_init+0x0/0x2c @ 1
+<1>[    0.066833] initcall blk_softirq_init+0x0/0x2c returned 0 after 0 usecs
+<1>[    0.066833] calling  blk_iopoll_setup+0x0/0x2c @ 1
+<1>[    0.066864] initcall blk_iopoll_setup+0x0/0x2c returned 0 after 0 usecs
+<1>[    0.066864] calling  genhd_device_init+0x0/0x80 @ 1
+<1>[    0.067108] initcall genhd_device_init+0x0/0x80 returned 0 after 0 usecs
+<1>[    0.067138] calling  gpiolib_debugfs_init+0x0/0x38 @ 1
+<1>[    0.067169] initcall gpiolib_debugfs_init+0x0/0x38 returned 0 after 0 usecs
+<1>[    0.067199] calling  zx29_dma_driver_init+0x0/0xc @ 1
+<6>[    0.070007] [DMA]ZTE-TSP zx297520v2 DMA initialized
+<1>[    0.070159] initcall zx29_dma_driver_init+0x0/0xc returned 0 after 4882 usecs
+<1>[    0.070159] calling  misc_init+0x0/0xc8 @ 1
+<1>[    0.070281] initcall misc_init+0x0/0xc8 returned 0 after 0 usecs
+<1>[    0.070312] calling  zx234290_i2c_init+0x0/0x34 @ 1
+<1>[    0.070434] initcall zx234290_i2c_init+0x0/0x34 returned 0 after 0 usecs
+<1>[    0.070465] calling  init_scsi+0x0/0x88 @ 1
+<5>[    0.071044] SCSI subsystem initialized
+<1>[    0.071075] initcall init_scsi+0x0/0x88 returned 0 after 0 usecs
+<1>[    0.071075] calling  usb_udc_init+0x0/0x58 @ 1
+<1>[    0.071166] initcall usb_udc_init+0x0/0x58 returned 0 after 0 usecs
+<1>[    0.071197] calling  serio_init+0x0/0x38 @ 1
+<1>[    0.071319] initcall serio_init+0x0/0x38 returned 0 after 0 usecs
+<1>[    0.071319] calling  input_init+0x0/0x124 @ 1
+<1>[    0.071441] initcall input_init+0x0/0x124 returned 0 after 0 usecs
+<1>[    0.071472] calling  i2c_adap_zx29_init+0x0/0x2c @ 1
+<6>[    0.072357] zx29_i2c zx29_i2c.0: i2c-0: ZX29 I2C adapter
+<6>[    0.072662] zx29_i2c zx29_i2c.1: i2c-1: ZX29 I2C adapter
+<1>[    0.072784] initcall i2c_adap_zx29_init+0x0/0x2c returned 0 after 0 usecs
+<1>[    0.072814] calling  power_supply_class_init+0x0/0x50 @ 1
+<1>[    0.072906] initcall power_supply_class_init+0x0/0x50 returned 0 after 0 usecs
+<1>[    0.072937] calling  mmc_init+0x0/0x84 @ 1
+<1>[    0.073242] initcall mmc_init+0x0/0x84 returned 0 after 0 usecs
+<1>[    0.073272] calling  leds_init+0x0/0x5c @ 1
+<1>[    0.073364] initcall leds_init+0x0/0x5c returned 0 after 0 usecs
+<1>[    0.073394] calling  icp_init+0x0/0xc @ 1
+<4>[    0.073516] rpmsg: icp_probe actorID = 0, success!
+<4>[    0.073974] [zxp] icp_wake_lock inited! 
+<4>[    0.074005] rpmsg: icp_probe actorID = 1, success!
+<1>[    0.074127] initcall icp_init+0x0/0xc returned 0 after 0 usecs
+<1>[    0.074157] calling  proto_init+0x0/0xc @ 1
+<1>[    0.074188] initcall proto_init+0x0/0xc returned 0 after 0 usecs
+<1>[    0.074188] calling  net_dev_init+0x0/0x148 @ 1
+<1>[    0.074951] initcall net_dev_init+0x0/0x148 returned 0 after 4882 usecs
+<1>[    0.074951] calling  neigh_init+0x0/0xa4 @ 1
+<1>[    0.074981] initcall neigh_init+0x0/0xa4 returned 0 after 0 usecs
+<1>[    0.074981] calling  fib_rules_init+0x0/0xc8 @ 1
+<1>[    0.075012] initcall fib_rules_init+0x0/0xc8 returned 0 after 0 usecs
+<1>[    0.075042] calling  pktsched_init+0x0/0x10c @ 1
+<1>[    0.075042] initcall pktsched_init+0x0/0x10c returned 0 after 0 usecs
+<1>[    0.075073] calling  tc_filter_init+0x0/0x6c @ 1
+<1>[    0.075073] initcall tc_filter_init+0x0/0x6c returned 0 after 0 usecs
+<1>[    0.075103] calling  tc_action_init+0x0/0x6c @ 1
+<1>[    0.075103] initcall tc_action_init+0x0/0x6c returned 0 after 0 usecs
+<1>[    0.075134] calling  genl_init+0x0/0x8c @ 1
+<1>[    0.075195] initcall genl_init+0x0/0x8c returned 0 after 0 usecs
+<1>[    0.075195] calling  sysfs_ipv4_init+0x0/0x50 @ 1
+<1>[    0.075256] initcall sysfs_ipv4_init+0x0/0x50 returned 0 after 0 usecs
+<1>[    0.075256] calling  atm_init+0x0/0xc8 @ 1
+<6>[    0.075286] NET: Registered protocol family 8
+<6>[    0.075286] NET: Registered protocol family 20
+<1>[    0.075500] initcall atm_init+0x0/0xc8 returned 0 after 0 usecs
+<1>[    0.075500] calling  cfg80211_init+0x0/0xc8 @ 1
+<6>[    0.075958] cfg80211: Calling CRDA to update world regulatory domain
+<1>[    0.076110] initcall cfg80211_init+0x0/0xc8 returned 0 after 0 usecs
+<1>[    0.076141] calling  wireless_nlevent_init+0x0/0xc @ 1
+<1>[    0.076141] initcall wireless_nlevent_init+0x0/0xc returned 0 after 0 usecs
+<1>[    0.076171] calling  rfkill_init+0x0/0x74 @ 1
+<1>[    0.076446] initcall rfkill_init+0x0/0x74 returned 0 after 0 usecs
+<1>[    0.076446] calling  net_sysctl_init+0x0/0x48 @ 1
+<1>[    0.076477] initcall net_sysctl_init+0x0/0x48 returned 0 after 0 usecs
+<1>[    0.076477] calling  activity_stats_init+0x0/0x48 @ 1
+<1>[    0.076507] initcall activity_stats_init+0x0/0x48 returned 0 after 0 usecs
+<1>[    0.076751] calling  proc_cpu_init+0x0/0x24 @ 1
+<1>[    0.076782] initcall proc_cpu_init+0x0/0x24 returned 0 after 0 usecs
+<1>[    0.076782] calling  dma_debug_do_init+0x0/0x20 @ 1
+<1>[    0.076812] initcall dma_debug_do_init+0x0/0x20 returned 0 after 0 usecs
+<1>[    0.076812] calling  alignment_init+0x0/0xfc @ 1
+<1>[    0.076843] initcall alignment_init+0x0/0xfc returned 0 after 0 usecs
+<1>[    0.076873] calling  clocksource_done_booting+0x0/0x50 @ 1
+<6>[    0.076873] Switching to clocksource zx29_ap_timer3
+<1>[    0.076904] initcall clocksource_done_booting+0x0/0x50 returned 0 after 0 usecs
+<1>[    0.076904] calling  init_pipe_fs+0x0/0x50 @ 1
+<1>[    0.076965] initcall init_pipe_fs+0x0/0x50 returned 0 after 29 usecs
+<1>[    0.076995] calling  eventpoll_init+0x0/0xb4 @ 1
+<1>[    0.077026] initcall eventpoll_init+0x0/0xb4 returned 0 after 29 usecs
+<1>[    0.077056] calling  anon_inode_init+0x0/0x60 @ 1
+<1>[    0.077087] initcall anon_inode_init+0x0/0x60 returned 0 after 29 usecs
+<1>[    0.077117] calling  blk_scsi_ioctl_init+0x0/0xe0 @ 1
+<1>[    0.077117] initcall blk_scsi_ioctl_init+0x0/0xe0 returned 0 after 0 usecs
+<1>[    0.077148] calling  chr_dev_init+0x0/0xdc @ 1
+<1>[    0.078582] initcall chr_dev_init+0x0/0xdc returned 0 after 1400 usecs
+<1>[    0.078613] calling  firmware_class_init+0x0/0x14 @ 1
+<1>[    0.078735] initcall firmware_class_init+0x0/0x14 returned 0 after 89 usecs
+<1>[    0.078735] calling  cpufreq_gov_performance_init+0x0/0xc @ 1
+<1>[    0.078765] initcall cpufreq_gov_performance_init+0x0/0xc returned 0 after 0 usecs
+<1>[    0.078796] calling  cpufreq_interactive_init+0x0/0xfc @ 1
+<1>[    0.079010] initcall cpufreq_interactive_init+0x0/0xfc returned 0 after 208 usecs
+<1>[    0.079040] calling  sysctl_core_init+0x0/0x34 @ 1
+<1>[    0.079132] initcall sysctl_core_init+0x0/0x34 returned 0 after 89 usecs
+<1>[    0.079162] calling  inet_init+0x0/0x2a0 @ 1
+<6>[    0.079254] NET: Registered protocol family 2
+<6>[    0.088378] IP route cache hash table entries: 1024 (order: 0, 4096 bytes)
+<6>[    0.088836] TCP established hash table entries: 1024 (order: 1, 8192 bytes)
+<6>[    0.088867] TCP bind hash table entries: 1024 (order: 0, 4096 bytes)
+<6>[    0.088897] TCP: Hash tables configured (established 1024 bind 1024)
+<6>[    0.088928] TCP: reno registered
+<6>[    0.088928] UDP hash table entries: 256 (order: 0, 4096 bytes)
+<6>[    0.088958] UDP-Lite hash table entries: 256 (order: 0, 4096 bytes)
+<1>[    0.089172] initcall inet_init+0x0/0x2a0 returned 0 after 9745 usecs
+<1>[    0.089172] calling  af_unix_init+0x0/0x54 @ 1
+<6>[    0.089202] NET: Registered protocol family 1
+<1>[    0.089233] initcall af_unix_init+0x0/0x54 returned 0 after 29 usecs
+<1>[    0.089263] calling  populate_rootfs+0x0/0x214 @ 1
+<1>[    0.089447] initcall populate_rootfs+0x0/0x214 returned 0 after 178 usecs
+<1>[    0.089691] calling  sched_clock_syscore_init+0x0/0x18 @ 1
+<1>[    0.089691] initcall sched_clock_syscore_init+0x0/0x18 returned 0 after 0 usecs
+<1>[    0.089721] calling  timer_init_syscore_ops+0x0/0x18 @ 1
+<1>[    0.089752] initcall timer_init_syscore_ops+0x0/0x18 returned 0 after 0 usecs
+<1>[    0.089752] calling  proc_execdomains_init+0x0/0x38 @ 1
+<1>[    0.089782] initcall proc_execdomains_init+0x0/0x38 returned 0 after 29 usecs
+<1>[    0.089782] calling  ioresources_init+0x0/0x58 @ 1
+<1>[    0.089813] initcall ioresources_init+0x0/0x58 returned 0 after 0 usecs
+<1>[    0.089843] calling  uid_cache_init+0x0/0x94 @ 1
+<1>[    0.089874] initcall uid_cache_init+0x0/0x94 returned 0 after 29 usecs
+<1>[    0.089874] calling  init_posix_timers+0x0/0x1d8 @ 1
+<1>[    0.089904] initcall init_posix_timers+0x0/0x1d8 returned 0 after 0 usecs
+<1>[    0.089935] calling  init_posix_cpu_timers+0x0/0xe4 @ 1
+<1>[    0.089935] initcall init_posix_cpu_timers+0x0/0xe4 returned 0 after 0 usecs
+<1>[    0.089965] calling  zxic_enable_trace+0x0/0x5c @ 1
+<1>[    0.090087] initcall zxic_enable_trace+0x0/0x5c returned 0 after 119 usecs
+<1>[    0.090118] calling  proc_schedstat_init+0x0/0x38 @ 1
+<1>[    0.090118] initcall proc_schedstat_init+0x0/0x38 returned 0 after 0 usecs
+<1>[    0.090148] calling  init_sched_debug_procfs+0x0/0x3c @ 1
+<1>[    0.090179] initcall init_sched_debug_procfs+0x0/0x3c returned 0 after 0 usecs
+<1>[    0.090179] calling  suspend_time_syscore_init+0x0/0x18 @ 1
+<1>[    0.090209] initcall suspend_time_syscore_init+0x0/0x18 returned 0 after 0 usecs
+<1>[    0.090209] calling  timekeeping_init_ops+0x0/0x18 @ 1
+<1>[    0.090240] initcall timekeeping_init_ops+0x0/0x18 returned 0 after 0 usecs
+<1>[    0.090240] calling  init_clocksource_sysfs+0x0/0x54 @ 1
+<1>[    0.090789] initcall init_clocksource_sysfs+0x0/0x54 returned 0 after 476 usecs
+<1>[    0.090789] calling  init_timer_list_procfs+0x0/0x3c @ 1
+<1>[    0.090820] initcall init_timer_list_procfs+0x0/0x3c returned 0 after 29 usecs
+<1>[    0.090850] calling  alarmtimer_init+0x0/0x174 @ 1
+<1>[    0.091186] initcall alarmtimer_init+0x0/0x174 returned 0 after 298 usecs
+<1>[    0.091186] calling  init_tstats_procfs+0x0/0x3c @ 1
+<1>[    0.091217] initcall init_tstats_procfs+0x0/0x3c returned 0 after 29 usecs
+<1>[    0.091217] calling  futex_init+0x0/0x60 @ 1
+<1>[    0.091247] initcall futex_init+0x0/0x60 returned 0 after 0 usecs
+<1>[    0.091278] calling  proc_modules_init+0x0/0x38 @ 1
+<1>[    0.091278] initcall proc_modules_init+0x0/0x38 returned 0 after 0 usecs
+<1>[    0.091308] calling  kallsyms_init+0x0/0x38 @ 1
+<1>[    0.091339] initcall kallsyms_init+0x0/0x38 returned 0 after 0 usecs
+<1>[    0.091339] calling  user_namespaces_init+0x0/0x40 @ 1
+<1>[    0.091400] initcall user_namespaces_init+0x0/0x40 returned 0 after 29 usecs
+<1>[    0.091400] calling  pid_namespaces_init+0x0/0x50 @ 1
+<1>[    0.091461] initcall pid_namespaces_init+0x0/0x50 returned 0 after 29 usecs
+<1>[    0.091461] calling  hung_task_init+0x0/0x58 @ 1
+<1>[    0.091522] initcall hung_task_init+0x0/0x58 returned 0 after 59 usecs
+<1>[    0.091552] calling  irq_pm_init_ops+0x0/0x18 @ 1
+<1>[    0.091552] initcall irq_pm_init_ops+0x0/0x18 returned 0 after 0 usecs
+<1>[    0.091583] calling  utsname_sysctl_init+0x0/0x18 @ 1
+<1>[    0.091613] initcall utsname_sysctl_init+0x0/0x18 returned 0 after 29 usecs
+<1>[    0.091644] calling  init_per_zone_wmark_min+0x0/0x8c @ 1
+<1>[    0.091705] initcall init_per_zone_wmark_min+0x0/0x8c returned 0 after 59 usecs
+<1>[    0.091735] calling  kswapd_init+0x0/0x18 @ 1
+<1>[    0.091796] initcall kswapd_init+0x0/0x18 returned 0 after 29 usecs
+<1>[    0.091796] calling  setup_vmstat+0x0/0x90 @ 1
+<1>[    0.091827] initcall setup_vmstat+0x0/0x90 returned 0 after 29 usecs
+<1>[    0.091857] calling  mm_sysfs_init+0x0/0x3c @ 1
+<1>[    0.092071] initcall mm_sysfs_init+0x0/0x3c returned 0 after 178 usecs
+<1>[    0.092071] calling  proc_vmalloc_init+0x0/0x38 @ 1
+<1>[    0.092102] initcall proc_vmalloc_init+0x0/0x38 returned 0 after 29 usecs
+<1>[    0.092102] calling  memblock_init_debugfs+0x0/0x7c @ 1
+<1>[    0.092163] initcall memblock_init_debugfs+0x0/0x7c returned 0 after 29 usecs
+<1>[    0.092193] calling  slab_proc_init+0x0/0x38 @ 1
+<1>[    0.092193] initcall slab_proc_init+0x0/0x38 returned 0 after 0 usecs
+<1>[    0.092224] calling  cpucache_init+0x0/0x78 @ 1
+<1>[    0.092224] initcall cpucache_init+0x0/0x78 returned 0 after 0 usecs
+<1>[    0.092254] calling  fcntl_init+0x0/0x40 @ 1
+<1>[    0.092285] initcall fcntl_init+0x0/0x40 returned 0 after 29 usecs
+<1>[    0.092315] calling  proc_filesystems_init+0x0/0x38 @ 1
+<1>[    0.092315] initcall proc_filesystems_init+0x0/0x38 returned 0 after 0 usecs
+<1>[    0.092346] calling  dio_init+0x0/0x40 @ 1
+<1>[    0.092376] initcall dio_init+0x0/0x40 returned 0 after 29 usecs
+<1>[    0.092376] calling  fsnotify_mark_init+0x0/0x40 @ 1
+<1>[    0.092468] initcall fsnotify_mark_init+0x0/0x40 returned 0 after 29 usecs
+<1>[    0.092468] calling  dnotify_init+0x0/0x84 @ 1
+<1>[    0.092529] initcall dnotify_init+0x0/0x84 returned 0 after 29 usecs
+<1>[    0.092529] calling  inotify_user_setup+0x0/0x78 @ 1
+<1>[    0.092590] initcall inotify_user_setup+0x0/0x78 returned 0 after 29 usecs
+<1>[    0.092590] calling  aio_setup+0x0/0x8c @ 1
+<1>[    0.092651] initcall aio_setup+0x0/0x8c returned 0 after 29 usecs
+<1>[    0.092681] calling  proc_locks_init+0x0/0x38 @ 1
+<1>[    0.092681] initcall proc_locks_init+0x0/0x38 returned 0 after 0 usecs
+<1>[    0.092712] calling  init_mbcache+0x0/0x18 @ 1
+<1>[    0.092742] initcall init_mbcache+0x0/0x18 returned 0 after 0 usecs
+<1>[    0.092742] calling  proc_cmdline_init+0x0/0x38 @ 1
+<1>[    0.092773] initcall proc_cmdline_init+0x0/0x38 returned 0 after 29 usecs
+<1>[    0.092773] calling  proc_consoles_init+0x0/0x38 @ 1
+<1>[    0.092803] initcall proc_consoles_init+0x0/0x38 returned 0 after 0 usecs
+<1>[    0.092834] calling  proc_cpuinfo_init+0x0/0x38 @ 1
+<1>[    0.092834] initcall proc_cpuinfo_init+0x0/0x38 returned 0 after 0 usecs
+<1>[    0.092864] calling  proc_devices_init+0x0/0x38 @ 1
+<1>[    0.092895] initcall proc_devices_init+0x0/0x38 returned 0 after 0 usecs
+<1>[    0.092895] calling  proc_interrupts_init+0x0/0x38 @ 1
+<1>[    0.092926] initcall proc_interrupts_init+0x0/0x38 returned 0 after 29 usecs
+<1>[    0.092926] calling  proc_loadavg_init+0x0/0x38 @ 1
+<1>[    0.092956] initcall proc_loadavg_init+0x0/0x38 returned 0 after 0 usecs
+<1>[    0.092987] calling  proc_meminfo_init+0x0/0x38 @ 1
+<1>[    0.092987] initcall proc_meminfo_init+0x0/0x38 returned 0 after 0 usecs
+<1>[    0.093017] calling  proc_stat_init+0x0/0x38 @ 1
+<1>[    0.093017] initcall proc_stat_init+0x0/0x38 returned 0 after 0 usecs
+<1>[    0.093048] calling  proc_uptime_init+0x0/0x38 @ 1
+<1>[    0.093078] initcall proc_uptime_init+0x0/0x38 returned 0 after 0 usecs
+<1>[    0.093078] calling  proc_version_init+0x0/0x38 @ 1
+<1>[    0.093109] initcall proc_version_init+0x0/0x38 returned 0 after 29 usecs
+<1>[    0.093109] calling  proc_softirqs_init+0x0/0x38 @ 1
+<1>[    0.093139] initcall proc_softirqs_init+0x0/0x38 returned 0 after 0 usecs
+<1>[    0.093170] calling  proc_kmsg_init+0x0/0x38 @ 1
+<1>[    0.093170] initcall proc_kmsg_init+0x0/0x38 returned 0 after 0 usecs
+<1>[    0.093200] calling  proc_page_init+0x0/0x58 @ 1
+<1>[    0.093200] initcall proc_page_init+0x0/0x58 returned 0 after 0 usecs
+<1>[    0.093231] calling  init_devpts_fs+0x0/0x68 @ 1
+<1>[    0.093292] initcall init_devpts_fs+0x0/0x68 returned 0 after 59 usecs
+<1>[    0.093322] calling  init_ext2_fs+0x0/0x88 @ 1
+<1>[    0.093353] initcall init_ext2_fs+0x0/0x88 returned 0 after 29 usecs
+<1>[    0.093383] calling  init_ramfs_fs+0x0/0xc @ 1
+<1>[    0.093383] initcall init_ramfs_fs+0x0/0xc returned 0 after 0 usecs
+<1>[    0.093414] calling  init_fat_fs+0x0/0x60 @ 1
+<1>[    0.093444] initcall init_fat_fs+0x0/0x60 returned 0 after 29 usecs
+<1>[    0.093444] calling  init_vfat_fs+0x0/0xc @ 1
+<1>[    0.093475] initcall init_vfat_fs+0x0/0xc returned 0 after 0 usecs
+<1>[    0.093475] calling  init_iso9660_fs+0x0/0x78 @ 1
+<1>[    0.093505] initcall init_iso9660_fs+0x0/0x78 returned 0 after 0 usecs
+<1>[    0.093536] calling  init_nls_cp936+0x0/0xc @ 1
+<1>[    0.093536] initcall init_nls_cp936+0x0/0xc returned 0 after 0 usecs
+<1>[    0.093566] calling  init_nls_ascii+0x0/0xc @ 1
+<1>[    0.093566] initcall init_nls_ascii+0x0/0xc returned 0 after 0 usecs
+<1>[    0.093597] calling  init_nls_iso8859_1+0x0/0xc @ 1
+<1>[    0.093597] initcall init_nls_iso8859_1+0x0/0xc returned 0 after 0 usecs
+<1>[    0.093627] calling  init_nls_utf8+0x0/0x28 @ 1
+<1>[    0.093627] initcall init_nls_utf8+0x0/0x28 returned 0 after 0 usecs
+<1>[    0.093658] calling  init_jffs2_fs+0x0/0xd8 @ 1
+<6>[    0.093658] jffs2: version 2.2. (NAND) © 2001-2006 Red Hat, Inc.
+<1>[    0.093872] initcall init_jffs2_fs+0x0/0xd8 returned 0 after 178 usecs
+<1>[    0.093872] calling  ipc_init+0x0/0x24 @ 1
+<6>[    0.093902] msgmni has been set to 46
+<1>[    0.093933] initcall ipc_init+0x0/0x24 returned 0 after 29 usecs
+<1>[    0.093933] calling  ipc_sysctl_init+0x0/0x18 @ 1
+<1>[    0.093994] initcall ipc_sysctl_init+0x0/0x18 returned 0 after 29 usecs
+<1>[    0.093994] calling  crypto_algapi_init+0x0/0x10 @ 1
+<1>[    0.094024] initcall crypto_algapi_init+0x0/0x10 returned 0 after 0 usecs
+<1>[    0.094024] calling  skcipher_module_init+0x0/0x1c @ 1
+<1>[    0.094055] initcall skcipher_module_init+0x0/0x1c returned 0 after 0 usecs
+<1>[    0.094055] calling  chainiv_module_init+0x0/0xc @ 1
+<1>[    0.094085] initcall chainiv_module_init+0x0/0xc returned 0 after 29 usecs
+<1>[    0.094085] calling  eseqiv_module_init+0x0/0xc @ 1
+<1>[    0.094116] initcall eseqiv_module_init+0x0/0xc returned 0 after 0 usecs
+<1>[    0.094146] calling  hmac_module_init+0x0/0xc @ 1
+<1>[    0.094146] initcall hmac_module_init+0x0/0xc returned 0 after 0 usecs
+<1>[    0.094177] calling  crypto_null_mod_init+0x0/0x74 @ 1
+<1>[    0.094543] initcall crypto_null_mod_init+0x0/0x74 returned 0 after 327 usecs
+<1>[    0.094543] calling  md5_mod_init+0x0/0xc @ 1
+<1>[    0.094635] initcall md5_mod_init+0x0/0xc returned 0 after 59 usecs
+<1>[    0.094635] calling  sha1_generic_mod_init+0x0/0xc @ 1
+<1>[    0.094726] initcall sha1_generic_mod_init+0x0/0xc returned 0 after 59 usecs
+<1>[    0.094726] calling  sha256_generic_mod_init+0x0/0x3c @ 1
+<1>[    0.094879] initcall sha256_generic_mod_init+0x0/0x3c returned 0 after 119 usecs
+<1>[    0.094879] calling  sha512_generic_mod_init+0x0/0x3c @ 1
+<1>[    0.095031] initcall sha512_generic_mod_init+0x0/0x3c returned 0 after 89 usecs
+<1>[    0.095031] calling  crypto_ecb_module_init+0x0/0xc @ 1
+<1>[    0.095062] initcall crypto_ecb_module_init+0x0/0xc returned 0 after 29 usecs
+<1>[    0.095062] calling  crypto_cbc_module_init+0x0/0xc @ 1
+<1>[    0.095092] initcall crypto_cbc_module_init+0x0/0xc returned 0 after 0 usecs
+<1>[    0.095092] calling  des_generic_mod_init+0x0/0x3c @ 1
+<1>[    0.095245] initcall des_generic_mod_init+0x0/0x3c returned 0 after 119 usecs
+<1>[    0.095245] calling  twofish_mod_init+0x0/0xc @ 1
+<1>[    0.095336] initcall twofish_mod_init+0x0/0xc returned 0 after 59 usecs
+<1>[    0.095336] calling  aes_init+0x0/0xc @ 1
+<1>[    0.095428] initcall aes_init+0x0/0xc returned 0 after 59 usecs
+<1>[    0.095428] calling  arc4_init+0x0/0xc @ 1
+<1>[    0.095520] initcall arc4_init+0x0/0xc returned 0 after 59 usecs
+<1>[    0.095520] calling  crc32c_mod_init+0x0/0xc @ 1
+<1>[    0.095611] initcall crc32c_mod_init+0x0/0xc returned 0 after 89 usecs
+<1>[    0.095642] calling  crypto_authenc_module_init+0x0/0xc @ 1
+<1>[    0.095642] initcall crypto_authenc_module_init+0x0/0xc returned 0 after 0 usecs
+<1>[    0.095672] calling  crypto_authenc_esn_module_init+0x0/0xc @ 1
+<1>[    0.095672] initcall crypto_authenc_esn_module_init+0x0/0xc returned 0 after 0 usecs
+<1>[    0.095703] calling  krng_mod_init+0x0/0xc @ 1
+<1>[    0.095764] initcall krng_mod_init+0x0/0xc returned 0 after 59 usecs
+<1>[    0.095794] calling  prng_mod_init+0x0/0xc @ 1
+<1>[    0.095855] initcall prng_mod_init+0x0/0xc returned 0 after 59 usecs
+<1>[    0.095886] calling  proc_genhd_init+0x0/0x58 @ 1
+<1>[    0.095916] initcall proc_genhd_init+0x0/0x58 returned 0 after 29 usecs
+<1>[    0.095916] calling  noop_init+0x0/0xc @ 1
+<6>[    0.095947] io scheduler noop registered
+<1>[    0.095947] initcall noop_init+0x0/0xc returned 0 after 0 usecs
+<1>[    0.095977] calling  deadline_init+0x0/0xc @ 1
+<6>[    0.095977] io scheduler deadline registered (default)
+<1>[    0.096008] initcall deadline_init+0x0/0xc returned 0 after 0 usecs
+<1>[    0.096008] calling  init_kmp+0x0/0xc @ 1
+<1>[    0.096038] initcall init_kmp+0x0/0xc returned 0 after 0 usecs
+<1>[    0.096038] calling  init_bm+0x0/0xc @ 1
+<1>[    0.096038] initcall init_bm+0x0/0xc returned 0 after 0 usecs
+<1>[    0.096069] calling  init_fsm+0x0/0xc @ 1
+<1>[    0.096069] initcall init_fsm+0x0/0xc returned 0 after 0 usecs
+<1>[    0.096099] calling  pty_init+0x0/0x3e0 @ 1
+<1>[    0.098083] initcall pty_init+0x0/0x3e0 returned 0 after 1906 usecs
+<1>[    0.098114] calling  sysrq_init+0x0/0xa0 @ 1
+<1>[    0.098144] initcall sysrq_init+0x0/0xa0 returned 0 after 29 usecs
+<1>[    0.098144] calling  zx29_uart_init+0x0/0x4c @ 1
+<6>[    0.098236] ttyS0 at MMIO 0x131000 (irq = 33) is a zx29_UART
+<6>[    0.098480] ZTE-TSP zx29 UART_0 probe OK
+<6>[    0.098510] ttyS1 at MMIO 0x1408000 (irq = 108) is a zx29_UART
+<6>[    0.098724] ZTE-TSP zx29 UART_1 probe OK
+<6>[    0.098785] ttyS2 at MMIO 0x140d000 (irq = 34) is a zx29_UART
+<6>[    0.098999] ZTE-TSP zx29 UART_2 probe OK
+<6>[    0.099121] ZTE-TSP zx29 UART driver registered
+<1>[    0.099151] initcall zx29_uart_init+0x0/0x4c returned 0 after 923 usecs
+<1>[    0.099182] calling  rand_initialize+0x0/0x2c @ 1
+<1>[    0.099243] initcall rand_initialize+0x0/0x2c returned 0 after 59 usecs
+<1>[    0.099273] calling  topology_sysfs_init+0x0/0x20 @ 1
+<1>[    0.099304] initcall topology_sysfs_init+0x0/0x20 returned 0 after 29 usecs
+<1>[    0.099334] calling  brd_init+0x0/0x1bc @ 1
+<6>[    0.107666] brd: module loaded
+<1>[    0.107696] initcall brd_init+0x0/0x1bc returned 0 after 8129 usecs
+<1>[    0.107696] calling  loop_init+0x0/0x12c @ 1
+<6>[    0.112304] loop: module loaded
+<1>[    0.112335] initcall loop_init+0x0/0x12c returned 0 after 4466 usecs
+<1>[    0.112365] calling  init_sd+0x0/0x134 @ 1
+<1>[    0.112701] initcall init_sd+0x0/0x134 returned 0 after 297 usecs
+<1>[    0.112701] calling  init_sr+0x0/0x44 @ 1
+<1>[    0.112823] initcall init_sr+0x0/0x44 returned 0 after 89 usecs
+<1>[    0.112854] calling  init_sg+0x0/0x120 @ 1
+<1>[    0.113006] initcall init_sg+0x0/0x120 returned 0 after 148 usecs
+<1>[    0.113037] calling  init_mtd+0x0/0xd8 @ 1
+<1>[    0.113647] initcall init_mtd+0x0/0xd8 returned 0 after 595 usecs
+<1>[    0.113677] calling  cmdline_parser_init+0x0/0xc @ 1
+<1>[    0.113708] initcall cmdline_parser_init+0x0/0xc returned 0 after 0 usecs
+<1>[    0.113708] calling  afs_parser_init+0x0/0xc @ 1
+<1>[    0.113739] initcall afs_parser_init+0x0/0xc returned 0 after 0 usecs
+<1>[    0.113739] calling  init_mtdchar+0x0/0x8c @ 1
+<1>[    0.113769] initcall init_mtdchar+0x0/0x8c returned 0 after 29 usecs
+<1>[    0.113800] calling  init_mtdblock+0x0/0xc @ 1
+<1>[    0.113800] initcall init_mtdblock+0x0/0xc returned 0 after 0 usecs
+<1>[    0.113830] calling  init_zftl+0x0/0xc @ 1
+<1>[    0.113830] initcall init_zftl+0x0/0xc returned 0 after 0 usecs
+<1>[    0.113861] calling  map_ram_init+0x0/0x18 @ 1
+<1>[    0.113861] initcall map_ram_init+0x0/0x18 returned 0 after 0 usecs
+<1>[    0.113891] calling  lpddr_probe_init+0x0/0x18 @ 1
+<1>[    0.113891] initcall lpddr_probe_init+0x0/0x18 returned 0 after 0 usecs
+<1>[    0.113922] calling  physmap_init+0x0/0xc @ 1
+<1>[    0.114105] initcall physmap_init+0x0/0xc returned 0 after 148 usecs
+<1>[    0.114105] calling  platram_init+0x0/0x20 @ 1
+<4>[    0.114105] Generic platform RAM MTD, (c) 2004 Simtec Electronics
+<1>[    0.114257] initcall platram_init+0x0/0x20 returned 0 after 148 usecs
+<1>[    0.114288] calling  nand_base_init+0x0/0x20 @ 1
+<1>[    0.114288] initcall nand_base_init+0x0/0x20 returned 0 after 0 usecs
+<1>[    0.114318] calling  spifc_dt_driver_init+0x0/0xc @ 1
+<6>[    0.114349] spi_nand_probe------------
+<7>[    0.114379] private_candidate: dma0chan0 filter said false
+<7>[    0.114410] private_candidate: dma0chan1 filter said false
+<7>[    0.114410] private_candidate: dma0chan2 filter said false
+<7>[    0.114410] private_candidate: dma0chan3 filter said false
+<7>[    0.114440] private_candidate: dma0chan4 filter said false
+<7>[    0.114440] private_candidate: dma0chan5 filter said false
+<7>[    0.114471] private_candidate: dma0chan6 filter said false
+<7>[    0.114471] private_candidate: dma0chan7 filter said false
+<7>[    0.114471] private_candidate: dma0chan8 filter said false
+<7>[    0.114501] private_candidate: dma0chan9 filter said false
+<7>[    0.114501] __dma_request_channel: success (dma0chan10)
+<7>[    0.114501] private_candidate: dma0chan0 filter said false
+<7>[    0.114532] private_candidate: dma0chan1 filter said false
+<7>[    0.114532] private_candidate: dma0chan2 filter said false
+<7>[    0.114532] private_candidate: dma0chan3 filter said false
+<7>[    0.114562] private_candidate: dma0chan4 filter said false
+<7>[    0.114562] private_candidate: dma0chan5 filter said false
+<7>[    0.114562] private_candidate: dma0chan6 filter said false
+<7>[    0.114593] private_candidate: dma0chan7 filter said false
+<7>[    0.114593] private_candidate: dma0chan8 filter said false
+<7>[    0.114593] private_candidate: dma0chan9 filter said false
+<7>[    0.114624] private_candidate: dma0chan10 busy
+<7>[    0.114624] __dma_request_channel: success (dma0chan11)
+<4>[    0.114654] [SPIFC]dma ok addr is 24cc0480
+<4>[    0.114654] gpio,clk ,spifc en ok
+<4>[    0.114685] [SPIFC]request_irq ok
+<6>[    0.114715] spi-nand-dt spi-nand-dt: maf = c8,dev = c1
+<4>[    0.114746] spi_nand wakelock ok
+<4>[    0.114776] [SPI-NAND]:  maf_id = 0xc8
+<4>[    0.114776] [SPI-NAND]:  dev_id = 0xc1
+<4>[    0.114776] [SPI-NAND]:  maf_id = 0xc8
+<4>[    0.114807] [SPI-NAND]:  dev_id = 0xc1
+<4>[    0.114807] [SPI-NAND]:  maf_id = 0xc8
+<4>[    0.114807] [SPI-NAND]:  dev_id = 0xc1
+<6>[    0.114837] NAND device: Manufacturer ID: 0xc8, Chip ID: 0xc1 (GigaDevice SPINAND 128MiB 1,8V 8-bit)
+<6>[    0.114837] 1 NAND maxchips chips detected
+<4>[    0.114868] [SPI-NAND][A0] = 0x0
+<4>[    0.114898] [SPI-NAND][B0] = 0x11
+<6>[    0.115386] Bad block table found at page 65408, version 0x0D
+<6>[    0.116027] Bad block table found at page 65344, version 0x0D
+<6>[    0.116241] nand_read_bbt: bad block at 0x000006000000
+<5>[    0.116394] 18 cmdlinepart partitions found on MTD device spi-nand
+<5>[    0.116394] Creating 18 MTD partitions on "spi-nand":
+<5>[    0.116424] 0x000000000000-0x000000080000 : "zloader"
+<5>[    0.117889] 0x000000080000-0x000000180000 : "uboot"
+<5>[    0.118896] 0x000000180000-0x000000200000 : "cpurpm"
+<5>[    0.119903] 0x000000200000-0x000000400000 : "nvfac"
+<4>[    0.120300] zftl[0] is nvfac
+<5>[    0.125091] 0x000000400000-0x000000600000 : "nvro"
+<4>[    0.125488] zftl[1] is nvro
+<4>[    0.125518] nvro_partsize=0x200000
+<5>[    0.130401] 0x000000600000-0x000000d00000 : "nvrw"
+<4>[    0.130828] zftl[2] is nvrw
+<5>[    0.144012] 0x000000d00000-0x000000e00000 : "fotaflag"
+<4>[    0.144439] zftl[3] is fotaflag
+<5>[    0.147796] 0x000000e00000-0x000001480000 : "cpuphy"
+<5>[    0.148803] 0x000001480000-0x000001500000 : "sms"
+<4>[    0.149200] zftl[4] is sms
+<5>[    0.151367] 0x000001500000-0x000002300000 : "cpups"
+<5>[    0.152618] 0x000002300000-0x000002700000 : "cpuap"
+<5>[    0.153686] 0x000002700000-0x000004e80000 : "cpfs"
+<5>[    0.154785] 0x000004e80000-0x000005200000 : "recovery"
+<5>[    0.155853] 0x000005200000-0x000005600000 : "recovery-kernel"
+<5>[    0.157226] 0x000005600000-0x000005680000 : "cdrom"
+<4>[    0.157684] zftl[5] is cdrom
+<5>[    0.159973] 0x000005680000-0x000007280000 : "userdata"
+<5>[    0.161041] 0x000007280000-0x000007b80000 : "mmi"
+<5>[    0.162231] 0x000007b80000-0x000007d80000 : "securefs"
+<1>[    0.163421] initcall spifc_dt_driver_init+0x0/0xc returned 0 after 47886 usecs
+<1>[    0.163452] calling  spidev_init+0x0/0xb8 @ 1
+<1>[    0.163696] initcall spidev_init+0x0/0xb8 returned 0 after 208 usecs
+<1>[    0.163696] calling  zx29_spi_init+0x0/0xc @ 1
+<6>[    0.163757] spi:zx29_spi_probe 
+<7>[    0.163818] private_candidate: dma0chan0 filter said false
+<7>[    0.163818] private_candidate: dma0chan1 filter said false
+<7>[    0.163818] private_candidate: dma0chan2 filter said false
+<7>[    0.163848] private_candidate: dma0chan3 filter said false
+<7>[    0.163848] private_candidate: dma0chan4 filter said false
+<7>[    0.163879] __dma_request_channel: success (dma0chan5)
+<7>[    0.163879] private_candidate: dma0chan0 filter said false
+<7>[    0.163879] private_candidate: dma0chan1 filter said false
+<7>[    0.163909] private_candidate: dma0chan2 filter said false
+<7>[    0.163909] private_candidate: dma0chan3 filter said false
+<7>[    0.163940] __dma_request_channel: success (dma0chan4)
+<6>[    0.163940] zx29_ssp zx29_ssp.0: setup for DMA on RX dma0chan5, TX dma0chan4
+<6>[    0.164184] spi:zx29_spi_probe OK
+<1>[    0.164337] initcall zx29_spi_init+0x0/0xc returned 0 after 625 usecs
+<1>[    0.164367] calling  net_olddevs_init+0x0/0xc0 @ 1
+<1>[    0.164398] initcall net_olddevs_init+0x0/0xc0 returned 0 after 29 usecs
+<1>[    0.164398] calling  tun_init+0x0/0x8c @ 1
+<6>[    0.164428] tun: Universal TUN/TAP device driver, 1.6
+<6>[    0.164428] tun: (C) 1999-2004 Max Krasnyansky <maxk@qualcomm.com>
+<1>[    0.164642] initcall tun_init+0x0/0x8c returned 0 after 178 usecs
+<1>[    0.164642] calling  ppp_init+0x0/0xec @ 1
+<6>[    0.164672] PPP generic driver version 2.4.2
+<1>[    0.164978] initcall ppp_init+0x0/0xec returned 0 after 268 usecs
+<1>[    0.164978] calling  ppp_async_init+0x0/0x34 @ 1
+<1>[    0.165008] initcall ppp_async_init+0x0/0x34 returned 0 after 0 usecs
+<1>[    0.165008] calling  bsdcomp_init+0x0/0x2c @ 1
+<6>[    0.165039] PPP BSD Compression module registered
+<1>[    0.165039] initcall bsdcomp_init+0x0/0x2c returned 0 after 0 usecs
+<1>[    0.165069] calling  deflate_init+0x0/0x38 @ 1
+<6>[    0.165069] PPP Deflate Compression module registered
+<1>[    0.165069] initcall deflate_init+0x0/0x38 returned 0 after 0 usecs
+<1>[    0.165100] calling  ppp_mppe_init+0x0/0xc4 @ 1
+<6>[    0.165496] PPP MPPE Compression module registered
+<1>[    0.165527] initcall ppp_mppe_init+0x0/0xc4 returned 0 after 416 usecs
+<1>[    0.165557] calling  pppox_init+0x0/0xc @ 1
+<6>[    0.165557] NET: Registered protocol family 24
+<1>[    0.165588] initcall pppox_init+0x0/0xc returned 0 after 0 usecs
+<1>[    0.165588] calling  pppoe_init+0x0/0x84 @ 1
+<1>[    0.165649] initcall pppoe_init+0x0/0x84 returned 0 after 29 usecs
+<1>[    0.165649] calling  at_cdev_init+0x0/0x190 @ 1
+<5>[    0.165679] ======== at_cdev_init 
+<5>[    0.165679] ======== at_cdev_init 1
+<5>[    0.165679] ======== at_cdev_setup_cdev
+<1>[    0.166076] initcall at_cdev_init+0x0/0x190 returned 0 after 357 usecs
+<1>[    0.166076] calling  cdrom_init+0x0/0x24 @ 1
+<1>[    0.166137] initcall cdrom_init+0x0/0x24 returned 0 after 29 usecs
+<1>[    0.166137] calling  dwc_otg_driver_init+0x0/0x90 @ 1
+<6>[    0.166168] zx29_hsotg: version 3.10b 20-MAY-2013
+<4>[    0.577880] Core Release: 3.20a
+<4>[    0.577880] Setting default values for core params
+<4>[    0.582244] Using Descriptor DMA mode
+<4>[    0.582244] Periodic Transfer Interrupt Enhancement - disabled
+<4>[    0.582244] Multiprocessor Interrupt Enhancement - disabled
+<4>[    0.582275] OTG VER PARAM: 0, OTG VER FLAG: 0
+<4>[    0.582366] Dedicated Tx FIFOs mode
+<1>[    0.583251] initcall dwc_otg_driver_init+0x0/0x90 returned 0 after 407097 usecs
+<1>[    0.583282] calling  init+0x0/0x4f4 @ 1
+<4>[    0.583679] #####composite_bind, 0xc19da8c0 
+<4>[    0.592803] #####acm_function_init@792:ACM INIT
+<4>[    0.594329] #### gadget name:dwc_otg_pcd 
+<6>[    0.594543]  gadget: Mass Storage Function, version: 2009/09/11
+<6>[    0.594543]  gadget: Number of LUNs=2
+<6>[    0.594573]  lun0: LUN: removable read only CD-ROM file: (no medium)
+<6>[    0.594573]  lun1: LUN: removable file: (no medium)
+<6>[    0.594635]  gadget: android_usb ready
+<1>[    0.597991] initcall init+0x0/0x4f4 returned 0 after 14331 usecs
+<1>[    0.597991] calling  kset_usb_init+0x0/0xa4 @ 1
+<4>[    0.598022] kset test init!
+<1>[    0.598083] initcall kset_usb_init+0x0/0xa4 returned 0 after 59 usecs
+<1>[    0.598114] calling  serport_init+0x0/0x30 @ 1
+<1>[    0.598114] initcall serport_init+0x0/0x30 returned 0 after 0 usecs
+<1>[    0.598144] calling  evdev_init+0x0/0xc @ 1
+<1>[    0.598144] initcall evdev_init+0x0/0xc returned 0 after 0 usecs
+<1>[    0.598175] calling  i2c_dev_init+0x0/0xd0 @ 1
+<6>[    0.598175] i2c /dev entries driver
+<1>[    0.598785] initcall i2c_dev_init+0x0/0xd0 returned 0 after 566 usecs
+<1>[    0.598815] calling  watchdog_init+0x0/0xc @ 1
+<6>[    0.599090] [WDT]Watchdog Timer init OK.
+<1>[    0.599212] initcall watchdog_init+0x0/0xc returned 0 after 387 usecs
+<1>[    0.599243] calling  cpufreq_gov_powersave_init+0x0/0xc @ 1
+<1>[    0.599273] initcall cpufreq_gov_powersave_init+0x0/0xc returned 0 after 0 usecs
+<1>[    0.599273] calling  cpufreq_gov_userspace_init+0x0/0xc @ 1
+<1>[    0.599304] initcall cpufreq_gov_userspace_init+0x0/0xc returned 0 after 0 usecs
+<1>[    0.599304] calling  cpufreq_gov_dbs_init+0x0/0x6c @ 1
+<1>[    0.599334] initcall cpufreq_gov_dbs_init+0x0/0x6c returned 0 after 29 usecs
+<1>[    0.599334] calling  cpufreq_gov_dbs_init+0x0/0xc @ 1
+<1>[    0.599365] initcall cpufreq_gov_dbs_init+0x0/0xc returned 0 after 0 usecs
+<1>[    0.599395] calling  init_ladder+0x0/0xc @ 1
+<6>[    0.599395] cpuidle: using governor ladder
+<1>[    0.599395] initcall init_ladder+0x0/0xc returned 0 after 0 usecs
+<1>[    0.599426] calling  init_menu+0x0/0xc @ 1
+<6>[    0.599426] cpuidle: using governor menu
+<1>[    0.599456] initcall init_menu+0x0/0xc returned 0 after 0 usecs
+<1>[    0.599456] calling  mmc_blk_init+0x0/0x80 @ 1
+<1>[    0.599578] initcall mmc_blk_init+0x0/0x80 returned 0 after 119 usecs
+<1>[    0.599609] calling  dw_mci_init+0x0/0x18 @ 1
+<6>[    0.599609] ZX29 Multimedia Card Interface Driver
+<1>[    0.599639] initcall dw_mci_init+0x0/0x18 returned 0 after 0 usecs
+<1>[    0.599639] calling  dw_mci_pltfm_driver_init+0x0/0xc @ 1
+<6>[    0.599761] dw_mci_pltfm_register: host0 step 1 finish, reg addr f8610000
+<6>[    0.599792] zx29_sd zx29_sd.0: Version ID is 210a
+<6>[    0.599884] zx29_sd zx29_sd.0: DW MMC controller at irq 44, 32 bit host data width, 512 deep fifo
+<6>[    0.602478] zx29_sd zx29_sd.0: 1 slots initialized
+<6>[    0.602569] dw_mci_pltfm_register: host1 step 1 finish, reg addr f8611000
+<6>[    0.602630] zx29_sd zx29_sd.1: Version ID is 210a
+<6>[    0.602752] zx29_sd zx29_sd.1: DW MMC controller at irq 43, 32 bit host data width, 1024 deep fifo
+<6>[    0.605133] zx29_sd zx29_sd.1: 1 slots initialized
+<1>[    0.605316] initcall dw_mci_pltfm_driver_init+0x0/0xc returned 0 after 5512 usecs
+<1>[    0.605346] calling  timer_trig_init+0x0/0xc @ 1
+<1>[    0.605377] initcall timer_trig_init+0x0/0xc returned 0 after 0 usecs
+<1>[    0.605377] calling  staging_init+0x0/0x8 @ 1
+<1>[    0.605407] initcall staging_init+0x0/0x8 returned 0 after 29 usecs
+<1>[    0.605407] calling  init+0x0/0x8 @ 1
+<1>[    0.605438] initcall init+0x0/0x8 returned 0 after 0 usecs
+<1>[    0.605438] calling  initialize_usb_detect_ipc_init+0x0/0x90 @ 1
+<6>[    0.605468] rpmsg_createChannel return [0]
+<4>[    0.605499] rpmsg: actorID = 1 chID = 2 register callback success!
+<6>[    0.605499] zdrvrpmsg regcallback return [0]
+<1>[    0.605529] initcall initialize_usb_detect_ipc_init+0x0/0x90 returned 2064 after 29 usecs
+<4>[    0.605529] initcall initialize_usb_detect_ipc_init+0x0/0x90 returned with error code 2064 
+<1>[    0.605560] calling  logcatf_init+0x0/0xa4 @ 1
+<4>[    0.605773] logcatf_init
+<1>[    0.605804] initcall logcatf_init+0x0/0xa4 returned 0 after 208 usecs
+<1>[    0.605804] calling  logcatk_init+0x0/0xe0 @ 1
+<4>[    0.605987] logcatk_init
+<1>[    0.606018] initcall logcatk_init+0x0/0xe0 returned 0 after 148 usecs
+<1>[    0.606048] calling  ramdump_init+0x0/0x44 @ 1
+<4>[    0.606231] ramdump_init
+<1>[    0.606262] initcall ramdump_init+0x0/0x44 returned 0 after 208 usecs
+<1>[    0.606292] calling  cplog_init+0x0/0xa8 @ 1
+<4>[    0.606323] cplog_init
+<1>[    0.606536] initcall cplog_init+0x0/0xa8 returned 0 after 208 usecs
+<1>[    0.606567] calling  zx297520v3_freq_register+0x0/0x1c @ 1
+<1>[    0.606628] initcall zx297520v3_freq_register+0x0/0x1c returned 0 after 0 usecs
+<1>[    0.606658] calling  zx29_rpmsg_init+0x0/0x60 @ 1
+<6>[    0.616821] [RPMSG] LOG_INIT 
+<1>[    0.616882] initcall zx29_rpmsg_init+0x0/0x60 returned 0 after 9951 usecs
+<1>[    0.616912] calling  sock_diag_init+0x0/0x50 @ 1
+<1>[    0.616973] initcall sock_diag_init+0x0/0x50 returned 0 after 29 usecs
+<1>[    0.617004] calling  flow_cache_init_global+0x0/0x114 @ 1
+<1>[    0.617095] initcall flow_cache_init_global+0x0/0x114 returned 0 after 59 usecs
+<1>[    0.617309] calling  check_privateip_module_init+0x0/0x20 @ 1
+<4>[    0.617309] [check privateip]zte_check_privateip_module_init register start...
+<1>[    0.617370] initcall check_privateip_module_init+0x0/0x20 returned 0 after 29 usecs
+<1>[    0.617401] calling  netioctl_init+0x0/0x54 @ 1
+<1>[    0.617431] initcall netioctl_init+0x0/0x54 returned 0 after 0 usecs
+<1>[    0.617462] calling  llc_init+0x0/0x24 @ 1
+<1>[    0.617492] initcall llc_init+0x0/0x24 returned 0 after 0 usecs
+<1>[    0.617523] calling  snap_init+0x0/0x44 @ 1
+<1>[    0.617584] initcall snap_init+0x0/0x44 returned 0 after 0 usecs
+<1>[    0.617614] calling  blackhole_module_init+0x0/0xc @ 1
+<1>[    0.617645] initcall blackhole_module_init+0x0/0xc returned 0 after 0 usecs
+<1>[    0.617675] calling  police_init_module+0x0/0xc @ 1
+<1>[    0.617706] initcall police_init_module+0x0/0xc returned 0 after 0 usecs
+<1>[    0.617736] calling  gact_init_module+0x0/0x20 @ 1
+<6>[    0.617767] GACT probability NOT on
+<1>[    0.617797] initcall gact_init_module+0x0/0x20 returned 0 after 0 usecs
+<1>[    0.617828] calling  ipt_init_module+0x0/0x54 @ 1
+<4>[    0.617858] Failed to load ipt action
+<1>[    0.617858] initcall ipt_init_module+0x0/0x54 returned 0 after 29 usecs
+<1>[    0.617889] calling  pedit_init_module+0x0/0xc @ 1
+<1>[    0.617919] initcall pedit_init_module+0x0/0xc returned 0 after 0 usecs
+<1>[    0.617980] calling  skbedit_init_module+0x0/0xc @ 1
+<1>[    0.618011] initcall skbedit_init_module+0x0/0xc returned 0 after 0 usecs
+<1>[    0.618041] calling  cbq_module_init+0x0/0xc @ 1
+<1>[    0.618072] initcall cbq_module_init+0x0/0xc returned 0 after 0 usecs
+<1>[    0.618103] calling  htb_module_init+0x0/0xc @ 1
+<1>[    0.618133] initcall htb_module_init+0x0/0xc returned 0 after 0 usecs
+<1>[    0.618164] calling  hfsc_init+0x0/0xc @ 1
+<1>[    0.618194] initcall hfsc_init+0x0/0xc returned 0 after 0 usecs
+<1>[    0.618225] calling  red_module_init+0x0/0xc @ 1
+<1>[    0.618255] initcall red_module_init+0x0/0xc returned 0 after 0 usecs
+<1>[    0.618286] calling  gred_module_init+0x0/0xc @ 1
+<1>[    0.618316] initcall gred_module_init+0x0/0xc returned 0 after 0 usecs
+<1>[    0.618347] calling  ingress_module_init+0x0/0xc @ 1
+<1>[    0.618377] initcall ingress_module_init+0x0/0xc returned 0 after 0 usecs
+<1>[    0.618408] calling  dsmark_module_init+0x0/0xc @ 1
+<1>[    0.618438] initcall dsmark_module_init+0x0/0xc returned 0 after 0 usecs
+<1>[    0.618469] calling  sfq_module_init+0x0/0xc @ 1
+<1>[    0.618499] initcall sfq_module_init+0x0/0xc returned 0 after 0 usecs
+<1>[    0.618530] calling  tbf_module_init+0x0/0xc @ 1
+<1>[    0.618560] initcall tbf_module_init+0x0/0xc returned 0 after 0 usecs
+<1>[    0.618591] calling  teql_init+0x0/0xd0 @ 1
+<1>[    0.619537] initcall teql_init+0x0/0xd0 returned 0 after 893 usecs
+<1>[    0.619598] calling  prio_module_init+0x0/0xc @ 1
+<1>[    0.619628] initcall prio_module_init+0x0/0xc returned 0 after 0 usecs
+<1>[    0.619659] calling  atm_init+0x0/0xc @ 1
+<1>[    0.619659] initcall atm_init+0x0/0xc returned 0 after 0 usecs
+<1>[    0.619689] calling  netem_module_init+0x0/0x20 @ 1
+<6>[    0.619720] netem: version 1.3
+<1>[    0.619750] initcall netem_module_init+0x0/0x20 returned 0 after 29 usecs
+<1>[    0.619781] calling  drr_init+0x0/0xc @ 1
+<1>[    0.619812] initcall drr_init+0x0/0xc returned 0 after 0 usecs
+<1>[    0.619842] calling  init_u32+0x0/0x44 @ 1
+<6>[    0.619842] u32 classifier
+<6>[    0.619873]     Performance counters on
+<6>[    0.619873]     input device check on
+<6>[    0.619903]     Actions configured
+<1>[    0.619934] initcall init_u32+0x0/0x44 returned 0 after 89 usecs
+<1>[    0.619964] calling  init_route4+0x0/0xc @ 1
+<1>[    0.619995] initcall init_route4+0x0/0xc returned 0 after 0 usecs
+<1>[    0.620025] calling  init_fw+0x0/0xc @ 1
+<1>[    0.620025] initcall init_fw+0x0/0xc returned 0 after 0 usecs
+<1>[    0.620056] calling  init_rsvp+0x0/0xc @ 1
+<1>[    0.620086] initcall init_rsvp+0x0/0xc returned 0 after 0 usecs
+<1>[    0.620117] calling  init_tcindex+0x0/0xc @ 1
+<1>[    0.620147] initcall init_tcindex+0x0/0xc returned 0 after 0 usecs
+<1>[    0.620178] calling  init_rsvp+0x0/0xc @ 1
+<1>[    0.620208] initcall init_rsvp+0x0/0xc returned 0 after 0 usecs
+<1>[    0.620239] calling  init_basic+0x0/0xc @ 1
+<1>[    0.620269] initcall init_basic+0x0/0xc returned 0 after 0 usecs
+<1>[    0.620300] calling  init_em_u32+0x0/0xc @ 1
+<1>[    0.620300] initcall init_em_u32+0x0/0xc returned 0 after 0 usecs
+<1>[    0.620330] calling  init_em_text+0x0/0xc @ 1
+<1>[    0.620361] initcall init_em_text+0x0/0xc returned 0 after 0 usecs
+<1>[    0.620391] calling  nfnetlink_init+0x0/0x28 @ 1
+<6>[    0.620422] Netfilter messages via NETLINK v0.30.
+<1>[    0.620483] initcall nfnetlink_init+0x0/0x28 returned 0 after 29 usecs
+<1>[    0.620513] calling  nfnl_acct_init+0x0/0x40 @ 1
+<6>[    0.620544] nfnl_acct: registering with nfnetlink.
+<1>[    0.620544] initcall nfnl_acct_init+0x0/0x40 returned 0 after 29 usecs
+<1>[    0.620605] calling  nfnetlink_queue_init+0x0/0xb8 @ 1
+<1>[    0.620635] initcall nfnetlink_queue_init+0x0/0xb8 returned 0 after 29 usecs
+<1>[    0.620666] calling  nf_conntrack_standalone_init+0x0/0xc @ 1
+<6>[    0.620697] nf_conntrack version 0.5.0 (372 buckets, 4832 max)
+<1>[    0.620941] initcall nf_conntrack_standalone_init+0x0/0xc returned 0 after 238 usecs
+<1>[    0.620971] calling  nf_ct_proto_gre_init+0x0/0x3c @ 1
+<1>[    0.621032] initcall nf_ct_proto_gre_init+0x0/0x3c returned 0 after 0 usecs
+<1>[    0.621063] calling  ctnetlink_init+0x0/0xa0 @ 1
+<6>[    0.621063] ctnetlink v0.93: registering with nfnetlink.
+<1>[    0.621093] initcall ctnetlink_init+0x0/0xa0 returned 0 after 29 usecs
+<1>[    0.621154] calling  nf_conntrack_ftp_init+0x0/0x1ac @ 1
+<1>[    0.621185] initcall nf_conntrack_ftp_init+0x0/0x1ac returned 0 after 29 usecs
+<1>[    0.621215] calling  nf_conntrack_h323_init+0x0/0xd4 @ 1
+<1>[    0.621246] initcall nf_conntrack_h323_init+0x0/0xd4 returned 0 after 0 usecs
+<1>[    0.621276] calling  nf_conntrack_irc_init+0x0/0x19c @ 1
+<1>[    0.621337] initcall nf_conntrack_irc_init+0x0/0x19c returned 0 after 0 usecs
+<1>[    0.621368] calling  nf_conntrack_pptp_init+0x0/0x3c @ 1
+<1>[    0.621398] initcall nf_conntrack_pptp_init+0x0/0x3c returned 0 after 0 usecs
+<1>[    0.621429] calling  nf_conntrack_tftp_init+0x0/0x194 @ 1
+<1>[    0.621459] initcall nf_conntrack_tftp_init+0x0/0x194 returned 0 after 0 usecs
+<1>[    0.621490] calling  xt_init+0x0/0xb0 @ 1
+<1>[    0.621520] initcall xt_init+0x0/0xb0 returned 0 after 0 usecs
+<1>[    0.621551] calling  tcpudp_mt_init+0x0/0x10 @ 1
+<1>[    0.621582] initcall tcpudp_mt_init+0x0/0x10 returned 0 after 0 usecs
+<1>[    0.621612] calling  mark_mt_init+0x0/0x44 @ 1
+<1>[    0.621643] initcall mark_mt_init+0x0/0x44 returned 0 after 0 usecs
+<1>[    0.621673] calling  classify_tg_init+0x0/0x10 @ 1
+<1>[    0.621704] initcall classify_tg_init+0x0/0x10 returned 0 after 0 usecs
+<1>[    0.621734] calling  dscp_tg_init+0x0/0x10 @ 1
+<1>[    0.621765] initcall dscp_tg_init+0x0/0x10 returned 0 after 0 usecs
+<1>[    0.621795] calling  hl_tg_init+0x0/0x10 @ 1
+<1>[    0.621826] initcall hl_tg_init+0x0/0x10 returned 0 after 29 usecs
+<1>[    0.621856] calling  tcpmss_tg_init+0x0/0x10 @ 1
+<1>[    0.621887] initcall tcpmss_tg_init+0x0/0x10 returned 0 after 0 usecs
+<1>[    0.621917] calling  conntrack_mt_init+0x0/0x10 @ 1
+<1>[    0.621948] initcall conntrack_mt_init+0x0/0x10 returned 0 after 0 usecs
+<1>[    0.621978] calling  dscp_mt_init+0x0/0x10 @ 1
+<1>[    0.622009] initcall dscp_mt_init+0x0/0x10 returned 0 after 0 usecs
+<1>[    0.622039] calling  iprange_mt_init+0x0/0x10 @ 1
+<1>[    0.622070] initcall iprange_mt_init+0x0/0x10 returned 0 after 0 usecs
+<1>[    0.622100] calling  length_mt_init+0x0/0x10 @ 1
+<1>[    0.622131] initcall length_mt_init+0x0/0x10 returned 0 after 0 usecs
+<1>[    0.622314] calling  limit_mt_init+0x0/0xc @ 1
+<1>[    0.622344] initcall limit_mt_init+0x0/0xc returned 0 after 0 usecs
+<1>[    0.622375] calling  mac_mt_init+0x0/0xc @ 1
+<1>[    0.622406] initcall mac_mt_init+0x0/0xc returned 0 after 0 usecs
+<1>[    0.622436] calling  policy_mt_init+0x0/0x10 @ 1
+<1>[    0.622467] initcall policy_mt_init+0x0/0x10 returned 0 after 0 usecs
+<1>[    0.622497] calling  state_mt_init+0x0/0xc @ 1
+<1>[    0.622528] initcall state_mt_init+0x0/0xc returned 0 after 0 usecs
+<1>[    0.622558] calling  string_mt_init+0x0/0xc @ 1
+<1>[    0.622589] initcall string_mt_init+0x0/0xc returned 0 after 0 usecs
+<1>[    0.622619] calling  tcpmss_mt_init+0x0/0x10 @ 1
+<1>[    0.622650] initcall tcpmss_mt_init+0x0/0x10 returned 0 after 0 usecs
+<1>[    0.622680] calling  init+0x0/0x10 @ 1
+<1>[    0.622680] initcall init+0x0/0x10 returned 0 after 0 usecs
+<1>[    0.622711] calling  sysctl_ipv4_init+0x0/0x9c @ 1
+<1>[    0.622985] initcall sysctl_ipv4_init+0x0/0x9c returned 0 after 208 usecs
+<1>[    0.623016] calling  esp4_init+0x0/0x7c @ 1
+<1>[    0.623046] initcall esp4_init+0x0/0x7c returned 0 after 0 usecs
+<1>[    0.623077] calling  xfrm4_beet_init+0x0/0x10 @ 1
+<1>[    0.623107] initcall xfrm4_beet_init+0x0/0x10 returned 0 after 0 usecs
+<1>[    0.623138] calling  tunnel4_init+0x0/0x70 @ 1
+<1>[    0.623168] initcall tunnel4_init+0x0/0x70 returned 0 after 0 usecs
+<1>[    0.623199] calling  xfrm4_transport_init+0x0/0x10 @ 1
+<1>[    0.623229] initcall xfrm4_transport_init+0x0/0x10 returned 0 after 0 usecs
+<1>[    0.623260] calling  xfrm4_mode_tunnel_init+0x0/0x10 @ 1
+<1>[    0.623291] initcall xfrm4_mode_tunnel_init+0x0/0x10 returned 0 after 29 usecs
+<1>[    0.623321] calling  ipv4_netfilter_init+0x0/0xc @ 1
+<1>[    0.623352] initcall ipv4_netfilter_init+0x0/0xc returned 0 after 0 usecs
+<1>[    0.623382] calling  nf_conntrack_l3proto_ipv4_init+0x0/0x130 @ 1
+<1>[    0.623596] initcall nf_conntrack_l3proto_ipv4_init+0x0/0x130 returned 0 after 178 usecs
+<1>[    0.623657] calling  nf_nat_init+0x0/0x130 @ 1
+<1>[    0.623687] initcall nf_nat_init+0x0/0x130 returned 0 after 29 usecs
+<1>[    0.623718] calling  nf_defrag_init+0x0/0x10 @ 1
+<1>[    0.623748] initcall nf_defrag_init+0x0/0x10 returned 0 after 0 usecs
+<1>[    0.623779] calling  nf_nat_ftp_init+0x0/0x28 @ 1
+<1>[    0.623809] initcall nf_nat_ftp_init+0x0/0x28 returned 0 after 0 usecs
+<1>[    0.623840] calling  init+0x0/0x168 @ 1
+<1>[    0.623870] initcall init+0x0/0x168 returned 0 after 0 usecs
+<1>[    0.623901] calling  nf_nat_irc_init+0x0/0x28 @ 1
+<1>[    0.623931] initcall nf_nat_irc_init+0x0/0x28 returned 0 after 0 usecs
+<1>[    0.623962] calling  nf_nat_helper_pptp_init+0x0/0x9c @ 1
+<1>[    0.623992] initcall nf_nat_helper_pptp_init+0x0/0x9c returned 0 after 0 usecs
+<1>[    0.624023] calling  nf_nat_tftp_init+0x0/0x28 @ 1
+<1>[    0.624053] initcall nf_nat_tftp_init+0x0/0x28 returned 0 after 0 usecs
+<1>[    0.624084] calling  nf_nat_proto_gre_init+0x0/0xc @ 1
+<1>[    0.624114] initcall nf_nat_proto_gre_init+0x0/0xc returned 0 after 0 usecs
+<1>[    0.624145] calling  ip_tables_init+0x0/0x98 @ 1
+<6>[    0.624176] ip_tables: (C) 2000-2006 Netfilter Core Team
+<1>[    0.624206] initcall ip_tables_init+0x0/0x98 returned 0 after 29 usecs
+<1>[    0.624267] calling  iptable_filter_init+0x0/0x58 @ 1
+<1>[    0.624328] initcall iptable_filter_init+0x0/0x58 returned 0 after 59 usecs
+<1>[    0.624359] calling  iptable_mangle_init+0x0/0x58 @ 1
+<1>[    0.624420] initcall iptable_mangle_init+0x0/0x58 returned 0 after 29 usecs
+<1>[    0.624450] calling  nf_nat_standalone_init+0x0/0x88 @ 1
+<1>[    0.624511] initcall nf_nat_standalone_init+0x0/0x88 returned 0 after 29 usecs
+<1>[    0.624542] calling  iptable_raw_init+0x0/0x58 @ 1
+<1>[    0.624603] initcall iptable_raw_init+0x0/0x58 returned 0 after 29 usecs
+<1>[    0.624633] calling  masquerade_tg_init+0x0/0x38 @ 1
+<1>[    0.624664] initcall masquerade_tg_init+0x0/0x38 returned 0 after 0 usecs
+<1>[    0.624694] calling  netmap_tg_init+0x0/0xc @ 1
+<1>[    0.624725] initcall netmap_tg_init+0x0/0xc returned 0 after 0 usecs
+<1>[    0.624755] calling  redirect_tg_init+0x0/0xc @ 1
+<1>[    0.624786] initcall redirect_tg_init+0x0/0xc returned 0 after 0 usecs
+<1>[    0.624816] calling  reject_tg_init+0x0/0xc @ 1
+<1>[    0.624847] initcall reject_tg_init+0x0/0xc returned 0 after 0 usecs
+<1>[    0.624877] calling  inet_diag_init+0x0/0x88 @ 1
+<1>[    0.624908] initcall inet_diag_init+0x0/0x88 returned 0 after 0 usecs
+<1>[    0.624938] calling  tcp_diag_init+0x0/0xc @ 1
+<1>[    0.624969] initcall tcp_diag_init+0x0/0xc returned 0 after 0 usecs
+<1>[    0.625000] calling  cubictcp_register+0x0/0x74 @ 1
+<6>[    0.625030] TCP: cubic registered
+<1>[    0.625061] initcall cubictcp_register+0x0/0x74 returned 0 after 29 usecs
+<1>[    0.625091] calling  xfrm_user_init+0x0/0x48 @ 1
+<6>[    0.625122] Initializing XFRM netlink socket
+<1>[    0.625152] initcall xfrm_user_init+0x0/0x48 returned 0 after 29 usecs
+<1>[    0.625183] calling  inet6_init+0x0/0x294 @ 1
+<6>[    0.625335] NET: Registered protocol family 10
+<1>[    0.626281] initcall inet6_init+0x0/0x294 returned 0 after 1013 usecs
+<1>[    0.626312] calling  esp6_init+0x0/0x70 @ 1
+<1>[    0.626342] initcall esp6_init+0x0/0x70 returned 0 after 0 usecs
+<1>[    0.626373] calling  tunnel6_init+0x0/0x64 @ 1
+<1>[    0.626403] initcall tunnel6_init+0x0/0x64 returned 0 after 0 usecs
+<1>[    0.626434] calling  xfrm6_transport_init+0x0/0x10 @ 1
+<1>[    0.626464] initcall xfrm6_transport_init+0x0/0x10 returned 0 after 0 usecs
+<1>[    0.626495] calling  xfrm6_mode_tunnel_init+0x0/0x10 @ 1
+<1>[    0.626525] initcall xfrm6_mode_tunnel_init+0x0/0x10 returned 0 after 0 usecs
+<1>[    0.626556] calling  xfrm6_beet_init+0x0/0x10 @ 1
+<1>[    0.626586] initcall xfrm6_beet_init+0x0/0x10 returned 0 after 0 usecs
+<1>[    0.626617] calling  ip6_tables_init+0x0/0x98 @ 1
+<6>[    0.626678] ip6_tables: (C) 2000-2006 Netfilter Core Team
+<1>[    0.626708] initcall ip6_tables_init+0x0/0x98 returned 0 after 59 usecs
+<1>[    0.626739] calling  ip6table_filter_init+0x0/0x58 @ 1
+<1>[    0.626831] initcall ip6table_filter_init+0x0/0x58 returned 0 after 29 usecs
+<1>[    0.626861] calling  ip6table_mangle_init+0x0/0x58 @ 1
+<1>[    0.626922] initcall ip6table_mangle_init+0x0/0x58 returned 0 after 29 usecs
+<1>[    0.626953] calling  nf_conntrack_l3proto_ipv6_init+0x0/0xe8 @ 1
+<1>[    0.627014] initcall nf_conntrack_l3proto_ipv6_init+0x0/0xe8 returned 0 after 29 usecs
+<1>[    0.627075] calling  nf_defrag_init+0x0/0x50 @ 1
+<1>[    0.627105] initcall nf_defrag_init+0x0/0x50 returned 0 after 29 usecs
+<1>[    0.627288] calling  frag_mt6_init+0x0/0xc @ 1
+<1>[    0.627319] initcall frag_mt6_init+0x0/0xc returned 0 after 0 usecs
+<1>[    0.627349] calling  ipv6header_mt6_init+0x0/0xc @ 1
+<1>[    0.627380] initcall ipv6header_mt6_init+0x0/0xc returned 0 after 0 usecs
+<1>[    0.627410] calling  hbh_mt6_init+0x0/0x10 @ 1
+<1>[    0.627441] initcall hbh_mt6_init+0x0/0x10 returned 0 after 0 usecs
+<1>[    0.627471] calling  sit_init+0x0/0x58 @ 1
+<6>[    0.627502] IPv6 over IPv4 tunneling driver
+<1>[    0.628753] initcall sit_init+0x0/0x58 returned 0 after 1221 usecs
+<1>[    0.628814] calling  ip6_tunnel_init+0x0/0x88 @ 1
+<1>[    0.629974] initcall ip6_tunnel_init+0x0/0x88 returned 0 after 1102 usecs
+<1>[    0.630035] calling  packet_init+0x0/0x48 @ 1
+<6>[    0.630035] NET: Registered protocol family 17
+<1>[    0.630126] initcall packet_init+0x0/0x48 returned 0 after 59 usecs
+<1>[    0.630157] calling  ipsec_pfkey_init+0x0/0x78 @ 1
+<6>[    0.630187] NET: Registered protocol family 15
+<1>[    0.630187] initcall ipsec_pfkey_init+0x0/0x78 returned 0 after 29 usecs
+<1>[    0.630218] calling  br_init+0x0/0xac @ 1
+<5>[    0.630340] Bridge firewalling registered
+<1>[    0.630371] initcall br_init+0x0/0xac returned 0 after 119 usecs
+<1>[    0.630401] calling  ebtables_init+0x0/0x50 @ 1
+<6>[    0.630432] Ebtables v2.0 registered
+<1>[    0.630432] initcall ebtables_init+0x0/0x50 returned 0 after 0 usecs
+<1>[    0.630462] calling  ebtable_broute_init+0x0/0x30 @ 1
+<1>[    0.630523] initcall ebtable_broute_init+0x0/0x30 returned 0 after 29 usecs
+<1>[    0.630554] calling  ebtable_filter_init+0x0/0x40 @ 1
+<1>[    0.630584] initcall ebtable_filter_init+0x0/0x40 returned 0 after 29 usecs
+<1>[    0.630615] calling  ebt_ip_init+0x0/0xc @ 1
+<1>[    0.630645] initcall ebt_ip_init+0x0/0xc returned 0 after 0 usecs
+<1>[    0.630676] calling  ebt_mark_m_init+0x0/0xc @ 1
+<1>[    0.630706] initcall ebt_mark_m_init+0x0/0xc returned 0 after 0 usecs
+<1>[    0.630706] calling  ebt_mark_init+0x0/0xc @ 1
+<1>[    0.630737] initcall ebt_mark_init+0x0/0xc returned 0 after 0 usecs
+<1>[    0.630767] calling  vlan_proto_init+0x0/0x7c @ 1
+<6>[    0.630798] 8021q: 802.1Q VLAN Support v1.8
+<1>[    0.630828] initcall vlan_proto_init+0x0/0x7c returned 0 after 29 usecs
+<1>[    0.631072] calling  zx29_gpio_debuginit+0x0/0x34 @ 1
+<1>[    0.631134] initcall zx29_gpio_debuginit+0x0/0x34 returned -1053734120 after 0 usecs
+<4>[    0.631164] initcall zx29_gpio_debuginit+0x0/0x34 returned with error code -1053734120 
+<1>[    0.631195] calling  zx_debug_init+0x0/0x3f4 @ 1
+<6>[    0.631195] [DEBUG] create zte sysfs interface OK.
+<6>[    0.631256] [DEBUG] create test sysfs interface OK.
+<6>[    0.631286] [DEBUG] create test clk sysfs interface OK.
+<6>[    0.631317] [DEBUG] create test icp sysfs interface OK.
+<1>[    0.631347] initcall zx_debug_init+0x0/0x3f4 returned 0 after 148 usecs
+<1>[    0.631378] calling  init_oops_id+0x0/0x50 @ 1
+<1>[    0.631408] initcall init_oops_id+0x0/0x50 returned 0 after 0 usecs
+<1>[    0.631439] calling  printk_late_init+0x0/0x6c @ 1
+<1>[    0.631469] initcall printk_late_init+0x0/0x6c returned 0 after 0 usecs
+<1>[    0.631500] calling  sched_init_debug+0x0/0x3c @ 1
+<1>[    0.631530] initcall sched_init_debug+0x0/0x3c returned 0 after 29 usecs
+<1>[    0.631561] calling  pm_qos_power_init+0x0/0x60 @ 1
+<1>[    0.632446] initcall pm_qos_power_init+0x0/0x60 returned 0 after 864 usecs
+<1>[    0.632507] calling  pm_debugfs_init+0x0/0x38 @ 1
+<1>[    0.632537] initcall pm_debugfs_init+0x0/0x38 returned 0 after 0 usecs
+<1>[    0.632568] calling  suspend_time_debug_init+0x0/0x54 @ 1
+<1>[    0.632598] initcall suspend_time_debug_init+0x0/0x54 returned 0 after 0 usecs
+<1>[    0.632598] calling  add_shrinker_debug+0x0/0x38 @ 1
+<1>[    0.632629] initcall add_shrinker_debug+0x0/0x38 returned 0 after 0 usecs
+<1>[    0.632659] calling  kmemleak_late_init+0x0/0x68 @ 1
+<6>[    0.632690] kmemleak: Kernel memory leak detector initialized
+<1>[    0.632720] initcall kmemleak_late_init+0x0/0x68 returned 0 after 29 usecs
+<1>[    0.632751] calling  ramdump_init+0x0/0x11c @ 1
+<4>[    0.632781] rpmsg: actorID = 1 chID = 10 register callback success!
+<4>[    0.632812] Ramdump server init success!
+<1>[    0.632812] initcall ramdump_init+0x0/0x11c returned 0 after 59 usecs
+<1>[    0.632843] calling  random32_reseed+0x0/0x60 @ 1
+<1>[    0.632904] initcall random32_reseed+0x0/0x60 returned 0 after 29 usecs
+<1>[    0.632934] calling  deferred_probe_initcall+0x0/0x74 @ 1
+<1>[    0.633056] initcall deferred_probe_initcall+0x0/0x74 returned 0 after 59 usecs
+<1>[    0.633087] calling  zx_suspend_init+0x0/0x110 @ 1
+<1>[    0.633209] initcall zx_suspend_init+0x0/0x110 returned 0 after 89 usecs
+<1>[    0.633209] calling  pmu_debug_init+0x0/0x68 @ 1
+<6>[    0.633239] [PMU] create sysfs interface
+<1>[    0.633300] initcall pmu_debug_init+0x0/0x68 returned 0 after 29 usecs
+<1>[    0.633331] calling  scsi_complete_async_scans+0x0/0x104 @ 1
+<1>[    0.633331] initcall scsi_complete_async_scans+0x0/0x104 returned 0 after 0 usecs
+<1>[    0.633361] calling  ddrnet_init+0x0/0x5c8 @ 1
+<7>[    0.633392]  ddrnet.c<ddrnet_init>: ddr_ap_net_lan_init.
+<7>[    0.633422] 
+<7>[    0.633453]  ddrnet.c<channelResult>: channel: success, len = 0
+<7>[    0.634857]  ddrnet.c<channelResult>: channel: success, len = 0
+<7>[    0.636291]  ddrnet.c<channelResult>: channel: success, len = 0
+<7>[    0.637817]  ddrnet.c<channelResult>: channel: success, len = 0
+<1>[    0.639648] initcall ddrnet_init+0x0/0x5c8 returned 0 after 6108 usecs
+<1>[    0.639709] calling  zx29_disable_unused_clocks+0x0/0x90 @ 1
+<7>[    0.639709] clk main_clk_32k: rate = 32768
+<7>[    0.639739] clk main_clk_26m: rate = 26000000
+<7>[    0.639739] clk mpll_clk_12m: rate = 12000000
+<7>[    0.639770] clk mpll_clk_24m: rate = 24000000
+<7>[    0.639801] clk mpll_clk_39m: rate = 39000000
+<7>[    0.639801] clk mpll_clk_52m: rate = 52000000
+<7>[    0.639831] clk mpll_clk_78m: rate = 78000000
+<7>[    0.639831] clk mpll_clk_104m: rate = 104000000
+<7>[    0.639862] clk mpll_clk_124m8: rate = 124800000
+<7>[    0.639862] clk mpll_clk_156m: rate = 156000000
+<7>[    0.639892] clk mpll_clk_208m: rate = 208000000
+<7>[    0.639892] clk mpll_clk_312m: rate = 312000000
+<7>[    0.639923] clk mpll_clk_624m: rate = 624000000
+<7>[    0.639923] clk dpll_clk_491m52: rate = 491520000
+<7>[    0.639953] clk dpll_clk_122m88: rate = 122880000
+<7>[    0.639984] clk dpll_clk_81m92: rate = 81920000
+<7>[    0.639984] clk upll_clk_480m: rate = 480000000
+<7>[    0.640014] clk upll_clk_96m: rate = 96000000
+<7>[    0.640014] clk gpll_clk_25m: rate = 25000000
+<7>[    0.640045] clk gpll_clk_50m: rate = 50000000
+<7>[    0.640045] clk gpll_clk_100m: rate = 100000000
+<7>[    0.640075] clk gpll_clk_178m: rate = 178000000
+<7>[    0.640106] clk gpll_clk_200m: rate = 200000000
+<7>[    0.640106] clk axi_clk: rate = 156000000
+<7>[    0.640136] clk cpu_work_clk: rate = 624000000
+<7>[    0.640136] clk hs_ahb_clk: rate = 104000000
+<7>[    0.640167] clk ap_wdt_work_clk: rate = 32768
+<7>[    0.640167] clk ap_wdt_apb_clk: rate = 0
+<7>[    0.640197] clk uart0_work_clk: rate = 26000000
+<7>[    0.640197] clk uart0_apb_clk: rate = 0
+<7>[    0.640228] clk uart1_work_clk: rate = 26000000
+<7>[    0.640228] clk uart1_apb_clk: rate = 0
+<7>[    0.640258] clk uart2_work_clk: rate = 26000000
+<7>[    0.640258] clk uart2_apb_clk: rate = 0
+<7>[    0.640289] clk timer0_work_clk: rate = 3250000
+<7>[    0.640289] clk timer0_apb_clk: rate = 0
+<7>[    0.640319] clk timer1_work_clk: rate = 32768
+<7>[    0.640319] clk timer1_apb_clk: rate = 0
+<7>[    0.640350] clk timer2_work_clk: rate = 26000000
+<7>[    0.640380] clk timer2_apb_clk: rate = 0
+<7>[    0.640380] clk timer3_work_clk: rate = 32768
+<7>[    0.640411] clk timer3_apb_clk: rate = 0
+<7>[    0.640411] clk timer4_work_clk: rate = 16384
+<7>[    0.640441] clk timer4_apb_clk: rate = 0
+<7>[    0.640441] clk i2c0_work_clk: rate = 26000000
+<7>[    0.640472] clk i2c0_apb_clk: rate = 0
+<7>[    0.640472] clk i2c1_work_clk: rate = 26000000
+<7>[    0.640502] clk i2c1_apb_clk: rate = 0
+<7>[    0.640502] clk ssp0_work_clk: rate = 26000000
+<7>[    0.640533] clk ssp0_apb_clk: rate = 0
+<7>[    0.640533] clk ssp1_work_clk: rate = 13000000
+<7>[    0.640563] clk ssp1_apb_clk: rate = 0
+<7>[    0.640563] clk tdm_work_clk: rate = 26000000
+<7>[    0.640594] clk tdm_apb_clk: rate = 0
+<7>[    0.640594] clk i2s0_work_clk: rate = 26000000
+<7>[    0.640625] clk i2s0_apb_clk: rate = 0
+<7>[    0.640625] clk i2s1_work_clk: rate = 26000000
+<7>[    0.640655] clk i2s1_apb_clk: rate = 0
+<7>[    0.640655] clk spifc_work_clk: rate = 156000000
+<7>[    0.640686] clk spifc_apb_clk: rate = 0
+<7>[    0.640686] clk kpd_work_clk: rate = 32768
+<7>[    0.640716] clk kpd_apb_clk: rate = 0
+<7>[    0.640716] clk rtc_work_clk: rate = 32768
+<7>[    0.640747] clk rtc_apb_clk: rate = 0
+<7>[    0.640747] clk usb_ahb_clk: rate = 104000000
+<7>[    0.640777] clk usb_24m_clk: rate = 24000000
+<7>[    0.640777] clk hsic_ahb_clk: rate = 104000000
+<7>[    0.640808] clk hsic_12m_clk: rate = 12000000
+<7>[    0.640838] clk gmac_ahb_clk: rate = 104000000
+<7>[    0.640838] clk gmac_apb_clk: rate = 0
+<7>[    0.640869] clk gmac_rmii_clk: rate = 50000000
+<7>[    0.640869] clk sd0_ahb_clk: rate = 104000000
+<7>[    0.640899] clk sd0_work_clk: rate = 100000000
+<7>[    0.640899] clk sd0_cdet_clk: rate = 32768
+<7>[    0.640930] clk sd1_ahb_clk: rate = 104000000
+<7>[    0.640930] clk sd1_work_clk: rate = 50000000
+<7>[    0.640960] clk sd1_cdet_clk: rate = 32768
+<1>[    0.640991] initcall zx29_disable_unused_clocks+0x0/0x90 returned 0 after 1251 usecs
+<1>[    0.641021] calling  zx_pm_init+0x0/0xe0 @ 1
+<6>[    0.641052] [SLP] Power/PM_INIT 
+<6>[    0.641052] [SLP] Power/SPM_INIT 
+<6>[    0.641082] [SLP] Power/PM_CONTEXT_INIT 
+<6>[    0.641082] [SLP] Power/WAKEUP_ADDRESS 
+<6>[    0.641113] [SLP] alloc size: 32 Bytes , total size 32 Bytes
+<6>[    0.641143] [SLP] alloc size: 2592 Bytes , total size 2624 Bytes
+<6>[    0.641174] [SLP] alloc size: 96 Bytes , total size 2720 Bytes
+<6>[    0.641174] [SLP] alloc size: 32 Bytes , total size 2752 Bytes
+<6>[    0.641204] [SLP] alloc size: 128 Bytes , total size 2880 Bytes
+<6>[    0.641235] [SLP] alloc size: 64 Bytes , total size 2944 Bytes
+<6>[    0.641235] [SLP] alloc size: 60 Bytes , total size 3004 Bytes
+<6>[    0.641265] [SLP] alloc size: 64 Bytes , total size 3068 Bytes
+<6>[    0.641296] [SLP] alloc size: 128 Bytes , total size 3196 Bytes
+<6>[    0.641296] [SLP] alloc size: 128 Bytes , total size 3324 Bytes
+<6>[    0.641326] [SLP] alloc size: 288 Bytes , total size 3612 Bytes
+<6>[    0.641357] [SLP] alloc size: 64 Bytes , total size 3676 Bytes
+<6>[    0.641357] [SLP] alloc size: 96 Bytes , total size 3772 Bytes
+<6>[    0.641387] [SLP] alloc size: 128 Bytes , total size 3900 Bytes
+<6>[    0.641418] [SLP] alloc size: 64 Bytes , total size 3964 Bytes
+<6>[    0.641418] [SLP] alloc size: 352 Bytes , total size 4316 Bytes
+<6>[    0.641448] [SLP] alloc size: 64 Bytes , total size 4380 Bytes
+<6>[    0.641479] [SLP] alloc size: 32 Bytes , total size 4412 Bytes
+<6>[    0.641479] [SLP] Power/PM_CONTEXT_INIT END
+<6>[    0.641510] [SLP] Power/SRAM_INIT 
+<6>[    0.641510] [SLP] create sysfs interface
+<6>[    0.641601] [SLP] pm_mask_info=(       0)
+<6>[    0.641693] [CPUIDLE] register device OK
+<6>[    0.641723] ,
+<1>[    0.641723] initcall zx_pm_init+0x0/0xe0 returned 0 after 655 usecs
+<1>[    0.641754] calling  zx_cpufreq_init+0x0/0xec @ 1
+<6>[    0.641784] [CPUFREQ] zx297520v2_cpufreq_init ok 
+<6>[    0.641815] [CPUFREQ] get_cpu_rate: 624000
+<6>[    0.641845] [CPUFREQ] zx_cpufreq_cpu_init cpu: 0, target_freq:624000
+<6>[    0.641967] [CPUFREQ] register cpufreq driver OK!
+<1>[    0.641998] initcall zx_cpufreq_init+0x0/0xec returned 0 after 208 usecs
+<1>[    0.642028] calling  net_secret_init+0x0/0x1c @ 1
+<1>[    0.642120] initcall net_secret_init+0x0/0x1c returned 0 after 59 usecs
+<1>[    0.642303] calling  tsp_fastlocal_init+0x0/0x8 @ 1
+<1>[    0.642333] initcall tsp_fastlocal_init+0x0/0x8 returned 0 after 0 usecs
+<1>[    0.642364] calling  tsp_fast_init+0x0/0xb0 @ 1
+<1>[    0.642578] initcall tsp_fast_init+0x0/0xb0 returned 0 after 208 usecs
+<1>[    0.642608] calling  app_assert_msg_init+0x0/0x38 @ 1
+<1>[    0.642669] initcall app_assert_msg_init+0x0/0x38 returned 0 after 0 usecs
+<1>[    0.642700] calling  net_other_init+0x0/0x8 @ 1
+<1>[    0.642700] initcall net_other_init+0x0/0x8 returned 0 after 0 usecs
+<1>[    0.642730] calling  mnl_init+0x0/0x68 @ 1
+<1>[    0.642791] initcall mnl_init+0x0/0x68 returned 0 after 0 usecs
+<1>[    0.642791] calling  netlog_late_init+0x0/0x38 @ 1
+<1>[    0.642822] initcall netlog_late_init+0x0/0x38 returned 0 after 0 usecs
+<1>[    0.642852] calling  tcp_congestion_default+0x0/0xc @ 1
+<1>[    0.642883] initcall tcp_congestion_default+0x0/0xc returned 0 after 0 usecs
+<1>[    0.642913] calling  initialize_hashrnd+0x0/0x1c @ 1
+<1>[    0.642944] initcall initialize_hashrnd+0x0/0x1c returned 0 after 0 usecs
+<1>[    0.643005] calling  sys_open(/dev/console)+0x0/0x0 @ 1
+<1>[    0.643188] initcall  sys_open(/dev/console)+0x0/0x0 @ 1
+<1>[    0.643218] calling  ramdisk_execute_command+0x0/0x0 @ 1
+<1>[    0.643249] async_waiting @ 1
+<1>[    0.643280] async_continuing @ 1 after 0 usec
+<4>[    1.601470] jffs2: Empty flash at 0x00d67014 ends at 0x00d67800
+<5>[    1.717987] jffs2: jffs2_scan_inode_node(): CRC failed on node at 0x012eefe0: Read 0xffffffff, calculated 0xf2ae0a0b
+<6>[    1.847076] VFS: Mounted root (jffs2 filesystem) on device 31:15.
+<1>[    1.847106] initcall  ramdisk_execute_command+0x0/0x0 @ 1
+<1>[    1.847137] initcall  kernel_init(->|init_post)+0x0/0x0 @ 1
+<1>[    1.847167] async_waiting @ 1
+<1>[    1.847167] async_continuing @ 1 after 0 usec
+<1>[    1.847381] Freeing init memory: 136K
+<6>[    1.847595] receive data : 16
+<6>[    1.847625] dwc_otg_usb_chg_detect
+<6>[    1.918853] register usb_detect_typedet for charger
+<4>[    2.237945] usb device plugin 
+<4>[    2.237945] Filter: kobj usbconfig.
+<4>[    2.237976] Name kobj usbconfig.
+<4>[    2.238006] uevent: kobj usbconfig.
+<4>[    2.238006] ACTION=add.
+<4>[    2.238006] DEVPATH=/dwc_usb/usbconfig.
+<4>[    2.238037] SUBSYSTEM=dwc_usb.
+<4>[    2.238037] USBEVENT=usb_device_in.
+<4>[    2.238586] rtv:-2 
+<6>[    2.238616] battery: usb detect send message 1
+<6>[    2.238616] zDrvRpMsg_Write 4
+<4>[    2.295440] Ramdump maybe happens before collect server init done, please check!
+<5>[    6.514984] jffs2: notice: (686) check_node_data: wrong data CRC in data node at 0x00d66fa4: read 0x1b74a5df, calculated 0xdf96090f.
+<4>[    8.725128] attrname: usbPlug.
+<4>[    8.849212] attrname: sysId.
+<4>[    8.868438] enable function:rndis 
+<4>[    8.868469] enable function:acm 
+<4>[    8.868499] enable function:adb 
+<4>[    9.041351] #####enable_store@1793:USB ENABLE
+<4>[    9.057006] #####enable_store@1811:function name:rndis
+<4>[    9.057037] #####enable_store@1811:function name:acm
+<4>[    9.057067] #####enable_store@1811:function name:adb
+<6>[    9.057098] rndis_function_bind_config MAC: 00:00:00:00:00:00
+<6>[    9.057373] gether_setup_name_num,nand_NvRead,ether addr:FF:FF:FF:FF:FF:FF
+<6>[    9.057373] nand_NvRead ok
+<6>[    9.057434] random_ether_addr ok
+<6>[    9.095825] usblan0: MAC 5a:4d:81:ec:f3:17
+<6>[    9.095855] usblan0: HOST MAC 00:a0:c6:00:00:00
+<4>[    9.095947] #####acm_function_bind_config@816:acm config, instances:3
+<4>[    9.095947] #####acm_function_bind_config@820:instance :0
+<4>[    9.095977] #####gser_bind_config@349:PORT_NUM:0
+<4>[    9.096008] #####gser_bind_config@359:MALLOC before
+<4>[    9.096008] #####gser_bind_config@365:MALLOC end
+<4>[    9.096038] #####acm_function_bind_config@822:ret:0
+<4>[    9.096069] #####acm_function_bind_config@820:instance :1
+<4>[    9.096099] #####gser_bind_config@349:PORT_NUM:1
+<4>[    9.096099] #####gser_bind_config@359:MALLOC before
+<4>[    9.096130] #####gser_bind_config@365:MALLOC end
+<4>[    9.096130] #####acm_function_bind_config@822:ret:0
+<4>[    9.096160] #####acm_function_bind_config@820:instance :2
+<4>[    9.096191] #####gser_bind_config@349:PORT_NUM:2
+<4>[    9.096191] #####gser_bind_config@359:MALLOC before
+<4>[    9.096221] #####gser_bind_config@365:MALLOC end
+<4>[    9.096252] #####acm_function_bind_config@822:ret:0
+<6>[    9.096282] adb_bind_config
+<4>[    9.098358] Using Descriptor DMA mode
+<4>[    9.098388] Periodic Transfer Interrupt Enhancement - disabled
+<4>[    9.098388] Multiprocessor Interrupt Enhancement - disabled
+<4>[    9.098419] OTG VER PARAM: 0, OTG VER FLAG: 0
+<6>[    9.105316] dwc_otg_suspend_irq, 575,wake_unlock, usbclk:0x0000001e, USBMODCFG:0x00032020
+<6>[    9.215881] dwc_otg_wakeup_irq, 597,wake_lock, usbclk:0x0000001e, USBMODCFG:0x00032020
+<7>[    9.449035] usblan0: qlen 1024
+<6>[    9.449096] gserial connect ttyGS0
+<6>[    9.450073] gserial_inform_work,in
+<6>[    9.461486] gserial_inform_work,end
+<7>[    9.690155] usblan0: eth_open
+<6>[    9.694732] device usblan0 entered promiscuous mode
+<4>[   13.555541] parse_nofast_proto receve:21+22+23+25+53+69+110+115+123+443+500+1352+1723+1990+1991+1992+1993+1994+1995+1996+1997+1998+4500+5060, 0xc10a9b30, 0xc10a9b30, c:+ 
+<4>[   13.591125]  network ioctl device is open!
+<4>[   13.644439] cplog_open
+<4>[   13.644470] cplog_open success
+<4>[   13.691467] attrname: netname.
+<4>[   19.482727] DEBUG:timer_callback:: Timer ep timer callback
+<4>[   19.482818] DEBUG:timer_callback:: Timer ep timer callback
+<4>[   23.662719] DEBUG:timer_callback:: Timer ep timer callback
+<4>[   29.502624] DEBUG:timer_callback:: Timer ep timer callback
+<4>[   29.502777] DEBUG:timer_callback:: Timer ep timer callback
+<4>[   30.722686] DEBUG:timer_callback:: Timer ep timer callback
+<4>[   33.682647] DEBUG:timer_callback:: Timer ep timer callback
+<4>[   39.522766] DEBUG:timer_callback:: Timer ep timer callback
+<4>[   39.522857] DEBUG:timer_callback:: Timer ep timer callback
+<4>[   43.702667] DEBUG:timer_callback:: Timer ep timer callback

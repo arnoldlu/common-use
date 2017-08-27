@@ -1,0 +1,43 @@
+<?xml version="1.0" standalone="no"?> 
+<svg width="2000" height="100%" version="1.1" xmlns="http://www.w3.org/2000/svg">
+<rect x="5.67481482302848" width="1.74817595138827" y="150" height="145" style="fill:rgb(0,0,255);fill-opacity:0.5;stroke-width:1;stroke:rgb(0,0,0)"/>
+<text transform="translate(6.67481482302848,154) rotate(90)" font-size="3pt">customize_machine</text>
+<rect x="8.24788765191165" width="30.0573826842899" y="150" height="145" style="fill:rgb(0,255,0);fill-opacity:0.5;stroke-width:1;stroke:rgb(0,0,0)"/>
+<text transform="translate(14.2478876519116,154) rotate(90)">param_sysfs_init</text>
+<rect x="39.525858245365" width="3.26607269582187" y="150" height="145" style="fill:rgb(255,0,20);fill-opacity:0.5;stroke-width:1;stroke:rgb(0,0,0)"/>
+<text transform="translate(40.525858245365,154) rotate(90)" font-size="3pt">zx29_dma_driver_init</text>
+<rect x="52.5577153375321" width="10.8220416038322" y="150" height="145" style="fill:rgb(255,255,20);fill-opacity:0.5;stroke-width:1;stroke:rgb(0,0,0)"/>
+<text transform="translate(53.5577153375321,154) rotate(90)" font-size="3pt">inet_init</text>
+<rect x="70.8027477157811" width="2.17846292025193" y="150" height="145" style="fill:rgb(255,0,255);fill-opacity:0.5;stroke-width:1;stroke:rgb(0,0,0)"/>
+<text transform="translate(71.8027477157811,154) rotate(90)" font-size="3pt">pty_init</text>
+<rect x="74.3336955557527" width="9.33657855051894" y="150" height="145" style="fill:rgb(0,255,255);fill-opacity:0.5;stroke-width:1;stroke:rgb(0,0,0)"/>
+<text transform="translate(75.3336955557527,154) rotate(90)" font-size="3pt">brd_init</text>
+<rect x="83.6702741062716" width="5.04776346136786" y="150" height="145" style="fill:rgb(0,128,255);fill-opacity:0.5;stroke-width:1;stroke:rgb(0,0,0)"/>
+<text transform="translate(84.6702741062716,154) rotate(90)" font-size="3pt">loop_init</text>
+<rect x="90.8629856737337" width="52.88853898696" y="150" height="145" style="fill:rgb(0,255,128);fill-opacity:0.5;stroke-width:1;stroke:rgb(0,0,0)"/>
+<text transform="translate(96.8629856737337,154) rotate(90)">spifc_dt_driver_init</text>
+<rect x="146.687854830125" width="450.786142774772" y="150" height="145" style="fill:rgb(255,0,128);fill-opacity:0.5;stroke-width:1;stroke:rgb(0,0,0)"/>
+<text transform="translate(152.687854830125,154) rotate(90)">dwc_otg_driver_init</text>
+<rect x="615.093059744522" width="6.0705058546971" y="150" height="145" style="fill:rgb(255,255,128);fill-opacity:0.5;stroke-width:1;stroke:rgb(0,0,0)"/>
+<text transform="translate(616.093059744522,154) rotate(90)" font-size="3pt">dw_mci_pltfm_driver_init</text>
+<rect x="622.581999024217" width="10.8879901091103" y="150" height="145" style="fill:rgb(255,128,255);fill-opacity:0.5;stroke-width:1;stroke:rgb(0,0,0)"/>
+<text transform="translate(623.581999024217,154) rotate(90)" font-size="3pt">zx29_rpmsg_init</text>
+<rect x="651.286896788787" width="6.82945422691387" y="150" height="145" style="fill:rgb(128,255,255);fill-opacity:0.5;stroke-width:1;stroke:rgb(0,0,0)"/>
+<text transform="translate(652.286896788787,154) rotate(90)" font-size="3pt">ddrnet_init</text>
+<text transform="translate(0,89) rotate(90)">0.03</text>
+<text transform="translate(130,89) rotate(90)">0.15</text>
+<text transform="translate(260,89) rotate(90)">0.27</text>
+<text transform="translate(390,89) rotate(90)">0.39</text>
+<text transform="translate(520,89) rotate(90)">0.51</text>
+<text transform="translate(650,89) rotate(90)">0.63</text>
+<text transform="translate(780,89) rotate(90)">0.75</text>
+<text transform="translate(910,89) rotate(90)">0.87</text>
+<text transform="translate(1040,89) rotate(90)">0.99</text>
+<text transform="translate(1170,89) rotate(90)">1.11</text>
+<text transform="translate(1300,89) rotate(90)">1.23</text>
+<text transform="translate(1430,89) rotate(90)">1.35</text>
+<text transform="translate(1560,89) rotate(90)">1.47</text>
+<text transform="translate(1690,89) rotate(90)">1.59</text>
+<text transform="translate(1820,89) rotate(90)">1.71</text>
+<text transform="translate(1950,89) rotate(90)">1.83</text>
+</svg>

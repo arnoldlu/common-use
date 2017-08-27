@@ -1,0 +1,42 @@
+<?xml version="1.0" standalone="no"?> 
+<svg width="2000" height="100%" version="1.1" xmlns="http://www.w3.org/2000/svg">
+<rect x="5.60266165033551" width="1.73586968549387" y="150" height="145" style="fill:rgb(0,0,255);fill-opacity:0.5;stroke-width:1;stroke:rgb(0,0,0)"/>
+<text transform="translate(6.60266165033551,154) rotate(90)" font-size="3pt">customize_machine</text>
+<rect x="8.15762136058623" width="29.8125151736861" y="150" height="145" style="fill:rgb(0,255,0);fill-opacity:0.5;stroke-width:1;stroke:rgb(0,0,0)"/>
+<text transform="translate(14.1576213605862,154) rotate(90)">param_sysfs_init</text>
+<rect x="39.1821321279164" width="3.17759695056392" y="150" height="145" style="fill:rgb(255,0,20);fill-opacity:0.5;stroke-width:1;stroke:rgb(0,0,0)"/>
+<text transform="translate(40.1821321279164,154) rotate(90)" font-size="3pt">zx29_dma_driver_init</text>
+<rect x="52.0245619656179" width="10.7458599578192" y="150" height="145" style="fill:rgb(255,255,20);fill-opacity:0.5;stroke-width:1;stroke:rgb(0,0,0)"/>
+<text transform="translate(53.0245619656179,154) rotate(90)" font-size="3pt">inet_init</text>
+<rect x="70.2066428952466" width="2.12984876686447" y="150" height="145" style="fill:rgb(255,0,255);fill-opacity:0.5;stroke-width:1;stroke:rgb(0,0,0)"/>
+<text transform="translate(71.2066428952466,154) rotate(90)" font-size="3pt">pty_init</text>
+<rect x="73.6794557787177" width="8.97671138534308" y="150" height="145" style="fill:rgb(0,255,255);fill-opacity:0.5;stroke-width:1;stroke:rgb(0,0,0)"/>
+<text transform="translate(74.6794557787177,154) rotate(90)" font-size="3pt">brd_init</text>
+<rect x="82.6561671640608" width="4.98002441002231" y="150" height="145" style="fill:rgb(0,128,255);fill-opacity:0.5;stroke-width:1;stroke:rgb(0,0,0)"/>
+<text transform="translate(83.6561671640608,154) rotate(90)" font-size="3pt">loop_init</text>
+<rect x="89.7649668284643" width="52.7126834674123" y="150" height="145" style="fill:rgb(0,255,128);fill-opacity:0.5;stroke-width:1;stroke:rgb(0,0,0)"/>
+<text transform="translate(95.7649668284643,154) rotate(90)">spifc_dt_driver_init</text>
+<rect x="145.393310200516" width="447.777085958622" y="150" height="145" style="fill:rgb(255,0,128);fill-opacity:0.5;stroke-width:1;stroke:rgb(0,0,0)"/>
+<text transform="translate(151.393310200516,154) rotate(90)">dwc_otg_driver_init</text>
+<rect x="610.763118735435" width="6.09433036768621" y="150" height="145" style="fill:rgb(255,255,128);fill-opacity:0.5;stroke-width:1;stroke:rgb(0,0,0)"/>
+<text transform="translate(611.763118735435,154) rotate(90)" font-size="3pt">dw_mci_pltfm_driver_init</text>
+<rect x="618.298102855708" width="10.9755916292452" y="150" height="145" style="fill:rgb(255,128,255);fill-opacity:0.5;stroke-width:1;stroke:rgb(0,0,0)"/>
+<text transform="translate(619.298102855708,154) rotate(90)" font-size="3pt">zx29_rpmsg_init</text>
+<rect x="646.964106697232" width="6.74917298249841" y="150" height="145" style="fill:rgb(128,255,255);fill-opacity:0.5;stroke-width:1;stroke:rgb(0,0,0)"/>
+<text transform="translate(647.964106697232,154) rotate(90)" font-size="3pt">ddrnet_init</text>
+<text transform="translate(0,89) rotate(90)">0.03</text>
+<text transform="translate(130,89) rotate(90)">0.15</text>
+<text transform="translate(260,89) rotate(90)">0.27</text>
+<text transform="translate(390,89) rotate(90)">0.39</text>
+<text transform="translate(520,89) rotate(90)">0.51</text>
+<text transform="translate(650,89) rotate(90)">0.63</text>
+<text transform="translate(780,89) rotate(90)">0.75</text>
+<text transform="translate(910,89) rotate(90)">0.87</text>
+<text transform="translate(1040,89) rotate(90)">0.99</text>
+<text transform="translate(1170,89) rotate(90)">1.12</text>
+<text transform="translate(1300,89) rotate(90)">1.24</text>
+<text transform="translate(1430,89) rotate(90)">1.36</text>
+<text transform="translate(1560,89) rotate(90)">1.48</text>
+<text transform="translate(1690,89) rotate(90)">1.6</text>
+<text transform="translate(1820,89) rotate(90)">1.72</text>
+</svg>

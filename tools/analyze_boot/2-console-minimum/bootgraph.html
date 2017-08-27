@@ -1,0 +1,763 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+	<title>Boot Graph</title>
+	<style type='text/css'>
+		body {overflow-y: scroll;}
+		.stamp {width: 100%;text-align:center;background-color:gray;line-height:30px;color:white;font: 25px Arial;}
+		t0 {color:black;font: bold 30px Times;}
+		t1 {color:black;font: 30px Times;}
+		t2 {color:black;font: 25px Times;}
+		t3 {color:black;font: 20px Times;white-space:nowrap;}
+		t4 {color:black;font: bold 30px Times;line-height:60px;white-space:nowrap;}
+		table {width:100%;}
+		.blue {background-color:rgba(169,208,245,0.4);}
+		.c1 {background-color:rgba(209,0,0,0.4);}
+		.c2 {background-color:rgba(255,102,34,0.4);}
+		.c3 {background-color:rgba(255,218,33,0.4);}
+		.c4 {background-color:rgba(51,221,0,0.4);}
+		.c5 {background-color:rgba(17,51,204,0.4);}
+		.c6 {background-color:rgba(34,0,102,0.4);}
+		.c7 {background-color:rgba(51,0,68,0.4);}
+		.c8 {background-color:rgba(204,255,204,0.4);}
+		.c9 {background-color:rgba(169,208,245,0.4);}
+		.c10 {background-color:rgba(255,255,204,0.4);}
+		.time1 {font: 22px Arial;border:1px solid;}
+		td {text-align: center;}
+		.zoombox {position:relative;width:100%;overflow-x:scroll;-webkit-user-select:none;-moz-user-select:none;user-select:none;}
+		.timeline {position:relative;font-size:14px;cursor:pointer;width:100%;overflow:hidden;background-color:#dddddd;}
+		.thread {position:absolute;height:0%;overflow:hidden;line-height:30px;border:1px solid;text-align:center;white-space:nowrap}
+		.thread:hover {border:1px solid red;z-index:10;}
+		.hover {background-color:white;border:1px solid red;z-index:10;}
+		.phase {position:absolute;overflow:hidden;border:0px;text-align:center;}
+		.phaselet {position:absolute;overflow:hidden;border:0px;text-align:center;height:100px;font-size:24px;}
+		.t {position:absolute;top:0%;height:100%;border-right:1px solid black;}
+		button {height:40px;width:200px;margin-bottom:20px;margin-top:20px;font-size:24px;}
+		.logbtn {position:relative;float:right;height:25px;width:50px;margin-top:3px;margin-bottom:0;font-size:10px;text-align:center;}
+		#devicedetail {height:100px;box-shadow: 5px 5px 20px black;}
+		.version {position:relative;float:left;color:white;font-size:10px;line-height:30px;margin-left:10px;}
+	</style>
+</head>
+<body>
+<div class="version">AnalyzeBoot v1.1</div><div class="stamp">lenovo-Product 3.4.110 boot May 05 2017, 05:26:55 PM</div>
+<table class="time1">
+<tr><td class="blue">Time from Kernel Boot to start of User Mode: <b>1847 ms</b></td></tr>
+</table>
+<center><button id="zoomin">ZOOM IN</button><button id="zoomout">ZOOM OUT</button><button id="zoomdef">ZOOM 1:1</button></center>
+<div id="dmesgzoombox" class="zoombox">
+<div id="dmesg" class="timeline" style="height:220px">
+<div class="phase" style="left:0%;width:100%;top:20.000px;height:200.000px;background-color:white"></div>
+<div id="timescale">
+<div class="t" style="right:100.000%"></div>
+<div class="t" style="right:94.587%">100ms</div>
+<div class="t" style="right:89.174%">200ms</div>
+<div class="t" style="right:83.761%">300ms</div>
+<div class="t" style="right:78.348%">400ms</div>
+<div class="t" style="right:72.935%">500ms</div>
+<div class="t" style="right:67.522%">600ms</div>
+<div class="t" style="right:62.109%">700ms</div>
+<div class="t" style="right:56.695%">800ms</div>
+<div class="t" style="right:51.282%">900ms</div>
+<div class="t" style="right:45.869%">1000ms</div>
+<div class="t" style="right:40.456%">1100ms</div>
+<div class="t" style="right:35.043%">1200ms</div>
+<div class="t" style="right:29.630%">1300ms</div>
+<div class="t" style="right:24.217%">1400ms</div>
+<div class="t" style="right:18.804%">1500ms</div>
+<div class="t" style="right:13.391%">1600ms</div>
+<div class="t" style="right:7.978%">1700ms</div>
+<div class="t" style="right:2.565%">1800ms</div>
+</div>
+<div id="a336" title="nf_nat_proto_gre_init (0.030 ms) kernel_mode" class="thread c4" style="left:33.782%;top:20.000px;height:100.000px;width:0.002%;">nf_nat_proto_gre_init</div>
+<div id="a333" title="nf_nat_irc_init (0.030 ms) kernel_mode" class="thread c5" style="left:33.772%;top:20.000px;height:100.000px;width:0.002%;">nf_nat_irc_init</div>
+<div id="a405" title="sys_open(/dev/console) (0.183 ms) kernel_mode" class="thread c10" style="left:34.806%;top:20.000px;height:100.000px;width:0.010%;">sys_open(/dev/console)</div>
+<div id="a191" title="noop_init (0.031 ms) kernel_mode" class="thread c6" style="left:5.192%;top:20.000px;height:100.000px;width:0.002%;">noop_init</div>
+<div id="a40" title="customize_machine (1.617 ms) kernel_mode" class="thread c6" style="left:1.944%;top:20.000px;height:100.000px;width:0.088%;">customize_machine</div>
+<div id="a252" title="logcatk_init (0.214 ms) kernel_mode" class="thread c3" style="left:32.793%;top:20.000px;height:100.000px;width:0.012%;">logcatk_init</div>
+<div id="a93" title="blk_scsi_ioctl_init (0.000 ms) kernel_mode" class="thread c8" style="left:4.174%;top:20.000px;height:100.000px;width:0.000%;">blk_scsi_ioctl_init</div>
+<div id="a235" title="evdev_init (0.000 ms) kernel_mode" class="thread c10" style="left:32.378%;top:20.000px;height:100.000px;width:0.000%;">evdev_init</div>
+<div id="a354" title="xfrm6_mode_tunnel_init (0.030 ms) kernel_mode" class="thread c4" style="left:33.913%;top:20.000px;height:100.000px;width:0.002%;">xfrm6_mode_tunnel_init</div>
+<div id="a332" title="init (0.030 ms) kernel_mode" class="thread c7" style="left:33.769%;top:20.000px;height:100.000px;width:0.002%;">init</div>
+<div id="a57" title="genhd_device_init (0.244 ms) kernel_mode" class="thread c9" style="left:3.619%;top:20.000px;height:100.000px;width:0.013%;">genhd_device_init</div>
+<div id="a1" title="start_kernel(->|rest_init) (30.548 ms) kernel_mode" class="thread c4" style="left:0.000%;top:20.000px;height:100.000px;width:1.654%;">start_kernel(->|rest_init)</div>
+<div id="a113" title="timekeeping_init_ops (0.031 ms) kernel_mode" class="thread c5" style="left:4.883%;top:20.000px;height:100.000px;width:0.002%;">timekeeping_init_ops</div>
+<div id="a92" title="anon_inode_init (0.031 ms) kernel_mode" class="thread c2" style="left:4.171%;top:20.000px;height:100.000px;width:0.002%;">anon_inode_init</div>
+<div id="a267" title="pedit_init_module (0.030 ms) kernel_mode" class="thread c7" style="left:33.447%;top:20.000px;height:100.000px;width:0.002%;">pedit_init_module</div>
+<div id="a242" title="init_ladder (0.000 ms) kernel_mode" class="thread c2" style="left:32.446%;top:20.000px;height:100.000px;width:0.000%;">init_ladder</div>
+<div id="a212" title="map_ram_init (0.000 ms) kernel_mode" class="thread c5" style="left:6.163%;top:20.000px;height:100.000px;width:0.000%;">map_ram_init</div>
+<div id="a251" title="logcatf_init (0.244 ms) kernel_mode" class="thread c8" style="left:32.779%;top:20.000px;height:100.000px;width:0.013%;">logcatf_init</div>
+<div id="a180" title="crypto_cbc_module_init (0.030 ms) kernel_mode" class="thread c7" style="left:5.146%;top:20.000px;height:100.000px;width:0.002%;">crypto_cbc_module_init</div>
+<div id="a343" title="netmap_tg_init (0.031 ms) kernel_mode" class="thread c1" style="left:33.815%;top:20.000px;height:100.000px;width:0.002%;">netmap_tg_init</div>
+<div id="a8" title="init_mmap_min_addr (0.000 ms) kernel_mode" class="thread c4" style="left:1.754%;top:20.000px;height:100.000px;width:0.000%;">init_mmap_min_addr</div>
+<div id="a152" title="proc_version_init (0.031 ms) kernel_mode" class="thread c7" style="left:5.038%;top:20.000px;height:100.000px;width:0.002%;">proc_version_init</div>
+<div id="a22" title="init_script_binfmt (0.030 ms) kernel_mode" class="thread c8" style="left:1.801%;top:20.000px;height:100.000px;width:0.002%;">init_script_binfmt</div>
+<div id="a35" title="tty_class_init (0.092 ms) kernel_mode" class="thread c4" style="left:1.898%;top:20.000px;height:100.000px;width:0.005%;">tty_class_init</div>
+<div id="a275" title="dsmark_module_init (0.030 ms) kernel_mode" class="thread c5" style="left:33.475%;top:20.000px;height:100.000px;width:0.002%;">dsmark_module_init</div>
+<div id="a177" title="sha256_generic_mod_init (0.153 ms) kernel_mode" class="thread c8" style="left:5.128%;top:20.000px;height:100.000px;width:0.008%;">sha256_generic_mod_init</div>
+<div id="a17" title="cpu_pm_init (0.030 ms) kernel_mode" class="thread c6" style="left:1.791%;top:20.000px;height:100.000px;width:0.002%;">cpu_pm_init</div>
+<div id="a9" title="init_cpufreq_transition_notifier_list (0.030 ms) kernel_mode" class="thread c2" style="left:1.756%;top:20.000px;height:100.000px;width:0.002%;">init_cpufreq_transition_notifier_list</div>
+<div id="a37" title="spi_init (0.213 ms) kernel_mode" class="thread c4" style="left:1.906%;top:20.000px;height:100.000px;width:0.012%;">spi_init</div>
+<div id="a143" title="proc_cmdline_init (0.031 ms) kernel_mode" class="thread c5" style="left:5.020%;top:20.000px;height:100.000px;width:0.002%;">proc_cmdline_init</div>
+<div id="a140" title="aio_setup (0.061 ms) kernel_mode" class="thread c10" style="left:5.012%;top:20.000px;height:100.000px;width:0.003%;">aio_setup</div>
+<div id="a298" title="nf_conntrack_ftp_init (0.031 ms) kernel_mode" class="thread c7" style="left:33.623%;top:20.000px;height:100.000px;width:0.002%;">nf_conntrack_ftp_init</div>
+<div id="a141" title="proc_locks_init (0.000 ms) kernel_mode" class="thread c3" style="left:5.017%;top:20.000px;height:100.000px;width:0.000%;">proc_locks_init</div>
+<div id="a266" title="ipt_init_module (0.030 ms) kernel_mode" class="thread c6" style="left:33.443%;top:20.000px;height:100.000px;width:0.002%;">ipt_init_module</div>
+<div id="a41" title="exceptions_init (0.000 ms) kernel_mode" class="thread c2" style="left:2.034%;top:20.000px;height:100.000px;width:0.000%;">exceptions_init</div>
+<div id="a385" title="kmemleak_late_init (0.061 ms) kernel_mode" class="thread c8" style="left:34.246%;top:20.000px;height:100.000px;width:0.003%;">kmemleak_late_init</div>
+<div id="a357" title="ip6table_filter_init (0.092 ms) kernel_mode" class="thread c4" style="left:33.926%;top:20.000px;height:100.000px;width:0.005%;">ip6table_filter_init</div>
+<div id="a285" title="init_fw (0.000 ms) kernel_mode" class="thread c3" style="left:33.562%;top:20.000px;height:100.000px;width:0.000%;">init_fw</div>
+<div id="a246" title="dw_mci_pltfm_driver_init (5.677 ms) kernel_mode" class="thread c8" style="left:32.459%;top:20.000px;height:100.000px;width:0.307%;">dw_mci_pltfm_driver_init</div>
+<div id="a231" title="dwc_otg_driver_init (417.114 ms) kernel_mode" class="thread c2" style="left:8.993%;top:20.000px;height:100.000px;width:22.579%;">dwc_otg_driver_init</div>
+<div id="a55" title="blk_softirq_init (0.031 ms) kernel_mode" class="thread c6" style="left:3.616%;top:20.000px;height:100.000px;width:0.002%;">blk_softirq_init</div>
+<div id="a289" title="init_basic (0.030 ms) kernel_mode" class="thread c6" style="left:33.574%;top:20.000px;height:100.000px;width:0.002%;">init_basic</div>
+<div id="a306" title="classify_tg_init (0.031 ms) kernel_mode" class="thread c8" style="left:33.652%;top:20.000px;height:100.000px;width:0.002%;">classify_tg_init</div>
+<div id="a280" title="atm_init (0.000 ms) kernel_mode" class="thread c4" style="left:33.543%;top:20.000px;height:100.000px;width:0.000%;">atm_init</div>
+<div id="a26" title="cpufreq_core_init (0.000 ms) kernel_mode" class="thread c10" style="left:1.809%;top:20.000px;height:100.000px;width:0.000%;">cpufreq_core_init</div>
+<div id="a167" title="ipc_init (0.061 ms) kernel_mode" class="thread c8" style="left:5.081%;top:20.000px;height:100.000px;width:0.003%;">ipc_init</div>
+<div id="a393" title="zx29_disable_unused_clocks (1.282 ms) kernel_mode" class="thread c8" style="left:34.628%;top:20.000px;height:100.000px;width:0.069%;">zx29_disable_unused_clocks</div>
+<div id="a201" title="brd_init (8.362 ms) kernel_mode" class="thread c4" style="left:5.377%;top:20.000px;height:100.000px;width:0.453%;">brd_init</div>
+<div id="a102" title="sched_clock_syscore_init (0.000 ms) kernel_mode" class="thread c1" style="left:4.855%;top:20.000px;height:100.000px;width:0.000%;">sched_clock_syscore_init</div>
+<div id="a347" title="tcp_diag_init (0.031 ms) kernel_mode" class="thread c9" style="left:33.828%;top:20.000px;height:100.000px;width:0.002%;">tcp_diag_init</div>
+<div id="a381" title="pm_qos_power_init (0.885 ms) kernel_mode" class="thread c9" style="left:34.187%;top:20.000px;height:100.000px;width:0.048%;">pm_qos_power_init</div>
+<div id="a274" title="ingress_module_init (0.030 ms) kernel_mode" class="thread c6" style="left:33.472%;top:20.000px;height:100.000px;width:0.002%;">ingress_module_init</div>
+<div id="a50" title="fsnotify_notification_init (0.031 ms) kernel_mode" class="thread c6" style="left:3.603%;top:20.000px;height:100.000px;width:0.002%;">fsnotify_notification_init</div>
+<div id="a388" title="deferred_probe_initcall (0.122 ms) kernel_mode" class="thread c8" style="left:34.261%;top:20.000px;height:100.000px;width:0.007%;">deferred_probe_initcall</div>
+<div id="a187" title="crypto_authenc_esn_module_init (0.000 ms) kernel_mode" class="thread c6" style="left:5.179%;top:20.000px;height:100.000px;width:0.000%;">crypto_authenc_esn_module_init</div>
+<div id="a324" title="tunnel4_init (0.030 ms) kernel_mode" class="thread c6" style="left:33.731%;top:20.000px;height:100.000px;width:0.002%;">tunnel4_init</div>
+<div id="a6" title="rcu_scheduler_really_started (0.031 ms) kernel_mode" class="thread c3" style="left:1.678%;top:20.000px;height:100.000px;width:0.002%;">rcu_scheduler_really_started</div>
+<div id="a28" title="sock_init (0.153 ms) kernel_mode" class="thread c4" style="left:1.812%;top:20.000px;height:100.000px;width:0.008%;">sock_init</div>
+<div id="a241" title="cpufreq_gov_dbs_init (0.031 ms) kernel_mode" class="thread c5" style="left:32.442%;top:20.000px;height:100.000px;width:0.002%;">cpufreq_gov_dbs_init</div>
+<div id="a199" title="rand_initialize (0.061 ms) kernel_mode" class="thread c1" style="left:5.369%;top:20.000px;height:100.000px;width:0.003%;">rand_initialize</div>
+<div id="a369" title="ebtables_init (0.031 ms) kernel_mode" class="thread c6" style="left:34.124%;top:20.000px;height:100.000px;width:0.002%;">ebtables_init</div>
+<div id="a291" title="init_em_text (0.031 ms) kernel_mode" class="thread c10" style="left:33.579%;top:20.000px;height:100.000px;width:0.002%;">init_em_text</div>
+<div id="a331" title="nf_nat_ftp_init (0.030 ms) kernel_mode" class="thread c7" style="left:33.766%;top:20.000px;height:100.000px;width:0.002%;">nf_nat_ftp_init</div>
+<div id="a260" title="netioctl_init (0.030 ms) kernel_mode" class="thread c8" style="left:33.420%;top:20.000px;height:100.000px;width:0.002%;">netioctl_init</div>
+<div id="a111" title="init_sched_debug_procfs (0.031 ms) kernel_mode" class="thread c3" style="left:4.880%;top:20.000px;height:100.000px;width:0.002%;">init_sched_debug_procfs</div>
+<div id="a121" title="user_namespaces_init (0.061 ms) kernel_mode" class="thread c10" style="left:4.944%;top:20.000px;height:100.000px;width:0.003%;">user_namespaces_init</div>
+<div id="a302" title="nf_conntrack_tftp_init (0.030 ms) kernel_mode" class="thread c3" style="left:33.638%;top:20.000px;height:100.000px;width:0.002%;">nf_conntrack_tftp_init</div>
+<div id="a304" title="tcpudp_mt_init (0.031 ms) kernel_mode" class="thread c8" style="left:33.645%;top:20.000px;height:100.000px;width:0.002%;">tcpudp_mt_init</div>
+<div id="a70" title="icp_init (0.733 ms) kernel_mode" class="thread c8" style="left:3.973%;top:20.000px;height:100.000px;width:0.040%;">icp_init</div>
+<div id="a131" title="memblock_init_debugfs (0.061 ms) kernel_mode" class="thread c5" style="left:4.986%;top:20.000px;height:100.000px;width:0.003%;">memblock_init_debugfs</div>
+<div id="a189" title="prng_mod_init (0.061 ms) kernel_mode" class="thread c6" style="left:5.185%;top:20.000px;height:100.000px;width:0.003%;">prng_mod_init</div>
+<div id="a110" title="proc_schedstat_init (0.000 ms) kernel_mode" class="thread c6" style="left:4.878%;top:20.000px;height:100.000px;width:0.000%;">proc_schedstat_init</div>
+<div id="a367" title="ipsec_pfkey_init (0.030 ms) kernel_mode" class="thread c2" style="left:34.111%;top:20.000px;height:100.000px;width:0.002%;">ipsec_pfkey_init</div>
+<div id="a268" title="skbedit_init_module (0.031 ms) kernel_mode" class="thread c5" style="left:33.452%;top:20.000px;height:100.000px;width:0.002%;">skbedit_init_module</div>
+<div id="a144" title="proc_consoles_init (0.030 ms) kernel_mode" class="thread c3" style="left:5.022%;top:20.000px;height:100.000px;width:0.002%;">proc_consoles_init</div>
+<div id="a134" title="fcntl_init (0.031 ms) kernel_mode" class="thread c7" style="left:4.994%;top:20.000px;height:100.000px;width:0.002%;">fcntl_init</div>
+<div id="a363" title="hbh_mt6_init (0.031 ms) kernel_mode" class="thread c2" style="left:33.962%;top:20.000px;height:100.000px;width:0.002%;">hbh_mt6_init</div>
+<div id="a13" title="v6_userpage_init (0.031 ms) kernel_mode" class="thread c9" style="left:1.781%;top:20.000px;height:100.000px;width:0.002%;">v6_userpage_init</div>
+<div id="a230" title="cdrom_init (0.061 ms) kernel_mode" class="thread c5" style="left:8.990%;top:20.000px;height:100.000px;width:0.003%;">cdrom_init</div>
+<div id="a377" title="zx_debug_init (0.152 ms) kernel_mode" class="thread c8" style="left:34.167%;top:20.000px;height:100.000px;width:0.008%;">zx_debug_init</div>
+<div id="a233" title="kset_usb_init (0.092 ms) kernel_mode" class="thread c6" style="left:32.370%;top:20.000px;height:100.000px;width:0.005%;">kset_usb_init</div>
+<div id="a146" title="proc_devices_init (0.031 ms) kernel_mode" class="thread c2" style="left:5.027%;top:20.000px;height:100.000px;width:0.002%;">proc_devices_init</div>
+<div id="a116" title="alarmtimer_init (0.336 ms) kernel_mode" class="thread c2" style="left:4.918%;top:20.000px;height:100.000px;width:0.018%;">alarmtimer_init</div>
+<div id="a10" title="net_ns_init (0.122 ms) kernel_mode" class="thread c9" style="left:1.759%;top:20.000px;height:100.000px;width:0.007%;">net_ns_init</div>
+<div id="a294" title="nfnetlink_queue_init (0.030 ms) kernel_mode" class="thread c5" style="left:33.594%;top:20.000px;height:100.000px;width:0.002%;">nfnetlink_queue_init</div>
+<div id="a402" title="netlog_late_init (0.031 ms) kernel_mode" class="thread c8" style="left:34.795%;top:20.000px;height:100.000px;width:0.002%;">netlog_late_init</div>
+<div id="a112" title="suspend_time_syscore_init (0.030 ms) kernel_mode" class="thread c9" style="left:4.881%;top:20.000px;height:100.000px;width:0.002%;">suspend_time_syscore_init</div>
+<div id="a221" title="tun_init (0.244 ms) kernel_mode" class="thread c5" style="left:8.899%;top:20.000px;height:100.000px;width:0.013%;">tun_init</div>
+<div id="a390" title="pmu_debug_init (0.091 ms) kernel_mode" class="thread c4" style="left:34.276%;top:20.000px;height:100.000px;width:0.005%;">pmu_debug_init</div>
+<div id="a106" title="uid_cache_init (0.031 ms) kernel_mode" class="thread c9" style="left:4.863%;top:20.000px;height:100.000px;width:0.002%;">uid_cache_init</div>
+<div id="a263" title="blackhole_module_init (0.031 ms) kernel_mode" class="thread c6" style="left:33.432%;top:20.000px;height:100.000px;width:0.002%;">blackhole_module_init</div>
+<div id="a175" title="md5_mod_init (0.092 ms) kernel_mode" class="thread c9" style="left:5.118%;top:20.000px;height:100.000px;width:0.005%;">md5_mod_init</div>
+<div id="a60" title="misc_init (0.122 ms) kernel_mode" class="thread c10" style="left:3.798%;top:20.000px;height:100.000px;width:0.007%;">misc_init</div>
+<div id="a53" title="blk_settings_init (0.031 ms) kernel_mode" class="thread c1" style="left:3.613%;top:20.000px;height:100.000px;width:0.002%;">blk_settings_init</div>
+<div id="a396" title="net_secret_init (0.092 ms) kernel_mode" class="thread c10" style="left:34.753%;top:20.000px;height:100.000px;width:0.005%;">net_secret_init</div>
+<div id="a198" title="zx29_uart_init (1.007 ms) kernel_mode" class="thread c10" style="left:5.313%;top:20.000px;height:100.000px;width:0.055%;">zx29_uart_init</div>
+<div id="a355" title="xfrm6_beet_init (0.030 ms) kernel_mode" class="thread c2" style="left:33.916%;top:20.000px;height:100.000px;width:0.002%;">xfrm6_beet_init</div>
+<div id="a391" title="scsi_complete_async_scans (0.000 ms) kernel_mode" class="thread c5" style="left:34.283%;top:20.000px;height:100.000px;width:0.000%;">scsi_complete_async_scans</div>
+<div id="a211" title="init_zftl (0.000 ms) kernel_mode" class="thread c10" style="left:6.162%;top:20.000px;height:100.000px;width:0.000%;">init_zftl</div>
+<div id="a359" title="nf_conntrack_l3proto_ipv6_init (0.061 ms) kernel_mode" class="thread c4" style="left:33.937%;top:20.000px;height:100.000px;width:0.003%;">nf_conntrack_l3proto_ipv6_init</div>
+<div id="a379" title="printk_late_init (0.030 ms) kernel_mode" class="thread c3" style="left:34.180%;top:20.000px;height:100.000px;width:0.002%;">printk_late_init</div>
+<div id="a166" title="init_jffs2_fs (0.214 ms) kernel_mode" class="thread c9" style="left:5.070%;top:20.000px;height:100.000px;width:0.012%;">init_jffs2_fs</div>
+<div id="a244" title="mmc_blk_init (0.122 ms) kernel_mode" class="thread c7" style="left:32.449%;top:20.000px;height:100.000px;width:0.007%;">mmc_blk_init</div>
+<div id="a194" title="init_bm (0.000 ms) kernel_mode" class="thread c9" style="left:5.199%;top:20.000px;height:100.000px;width:0.000%;">init_bm</div>
+<div id="a339" title="iptable_mangle_init (0.061 ms) kernel_mode" class="thread c2" style="left:33.797%;top:20.000px;height:100.000px;width:0.003%;">iptable_mangle_init</div>
+<div id="a329" title="nf_nat_init (0.030 ms) kernel_mode" class="thread c2" style="left:33.759%;top:20.000px;height:100.000px;width:0.002%;">nf_nat_init</div>
+<div id="a334" title="nf_nat_helper_pptp_init (0.030 ms) kernel_mode" class="thread c4" style="left:33.775%;top:20.000px;height:100.000px;width:0.002%;">nf_nat_helper_pptp_init</div>
+<div id="a82" title="wireless_nlevent_init (0.000 ms) kernel_mode" class="thread c9" style="left:4.122%;top:20.000px;height:100.000px;width:0.000%;">wireless_nlevent_init</div>
+<div id="a183" title="aes_init (0.092 ms) kernel_mode" class="thread c5" style="left:5.161%;top:20.000px;height:100.000px;width:0.005%;">aes_init</div>
+<div id="a227" title="pppox_init (0.031 ms) kernel_mode" class="thread c9" style="left:8.962%;top:20.000px;height:100.000px;width:0.002%;">pppox_init</div>
+<div id="a218" title="spidev_init (0.244 ms) kernel_mode" class="thread c3" style="left:8.848%;top:20.000px;height:100.000px;width:0.013%;">spidev_init</div>
+<div id="a368" title="br_init (0.153 ms) kernel_mode" class="thread c4" style="left:34.114%;top:20.000px;height:100.000px;width:0.008%;">br_init</div>
+<div id="a281" title="netem_module_init (0.061 ms) kernel_mode" class="thread c10" style="left:33.544%;top:20.000px;height:100.000px;width:0.003%;">netem_module_init</div>
+<div id="a184" title="arc4_init (0.092 ms) kernel_mode" class="thread c4" style="left:5.166%;top:20.000px;height:100.000px;width:0.005%;">arc4_init</div>
+<div id="a195" title="init_fsm (0.000 ms) kernel_mode" class="thread c8" style="left:5.200%;top:20.000px;height:100.000px;width:0.000%;">init_fsm</div>
+<div id="a21" title="init_misc_binfmt (0.031 ms) kernel_mode" class="thread c5" style="left:1.799%;top:20.000px;height:100.000px;width:0.002%;">init_misc_binfmt</div>
+<div id="a309" title="tcpmss_tg_init (0.031 ms) kernel_mode" class="thread c2" style="left:33.661%;top:20.000px;height:100.000px;width:0.002%;">tcpmss_tg_init</div>
+<div id="a389" title="zx_suspend_init (0.122 ms) kernel_mode" class="thread c9" style="left:34.269%;top:20.000px;height:100.000px;width:0.007%;">zx_suspend_init</div>
+<div id="a29" title="net_inuse_init (0.030 ms) kernel_mode" class="thread c2" style="left:1.820%;top:20.000px;height:100.000px;width:0.002%;">net_inuse_init</div>
+<div id="a58" title="gpiolib_debugfs_init (0.031 ms) kernel_mode" class="thread c5" style="left:3.634%;top:20.000px;height:100.000px;width:0.002%;">gpiolib_debugfs_init</div>
+<div id="a305" title="mark_mt_init (0.031 ms) kernel_mode" class="thread c9" style="left:33.648%;top:20.000px;height:100.000px;width:0.002%;">mark_mt_init</div>
+<div id="a158" title="init_ramfs_fs (0.000 ms) kernel_mode" class="thread c1" style="left:5.055%;top:20.000px;height:100.000px;width:0.000%;">init_ramfs_fs</div>
+<div id="a297" title="ctnetlink_init (0.030 ms) kernel_mode" class="thread c4" style="left:33.619%;top:20.000px;height:100.000px;width:0.002%;">ctnetlink_init</div>
+<div id="a228" title="pppoe_init (0.061 ms) kernel_mode" class="thread c10" style="left:8.963%;top:20.000px;height:100.000px;width:0.003%;">pppoe_init</div>
+<div id="a265" title="gact_init_module (0.061 ms) kernel_mode" class="thread c8" style="left:33.438%;top:20.000px;height:100.000px;width:0.003%;">gact_init_module</div>
+<div id="a16" title="init_jiffies_clocksource (0.031 ms) kernel_mode" class="thread c4" style="left:1.789%;top:20.000px;height:100.000px;width:0.002%;">init_jiffies_clocksource</div>
+<div id="a403" title="tcp_congestion_default (0.031 ms) kernel_mode" class="thread c10" style="left:34.798%;top:20.000px;height:100.000px;width:0.002%;">tcp_congestion_default</div>
+<div id="a170" title="skcipher_module_init (0.031 ms) kernel_mode" class="thread c10" style="left:5.090%;top:20.000px;height:100.000px;width:0.002%;">skcipher_module_init</div>
+<div id="a139" title="inotify_user_setup (0.061 ms) kernel_mode" class="thread c9" style="left:5.009%;top:20.000px;height:100.000px;width:0.003%;">inotify_user_setup</div>
+<div id="a94" title="chr_dev_init (1.434 ms) kernel_mode" class="thread c3" style="left:4.176%;top:20.000px;height:100.000px;width:0.078%;">chr_dev_init</div>
+<div id="a271" title="hfsc_init (0.030 ms) kernel_mode" class="thread c2" style="left:33.462%;top:20.000px;height:100.000px;width:0.002%;">hfsc_init</div>
+<div id="a361" title="frag_mt6_init (0.031 ms) kernel_mode" class="thread c2" style="left:33.956%;top:20.000px;height:100.000px;width:0.002%;">frag_mt6_init</div>
+<div id="a2" title="kernel_init(->|init_post) (1816.467 ms) kernel_mode" class="thread c10" style="left:1.660%;top:120.000px;height:100.000px;width:98.327%;">kernel_init(->|init_post)</div>
+<div id="a83" title="rfkill_init (0.275 ms) kernel_mode" class="thread c6" style="left:4.123%;top:20.000px;height:100.000px;width:0.015%;">rfkill_init</div>
+<div id="a20" title="filelock_init (0.030 ms) kernel_mode" class="thread c3" style="left:1.797%;top:20.000px;height:100.000px;width:0.002%;">filelock_init</div>
+<div id="a310" title="conntrack_mt_init (0.031 ms) kernel_mode" class="thread c5" style="left:33.665%;top:20.000px;height:100.000px;width:0.002%;">conntrack_mt_init</div>
+<div id="a31" title="bdi_class_init (0.366 ms) kernel_mode" class="thread c4" style="left:1.839%;top:20.000px;height:100.000px;width:0.020%;">bdi_class_init</div>
+<div id="a387" title="random32_reseed (0.061 ms) kernel_mode" class="thread c10" style="left:34.256%;top:20.000px;height:100.000px;width:0.003%;">random32_reseed</div>
+<div id="a89" title="clocksource_done_booting (0.031 ms) kernel_mode" class="thread c8" style="left:4.161%;top:20.000px;height:100.000px;width:0.002%;">clocksource_done_booting</div>
+<div id="a132" title="slab_proc_init (0.000 ms) kernel_mode" class="thread c1" style="left:4.990%;top:20.000px;height:100.000px;width:0.000%;">slab_proc_init</div>
+<div id="a11" title="ptrace_break_init (0.031 ms) kernel_mode" class="thread c3" style="left:1.777%;top:20.000px;height:100.000px;width:0.002%;">ptrace_break_init</div>
+<div id="a34" title="zx29_gpio_init (0.489 ms) kernel_mode" class="thread c7" style="left:1.870%;top:20.000px;height:100.000px;width:0.026%;">zx29_gpio_init</div>
+<div id="a208" title="afs_parser_init (0.031 ms) kernel_mode" class="thread c4" style="left:6.155%;top:20.000px;height:100.000px;width:0.002%;">afs_parser_init</div>
+<div id="a386" title="ramdump_init (0.061 ms) kernel_mode" class="thread c10" style="left:34.251%;top:20.000px;height:100.000px;width:0.003%;">ramdump_init</div>
+<div id="a190" title="proc_genhd_init (0.030 ms) kernel_mode" class="thread c1" style="left:5.190%;top:20.000px;height:100.000px;width:0.002%;">proc_genhd_init</div>
+<div id="a64" title="serio_init (0.122 ms) kernel_mode" class="thread c8" style="left:3.854%;top:20.000px;height:100.000px;width:0.007%;">serio_init</div>
+<div id="a172" title="eseqiv_module_init (0.031 ms) kernel_mode" class="thread c6" style="left:5.093%;top:20.000px;height:100.000px;width:0.002%;">eseqiv_module_init</div>
+<div id="a154" title="proc_kmsg_init (0.000 ms) kernel_mode" class="thread c7" style="left:5.043%;top:20.000px;height:100.000px;width:0.000%;">proc_kmsg_init</div>
+<div id="a126" title="init_per_zone_wmark_min (0.061 ms) kernel_mode" class="thread c8" style="left:4.961%;top:20.000px;height:100.000px;width:0.003%;">init_per_zone_wmark_min</div>
+<div id="a365" title="ip6_tunnel_init (1.160 ms) kernel_mode" class="thread c10" style="left:34.038%;top:20.000px;height:100.000px;width:0.063%;">ip6_tunnel_init</div>
+<div id="a171" title="chainiv_module_init (0.030 ms) kernel_mode" class="thread c1" style="left:5.091%;top:20.000px;height:100.000px;width:0.002%;">chainiv_module_init</div>
+<div id="a48" title="default_bdi_init (0.275 ms) kernel_mode" class="thread c1" style="left:3.580%;top:20.000px;height:100.000px;width:0.015%;">default_bdi_init</div>
+<div id="a282" title="drr_init (0.031 ms) kernel_mode" class="thread c10" style="left:33.549%;top:20.000px;height:100.000px;width:0.002%;">drr_init</div>
+<div id="a75" title="pktsched_init (0.000 ms) kernel_mode" class="thread c6" style="left:4.062%;top:20.000px;height:100.000px;width:0.000%;">pktsched_init</div>
+<div id="a161" title="init_iso9660_fs (0.030 ms) kernel_mode" class="thread c8" style="left:5.060%;top:20.000px;height:100.000px;width:0.002%;">init_iso9660_fs</div>
+<div id="a380" title="sched_init_debug (0.030 ms) kernel_mode" class="thread c5" style="left:34.184%;top:20.000px;height:100.000px;width:0.002%;">sched_init_debug</div>
+<div id="a4" title="spawn_ksoftirqd (0.061 ms) kernel_mode" class="thread c2" style="left:1.665%;top:20.000px;height:100.000px;width:0.003%;">spawn_ksoftirqd</div>
+<div id="a117" title="init_tstats_procfs (0.031 ms) kernel_mode" class="thread c5" style="left:4.936%;top:20.000px;height:100.000px;width:0.002%;">init_tstats_procfs</div>
+<div id="a86" title="proc_cpu_init (0.031 ms) kernel_mode" class="thread c1" style="left:4.155%;top:20.000px;height:100.000px;width:0.002%;">proc_cpu_init</div>
+<div id="a335" title="nf_nat_tftp_init (0.030 ms) kernel_mode" class="thread c3" style="left:33.779%;top:20.000px;height:100.000px;width:0.002%;">nf_nat_tftp_init</div>
+<div id="a182" title="twofish_mod_init (0.091 ms) kernel_mode" class="thread c9" style="left:5.156%;top:20.000px;height:100.000px;width:0.005%;">twofish_mod_init</div>
+<div id="a362" title="ipv6header_mt6_init (0.031 ms) kernel_mode" class="thread c2" style="left:33.959%;top:20.000px;height:100.000px;width:0.002%;">ipv6header_mt6_init</div>
+<div id="a255" title="zx297520v3_freq_register (0.061 ms) kernel_mode" class="thread c4" style="left:32.834%;top:20.000px;height:100.000px;width:0.003%;">zx297520v3_freq_register</div>
+<div id="a147" title="proc_interrupts_init (0.031 ms) kernel_mode" class="thread c3" style="left:5.028%;top:20.000px;height:100.000px;width:0.002%;">proc_interrupts_init</div>
+<div id="a181" title="des_generic_mod_init (0.153 ms) kernel_mode" class="thread c1" style="left:5.147%;top:20.000px;height:100.000px;width:0.008%;">des_generic_mod_init</div>
+<div id="a205" title="init_sg (0.152 ms) kernel_mode" class="thread c10" style="left:6.109%;top:20.000px;height:100.000px;width:0.008%;">init_sg</div>
+<div id="a153" title="proc_softirqs_init (0.030 ms) kernel_mode" class="thread c4" style="left:5.040%;top:20.000px;height:100.000px;width:0.002%;">proc_softirqs_init</div>
+<div id="a383" title="suspend_time_debug_init (0.030 ms) kernel_mode" class="thread c2" style="left:34.241%;top:20.000px;height:100.000px;width:0.002%;">suspend_time_debug_init</div>
+<div id="a203" title="init_sd (0.336 ms) kernel_mode" class="thread c7" style="left:6.082%;top:20.000px;height:100.000px;width:0.018%;">init_sd</div>
+<div id="a239" title="cpufreq_gov_userspace_init (0.031 ms) kernel_mode" class="thread c3" style="left:32.439%;top:20.000px;height:100.000px;width:0.002%;">cpufreq_gov_userspace_init</div>
+<div id="a114" title="init_clocksource_sysfs (0.549 ms) kernel_mode" class="thread c6" style="left:4.885%;top:20.000px;height:100.000px;width:0.030%;">init_clocksource_sysfs</div>
+<div id="a204" title="init_sr (0.122 ms) kernel_mode" class="thread c1" style="left:6.101%;top:20.000px;height:100.000px;width:0.007%;">init_sr</div>
+<div id="a56" title="blk_iopoll_setup (0.031 ms) kernel_mode" class="thread c10" style="left:3.618%;top:20.000px;height:100.000px;width:0.002%;">blk_iopoll_setup</div>
+<div id="a293" title="nfnl_acct_init (0.031 ms) kernel_mode" class="thread c8" style="left:33.589%;top:20.000px;height:100.000px;width:0.002%;">nfnl_acct_init</div>
+<div id="a202" title="loop_init (4.639 ms) kernel_mode" class="thread c4" style="left:5.830%;top:20.000px;height:100.000px;width:0.251%;">loop_init</div>
+<div id="a14" title="ksysfs_init (0.061 ms) kernel_mode" class="thread c7" style="left:1.782%;top:20.000px;height:100.000px;width:0.003%;">ksysfs_init</div>
+<div id="a71" title="proto_init (0.031 ms) kernel_mode" class="thread c6" style="left:4.014%;top:20.000px;height:100.000px;width:0.002%;">proto_init</div>
+<div id="a72" title="net_dev_init (0.763 ms) kernel_mode" class="thread c3" style="left:4.016%;top:20.000px;height:100.000px;width:0.041%;">net_dev_init</div>
+<div id="a127" title="kswapd_init (0.061 ms) kernel_mode" class="thread c2" style="left:4.966%;top:20.000px;height:100.000px;width:0.003%;">kswapd_init</div>
+<div id="a395" title="zx_cpufreq_init (0.244 ms) kernel_mode" class="thread c7" style="left:34.739%;top:20.000px;height:100.000px;width:0.013%;">zx_cpufreq_init</div>
+<div id="a328" title="nf_conntrack_l3proto_ipv4_init (0.214 ms) kernel_mode" class="thread c2" style="left:33.744%;top:20.000px;height:100.000px;width:0.012%;">nf_conntrack_l3proto_ipv4_init</div>
+<div id="a164" title="init_nls_iso8859_1 (0.000 ms) kernel_mode" class="thread c7" style="left:5.066%;top:20.000px;height:100.000px;width:0.000%;">init_nls_iso8859_1</div>
+<div id="a155" title="proc_page_init (0.000 ms) kernel_mode" class="thread c6" style="left:5.045%;top:20.000px;height:100.000px;width:0.000%;">proc_page_init</div>
+<div id="a47" title="pm_sysrq_init (0.000 ms) kernel_mode" class="thread c6" style="left:3.578%;top:20.000px;height:100.000px;width:0.000%;">pm_sysrq_init</div>
+<div id="a91" title="eventpoll_init (0.031 ms) kernel_mode" class="thread c7" style="left:4.168%;top:20.000px;height:100.000px;width:0.002%;">eventpoll_init</div>
+<div id="a188" title="krng_mod_init (0.061 ms) kernel_mode" class="thread c1" style="left:5.180%;top:20.000px;height:100.000px;width:0.003%;">krng_mod_init</div>
+<div id="a67" title="power_supply_class_init (0.092 ms) kernel_mode" class="thread c8" style="left:3.941%;top:20.000px;height:100.000px;width:0.005%;">power_supply_class_init</div>
+<div id="a145" title="proc_cpuinfo_init (0.000 ms) kernel_mode" class="thread c9" style="left:5.025%;top:20.000px;height:100.000px;width:0.000%;">proc_cpuinfo_init</div>
+<div id="a115" title="init_timer_list_procfs (0.031 ms) kernel_mode" class="thread c4" style="left:4.914%;top:20.000px;height:100.000px;width:0.002%;">init_timer_list_procfs</div>
+<div id="a122" title="pid_namespaces_init (0.061 ms) kernel_mode" class="thread c10" style="left:4.948%;top:20.000px;height:100.000px;width:0.003%;">pid_namespaces_init</div>
+<div id="a337" title="ip_tables_init (0.061 ms) kernel_mode" class="thread c9" style="left:33.785%;top:20.000px;height:100.000px;width:0.003%;">ip_tables_init</div>
+<div id="a399" title="app_assert_msg_init (0.061 ms) kernel_mode" class="thread c8" style="left:34.785%;top:20.000px;height:100.000px;width:0.003%;">app_assert_msg_init</div>
+<div id="a169" title="crypto_algapi_init (0.030 ms) kernel_mode" class="thread c2" style="left:5.088%;top:20.000px;height:100.000px;width:0.002%;">crypto_algapi_init</div>
+<div id="a382" title="pm_debugfs_init (0.030 ms) kernel_mode" class="thread c4" style="left:34.238%;top:20.000px;height:100.000px;width:0.002%;">pm_debugfs_init</div>
+<div id="a176" title="sha1_generic_mod_init (0.091 ms) kernel_mode" class="thread c10" style="left:5.123%;top:20.000px;height:100.000px;width:0.005%;">sha1_generic_mod_init</div>
+<div id="a236" title="i2c_dev_init (0.610 ms) kernel_mode" class="thread c10" style="left:32.380%;top:20.000px;height:100.000px;width:0.033%;">i2c_dev_init</div>
+<div id="a107" title="init_posix_timers (0.030 ms) kernel_mode" class="thread c10" style="left:4.865%;top:20.000px;height:100.000px;width:0.002%;">init_posix_timers</div>
+<div id="a290" title="init_em_u32 (0.000 ms) kernel_mode" class="thread c5" style="left:33.577%;top:20.000px;height:100.000px;width:0.000%;">init_em_u32</div>
+<div id="a97" title="cpufreq_interactive_init (0.214 ms) kernel_mode" class="thread c7" style="left:4.265%;top:20.000px;height:100.000px;width:0.012%;">cpufreq_interactive_init</div>
+<div id="a109" title="zxic_enable_trace (0.122 ms) kernel_mode" class="thread c9" style="left:4.870%;top:20.000px;height:100.000px;width:0.007%;">zxic_enable_trace</div>
+<div id="a33" title="gpiolib_sysfs_init (0.152 ms) kernel_mode" class="thread c7" style="left:1.862%;top:20.000px;height:100.000px;width:0.008%;">gpiolib_sysfs_init</div>
+<div id="a392" title="ddrnet_init (6.287 ms) kernel_mode" class="thread c3" style="left:34.284%;top:20.000px;height:100.000px;width:0.340%;">ddrnet_init</div>
+<div id="a84" title="net_sysctl_init (0.031 ms) kernel_mode" class="thread c8" style="left:4.138%;top:20.000px;height:100.000px;width:0.002%;">net_sysctl_init</div>
+<div id="a5" title="init_workqueues (0.183 ms) kernel_mode" class="thread c7" style="left:1.668%;top:20.000px;height:100.000px;width:0.010%;">init_workqueues</div>
+<div id="a209" title="init_mtdchar (0.030 ms) kernel_mode" class="thread c1" style="left:6.157%;top:20.000px;height:100.000px;width:0.002%;">init_mtdchar</div>
+<div id="a237" title="watchdog_init (0.397 ms) kernel_mode" class="thread c1" style="left:32.414%;top:20.000px;height:100.000px;width:0.021%;">watchdog_init</div>
+<div id="a156" title="init_devpts_fs (0.061 ms) kernel_mode" class="thread c6" style="left:5.047%;top:20.000px;height:100.000px;width:0.003%;">init_devpts_fs</div>
+<div id="a196" title="pty_init (1.984 ms) kernel_mode" class="thread c1" style="left:5.202%;top:20.000px;height:100.000px;width:0.107%;">pty_init</div>
+<div id="a46" title="param_sysfs_init (27.771 ms) kernel_mode" class="thread c4" style="left:2.073%;top:20.000px;height:100.000px;width:1.503%;">param_sysfs_init</div>
+<div id="a101" title="populate_rootfs (0.184 ms) kernel_mode" class="thread c9" style="left:4.832%;top:20.000px;height:100.000px;width:0.010%;">populate_rootfs</div>
+<div id="a300" title="nf_conntrack_irc_init (0.061 ms) kernel_mode" class="thread c5" style="left:33.630%;top:20.000px;height:100.000px;width:0.003%;">nf_conntrack_irc_init</div>
+<div id="a276" title="sfq_module_init (0.030 ms) kernel_mode" class="thread c3" style="left:33.478%;top:20.000px;height:100.000px;width:0.002%;">sfq_module_init</div>
+<div id="a61" title="zx234290_i2c_init (0.122 ms) kernel_mode" class="thread c1" style="left:3.806%;top:20.000px;height:100.000px;width:0.007%;">zx234290_i2c_init</div>
+<div id="a104" title="proc_execdomains_init (0.030 ms) kernel_mode" class="thread c1" style="left:4.858%;top:20.000px;height:100.000px;width:0.002%;">proc_execdomains_init</div>
+<div id="a213" title="lpddr_probe_init (0.000 ms) kernel_mode" class="thread c7" style="left:6.165%;top:20.000px;height:100.000px;width:0.000%;">lpddr_probe_init</div>
+<div id="a283" title="init_u32 (0.092 ms) kernel_mode" class="thread c10" style="left:33.552%;top:20.000px;height:100.000px;width:0.005%;">init_u32</div>
+<div id="a311" title="dscp_mt_init (0.031 ms) kernel_mode" class="thread c8" style="left:33.668%;top:20.000px;height:100.000px;width:0.002%;">dscp_mt_init</div>
+<div id="a321" title="sysctl_ipv4_init (0.274 ms) kernel_mode" class="thread c8" style="left:33.708%;top:20.000px;height:100.000px;width:0.015%;">sysctl_ipv4_init</div>
+<div id="a397" title="tsp_fastlocal_init (0.030 ms) kernel_mode" class="thread c3" style="left:34.768%;top:20.000px;height:100.000px;width:0.002%;">tsp_fastlocal_init</div>
+<div id="a151" title="proc_uptime_init (0.030 ms) kernel_mode" class="thread c3" style="left:5.037%;top:20.000px;height:100.000px;width:0.002%;">proc_uptime_init</div>
+<div id="a24" title="debugfs_init (0.030 ms) kernel_mode" class="thread c8" style="left:1.804%;top:20.000px;height:100.000px;width:0.002%;">debugfs_init</div>
+<div id="a340" title="nf_nat_standalone_init (0.061 ms) kernel_mode" class="thread c2" style="left:33.802%;top:20.000px;height:100.000px;width:0.003%;">nf_nat_standalone_init</div>
+<div id="a375" title="vlan_proto_init (0.061 ms) kernel_mode" class="thread c4" style="left:34.144%;top:20.000px;height:100.000px;width:0.003%;">vlan_proto_init</div>
+<div id="a185" title="crc32c_mod_init (0.091 ms) kernel_mode" class="thread c9" style="left:5.171%;top:20.000px;height:100.000px;width:0.005%;">crc32c_mod_init</div>
+<div id="a296" title="nf_ct_proto_gre_init (0.061 ms) kernel_mode" class="thread c6" style="left:33.614%;top:20.000px;height:100.000px;width:0.003%;">nf_ct_proto_gre_init</div>
+<div id="a98" title="sysctl_core_init (0.092 ms) kernel_mode" class="thread c6" style="left:4.278%;top:20.000px;height:100.000px;width:0.005%;">sysctl_core_init</div>
+<div id="a307" title="dscp_tg_init (0.031 ms) kernel_mode" class="thread c2" style="left:33.655%;top:20.000px;height:100.000px;width:0.002%;">dscp_tg_init</div>
+<div id="a338" title="iptable_filter_init (0.061 ms) kernel_mode" class="thread c10" style="left:33.792%;top:20.000px;height:100.000px;width:0.003%;">iptable_filter_init</div>
+<div id="a371" title="ebtable_filter_init (0.030 ms) kernel_mode" class="thread c2" style="left:34.132%;top:20.000px;height:100.000px;width:0.002%;">ebtable_filter_init</div>
+<div id="a250" title="initialize_usb_detect_ipc_init (0.091 ms) kernel_mode" class="thread c10" style="left:32.773%;top:20.000px;height:100.000px;width:0.005%;">initialize_usb_detect_ipc_init</div>
+<div id="a277" title="tbf_module_init (0.030 ms) kernel_mode" class="thread c9" style="left:33.481%;top:20.000px;height:100.000px;width:0.002%;">tbf_module_init</div>
+<div id="a120" title="kallsyms_init (0.031 ms) kernel_mode" class="thread c2" style="left:4.943%;top:20.000px;height:100.000px;width:0.002%;">kallsyms_init</div>
+<div id="a262" title="snap_init (0.061 ms) kernel_mode" class="thread c6" style="left:33.427%;top:20.000px;height:100.000px;width:0.003%;">snap_init</div>
+<div id="a65" title="input_init (0.122 ms) kernel_mode" class="thread c2" style="left:3.861%;top:20.000px;height:100.000px;width:0.007%;">input_init</div>
+<div id="a77" title="tc_action_init (0.000 ms) kernel_mode" class="thread c10" style="left:4.065%;top:20.000px;height:100.000px;width:0.000%;">tc_action_init</div>
+<div id="a162" title="init_nls_cp936 (0.000 ms) kernel_mode" class="thread c3" style="left:5.063%;top:20.000px;height:100.000px;width:0.000%;">init_nls_cp936</div>
+<div id="a299" title="nf_conntrack_h323_init (0.031 ms) kernel_mode" class="thread c3" style="left:33.627%;top:20.000px;height:100.000px;width:0.002%;">nf_conntrack_h323_init</div>
+<div id="a27" title="cpuidle_init (0.030 ms) kernel_mode" class="thread c4" style="left:1.811%;top:20.000px;height:100.000px;width:0.002%;">cpuidle_init</div>
+<div id="a119" title="proc_modules_init (0.000 ms) kernel_mode" class="thread c4" style="left:4.941%;top:20.000px;height:100.000px;width:0.000%;">proc_modules_init</div>
+<div id="a87" title="dma_debug_do_init (0.030 ms) kernel_mode" class="thread c8" style="left:4.156%;top:20.000px;height:100.000px;width:0.002%;">dma_debug_do_init</div>
+<div id="a129" title="mm_sysfs_init (0.214 ms) kernel_mode" class="thread c3" style="left:4.972%;top:20.000px;height:100.000px;width:0.012%;">mm_sysfs_init</div>
+<div id="a322" title="esp4_init (0.030 ms) kernel_mode" class="thread c2" style="left:33.724%;top:20.000px;height:100.000px;width:0.002%;">esp4_init</div>
+<div id="a159" title="init_fat_fs (0.030 ms) kernel_mode" class="thread c9" style="left:5.057%;top:20.000px;height:100.000px;width:0.002%;">init_fat_fs</div>
+<div id="a247" title="timer_trig_init (0.031 ms) kernel_mode" class="thread c10" style="left:32.768%;top:20.000px;height:100.000px;width:0.002%;">timer_trig_init</div>
+<div id="a326" title="xfrm4_mode_tunnel_init (0.031 ms) kernel_mode" class="thread c2" style="left:33.737%;top:20.000px;height:100.000px;width:0.002%;">xfrm4_mode_tunnel_init</div>
+<div id="a258" title="flow_cache_init_global (0.091 ms) kernel_mode" class="thread c7" style="left:33.399%;top:20.000px;height:100.000px;width:0.005%;">flow_cache_init_global</div>
+<div id="a366" title="packet_init (0.091 ms) kernel_mode" class="thread c4" style="left:34.104%;top:20.000px;height:100.000px;width:0.005%;">packet_init</div>
+<div id="a315" title="mac_mt_init (0.031 ms) kernel_mode" class="thread c7" style="left:33.690%;top:20.000px;height:100.000px;width:0.002%;">mac_mt_init</div>
+<div id="a44" title="topology_init (0.153 ms) kernel_mode" class="thread c5" style="left:2.058%;top:20.000px;height:100.000px;width:0.008%;">topology_init</div>
+<div id="a256" title="zx29_rpmsg_init (10.224 ms) kernel_mode" class="thread c9" style="left:32.839%;top:20.000px;height:100.000px;width:0.553%;">zx29_rpmsg_init</div>
+<div id="a406" title="ramdisk_execute_command (1203.888 ms) kernel_mode" class="thread c8" style="left:34.818%;top:20.000px;height:100.000px;width:65.167%;">ramdisk_execute_command</div>
+<div id="a292" title="nfnetlink_init (0.092 ms) kernel_mode" class="thread c1" style="left:33.582%;top:20.000px;height:100.000px;width:0.005%;">nfnetlink_init</div>
+<div id="a66" title="i2c_adap_zx29_init (1.312 ms) kernel_mode" class="thread c1" style="left:3.869%;top:20.000px;height:100.000px;width:0.071%;">i2c_adap_zx29_init</div>
+<div id="a254" title="cplog_init (0.244 ms) kernel_mode" class="thread c5" style="left:32.819%;top:20.000px;height:100.000px;width:0.013%;">cplog_init</div>
+<div id="a314" title="limit_mt_init (0.030 ms) kernel_mode" class="thread c5" style="left:33.686%;top:20.000px;height:100.000px;width:0.002%;">limit_mt_init</div>
+<div id="a214" title="physmap_init (0.183 ms) kernel_mode" class="thread c2" style="left:6.167%;top:20.000px;height:100.000px;width:0.010%;">physmap_init</div>
+<div id="a179" title="crypto_ecb_module_init (0.031 ms) kernel_mode" class="thread c9" style="left:5.144%;top:20.000px;height:100.000px;width:0.002%;">crypto_ecb_module_init</div>
+<div id="a39" title="gate_vma_init (0.031 ms) kernel_mode" class="thread c8" style="left:1.943%;top:20.000px;height:100.000px;width:0.002%;">gate_vma_init</div>
+<div id="a325" title="xfrm4_transport_init (0.030 ms) kernel_mode" class="thread c9" style="left:33.734%;top:20.000px;height:100.000px;width:0.002%;">xfrm4_transport_init</div>
+<div id="a197" title="sysrq_init (0.030 ms) kernel_mode" class="thread c10" style="left:5.311%;top:20.000px;height:100.000px;width:0.002%;">sysrq_init</div>
+<div id="a173" title="hmac_module_init (0.000 ms) kernel_mode" class="thread c2" style="left:5.096%;top:20.000px;height:100.000px;width:0.000%;">hmac_module_init</div>
+<div id="a54" title="blk_ioc_init (0.030 ms) kernel_mode" class="thread c5" style="left:3.614%;top:20.000px;height:100.000px;width:0.002%;">blk_ioc_init</div>
+<div id="a99" title="inet_init (10.010 ms) kernel_mode" class="thread c4" style="left:4.285%;top:20.000px;height:100.000px;width:0.542%;">inet_init</div>
+<div id="a257" title="sock_diag_init (0.061 ms) kernel_mode" class="thread c4" style="left:33.394%;top:20.000px;height:100.000px;width:0.003%;">sock_diag_init</div>
+<div id="a308" title="hl_tg_init (0.031 ms) kernel_mode" class="thread c8" style="left:33.658%;top:20.000px;height:100.000px;width:0.002%;">hl_tg_init</div>
+<div id="a401" title="mnl_init (0.061 ms) kernel_mode" class="thread c9" style="left:34.791%;top:20.000px;height:100.000px;width:0.003%;">mnl_init</div>
+<div id="a118" title="futex_init (0.030 ms) kernel_mode" class="thread c8" style="left:4.938%;top:20.000px;height:100.000px;width:0.002%;">futex_init</div>
+<div id="a42" title="dma_bus_init (0.092 ms) kernel_mode" class="thread c3" style="left:2.035%;top:20.000px;height:100.000px;width:0.005%;">dma_bus_init</div>
+<div id="a52" title="cryptomgr_init (0.030 ms) kernel_mode" class="thread c1" style="left:3.611%;top:20.000px;height:100.000px;width:0.002%;">cryptomgr_init</div>
+<div id="a346" title="inet_diag_init (0.031 ms) kernel_mode" class="thread c4" style="left:33.825%;top:20.000px;height:100.000px;width:0.002%;">inet_diag_init</div>
+<div id="a222" title="ppp_init (0.336 ms) kernel_mode" class="thread c8" style="left:8.912%;top:20.000px;height:100.000px;width:0.018%;">ppp_init</div>
+<div id="a7" title="ipc_ns_init (0.000 ms) kernel_mode" class="thread c8" style="left:1.753%;top:20.000px;height:100.000px;width:0.000%;">ipc_ns_init</div>
+<div id="a316" title="policy_mt_init (0.031 ms) kernel_mode" class="thread c8" style="left:33.693%;top:20.000px;height:100.000px;width:0.002%;">policy_mt_init</div>
+<div id="a349" title="xfrm_user_init (0.061 ms) kernel_mode" class="thread c9" style="left:33.837%;top:20.000px;height:100.000px;width:0.003%;">xfrm_user_init</div>
+<div id="a360" title="nf_defrag_init (0.030 ms) kernel_mode" class="thread c6" style="left:33.944%;top:20.000px;height:100.000px;width:0.002%;">nf_defrag_init</div>
+<div id="a341" title="iptable_raw_init (0.061 ms) kernel_mode" class="thread c4" style="left:33.807%;top:20.000px;height:100.000px;width:0.003%;">iptable_raw_init</div>
+<div id="a3" title="init_static_idmap (0.031 ms) kernel_mode" class="thread c8" style="left:1.662%;top:20.000px;height:100.000px;width:0.002%;">init_static_idmap</div>
+<div id="a62" title="init_scsi (0.610 ms) kernel_mode" class="thread c6" style="left:3.814%;top:20.000px;height:100.000px;width:0.033%;">init_scsi</div>
+<div id="a78" title="genl_init (0.061 ms) kernel_mode" class="thread c4" style="left:4.067%;top:20.000px;height:100.000px;width:0.003%;">genl_init</div>
+<div id="a149" title="proc_meminfo_init (0.000 ms) kernel_mode" class="thread c10" style="left:5.033%;top:20.000px;height:100.000px;width:0.000%;">proc_meminfo_init</div>
+<div id="a128" title="setup_vmstat (0.031 ms) kernel_mode" class="thread c8" style="left:4.969%;top:20.000px;height:100.000px;width:0.002%;">setup_vmstat</div>
+<div id="a245" title="dw_mci_init (0.030 ms) kernel_mode" class="thread c9" style="left:32.457%;top:20.000px;height:100.000px;width:0.002%;">dw_mci_init</div>
+<div id="a19" title="fsnotify_init (0.030 ms) kernel_mode" class="thread c4" style="left:1.794%;top:20.000px;height:100.000px;width:0.002%;">fsnotify_init</div>
+<div id="a124" title="irq_pm_init_ops (0.000 ms) kernel_mode" class="thread c3" style="left:4.956%;top:20.000px;height:100.000px;width:0.000%;">irq_pm_init_ops</div>
+<div id="a160" title="init_vfat_fs (0.031 ms) kernel_mode" class="thread c7" style="left:5.058%;top:20.000px;height:100.000px;width:0.002%;">init_vfat_fs</div>
+<div id="a15" title="pm_init (0.061 ms) kernel_mode" class="thread c3" style="left:1.786%;top:20.000px;height:100.000px;width:0.003%;">pm_init</div>
+<div id="a95" title="firmware_class_init (0.122 ms) kernel_mode" class="thread c2" style="left:4.255%;top:20.000px;height:100.000px;width:0.007%;">firmware_class_init</div>
+<div id="a25" title="random32_init (0.000 ms) kernel_mode" class="thread c4" style="left:1.807%;top:20.000px;height:100.000px;width:0.000%;">random32_init</div>
+<div id="a225" title="deflate_init (0.000 ms) kernel_mode" class="thread c7" style="left:8.935%;top:20.000px;height:100.000px;width:0.000%;">deflate_init</div>
+<div id="a81" title="cfg80211_init (0.610 ms) kernel_mode" class="thread c8" style="left:4.087%;top:20.000px;height:100.000px;width:0.033%;">cfg80211_init</div>
+<div id="a373" title="ebt_mark_m_init (0.030 ms) kernel_mode" class="thread c3" style="left:34.139%;top:20.000px;height:100.000px;width:0.002%;">ebt_mark_m_init</div>
+<div id="a135" title="proc_filesystems_init (0.000 ms) kernel_mode" class="thread c1" style="left:4.997%;top:20.000px;height:100.000px;width:0.000%;">proc_filesystems_init</div>
+<div id="a63" title="usb_udc_init (0.091 ms) kernel_mode" class="thread c3" style="left:3.847%;top:20.000px;height:100.000px;width:0.005%;">usb_udc_init</div>
+<div id="a217" title="spifc_dt_driver_init (49.103 ms) kernel_mode" class="thread c3" style="left:6.188%;top:20.000px;height:100.000px;width:2.658%;">spifc_dt_driver_init</div>
+<div id="a207" title="cmdline_parser_init (0.031 ms) kernel_mode" class="thread c2" style="left:6.153%;top:20.000px;height:100.000px;width:0.002%;">cmdline_parser_init</div>
+<div id="a30" title="netlink_proto_init (0.061 ms) kernel_mode" class="thread c8" style="left:1.824%;top:20.000px;height:100.000px;width:0.003%;">netlink_proto_init</div>
+<div id="a216" title="nand_base_init (0.000 ms) kernel_mode" class="thread c5" style="left:6.186%;top:20.000px;height:100.000px;width:0.000%;">nand_base_init</div>
+<div id="a130" title="proc_vmalloc_init (0.031 ms) kernel_mode" class="thread c3" style="left:4.984%;top:20.000px;height:100.000px;width:0.002%;">proc_vmalloc_init</div>
+<div id="a374" title="ebt_mark_init (0.031 ms) kernel_mode" class="thread c9" style="left:34.141%;top:20.000px;height:100.000px;width:0.002%;">ebt_mark_init</div>
+<div id="a238" title="cpufreq_gov_powersave_init (0.030 ms) kernel_mode" class="thread c10" style="left:32.437%;top:20.000px;height:100.000px;width:0.002%;">cpufreq_gov_powersave_init</div>
+<div id="a344" title="redirect_tg_init (0.031 ms) kernel_mode" class="thread c6" style="left:33.818%;top:20.000px;height:100.000px;width:0.002%;">redirect_tg_init</div>
+<div id="a351" title="esp6_init (0.030 ms) kernel_mode" class="thread c4" style="left:33.903%;top:20.000px;height:100.000px;width:0.002%;">esp6_init</div>
+<div id="a137" title="fsnotify_mark_init (0.092 ms) kernel_mode" class="thread c6" style="left:5.000%;top:20.000px;height:100.000px;width:0.005%;">fsnotify_mark_init</div>
+<div id="a178" title="sha512_generic_mod_init (0.152 ms) kernel_mode" class="thread c3" style="left:5.136%;top:20.000px;height:100.000px;width:0.008%;">sha512_generic_mod_init</div>
+<div id="a394" title="zx_pm_init (0.702 ms) kernel_mode" class="thread c10" style="left:34.699%;top:20.000px;height:100.000px;width:0.038%;">zx_pm_init</div>
+<div id="a133" title="cpucache_init (0.000 ms) kernel_mode" class="thread c10" style="left:4.992%;top:20.000px;height:100.000px;width:0.000%;">cpucache_init</div>
+<div id="a125" title="utsname_sysctl_init (0.030 ms) kernel_mode" class="thread c6" style="left:4.957%;top:20.000px;height:100.000px;width:0.002%;">utsname_sysctl_init</div>
+<div id="a272" title="red_module_init (0.030 ms) kernel_mode" class="thread c8" style="left:33.465%;top:20.000px;height:100.000px;width:0.002%;">red_module_init</div>
+<div id="a234" title="serport_init (0.000 ms) kernel_mode" class="thread c5" style="left:32.376%;top:20.000px;height:100.000px;width:0.000%;">serport_init</div>
+<div id="a79" title="sysfs_ipv4_init (0.061 ms) kernel_mode" class="thread c2" style="left:4.070%;top:20.000px;height:100.000px;width:0.003%;">sysfs_ipv4_init</div>
+<div id="a12" title="consistent_init (0.030 ms) kernel_mode" class="thread c10" style="left:1.779%;top:20.000px;height:100.000px;width:0.002%;">consistent_init</div>
+<div id="a323" title="xfrm4_beet_init (0.030 ms) kernel_mode" class="thread c10" style="left:33.728%;top:20.000px;height:100.000px;width:0.002%;">xfrm4_beet_init</div>
+<div id="a85" title="activity_stats_init (0.030 ms) kernel_mode" class="thread c3" style="left:4.140%;top:20.000px;height:100.000px;width:0.002%;">activity_stats_init</div>
+<div id="a312" title="iprange_mt_init (0.031 ms) kernel_mode" class="thread c4" style="left:33.671%;top:20.000px;height:100.000px;width:0.002%;">iprange_mt_init</div>
+<div id="a279" title="prio_module_init (0.030 ms) kernel_mode" class="thread c5" style="left:33.539%;top:20.000px;height:100.000px;width:0.002%;">prio_module_init</div>
+<div id="a157" title="init_ext2_fs (0.031 ms) kernel_mode" class="thread c1" style="left:5.052%;top:20.000px;height:100.000px;width:0.002%;">init_ext2_fs</div>
+<div id="a45" title="zx29_ext_int_init (0.091 ms) kernel_mode" class="thread c9" style="left:2.068%;top:20.000px;height:100.000px;width:0.005%;">zx29_ext_int_init</div>
+<div id="a215" title="platram_init (0.152 ms) kernel_mode" class="thread c5" style="left:6.177%;top:20.000px;height:100.000px;width:0.008%;">platram_init</div>
+<div id="a100" title="af_unix_init (0.061 ms) kernel_mode" class="thread c8" style="left:4.827%;top:20.000px;height:100.000px;width:0.003%;">af_unix_init</div>
+<div id="a193" title="init_kmp (0.030 ms) kernel_mode" class="thread c10" style="left:5.197%;top:20.000px;height:100.000px;width:0.002%;">init_kmp</div>
+<div id="a123" title="hung_task_init (0.061 ms) kernel_mode" class="thread c6" style="left:4.951%;top:20.000px;height:100.000px;width:0.003%;">hung_task_init</div>
+<div id="a384" title="add_shrinker_debug (0.031 ms) kernel_mode" class="thread c7" style="left:34.243%;top:20.000px;height:100.000px;width:0.002%;">add_shrinker_debug</div>
+<div id="a273" title="gred_module_init (0.030 ms) kernel_mode" class="thread c1" style="left:33.468%;top:20.000px;height:100.000px;width:0.002%;">gred_module_init</div>
+<div id="a220" title="net_olddevs_init (0.031 ms) kernel_mode" class="thread c7" style="left:8.897%;top:20.000px;height:100.000px;width:0.002%;">net_olddevs_init</div>
+<div id="a243" title="init_menu (0.030 ms) kernel_mode" class="thread c9" style="left:32.447%;top:20.000px;height:100.000px;width:0.002%;">init_menu</div>
+<div id="a269" title="cbq_module_init (0.031 ms) kernel_mode" class="thread c3" style="left:33.455%;top:20.000px;height:100.000px;width:0.002%;">cbq_module_init</div>
+<div id="a372" title="ebt_ip_init (0.030 ms) kernel_mode" class="thread c9" style="left:34.136%;top:20.000px;height:100.000px;width:0.002%;">ebt_ip_init</div>
+<div id="a174" title="crypto_null_mod_init (0.366 ms) kernel_mode" class="thread c8" style="left:5.098%;top:20.000px;height:100.000px;width:0.020%;">crypto_null_mod_init</div>
+<div id="a288" title="init_rsvp (0.030 ms) kernel_mode" class="thread c1" style="left:33.571%;top:20.000px;height:100.000px;width:0.002%;">init_rsvp</div>
+<div id="a353" title="xfrm6_transport_init (0.030 ms) kernel_mode" class="thread c1" style="left:33.909%;top:20.000px;height:100.000px;width:0.002%;">xfrm6_transport_init</div>
+<div id="a259" title="check_privateip_module_init (0.061 ms) kernel_mode" class="thread c8" style="left:33.415%;top:20.000px;height:100.000px;width:0.003%;">check_privateip_module_init</div>
+<div id="a345" title="reject_tg_init (0.031 ms) kernel_mode" class="thread c3" style="left:33.822%;top:20.000px;height:100.000px;width:0.002%;">reject_tg_init</div>
+<div id="a192" title="deadline_init (0.031 ms) kernel_mode" class="thread c4" style="left:5.195%;top:20.000px;height:100.000px;width:0.002%;">deadline_init</div>
+<div id="a32" title="kobject_uevent_init (0.030 ms) kernel_mode" class="thread c8" style="left:1.858%;top:20.000px;height:100.000px;width:0.002%;">kobject_uevent_init</div>
+<div id="a108" title="init_posix_cpu_timers (0.000 ms) kernel_mode" class="thread c3" style="left:4.868%;top:20.000px;height:100.000px;width:0.000%;">init_posix_cpu_timers</div>
+<div id="a287" title="init_tcindex (0.030 ms) kernel_mode" class="thread c3" style="left:33.567%;top:20.000px;height:100.000px;width:0.002%;">init_tcindex</div>
+<div id="a376" title="zx29_gpio_debuginit (0.092 ms) kernel_mode" class="thread c6" style="left:34.160%;top:20.000px;height:100.000px;width:0.005%;">zx29_gpio_debuginit</div>
+<div id="a200" title="topology_sysfs_init (0.031 ms) kernel_mode" class="thread c8" style="left:5.374%;top:20.000px;height:100.000px;width:0.002%;">topology_sysfs_init</div>
+<div id="a400" title="net_other_init (0.000 ms) kernel_mode" class="thread c10" style="left:34.790%;top:20.000px;height:100.000px;width:0.000%;">net_other_init</div>
+<div id="a69" title="leds_init (0.092 ms) kernel_mode" class="thread c6" style="left:3.966%;top:20.000px;height:100.000px;width:0.005%;">leds_init</div>
+<div id="a186" title="crypto_authenc_module_init (0.000 ms) kernel_mode" class="thread c5" style="left:5.177%;top:20.000px;height:100.000px;width:0.000%;">crypto_authenc_module_init</div>
+<div id="a76" title="tc_filter_init (0.000 ms) kernel_mode" class="thread c8" style="left:4.064%;top:20.000px;height:100.000px;width:0.000%;">tc_filter_init</div>
+<div id="a317" title="state_mt_init (0.031 ms) kernel_mode" class="thread c7" style="left:33.696%;top:20.000px;height:100.000px;width:0.002%;">state_mt_init</div>
+<div id="a370" title="ebtable_broute_init (0.061 ms) kernel_mode" class="thread c3" style="left:34.127%;top:20.000px;height:100.000px;width:0.003%;">ebtable_broute_init</div>
+<div id="a59" title="zx29_dma_driver_init (2.960 ms) kernel_mode" class="thread c9" style="left:3.638%;top:20.000px;height:100.000px;width:0.160%;">zx29_dma_driver_init</div>
+<div id="a278" title="teql_init (0.946 ms) kernel_mode" class="thread c10" style="left:33.485%;top:20.000px;height:100.000px;width:0.051%;">teql_init</div>
+<div id="a327" title="ipv4_netfilter_init (0.031 ms) kernel_mode" class="thread c7" style="left:33.741%;top:20.000px;height:100.000px;width:0.002%;">ipv4_netfilter_init</div>
+<div id="a210" title="init_mtdblock (0.000 ms) kernel_mode" class="thread c10" style="left:6.160%;top:20.000px;height:100.000px;width:0.000%;">init_mtdblock</div>
+<div id="a105" title="ioresources_init (0.031 ms) kernel_mode" class="thread c5" style="left:4.860%;top:20.000px;height:100.000px;width:0.002%;">ioresources_init</div>
+<div id="a270" title="htb_module_init (0.030 ms) kernel_mode" class="thread c1" style="left:33.458%;top:20.000px;height:100.000px;width:0.002%;">htb_module_init</div>
+<div id="a295" title="nf_conntrack_standalone_init (0.275 ms) kernel_mode" class="thread c2" style="left:33.597%;top:20.000px;height:100.000px;width:0.015%;">nf_conntrack_standalone_init</div>
+<div id="a284" title="init_route4 (0.031 ms) kernel_mode" class="thread c3" style="left:33.559%;top:20.000px;height:100.000px;width:0.002%;">init_route4</div>
+<div id="a248" title="staging_init (0.030 ms) kernel_mode" class="thread c1" style="left:32.769%;top:20.000px;height:100.000px;width:0.002%;">staging_init</div>
+<div id="a301" title="nf_conntrack_pptp_init (0.030 ms) kernel_mode" class="thread c9" style="left:33.635%;top:20.000px;height:100.000px;width:0.002%;">nf_conntrack_pptp_init</div>
+<div id="a319" title="tcpmss_mt_init (0.031 ms) kernel_mode" class="thread c8" style="left:33.703%;top:20.000px;height:100.000px;width:0.002%;">tcpmss_mt_init</div>
+<div id="a342" title="masquerade_tg_init (0.031 ms) kernel_mode" class="thread c10" style="left:33.812%;top:20.000px;height:100.000px;width:0.002%;">masquerade_tg_init</div>
+<div id="a148" title="proc_loadavg_init (0.030 ms) kernel_mode" class="thread c7" style="left:5.030%;top:20.000px;height:100.000px;width:0.002%;">proc_loadavg_init</div>
+<div id="a150" title="proc_stat_init (0.000 ms) kernel_mode" class="thread c7" style="left:5.035%;top:20.000px;height:100.000px;width:0.000%;">proc_stat_init</div>
+<div id="a364" title="sit_init (1.282 ms) kernel_mode" class="thread c8" style="left:33.965%;top:20.000px;height:100.000px;width:0.069%;">sit_init</div>
+<div id="a206" title="init_mtd (0.610 ms) kernel_mode" class="thread c7" style="left:6.119%;top:20.000px;height:100.000px;width:0.033%;">init_mtd</div>
+<div id="a88" title="alignment_init (0.031 ms) kernel_mode" class="thread c1" style="left:4.158%;top:20.000px;height:100.000px;width:0.002%;">alignment_init</div>
+<div id="a358" title="ip6table_mangle_init (0.061 ms) kernel_mode" class="thread c6" style="left:33.932%;top:20.000px;height:100.000px;width:0.003%;">ip6table_mangle_init</div>
+<div id="a163" title="init_nls_ascii (0.000 ms) kernel_mode" class="thread c1" style="left:5.065%;top:20.000px;height:100.000px;width:0.000%;">init_nls_ascii</div>
+<div id="a138" title="dnotify_init (0.061 ms) kernel_mode" class="thread c7" style="left:5.005%;top:20.000px;height:100.000px;width:0.003%;">dnotify_init</div>
+<div id="a36" title="wakeup_sources_debugfs_init (0.031 ms) kernel_mode" class="thread c3" style="left:1.905%;top:20.000px;height:100.000px;width:0.002%;">wakeup_sources_debugfs_init</div>
+<div id="a404" title="initialize_hashrnd (0.031 ms) kernel_mode" class="thread c4" style="left:34.801%;top:20.000px;height:100.000px;width:0.002%;">initialize_hashrnd</div>
+<div id="a398" title="tsp_fast_init (0.214 ms) kernel_mode" class="thread c10" style="left:34.772%;top:20.000px;height:100.000px;width:0.012%;">tsp_fast_init</div>
+<div id="a264" title="police_init_module (0.031 ms) kernel_mode" class="thread c9" style="left:33.435%;top:20.000px;height:100.000px;width:0.002%;">police_init_module</div>
+<div id="a74" title="fib_rules_init (0.031 ms) kernel_mode" class="thread c7" style="left:4.059%;top:20.000px;height:100.000px;width:0.002%;">fib_rules_init</div>
+<div id="a226" title="ppp_mppe_init (0.427 ms) kernel_mode" class="thread c7" style="left:8.937%;top:20.000px;height:100.000px;width:0.023%;">ppp_mppe_init</div>
+<div id="a168" title="ipc_sysctl_init (0.061 ms) kernel_mode" class="thread c7" style="left:5.085%;top:20.000px;height:100.000px;width:0.003%;">ipc_sysctl_init</div>
+<div id="a165" title="init_nls_utf8 (0.000 ms) kernel_mode" class="thread c1" style="left:5.068%;top:20.000px;height:100.000px;width:0.000%;">init_nls_utf8</div>
+<div id="a352" title="tunnel6_init (0.030 ms) kernel_mode" class="thread c8" style="left:33.906%;top:20.000px;height:100.000px;width:0.002%;">tunnel6_init</div>
+<div id="a229" title="at_cdev_init (0.427 ms) kernel_mode" class="thread c8" style="left:8.967%;top:20.000px;height:100.000px;width:0.023%;">at_cdev_init</div>
+<div id="a49" title="init_bio (0.092 ms) kernel_mode" class="thread c6" style="left:3.596%;top:20.000px;height:100.000px;width:0.005%;">init_bio</div>
+<div id="a68" title="mmc_init (0.305 ms) kernel_mode" class="thread c9" style="left:3.948%;top:20.000px;height:100.000px;width:0.017%;">mmc_init</div>
+<div id="a142" title="init_mbcache (0.030 ms) kernel_mode" class="thread c9" style="left:5.019%;top:20.000px;height:100.000px;width:0.002%;">init_mbcache</div>
+<div id="a73" title="neigh_init (0.030 ms) kernel_mode" class="thread c5" style="left:4.057%;top:20.000px;height:100.000px;width:0.002%;">neigh_init</div>
+<div id="a348" title="cubictcp_register (0.061 ms) kernel_mode" class="thread c10" style="left:33.832%;top:20.000px;height:100.000px;width:0.003%;">cubictcp_register</div>
+<div id="a303" title="xt_init (0.030 ms) kernel_mode" class="thread c8" style="left:33.642%;top:20.000px;height:100.000px;width:0.002%;">xt_init</div>
+<div id="a23" title="init_elf_binfmt (0.031 ms) kernel_mode" class="thread c8" style="left:1.802%;top:20.000px;height:100.000px;width:0.002%;">init_elf_binfmt</div>
+<div id="a103" title="timer_init_syscore_ops (0.031 ms) kernel_mode" class="thread c1" style="left:4.857%;top:20.000px;height:100.000px;width:0.002%;">timer_init_syscore_ops</div>
+<div id="a38" title="i2c_init (0.183 ms) kernel_mode" class="thread c6" style="left:1.920%;top:20.000px;height:100.000px;width:0.010%;">i2c_init</div>
+<div id="a356" title="ip6_tables_init (0.091 ms) kernel_mode" class="thread c3" style="left:33.919%;top:20.000px;height:100.000px;width:0.005%;">ip6_tables_init</div>
+<div id="a136" title="dio_init (0.030 ms) kernel_mode" class="thread c8" style="left:4.999%;top:20.000px;height:100.000px;width:0.002%;">dio_init</div>
+<div id="a224" title="bsdcomp_init (0.031 ms) kernel_mode" class="thread c6" style="left:8.932%;top:20.000px;height:100.000px;width:0.002%;">bsdcomp_init</div>
+<div id="a378" title="init_oops_id (0.030 ms) kernel_mode" class="thread c1" style="left:34.177%;top:20.000px;height:100.000px;width:0.002%;">init_oops_id</div>
+<div id="a318" title="string_mt_init (0.031 ms) kernel_mode" class="thread c5" style="left:33.699%;top:20.000px;height:100.000px;width:0.002%;">string_mt_init</div>
+<div id="a96" title="cpufreq_gov_performance_init (0.030 ms) kernel_mode" class="thread c2" style="left:4.262%;top:20.000px;height:100.000px;width:0.002%;">cpufreq_gov_performance_init</div>
+<div id="a90" title="init_pipe_fs (0.061 ms) kernel_mode" class="thread c4" style="left:4.163%;top:20.000px;height:100.000px;width:0.003%;">init_pipe_fs</div>
+<div id="a18" title="init_zero_pfn (0.031 ms) kernel_mode" class="thread c9" style="left:1.792%;top:20.000px;height:100.000px;width:0.002%;">init_zero_pfn</div>
+<div id="a51" title="crypto_wq_init (0.092 ms) kernel_mode" class="thread c2" style="left:3.606%;top:20.000px;height:100.000px;width:0.005%;">crypto_wq_init</div>
+<div id="a261" title="llc_init (0.030 ms) kernel_mode" class="thread c7" style="left:33.424%;top:20.000px;height:100.000px;width:0.002%;">llc_init</div>
+<div id="a223" title="ppp_async_init (0.030 ms) kernel_mode" class="thread c5" style="left:8.930%;top:20.000px;height:100.000px;width:0.002%;">ppp_async_init</div>
+<div id="a43" title="dma_channel_table_init (0.061 ms) kernel_mode" class="thread c7" style="left:2.042%;top:20.000px;height:100.000px;width:0.003%;">dma_channel_table_init</div>
+<div id="a350" title="inet6_init (1.098 ms) kernel_mode" class="thread c8" style="left:33.842%;top:20.000px;height:100.000px;width:0.059%;">inet6_init</div>
+<div id="a219" title="zx29_spi_init (0.641 ms) kernel_mode" class="thread c8" style="left:8.861%;top:20.000px;height:100.000px;width:0.035%;">zx29_spi_init</div>
+<div id="a313" title="length_mt_init (0.031 ms) kernel_mode" class="thread c4" style="left:33.675%;top:20.000px;height:100.000px;width:0.002%;">length_mt_init</div>
+</div>
+</div>
+<div id="devicedetailtitle"></div>
+<div id="devicedetail" style="display:none;">
+<div id="devicedetail0">
+<div id="kernel_mode" class="phaselet" style="left:0%;width:100%;background-color:#DDDDDD"></div>
+</div>
+</div>
+<script type="text/javascript">
+	var devtable = [];
+	var bounds = [0.000000,1847.381000];
+	var resolution = -1;
+	var dragval = [0, 0];
+	function redrawTimescale(t0, tMax, tS) {
+		var rline = '<div class="t" style="left:0;border-left:1px solid black;border-right:0;">0ms</div>';
+		var tTotal = tMax - t0;
+		var list = document.getElementsByClassName("phase");
+		for (var i = 0; i < list.length; i++) {
+			var timescale = document.getElementById("timescale");
+			var m0 = t0 + (tTotal*parseFloat(list[i].style.left)/100);
+			var mTotal = tTotal*parseFloat(list[i].style.width)/100;
+			var mMax = m0 + mTotal;
+			var html = "";
+			var divTotal = Math.floor(mTotal/tS) + 1;
+			if(divTotal > 1000) continue;
+			var divEdge = (mTotal - tS*(divTotal-1))*100/mTotal;
+			var pos = 0.0, val = 0.0;
+			for (var j = 0; j < divTotal; j++) {
+				var htmlline = "";
+				pos = 100 - (((j)*tS*100)/mTotal);
+				val = (j)*tS;
+				htmlline = '<div class="t" style="right:'+pos+'%">'+val+'ms</div>';
+				if(j == 0)
+					htmlline = rline;
+				html += htmlline;
+			}
+			timescale.innerHTML = html;
+		}
+	}
+	function zoomTimeline() {
+		var dmesg = document.getElementById("dmesg");
+		var zoombox = document.getElementById("dmesgzoombox");
+		var left = zoombox.scrollLeft;
+		var val = parseFloat(dmesg.style.width);
+		var newval = 100;
+		var sh = window.outerWidth / 2;
+		if(this.id == "zoomin") {
+			newval = val * 1.2;
+			if(newval > 910034) newval = 910034;
+			dmesg.style.width = newval+"%";
+			zoombox.scrollLeft = ((left + sh) * newval / val) - sh;
+		} else if (this.id == "zoomout") {
+			newval = val / 1.2;
+			if(newval < 100) newval = 100;
+			dmesg.style.width = newval+"%";
+			zoombox.scrollLeft = ((left + sh) * newval / val) - sh;
+		} else {
+			zoombox.scrollLeft = 0;
+			dmesg.style.width = "100%";
+		}
+		var tS = [10000, 5000, 2000, 1000, 500, 200, 100, 50, 20, 10, 5, 2, 1];
+		var t0 = bounds[0];
+		var tMax = bounds[1];
+		var tTotal = tMax - t0;
+		var wTotal = tTotal * 100.0 / newval;
+		var idx = 7*window.innerWidth/1100;
+		for(var i = 0; (i < tS.length)&&((wTotal / tS[i]) < idx); i++);
+		if(i >= tS.length) i = tS.length - 1;
+		if(tS[i] == resolution) return;
+		resolution = tS[i];
+		redrawTimescale(t0, tMax, tS[i]);
+	}
+	function deviceName(title) {
+		var name = title.slice(0, title.indexOf(" ("));
+		return name;
+	}
+	function deviceHover() {
+		var name = deviceName(this.title);
+		var dmesg = document.getElementById("dmesg");
+		var dev = dmesg.getElementsByClassName("thread");
+		var cpu = -1;
+		if(name.match("CPU_ON\[[0-9]*\]"))
+			cpu = parseInt(name.slice(7));
+		else if(name.match("CPU_OFF\[[0-9]*\]"))
+			cpu = parseInt(name.slice(8));
+		for (var i = 0; i < dev.length; i++) {
+			dname = deviceName(dev[i].title);
+			var cname = dev[i].className.slice(dev[i].className.indexOf("thread"));
+			if((cpu >= 0 && dname.match("CPU_O[NF]*\\[*"+cpu+"\\]")) ||
+				(name == dname))
+			{
+				dev[i].className = "hover "+cname;
+			} else {
+				dev[i].className = cname;
+			}
+		}
+	}
+	function deviceUnhover() {
+		var dmesg = document.getElementById("dmesg");
+		var dev = dmesg.getElementsByClassName("thread");
+		for (var i = 0; i < dev.length; i++) {
+			dev[i].className = dev[i].className.slice(dev[i].className.indexOf("thread"));
+		}
+	}
+	function deviceTitle(title, total, cpu) {
+		var prefix = "Total";
+		if(total.length > 3) {
+			prefix = "Average";
+			total[1] = (total[1]+total[3])/2;
+			total[2] = (total[2]+total[4])/2;
+		}
+		var devtitle = document.getElementById("devicedetailtitle");
+		var name = deviceName(title);
+		if(cpu >= 0) name = "CPU"+cpu;
+		var driver = "";
+		var tS = "<t2>(</t2>";
+		var tR = "<t2>)</t2>";
+		if(total[1] > 0)
+			tS = "<t2>("+prefix+" Suspend:</t2><t0> "+total[1].toFixed(3)+" ms</t0> ";
+		if(total[2] > 0)
+			tR = " <t2>"+prefix+" Resume:</t2><t0> "+total[2].toFixed(3)+" ms<t2>)</t2></t0>";
+		var s = title.indexOf("{");
+		var e = title.indexOf("}");
+		if((s >= 0) && (e >= 0))
+			driver = title.slice(s+1, e) + " <t1>@</t1> ";
+		if(total[1] > 0 && total[2] > 0)
+			devtitle.innerHTML = "<t0>"+driver+name+"</t0> "+tS+tR;
+		else
+			devtitle.innerHTML = "<t0>"+title+"</t0>";
+		return name;
+	}
+	function deviceDetail() {
+		var devinfo = document.getElementById("devicedetail");
+		devinfo.style.display = "block";
+		var name = deviceName(this.title);
+		var cpu = -1;
+		if(name.match("CPU_ON\[[0-9]*\]"))
+			cpu = parseInt(name.slice(7));
+		else if(name.match("CPU_OFF\[[0-9]*\]"))
+			cpu = parseInt(name.slice(8));
+		var dmesg = document.getElementById("dmesg");
+		var dev = dmesg.getElementsByClassName("thread");
+		var idlist = [];
+		var pdata = [[]];
+		if(document.getElementById("devicedetail1"))
+			pdata = [[], []];
+		var pd = pdata[0];
+		var total = [0.0, 0.0, 0.0];
+		for (var i = 0; i < dev.length; i++) {
+			dname = deviceName(dev[i].title);
+			if((cpu >= 0 && dname.match("CPU_O[NF]*\\[*"+cpu+"\\]")) ||
+				(name == dname))
+			{
+				idlist[idlist.length] = dev[i].id;
+				var tidx = 1;
+				if(dev[i].id[0] == "a") {
+					pd = pdata[0];
+				} else {
+					if(pdata.length == 1) pdata[1] = [];
+					if(total.length == 3) total[3]=total[4]=0.0;
+					pd = pdata[1];
+					tidx = 3;
+				}
+				var info = dev[i].title.split(" ");
+				var pname = info[info.length-1];
+				pd[pname] = parseFloat(info[info.length-3].slice(1));
+				total[0] += pd[pname];
+				if(pname.indexOf("suspend") >= 0)
+					total[tidx] += pd[pname];
+				else
+					total[tidx+1] += pd[pname];
+			}
+		}
+		var devname = deviceTitle(this.title, total, cpu);
+		var left = 0.0;
+		for (var t = 0; t < pdata.length; t++) {
+			pd = pdata[t];
+			devinfo = document.getElementById("devicedetail"+t);
+			var phases = devinfo.getElementsByClassName("phaselet");
+			for (var i = 0; i < phases.length; i++) {
+				if(phases[i].id in pd) {
+					var w = 100.0*pd[phases[i].id]/total[0];
+					var fs = 32;
+					if(w < 8) fs = 4*w | 0;
+					var fs2 = fs*3/4;
+					phases[i].style.width = w+"%";
+					phases[i].style.left = left+"%";
+					phases[i].title = phases[i].id+" "+pd[phases[i].id]+" ms";
+					left += w;
+					var time = "<t4 style=\"font-size:"+fs+"px\">"+pd[phases[i].id]+" ms<br></t4>";
+					var pname = "<t3 style=\"font-size:"+fs2+"px\">"+phases[i].id.replace(new RegExp("_", "g"), " ")+"</t3>";
+					phases[i].innerHTML = time+pname;
+				} else {
+					phases[i].style.width = "0%";
+					phases[i].style.left = left+"%";
+				}
+			}
+		}
+		var cglist = document.getElementById("callgraphs");
+		if(!cglist) return;
+		var cg = cglist.getElementsByClassName("atop");
+		if(cg.length < 10) return;
+		for (var i = 0; i < cg.length; i++) {
+			if(idlist.indexOf(cg[i].id) >= 0) {
+				cg[i].style.display = "block";
+			} else {
+				cg[i].style.display = "none";
+			}
+		}
+	}
+	function devListWindow(e) {
+		var win = window.open();
+		var html = "<title>"+e.target.innerHTML+"</title>"+
+			"<style type=\"text/css\">"+
+			"   ul {list-style-type:circle;padding-left:10px;margin-left:10px;}"+
+			"</style>"
+		var dt = devtable[0];
+		if(e.target.id != "devlist1")
+			dt = devtable[1];
+		win.document.write(html+dt);
+	}
+	function errWindow() {
+		var text = this.id;
+		var win = window.open();
+		win.document.write("<pre>"+text+"</pre>");
+		win.document.close();
+	}
+	function logWindow(e) {
+		var name = e.target.id.slice(4);
+		var win = window.open();
+		var log = document.getElementById(name+"log");
+		var title = "<title>"+document.title.split(" ")[0]+" "+name+" log</title>";
+		win.document.write(title+"<pre>"+log.innerHTML+"</pre>");
+		win.document.close();
+	}
+	function onClickPhase(e) {
+	}
+	function onMouseDown(e) {
+		dragval[0] = e.clientX;
+		dragval[1] = document.getElementById("dmesgzoombox").scrollLeft;
+		document.onmousemove = onMouseMove;
+	}
+	function onMouseMove(e) {
+		var zoombox = document.getElementById("dmesgzoombox");
+		zoombox.scrollLeft = dragval[1] + dragval[0] - e.clientX;
+	}
+	function onMouseUp(e) {
+		document.onmousemove = null;
+	}
+	function onKeyPress(e) {
+		var c = e.charCode;
+		if(c != 42 && c != 43 && c != 45) return;
+		var click = document.createEvent("Events");
+		click.initEvent("click", true, false);
+		if(c == 43)  
+			document.getElementById("zoomin").dispatchEvent(click);
+		else if(c == 45)
+			document.getElementById("zoomout").dispatchEvent(click);
+		else if(c == 42)
+			document.getElementById("zoomdef").dispatchEvent(click);
+	}
+	window.addEventListener("resize", function () {zoomTimeline();});
+	window.addEventListener("load", function () {
+		var dmesg = document.getElementById("dmesg");
+		dmesg.style.width = "100%"
+		dmesg.onmousedown = onMouseDown;
+		document.onmouseup = onMouseUp;
+		document.onkeypress = onKeyPress;
+		document.getElementById("zoomin").onclick = zoomTimeline;
+		document.getElementById("zoomout").onclick = zoomTimeline;
+		document.getElementById("zoomdef").onclick = zoomTimeline;
+		var list = document.getElementsByClassName("square");
+		for (var i = 0; i < list.length; i++)
+			list[i].onclick = onClickPhase;
+		var list = document.getElementsByClassName("err");
+		for (var i = 0; i < list.length; i++)
+			list[i].onclick = errWindow;
+		var list = document.getElementsByClassName("logbtn");
+		for (var i = 0; i < list.length; i++)
+			list[i].onclick = logWindow;
+		list = document.getElementsByClassName("devlist");
+		for (var i = 0; i < list.length; i++)
+			list[i].onclick = devListWindow;
+		var dev = dmesg.getElementsByClassName("thread");
+		for (var i = 0; i < dev.length; i++) {
+			dev[i].onclick = deviceDetail;
+			dev[i].onmouseover = deviceHover;
+			dev[i].onmouseout = deviceUnhover;
+		}
+		zoomTimeline();
+	});
+</script>
+</body>
+</html>
